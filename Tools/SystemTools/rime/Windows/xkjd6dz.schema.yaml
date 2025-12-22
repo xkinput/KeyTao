@@ -44,14 +44,12 @@ switches:
     states: [ 中, 英 ]
   - name: full_shape
     states: [ 半角, 全角 ]
-  - name: jffh
+  - name: s2tw
     reset: 0
     states: [ 简体, 繁體 ]
   - name: sbb_hint
     reset: 1 # 改成0默认关闭
     states: [ "关₆₃₀", "开₆₃₀" ]
-  - name: EN2en
-    reset: 1
 
 
 punctuator:
@@ -148,15 +146,12 @@ engine:
     - history_translator@repeat_history
     - table_translator@custom_phrase
     - table_translator@danzi_lookup
-    - lua_translator@date_translator
-    - lua_translator@time_translator
+    - lua_translator@date_time_translator
     - lua_translator@number_translator
   filters:
     - uniquifier
     - simplifier@emoji_cn
-    - simplifier@jffh
-    - simplifier@bmms
-    - simplifier@EN2en
+    - simplifier@s2tw
     # - lua_filter@hint_filter
     - lua_filter@xkjd6_filter
     - reverse_lookup_filter@danzi_lookup
@@ -194,22 +189,9 @@ emoji_cn:
   tips: all
 
 
-jffh:
+s2tw:
   opencc_config: s2tw.json
-  option_name: jffh
-
-
-EN2en:
-  opencc_config: EN2en.json
-  option_name: EN2en
-
-
-bmms:
-  opencc_config: pinyin.json
-  option_name: bmms
-  show_in_comment: true
-  comment_format:
-    - xform/'/ /
+  option_name: s2tw
 
 
 danzi_lookup:
@@ -247,10 +229,9 @@ key_binder:
   bindings:
     - {accept: minus, send: Page_Up, when: has_menu}
     - {accept: equal, send: Page_Down, when: has_menu}
-    - { when: always, accept: F7, toggle: jffh }
+    - { when: always, accept: F7, toggle: s2tw }
     # - { when: has_menu, accept: "'", send: 2 }
     - { when: has_menu, accept: "&", toggle: emoji_cn}
-    - { when: has_menu, accept: "^", toggle: bmms}
 
 
 recognizer:

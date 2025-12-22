@@ -31,7 +31,7 @@ switches:
     states: [ 中文, 西文 ]
   - name: full_shape
     states: [ 半角, 全角 ]
-  - name: jffh
+  - name: s2tw
     reset: 0
     states: [ 简体, 繁體 ]
   - name: sbb_hint
@@ -40,8 +40,6 @@ switches:
   - name: sbb_disable_full
     reset: 0 # 改成1默认关闭全码
     states: [ "开₆₃₀全码", "关₆₃₀全码" ]
-  - name: EN2en
-    reset: 1
   - name: topup_hint
     reset: 1
     states: [ "关顶功提示", "开顶功提示" ]
@@ -144,8 +142,7 @@ engine:
     - simplifier
     - uniquifier
     - simplifier@emoji_cn
-    - simplifier@jffh
-    - simplifier@EN2en
+    - simplifier@s2tw
     - reverse_lookup_filter@danzi_lookup
     - lua_filter@xkjd6_filter
 
@@ -171,18 +168,14 @@ repeat_history:
   size: 1
   initial_quality: 10000
 
-EN2en:
-  opencc_config: EN2en.json
-  option_name: EN2en
-
 emoji_cn:
   opencc_config: emoji.json
   option_name: emoji_cn
   tips: all
 
-jffh:
+s2tw:
   opencc_config: s2tw.json
-  option_name: jffh
+  option_name: s2tw
 
 danzi_lookup:
   dictionary: xkjd6.extended
@@ -213,7 +206,7 @@ key_binder:
     - {accept: minus, send: Page_Up, when: has_menu}
     - {accept: equal, send: Page_Down, when: has_menu}
     - { when: always, accept: F6, select: .next }
-    - { when: always, accept: F7, toggle: jffh }
+    - { when: always, accept: F7, toggle: s2tw }
     - { when: has_menu, accept: "'", send: 2 }
     - { when: has_menu, accept: "&", toggle: emoji_cn}
 

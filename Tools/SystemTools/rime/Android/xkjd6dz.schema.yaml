@@ -56,8 +56,6 @@ switches:
   - name: danzi_mode
     reset: 0 # 改成1默认单字
     states: [ 词组, 单字 ]
-  - name: EN2en
-    reset: 1
 
 
 punctuator:
@@ -154,15 +152,12 @@ engine:
     - table_translator@custom_phrase
     - table_translator@danzi_lookup
     - history_translator@repeat_history
-    - lua_translator@date_translator
-    - lua_translator@time_translator
+    - lua_translator@date_time_translator
     - lua_translator@number_translator
   filters:
     - uniquifier
     - simplifier@emoji_cn
     - simplifier@simplification
-    - simplifier@bmms
-    - simplifier@EN2en
     - lua_filter@xkjd6_filter
     - reverse_lookup_filter@danzi_lookup
 
@@ -192,11 +187,6 @@ repeat_history:
   initial_quality: 10000
 
 
-EN2en:
-  opencc_config: EN2en.json
-  option_name: EN2en
-
-
 emoji_cn:
   opencc_config: emoji.json
   option_name: emoji_cn
@@ -206,14 +196,6 @@ emoji_cn:
 simplification:
   opencc_config: s2tw.json
   option_name: simplification
-
-
-bmms:
-  opencc_config: pinyin.json
-  option_name: bmms
-  show_in_comment: true
-  comment_format:
-    - xform/'/ /
 
 
 custom_phrase:
