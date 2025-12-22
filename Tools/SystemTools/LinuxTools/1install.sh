@@ -103,7 +103,7 @@ echo "==========================================="
 JD=""
 YB=""
 LB=""
-rime=~/.config/fcitx/rime
+rime=~/.local/share/fcitx5/rime
 
 xkjd=../../../../Rime_JD
 xklb=../../../../rime_xklb

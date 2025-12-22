@@ -4,7 +4,7 @@ clear
 JD=""
 YB=""
 LB=""
-rime=~/.config/fcitx/rime
+rime=~/.local/share/fcitx5/rime
 
 jd=$(pwd);
 xkjd=../../../../Rime_JD
