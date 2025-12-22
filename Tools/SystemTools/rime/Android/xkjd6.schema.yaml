@@ -59,8 +59,6 @@ switches:
   - name: danzi_mode
     reset: 0 # 改成1默认单字
     states: [ 词组, 单字 ]
-  - name: EN2en
-    reset: 1
   - name: topup_hint
     reset: 1
     states: [ "关顶功提示", "开顶功提示" ]
@@ -157,6 +155,7 @@ engine:
     - fallback_segmentor
   translators:
     - punct_translator
+    - table_translator
     - table_translator@custom_phrase
     - table_translator@danzi_lookup
     - history_translator@repeat_history
@@ -166,7 +165,6 @@ engine:
     - uniquifier
     - simplifier@emoji_cn
     - simplifier@simplification
-    - simplifier@EN2en
     - lua_filter@xkjd6_filter
     - reverse_lookup_filter@danzi_lookup
 
@@ -194,11 +192,6 @@ repeat_history:
   input: ;h #重复上次上屏内容
   size: 1
   initial_quality: 10000
-
-
-EN2en:
-  opencc_config: EN2en.json
-  option_name: EN2en
 
 
 emoji_cn:
