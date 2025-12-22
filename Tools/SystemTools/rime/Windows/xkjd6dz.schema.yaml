@@ -143,6 +143,7 @@ engine:
     - fallback_segmentor
   translators:
     - punct_translator
+    - table_translator
     - history_translator@repeat_history
     - table_translator@custom_phrase
     - table_translator@danzi_lookup
