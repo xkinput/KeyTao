@@ -117,7 +117,8 @@ engine:
     - reverse_lookup_translator
 
 speller:
-  auto_select: true
+  auto_select: false
+  auto_select_unique_candidate: false
   alphabet: "zyxwvutsrqponmlkjihgfedcba;"
   initials: "abcdefghijklmnopqrstuvwxyz;"
 
