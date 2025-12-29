@@ -167,7 +167,8 @@ engine:
 speller:
   algebra:
     __include: "layout/algebra"
-  auto_select: true
+  auto_select: false
+  auto_select_unique_candidate: false
   alphabet: "abcdefghijklmnopqrstuvwxyz;/`"
   initials: "abcdefghijklmnopqrstuvwxyz;/`"
 

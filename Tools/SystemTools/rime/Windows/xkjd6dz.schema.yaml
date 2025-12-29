@@ -161,8 +161,8 @@ engine:
 speller:
   algebra:
     __include: "layout/algebra"
-  auto_select: true
-  auto_select_unique_candidate: true #空码自动顶
+  auto_select: false
+  auto_select_unique_candidate: false # 关闭全局唯一编码自动上屏，使用 topup_processor 处理顶功自动上屏
   alphabet: "zyxwvutsrqponmlkjihgfedcba;/=`"
   initials: "abcdefghijklmnopqrstuvwxyz;/=`"
 

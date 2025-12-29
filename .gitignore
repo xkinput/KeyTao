@@ -1,6 +1,6 @@
 Tools/SystemTools/*/备份/
 Tools/TermsTools/键道6词库.txt
 Tools/SystemTools/*/用户数据/*
-!Tools/SystemTools/*/用户数据/weasel.custom.yaml
+!Tools/SystemTools/*/用户数据/themes/
 !Tools/SystemTools/*/用户数据/preview/
 .DS_Store
