@@ -1,0 +1,12 @@
+customization:
+  distribution_code_name: Weasel
+  distribution_version: 0.17.0
+  generator: "Weasel::UIStyleSettings"
+  modified_time: "Sun May 18 05:05:51 2025"
+  rime_version: 1.13.1
+patch:
+  "style/color_scheme": aqua
+  "style/horizontal": true
+  "style/inline_preedit": true
+  "style/layout/margin_y": "-1"
+  "style/preedit_type": preview

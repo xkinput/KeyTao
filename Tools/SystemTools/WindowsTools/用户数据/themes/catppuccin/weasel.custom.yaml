@@ -1,0 +1,46 @@
+patch:
+  preset_color_schemes:
+    Catppuccin:
+      {
+        author: "缄默线",
+        back_color: 0x3A2724,
+        border_color: 0x3A2724,
+        candidate_text_color: 0xF5D3CA,
+        comment_text_color: 0x9FD4EE,
+        hilited_back_color: 0x261918,
+        hilited_candidate_back_color: 0x644D49,
+        hilited_candidate_text_color: 0xD6DBF4,
+        hilited_comment_text_color: 0x9FD4EE,
+        hilited_label_color: 0xCBADA5,
+        hilited_text_color: 0xF2AB89,
+        label_color: 0xA28780,
+        shadow_color: 0xAA000000,
+        name: "Catppuccin",
+        text_color: 0xF5D3CA,
+      }
+  style:
+    color_scheme: Catppuccin
+    font_face: "Noto Emoji, 更纱黑体 UI SC"
+    label_font_face: "更纱黑体 UI SC"
+    comment_font_face: "更纱黑体 UI SC"
+    font_point: 12
+    label_font_point: 11
+    comment_font_point: 12
+    horizontal: false
+    inline_preedit: true
+    layout:
+      {
+        align_type: bottom,
+        border: 1,
+        spacing: 5,
+        candidate_spacing: 20,
+        hilite_spacing: 5,
+        hilite_padding: 5,
+        margin_x: 0,
+        margin_y: 0,
+        round_corner: 5,
+        corner_radius: 10,
+        shadow_radius: 3,
+        shadow_offset_x: 3,
+        shadow_offset_y: 3,
+      }
