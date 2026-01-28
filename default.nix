@@ -29,7 +29,7 @@ stdenvNoCC.mkDerivation rec {
 
   meta = with lib; {
     description = "KeyTao (星空键道6) - A Rime input method schema";
-    homepage = "https://github.com/xkinput/Rime_JD";
+    homepage = "https://github.com/xkinput/KeyTao";
     license = licenses.free; # No explicit license in repository
     maintainers = [ ];
     platforms = platforms.all;

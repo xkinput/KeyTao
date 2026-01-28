@@ -1,6 +1,6 @@
 --[[
 
-    https://github.com/xkjd27/rime_jd27c/blob/e38a8c5d010d5a3933e6d6d8265c0cf7b56bfcca/rime/lua/jd27_topup.lua
+    https://github.com/xkjd27/KeyTao27c/blob/e38a8c5d010d5a3933e6d6d8265c0cf7b56bfcca/rime/lua/jd27_topup.lua
     顶功处理器 by TsFreddie
 
     ------------

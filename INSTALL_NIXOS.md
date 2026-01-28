@@ -26,10 +26,10 @@ Nix 包会自动安装以下文件到 Rime 数据目录：
   inputs = {
     nixpkgs.url = "github:NixOS/nixpkgs/nixos-unstable";
     home-manager.url = "github:nix-community/home-manager";
-    
-    # 添加 Rime_JD
+  
+    # 添加 KeyTao
     rime-keytao = {
-      url = "github:xkinput/Rime_JD";  # 或 "git+https://gitee.com/xkinput/Rime_JD"
+      url = "github:xkinput/KeyTao";
       inputs.nixpkgs.follows = "nixpkgs";
     };
   };
@@ -40,7 +40,7 @@ Nix 包会自动安装以下文件到 Rime 数据目录：
       modules = [
         # 导入 rime-keytao 的 Home Manager 模块
         rime-keytao.homeManagerModules.default
-        
+    
         # 你的其他配置
         ./home.nix
       ];
@@ -56,7 +56,7 @@ Nix 包会自动安装以下文件到 Rime 数据目录：
   # 启用星空键道6
   programs.rime-keytao = {
     enable = true;
-    
+  
     # 可选：指定 Rime 数据目录（默认是 fcitx5）
     rimeDataDir = ".local/share/fcitx5/rime";  # fcitx5-rime
     # rimeDataDir = ".config/ibus/rime";       # ibus-rime
@@ -89,7 +89,7 @@ fcitx5-remote -r
 {
   inputs = {
     nixpkgs.url = "github:NixOS/nixpkgs/nixos-unstable";
-    rime-keytao.url = "github:xkinput/Rime_JD";
+    rime-keytao.url = "github:xkinput/KeyTao";
   };
 
   outputs = { nixpkgs, rime-keytao, ... }: {
@@ -110,7 +110,7 @@ fcitx5-remote -r
 
 ```bash
 # 构建包
-nix build github:xkinput/Rime_JD
+nix build github:xkinput/KeyTao
 
 # 复制到 fcitx5-rime 配置目录
 cp -r result/share/rime-data/* ~/.local/share/fcitx5/rime/
@@ -125,8 +125,8 @@ cp -r result/share/rime-data/* ~/.local/share/fcitx5/rime/
 
 ```bash
 # 克隆仓库
-git clone https://gitee.com/xkinput/Rime_JD.git
-cd Rime_JD
+git clone https://github.com/xkinput/KeyTao.git
+cd KeyTao
 
 # 构建
 nix-build
@@ -213,16 +213,19 @@ fcitx5-remote -r
 ### 重新部署 Rime 后仍看不到键道方案
 
 1. 检查文件是否正确链接：
+
 ```bash
 ls -la ~/.local/share/fcitx5/rime/*.schema.yaml
 ```
 
 2. 查看 Rime 日志：
+
 ```bash
 cat ~/.local/share/fcitx5/rime/rime.log
 ```
 
 3. 清除 Rime 缓存：
+
 ```bash
 rm -rf ~/.local/share/fcitx5/rime/build
 fcitx5-remote -r
@@ -238,6 +241,6 @@ fcitx5-remote -r
 
 ## 参考资源
 
-- [键道官网](https://xkinput.gitee.io)
+- [键道官网](https://xkinput.github.io)
 - [键道详尽操作指南](https://pingshunhuangalex.gitbook.io/rime-keytao/)
-- [原始安装教程](https://gitee.com/xkinput/Rime_JD)
+- [原始安装教程](https://github.com/xkinput/KeyTao)

@@ -1,21 +1,21 @@
 @echo off
-if exist "..\SystemTools\WindowsTools\±¸·Ý" (
-  mkdir "..\..\..\±¸·Ý"
-  xcopy "..\SystemTools\WindowsTools\±¸·Ý" "..\..\..\±¸·Ý" /y /e
-  echo ÓÃ»§´Ê¿â±¸·ÝÍê³É
-  rmdir /S /Q "..\SystemTools\WindowsTools\±¸·Ý"
+if exist "..\SystemTools\WindowsTools\ï¿½ï¿½ï¿½ï¿½" (
+  mkdir "..\..\..\ï¿½ï¿½ï¿½ï¿½"
+  xcopy "..\SystemTools\WindowsTools\ï¿½ï¿½ï¿½ï¿½" "..\..\..\ï¿½ï¿½ï¿½ï¿½" /y /e
+  echo ï¿½Ã»ï¿½ï¿½Ê¿â±¸ï¿½ï¿½ï¿½ï¿½ï¿½
+  rmdir /S /Q "..\SystemTools\WindowsTools\ï¿½ï¿½ï¿½ï¿½"
 )
 
-if exist "Rime_JD.7z" (
-  del Rime_JD.7z /S /Q
-  echo É¾³ý¾ÉÎÄ¼þ
+if exist "KeyTao.7z" (
+  del KeyTao.7z /S /Q
+  echo É¾ï¿½ï¿½ï¿½ï¿½ï¿½Ä¼ï¿½
 )
 
-if exist "Rime_JD.exe" (
-  del Rime_JD.exe /S /Q
-  echo É¾³ý¾ÉÎÄ¼þ
+if exist "KeyTao.exe" (
+  del KeyTao.exe /S /Q
+  echo É¾ï¿½ï¿½ï¿½ï¿½ï¿½Ä¼ï¿½
 )
 
 
-echo ¿ªÊ¼¹¹½¨7zip
-7z a -m1=LZMA Rime_JD.7z ..\..\
+echo ï¿½ï¿½Ê¼ï¿½ï¿½ï¿½ï¿½7zip
+7z a -m1=LZMA KeyTao.7z ..\..\

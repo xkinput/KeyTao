@@ -105,7 +105,7 @@ YB=""
 LB=""
 rime=~/.local/share/fcitx5/rime
 
-xkjd=../../../../Rime_JD
+xkjd=../../../../KeyTao
 xklb=../../../../rime_xklb
 xkyb=../../../../rime_xkybd
 

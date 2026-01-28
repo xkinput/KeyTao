@@ -89,7 +89,7 @@ cat >>./$outFileName<< EOF
 \$ddcmd(config(/do 输出反查),[反查]：<last.1>)	oew
 \$ddcmd(config(/do 在线加词),[在线加词])	ojc
 \$ddcmd(config(/do 码表),[码表])	omb
-\$ddcmd(run(https://gitee.com/xkinput/Rime_JD/wikis/pages),[入门文档])	orm
+\$ddcmd(run(https://github.com/xkinput/KeyTao/wikis/pages),[入门文档])	orm
 \$ddcmd(run(http://www.zdic.net/sousuo/?q=<last.1>),[汉典]:<last.1>)	ohd
 \$ddcmd(<date.yyyy>年<date.m>月<date.d>日,<date.yyyy>年<date.m>月<date.d>日)	orq
 \$ddcmd(<date.yyyy>-<date.mm>-<date.dd>,<date.yyyy>-<date.mm>-<date.dd>)	orq

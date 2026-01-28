@@ -3,7 +3,7 @@
 # set -x
 rootDir=`dirname $0`
 cd $rootDir
-xkjd="../../../../Rime_JD/rime"
+xkjd="../../../../KeyTao/rime"
 xklb="../../../../rime_xklb"
 xkyb="../../../../rime_xkyb"
 my_default="default.custom.yaml"
@@ -19,7 +19,7 @@ testHasSchema(){
   check_dir=$(pwd | sed -E $'s/.*\\/(.{1,})\\/Tools\\/SystemTools\\/MacTools/\\1/')
   echo "$check_dir"
   case $check_dir in
-    "Rime_JD")
+    "KeyTao")
       xk_ID="xkjd6"
       xk_name="键道6"
       xk_path=$xkjd
