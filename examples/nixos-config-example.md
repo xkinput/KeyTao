@@ -27,9 +27,7 @@
     
     # 添加星空键道6
     rime-keytao = {
-      url = "github:xkinput/Rime_JD";
-      # 或使用 Gitee（国内更快）
-      # url = "git+https://gitee.com/xkinput/Rime_JD";
+      url = "github:xkinput/KeyTao";
       inputs.nixpkgs.follows = "nixpkgs";
     };
   };
@@ -133,7 +131,7 @@ ibus-daemon -drx  # ibus
     nixpkgs.url = "github:NixOS/nixpkgs/nixos-unstable";
     home-manager.url = "github:nix-community/home-manager";
     home-manager.inputs.nixpkgs.follows = "nixpkgs";
-    rime-keytao.url = "github:xkinput/Rime_JD";
+    rime-keytao.url = "github:xkinput/KeyTao";
     rime-keytao.inputs.nixpkgs.follows = "nixpkgs";
   };
 

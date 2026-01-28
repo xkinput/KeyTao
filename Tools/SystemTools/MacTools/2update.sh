@@ -2,7 +2,7 @@
 
 rootDir=`dirname $0`
 cd $rootDir
-xkjd="../../../../Rime_JD/"
+xkjd="../../../../KeyTao/"
 xklb="../../../../rime_xklb"
 xkyb="../../../../rime_xkyb"
 rime="$HOME/Library/Rime"

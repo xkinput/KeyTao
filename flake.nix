@@ -58,7 +58,9 @@
               $DRY_RUN_CMD mkdir -p "${config.home.homeDirectory}/${cfg.rimeDataDir}"
               
               # Use rsync to sync files, preserving existing user data
+              # Set proper permissions (files: 644, dirs: 755) instead of copying read-only Nix store permissions
               $DRY_RUN_CMD ${pkgs.rsync}/bin/rsync -av --ignore-existing \
+                --chmod=D0755,F0644 \
                 "${cfg.package}/share/rime-data/" \
                 "${config.home.homeDirectory}/${cfg.rimeDataDir}/"
               

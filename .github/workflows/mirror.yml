@@ -16,5 +16,5 @@ jobs:
           dst: gitee/xkinput
           dst_key: ${{ secrets.GITEE_PRIVATE_KEY }}
           dst_token: ${{ secrets.GITEE_TOKEN }}
-          static_list: "Rime_JD"
+          static_list: "KeyTao"
           account_type: org

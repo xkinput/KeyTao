@@ -18,7 +18,7 @@ Mac 系统码表升级工具使用帮助
       **请注意: 该脚本为 beta 阶段。**
       A) 备份并覆盖现有 Rime 配置: 同「2升级码表.sh」的功能
       B) [更新] 码表/schema/opencc : 
-	 涵盖 "Rime_JD/rime/" 目录下的 *dict.yaml、*schema.yaml 和 opencc/ 档案，
+	 涵盖 "KeyTao/rime/" 目录下的 *dict.yaml、*schema.yaml 和 opencc/ 档案，
 	 若有个人化需求的用户 ( xkjd6.schema.yaml / xkjd6dz.schema.yaml )，应考虑
 	 使用 xkjd6.custom.yaml / xkjd6dz.custom.yaml 避免覆盖设置。
 
@@ -27,4 +27,4 @@ Mac 系统码表升级工具使用帮助
      输入内输入 「./2」(或 「./b」，见本文「2. 脚本说明」) -> 按tab键 -> 回车
    - 开始安装，按照提示步骤继续即可。
 
-**请注意: 若不幸错按导致既有码表被覆盖，请至 Rime_JD/SystemTools/MacTools/备份 找回**
+**请注意: 若不幸错按导致既有码表被覆盖，请至 KeyTao/SystemTools/MacTools/备份 找回**
