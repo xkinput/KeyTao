@@ -28,18 +28,18 @@ Nix 包会自动安装以下文件到 Rime 数据目录：
     home-manager.url = "github:nix-community/home-manager";
     
     # 添加 Rime_JD
-    rime-xkjd = {
+    rime-keytao = {
       url = "github:xkinput/Rime_JD";  # 或 "git+https://gitee.com/xkinput/Rime_JD"
       inputs.nixpkgs.follows = "nixpkgs";
     };
   };
 
-  outputs = { nixpkgs, home-manager, rime-xkjd, ... }: {
+  outputs = { nixpkgs, home-manager, rime-keytao, ... }: {
     homeConfigurations.your-username = home-manager.lib.homeManagerConfiguration {
       pkgs = nixpkgs.legacyPackages.x86_64-linux;
       modules = [
-        # 导入 rime-xkjd 的 Home Manager 模块
-        rime-xkjd.homeManagerModules.default
+        # 导入 rime-keytao 的 Home Manager 模块
+        rime-keytao.homeManagerModules.default
         
         # 你的其他配置
         ./home.nix
@@ -54,7 +54,7 @@ Nix 包会自动安装以下文件到 Rime 数据目录：
 ```nix
 {
   # 启用星空键道6
-  programs.rime-xkjd = {
+  programs.rime-keytao = {
     enable = true;
     
     # 可选：指定 Rime 数据目录（默认是 fcitx5）
@@ -89,15 +89,15 @@ fcitx5-remote -r
 {
   inputs = {
     nixpkgs.url = "github:NixOS/nixpkgs/nixos-unstable";
-    rime-xkjd.url = "github:xkinput/Rime_JD";
+    rime-keytao.url = "github:xkinput/Rime_JD";
   };
 
-  outputs = { nixpkgs, rime-xkjd, ... }: {
+  outputs = { nixpkgs, rime-keytao, ... }: {
     nixosConfigurations.your-hostname = nixpkgs.lib.nixosSystem {
       system = "x86_64-linux";
       modules = [
         {
-          nixpkgs.overlays = [ rime-xkjd.overlays.default ];
+          nixpkgs.overlays = [ rime-keytao.overlays.default ];
         }
         ./configuration.nix
       ];
@@ -155,7 +155,7 @@ i18n.inputMethod = {
   ];
 };
 
-programs.rime-xkjd = {
+programs.rime-keytao = {
   enable = true;
   rimeDataDir = ".local/share/fcitx5/rime";
 };
@@ -174,7 +174,7 @@ i18n.inputMethod = {
 
 ```nix
 # home.nix
-programs.rime-xkjd = {
+programs.rime-keytao = {
   enable = true;
   rimeDataDir = ".config/ibus/rime";
 };
@@ -186,7 +186,7 @@ programs.rime-xkjd = {
 
 ```bash
 # 更新 flake 输入
-nix flake lock --update-input rime-xkjd
+nix flake lock --update-input rime-keytao
 
 # 重新构建
 sudo nixos-rebuild switch --flake .#your-hostname
@@ -239,5 +239,5 @@ fcitx5-remote -r
 ## 参考资源
 
 - [键道官网](https://xkinput.gitee.io)
-- [键道详尽操作指南](https://pingshunhuangalex.gitbook.io/rime-xkjd/)
+- [键道详尽操作指南](https://pingshunhuangalex.gitbook.io/rime-keytao/)
 - [原始安装教程](https://gitee.com/xkinput/Rime_JD)

@@ -4,7 +4,7 @@
 }:
 
 stdenvNoCC.mkDerivation rec {
-  pname = "rime-xkjd";
+  pname = "rime-keytao";
   version = "6.0";
 
   src = ./.;
@@ -28,7 +28,7 @@ stdenvNoCC.mkDerivation rec {
   '';
 
   meta = with lib; {
-    description = "Xingkong Jiandao (星空键道6) - A Rime input method schema";
+    description = "KeyTao (星空键道6) - A Rime input method schema";
     homepage = "https://github.com/xkinput/Rime_JD";
     license = licenses.free; # No explicit license in repository
     maintainers = [ ];

@@ -1,5 +1,5 @@
 {
-  description = "Xingkong Jiandao (星空键道6) - Rime input method schema";
+  description = "KeyTao (星空键道6) - Rime input method schema";
 
   inputs = {
     nixpkgs.url = "github:NixOS/nixpkgs/nixos-unstable";
@@ -14,29 +14,29 @@
       {
         packages.default = pkgs.callPackage ./default.nix { };
         
-        packages.rime-xkjd = self.packages.${system}.default;
+        packages.rime-keytao = self.packages.${system}.default;
       }
     ) // {
       # Overlay for easy integration
       overlays.default = final: prev: {
-        rime-xkjd = final.callPackage ./default.nix { };
+        rime-keytao = final.callPackage ./default.nix { };
       };
 
       # Home Manager module
       homeManagerModules.default = { config, lib, pkgs, ... }:
         with lib;
         let
-          cfg = config.programs.rime-xkjd;
-          rime-xkjd-pkg = pkgs.callPackage ./default.nix { };
+          cfg = config.programs.rime-keytao;
+          rime-keytao-pkg = pkgs.callPackage ./default.nix { };
         in
         {
-          options.programs.rime-xkjd = {
-            enable = mkEnableOption "Rime Xingkong Jiandao input method schema";
+          options.programs.rime-keytao = {
+            enable = mkEnableOption "KeyTao (Rime Xingkong Jiandao) input method schema";
 
             package = mkOption {
               type = types.package;
-              default = rime-xkjd-pkg;
-              description = "The rime-xkjd package to use";
+              default = rime-keytao-pkg;
+              description = "The rime-keytao package to use";
             };
 
             rimeDataDir = mkOption {

@@ -26,7 +26,7 @@
     };
     
     # 添加星空键道6
-    rime-xkjd = {
+    rime-keytao = {
       url = "github:xkinput/Rime_JD";
       # 或使用 Gitee（国内更快）
       # url = "git+https://gitee.com/xkinput/Rime_JD";
@@ -34,7 +34,7 @@
     };
   };
 
-  outputs = { self, nixpkgs, home-manager, rime-xkjd, ... }@inputs: {
+  outputs = { self, nixpkgs, home-manager, rime-keytao, ... }@inputs: {
     nixosConfigurations.your-hostname = nixpkgs.lib.nixosSystem {
       system = "x86_64-linux";
       specialArgs = { inherit inputs; };
@@ -91,13 +91,13 @@
 {
   # 导入星空键道6的 Home Manager 模块
   imports = [
-    inputs.rime-xkjd.homeManagerModules.default
+    inputs.rime-keytao.homeManagerModules.default
   ];
 
   # ... 其他配置 ...
 
   # 启用星空键道6
-  programs.rime-xkjd = {
+  programs.rime-keytao = {
     enable = true;
     
     # 根据你使用的 Rime 前端选择数据目录
@@ -133,11 +133,11 @@ ibus-daemon -drx  # ibus
     nixpkgs.url = "github:NixOS/nixpkgs/nixos-unstable";
     home-manager.url = "github:nix-community/home-manager";
     home-manager.inputs.nixpkgs.follows = "nixpkgs";
-    rime-xkjd.url = "github:xkinput/Rime_JD";
-    rime-xkjd.inputs.nixpkgs.follows = "nixpkgs";
+    rime-keytao.url = "github:xkinput/Rime_JD";
+    rime-keytao.inputs.nixpkgs.follows = "nixpkgs";
   };
 
-  outputs = { nixpkgs, home-manager, rime-xkjd, ... }@inputs: {
+  outputs = { nixpkgs, home-manager, rime-keytao, ... }@inputs: {
     nixosConfigurations.nixos = nixpkgs.lib.nixosSystem {
       system = "x86_64-linux";
       modules = [
@@ -162,9 +162,9 @@ ibus-daemon -drx  # ibus
           home-manager.useGlobalPkgs = true;
           home-manager.extraSpecialArgs = { inherit inputs; };
           home-manager.users.user = {
-            imports = [ rime-xkjd.homeManagerModules.default ];
+            imports = [ rime-keytao.homeManagerModules.default ];
             
-            programs.rime-xkjd.enable = true;
+            programs.rime-keytao.enable = true;
             
             home.stateVersion = "24.05";
           };
@@ -181,7 +181,7 @@ ibus-daemon -drx  # ibus
 
 ```nix
 {
-  programs.rime-xkjd.enable = true;
+  programs.rime-keytao.enable = true;
 
   # 自定义 default.custom.yaml
   home.file.".local/share/fcitx5/rime/default.custom.yaml" = {
@@ -212,7 +212,7 @@ ibus-daemon -drx  # ibus
   # 手动安装脚本
   home.activation.installRimeXKJD = lib.hm.dag.entryAfter ["writeBoundary"] ''
     ${pkgs.rsync}/bin/rsync -av --delete \
-      ${inputs.rime-xkjd.packages.${pkgs.system}.default}/share/rime-data/ \
+      ${inputs.rime-keytao.packages.${pkgs.system}.default}/share/rime-data/ \
       $HOME/.local/share/fcitx5/rime/
   '';
 }
