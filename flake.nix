@@ -53,17 +53,17 @@
           };
 
           config = mkIf cfg.enable {
-            home.file = 
-              let
-                rimeFiles = builtins.readDir "${cfg.package}/share/rime-data";
-                mkRimeFileLink = name: value: {
-                  name = "${cfg.rimeDataDir}/${name}";
-                  value.source = "${cfg.package}/share/rime-data/${name}";
-                };
-              in
-                listToAttrs (
-                  mapAttrsToList mkRimeFileLink rimeFiles
-                );
+            # Use activation script instead of home.file to handle existing directories
+            home.activation.installRimeKeytao = lib.hm.dag.entryAfter ["writeBoundary"] ''
+              $DRY_RUN_CMD mkdir -p "${config.home.homeDirectory}/${cfg.rimeDataDir}"
+              
+              # Use rsync to sync files, preserving existing user data
+              $DRY_RUN_CMD ${pkgs.rsync}/bin/rsync -av --ignore-existing \
+                "${cfg.package}/share/rime-data/" \
+                "${config.home.homeDirectory}/${cfg.rimeDataDir}/"
+              
+              $VERBOSE_ECHO "KeyTao Rime schema files installed to ${cfg.rimeDataDir}"
+            '';
           };
         };
     };
