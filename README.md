@@ -35,6 +35,11 @@
   * Linux 首选安装方式： 
     详见wiki页教程：[Linux安装rime键道教程][linux安装键道6]
 
+  * **NixOS 安装方式 🆕：**
+    详见：**[NixOS 安装指南](./INSTALL_NIXOS.md)** | [配置示例](./examples/nixos-config-example.md)
+    
+    使用 Nix Flakes 一键安装，支持 Home Manager 模块自动管理配置文件。
+
   * Mac 首选安装方式：
 
     1. 安装鼠须管
