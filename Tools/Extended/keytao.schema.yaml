@@ -9,11 +9,11 @@
 #   或是将 「 - erase/^.*/」取消注释
 
 schema:
-  schema_id: xkjd6
+  schema_id: keytao
   name: 键道6
   version: "1"
   dependencies:
-    - xkjd6cx
+    - keytao-cx
 
 switches:
   - name: ascii_mode
@@ -143,7 +143,7 @@ speller:
   initials: "abcdefghijklmnopqrstuvwxyz;"
 
 translator:
-  dictionary: xkjd6.extended
+  dictionary: keytao.extended
   enable_charset_filter: false
   enable_completion: true
   enable_encoder: true
@@ -257,7 +257,7 @@ bmms:
     - xform/'/ /
 
 reverse_lookup:
-  dictionary: xkjd6cx
+  dictionary: keytao-cx
   comment_format:
     - xform/^/〔/
     - xform/$/〕/

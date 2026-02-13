@@ -1,7 +1,7 @@
 # 该文件以UTF-8存储
 # 基于天珩所作的字海两分输入法V5.0制作，已勘误若干处，并适配键道全部双拼组合
 ---
-name: xkjd6.chaojizicijia
+name: keytao.chaojizicijia
 version: "Q1"
 sort: original
 ...

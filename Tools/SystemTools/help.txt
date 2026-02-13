@@ -6,12 +6,12 @@
 皆可使用F6切换为下一个方案。
 皆可使用F7切换简繁。
 
-说明 ：若需要加词，可在rime/xkjd6.user.dict.yaml 用户词库文件内添加。
+说明 ：若需要加词，可在rime/keytao.user.dict.yaml 用户词库文件内添加。
 
 默认文件解释
 default.yaml	为默认配置文件
-xkjd6.extended.dict.yaml	为配置扩展词库文件
-xkjd6.user.dict.yaml	为用户词库
+keytao.extended.dict.yaml	为配置扩展词库文件
+keytao.user.dict.yaml	为用户词库
 opencc		为开源转换工具库
 symbols.yaml	为符号文件
 user.yaml	为用户配置记录
