@@ -6,24 +6,37 @@
     flake-utils.url = "github:numtide/flake-utils";
   };
 
-  outputs = { self, nixpkgs, flake-utils }:
-    flake-utils.lib.eachDefaultSystem (system:
+  outputs =
+    {
+      self,
+      nixpkgs,
+      flake-utils,
+    }:
+    flake-utils.lib.eachDefaultSystem (
+      system:
       let
         pkgs = nixpkgs.legacyPackages.${system};
       in
       {
         packages.default = pkgs.callPackage ./default.nix { };
-        
+
         packages.rime-keytao = self.packages.${system}.default;
       }
-    ) // {
+    )
+    // {
       # Overlay for easy integration
       overlays.default = final: prev: {
         rime-keytao = final.callPackage ./default.nix { };
       };
 
       # Home Manager module
-      homeManagerModules.default = { config, lib, pkgs, ... }:
+      homeManagerModules.default =
+        {
+          config,
+          lib,
+          pkgs,
+          ...
+        }:
         with lib;
         let
           cfg = config.programs.rime-keytao;
@@ -41,29 +54,30 @@
 
             rimeDataDir = mkOption {
               type = types.str;
-              default = ".local/share/fcitx5/rime";
+              default = if pkgs.stdenv.isDarwin then "Library/Rime" else ".local/share/fcitx5/rime";
               description = ''
                 Rime user data directory relative to home.
-                Common values:
-                - .local/share/fcitx5/rime (fcitx5-rime)
+                Default values:
+                - Library/Rime (macOS Squirrel, automatically set)
+                - .local/share/fcitx5/rime (Linux fcitx5-rime, automatically set)
+                Other common values:
                 - .config/ibus/rime (ibus-rime)
-                - Library/Rime (macOS Squirrel)
               '';
             };
           };
 
           config = mkIf cfg.enable {
             # Use activation script instead of home.file to handle existing directories
-            home.activation.installRimeKeytao = lib.hm.dag.entryAfter ["writeBoundary"] ''
+            home.activation.installRimeKeytao = lib.hm.dag.entryAfter [ "writeBoundary" ] ''
               $DRY_RUN_CMD mkdir -p "${config.home.homeDirectory}/${cfg.rimeDataDir}"
-              
+
               # Use rsync to sync files, preserving existing user data
               # Set proper permissions (files: 644, dirs: 755) instead of copying read-only Nix store permissions
               $DRY_RUN_CMD ${pkgs.rsync}/bin/rsync -av --ignore-existing \
                 --chmod=D0755,F0644 \
                 "${cfg.package}/share/rime-data/" \
                 "${config.home.homeDirectory}/${cfg.rimeDataDir}/"
-              
+
               $VERBOSE_ECHO "KeyTao Rime schema files installed to ${cfg.rimeDataDir}"
             '';
           };

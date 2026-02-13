@@ -3,9 +3,9 @@
 # set -x
 rootDir=`dirname $0`
 cd $rootDir
-xkjd="../../../../KeyTao/rime"
-xklb="../../../../rime_xklb"
-xkyb="../../../../rime_xkyb"
+xkjd="../../../KeyTao/rime"
+xklb="../../../rime_xklb"
+xkyb="../../../rime_xkyb"
 my_default="default.custom.yaml"
 rime="$HOME/Library/Rime"
 
@@ -20,7 +20,7 @@ testHasSchema(){
   echo "$check_dir"
   case $check_dir in
     "KeyTao")
-      xk_ID="xkjd6"
+      xk_ID="keytao"
       xk_name="键道6"
       xk_path=$xkjd
       ;;
@@ -57,8 +57,8 @@ testHasSchema(){
       --include="*.schema.yaml" \
       --include=/opencc \
       --include=/lua \
-      --exclude="xkjd6.extended.dict.yaml" \
-      --exclude="xkjd6dz.extended.dict.yaml" \
+      --exclude="keytao.extended.dict.yaml" \
+      --exclude="keytao-dz.extended.dict.yaml" \
       --exclude=/* \
       $rime
     rsync -avhI --progress $xk_path/*.schema.yaml $rime

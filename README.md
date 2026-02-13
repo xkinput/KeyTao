@@ -37,10 +37,12 @@
   >
 * Linux 首选安装方式：
   详见wiki页教程：[Linux安装rime键道教程][linux安装键道6]
-* **NixOS 安装方式 🆕：**
-  详见：**[NixOS 安装指南](./INSTALL_NIXOS.md)** | [配置示例](./docs/nixos-config-example.md)
+* **Nix/NixOS 安装方式 🆕：**
+  详见：**[Nix 安装指南](./INSTALL_NIXOS.md)** | [配置示例](./docs/nixos-config-example.md)
 
   使用 Nix Flakes 一键安装，支持 Home Manager 模块自动管理配置文件。
+  
+  > **macOS 用户注意**：使用 Nix 安装前需先手动安装鼠须管（见下方 Mac 安装方式）。
 * Mac 首选安装方式：
 
   1. 安装鼠须管
@@ -52,7 +54,7 @@
      2. brew方式(需要提前安装brew)
 
         ```bash
-        brew cask install squirrel
+        brew install --cask squirrel
         ```
   2. 克隆rime键道仓库
 

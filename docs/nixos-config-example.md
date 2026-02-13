@@ -1,6 +1,28 @@
-# NixOS Flake 配置示例
+# Nix Flake 配置示例
 
-这是一个完整的示例，展示如何在你的 NixOS 系统中集成星空键道6。
+这是一个完整的示例，展示如何在你的 NixOS 或 macOS 系统中集成星空键道6。
+
+## 前提条件
+
+### macOS 用户必读
+
+**⚠️ 在使用本配置之前，必须先手动安装鼠须管（Squirrel）。**
+
+鼠须管目前尚未在 Nix 中打包，请通过以下方式之一安装：
+
+```bash
+# 方式 1: Homebrew
+brew install --cask squirrel
+
+# 方式 2: 官方下载
+# 访问 https://rime.im/download/#macOS 下载并安装
+```
+
+安装后在"系统偏好设置 > 键盘 > 输入法"中添加"鼠须管"。
+
+### Linux 用户
+
+Linux 上的 Rime 前端（fcitx5-rime 或 ibus-rime）可通过 Nix 配置自动安装，详见下方示例。
 
 ## 示例文件结构
 
@@ -99,7 +121,9 @@
     enable = true;
     
     # 根据你使用的 Rime 前端选择数据目录
-    rimeDataDir = ".local/share/fcitx5/rime";  # fcitx5-rime（默认）
+    # Linux 默认: .local/share/fcitx5/rime
+    # macOS 默认: Library/Rime（自动设置，无需配置）
+    rimeDataDir = ".local/share/fcitx5/rime";  # fcitx5-rime（Linux 默认）
     # rimeDataDir = ".config/ibus/rime";       # ibus-rime
   };
 
@@ -107,7 +131,32 @@
 }
 ```
 
+## home.nix (macOS)
+
+```nix
+{ config, pkgs, inputs, ... }:
+
+{
+  # 导入星空键道6的 Home Manager 模块
+  imports = [
+    inputs.rime-keytao.homeManagerModules.default
+  ];
+
+  # ... 其他配置 ...
+
+  # 启用星空键道6（macOS 自动使用 ~/Library/Rime）
+  programs.rime-keytao = {
+    enable = true;
+    # macOS 无需配置 rimeDataDir，自动使用 Library/Rime
+  };
+
+  # ... 其他配置 ...
+}
+```
+
 ## 应用配置
+
+### Linux (NixOS)
 
 ```bash
 # 构建并切换到新配置
@@ -119,7 +168,20 @@ fcitx5-remote -r  # fcitx5
 ibus-daemon -drx  # ibus
 ```
 
-## 完整示例（单文件版）
+### macOS (nix-darwin 或 Home Manager standalone)
+
+```bash
+# 如果使用 nix-darwin
+darwin-rebuild switch --flake .#your-hostname
+
+# 或者使用 home-manager 独立模式
+home-manager switch --flake .#your-username
+
+# 重新部署鼠须管
+/Library/Input\ Methods/Squirrel.app/Contents/MacOS/Squirrel --reload
+```
+
+## 完整示例（单文件版 - Linux）
 
 如果你不想分离配置，这里是一个单文件版本的 `flake.nix`：
 
@@ -186,8 +248,8 @@ ibus-daemon -drx  # ibus
     text = ''
       patch:
         schema_list:
-          - schema: xkjd6
-          - schema: xkjd6dz
+          - schema: keytao
+          - schema: keytao-dz
         
         menu:
           page_size: 9
@@ -214,4 +276,60 @@ ibus-daemon -drx  # ibus
       $HOME/.local/share/fcitx5/rime/
   '';
 }
+```
+
+## macOS 完整示例（Home Manager standalone）
+
+> **⚠️ 前提条件**：请确保已安装鼠须管（Squirrel）。未安装请执行：
+> ```bash
+> brew install --cask squirrel
+> ```
+> 或访问 https://rime.im/download/#macOS 下载安装。
+
+如果你在 macOS 上使用 Home Manager standalone（不使用 nix-darwin）：
+
+```nix
+# ~/.config/home-manager/flake.nix
+{
+  description = "Home Manager configuration";
+
+  inputs = {
+    nixpkgs.url = "github:NixOS/nixpkgs/nixpkgs-unstable";
+    home-manager = {
+      url = "github:nix-community/home-manager";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
+    rime-keytao = {
+      url = "github:xkinput/KeyTao";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
+  };
+
+  outputs = { nixpkgs, home-manager, rime-keytao, ... }: {
+    homeConfigurations."your-username" = home-manager.lib.homeManagerConfiguration {
+      pkgs = nixpkgs.legacyPackages.aarch64-darwin;  # 或 x86_64-darwin
+      modules = [
+        rime-keytao.homeManagerModules.default
+        {
+          home.username = "your-username";
+          home.homeDirectory = "/Users/your-username";
+          home.stateVersion = "24.05";
+
+          # 启用星空键道6（自动使用 ~/Library/Rime）
+          programs.rime-keytao.enable = true;
+        }
+      ];
+    };
+  };
+}
+```
+
+应用配置：
+
+```bash
+# 切换配置
+home-manager switch --flake ~/.config/home-manager#your-username
+
+# 重新部署鼠须管
+/Library/Input\ Methods/Squirrel.app/Contents/MacOS/Squirrel --reload
 ```

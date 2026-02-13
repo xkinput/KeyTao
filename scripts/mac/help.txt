@@ -19,8 +19,8 @@ Mac 系统码表升级工具使用帮助
       A) 备份并覆盖现有 Rime 配置: 同「2升级码表.sh」的功能
       B) [更新] 码表/schema/opencc : 
 	 涵盖 "KeyTao/rime/" 目录下的 *dict.yaml、*schema.yaml 和 opencc/ 档案，
-	 若有个人化需求的用户 ( xkjd6.schema.yaml / xkjd6dz.schema.yaml )，应考虑
-	 使用 xkjd6.custom.yaml / xkjd6dz.custom.yaml 避免覆盖设置。
+	 若有个人化需求的用户 ( keytao.schema.yaml / keytao-dz.schema.yaml )，应考虑
+	 使用 keytao.custom.yaml / keytao-dz.custom.yaml 避免覆盖设置。
 
 3. 操作步骤：
    - 在当前目录右键 -> 新建位于文件夹位置的终端窗口 -> 

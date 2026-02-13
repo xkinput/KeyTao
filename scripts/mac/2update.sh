@@ -41,7 +41,7 @@ isHaveDict (){
 
 isHaveUserDict() {
 # $1: 键道6 / 两笔 / 一笔
-# $2: xkjd6 / xkyb / xklb
+# $2: keytao / xkyb / xklb
     if [ ! -f $bak/$2 ]; then
 	echo "· 没有备份$1用户词库跳过。"
     else
