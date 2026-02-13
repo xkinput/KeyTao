@@ -1,9 +1,9 @@
 # default.custom.yaml
 patch:
   schema_list:
-    - schema: xkjd6
-    - schema: xkjd6dz
-    - schema: xkjd6_bj
+    - schema: keytao
+    - schema: keytao-dz
+    - schema: keytao-bj
 
   switcher:
     caption: "「切换方案」"

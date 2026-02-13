@@ -409,23 +409,23 @@ vars_map:
 preset_keyboards:
   __include: xingaqr:/kbs
   
-  xkjd6: #星空键道6
+  keytao: #星空键道6
     __include: preset_keyboards/default
     __patch:
       'keys/@21/composing': select_second
       'keys/@34/composing': '.'
   
-  xkjd6dz: #星空键道6单字
-    __include: /preset_keyboards/xkjd6
+  keytao-dz: #星空键道6单字
+    __include: /preset_keyboards/keytao
 
   xklb: #星空两笔
-    __include: /preset_keyboards/xkjd6
+    __include: /preset_keyboards/keytao
 
   xklbdz: #星空两笔单字
     __include: /preset_keyboards/xklb
 
   xkyb: #星空一笔
-    __include: /preset_keyboards/xkjd6
+    __include: /preset_keyboards/keytao
 
   xkybdz: #星空一笔单字
     __include: /preset_keyboards/xkyb

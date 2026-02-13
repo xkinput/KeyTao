@@ -2,11 +2,11 @@
 # encoding: utf-8
 
 schema:
-  schema_id: xkjd6_bj
+  schema_id: keytao-bj
   name: 鍵道6并击
   version: "1"
   dependencies:
-    - xkjd6cx
+    - keytao-cx
 
 switches:
   - name: ascii_mode
@@ -109,8 +109,8 @@ chord_composer:
     - "xform/^(.*)$/[$1]/"     
 
 translator:
-  dictionary: xkjd6.extended
-  prism: xkjd6_bj
+  dictionary: keytao.extended
+  prism: keytao-bj
   enable_charset_filter: false
   enable_completion: true  
   enable_encoder: true
@@ -161,7 +161,7 @@ custom_phrase:
   enable_sentence: false
 
 reverse_lookup:
-  dictionary: xkjd6cx
+  dictionary: keytao-cx
   comment_format:
     - xform/^/〔/
     - xform/$/〕/

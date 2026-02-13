@@ -521,7 +521,7 @@ preset_keyboards:
       "keys/@30/composing": Sdiao2
       "keys/@31/composing": Sdiao3
       "keys/@33/composing": Sdiao4
-  xkjd6: #星空键道6
+  keytao: #星空键道6
     __include: /preset_keyboards/qwerty
     __patch:
       #第一行上
@@ -592,7 +592,7 @@ preset_keyboards:
       "keys/@23/swipe_down": "copy"
       "keys/@24/swipe_down": "paste"
       "keys/@33/composing": "."
-  xkjd6dz: #星空键道6单字
+  keytao-dz: #星空键道6单字
     __include: /preset_keyboards/qwerty
     __patch:
       "keys/@20/composing": "Cixuan"

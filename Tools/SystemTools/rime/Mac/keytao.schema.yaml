@@ -2,7 +2,7 @@
 # encoding: utf-8
 
 schema:
-  schema_id: xkjd6
+  schema_id: keytao
   name: 键道6
   version: "2.2"
 
@@ -161,7 +161,7 @@ engine:
     - simplifier@s2tw
     - uniquifier
     - reverse_lookup_filter@danzi_lookup
-    - lua_filter@xkjd6_filter
+    - lua_filter@keytao_filter
 
 
 speller:
@@ -174,7 +174,7 @@ speller:
 
 
 translator:
-  dictionary: xkjd6.extended
+  dictionary: keytao.extended
   enable_charset_filter: false
   enable_completion: true
   enable_encoder: true
@@ -201,7 +201,7 @@ s2tw:
   option_name: s2tw
 
 danzi_lookup:
-  dictionary: xkjd6.extended
+  dictionary: keytao.extended
   tags: [ danzi_lookup ]
   overwrite_comment: true
   enable_charset_filter: false

@@ -427,7 +427,7 @@ preset_keyboards:
       "keys/@41/composing": tone2
       "keys/@42/composing": tone3
       "keys/@44/composing": tone4
-  xkjd6: #星空键道6
+  keytao: #星空键道6
     __include: /preset_keyboards/qwerty
     __patch:
       #第一行上
@@ -497,7 +497,7 @@ preset_keyboards:
       "keys/@32/swipe_down": "cut"
       "keys/@33/swipe_down": "copy"
       "keys/@34/swipe_down": "paste"
-  xkjd6dz: #星空键道6单字
+  keytao-dz: #星空键道6单字
     __include: /preset_keyboards/qwerty
     __patch:
       #第一行上

@@ -1,10 +1,10 @@
 --[[
 xnumber.lua: realize a yong-style number typing experience in RIME
 usage:
-0. this script is intended for xkjd6 but also work for other schemas (may need some custimizations)
+0. this script is intended for keytao but also work for other schemas (may need some custimizations)
 1. place this script in `rime\lua`
 2. modify `rime\rime.lua` by adding a line like `number_translator = require("numberx")`
-3. modify your schema (like `xkjd6.schema.yaml`) by adding an item like `- lua_translator@number_translator` under the `engine/translators` section
+3. modify your schema (like `keytao.schema.yaml`) by adding an item like `- lua_translator@number_translator` under the `engine/translators` section
 4. re-deploy RIME and enjoy (the default trigger key is `=`)
 change log:
 v0.0.1(20201010) - initial version written by thXnder(别打脸)
@@ -12,8 +12,21 @@ v0.0.1(20201010) - initial version written by thXnder(别打脸)
 
 local function speakLiterally(str, valMap)
 	valMap = valMap or {
-		[0]="零"; "一"; "二"; "三"; "四"; "五"; "六"; "七"; "八"; "九"; "十";
-		["+"]="正"; ["-"]="负"; ["."]="点"; [""]=""
+		[0] = "零",
+		"一",
+		"二",
+		"三",
+		"四",
+		"五",
+		"六",
+		"七",
+		"八",
+		"九",
+		"十",
+		["+"] = "正",
+		["-"] = "负",
+		["."] = "点",
+		[""] = ""
 	}
 
 	local tbOut = {}
@@ -26,7 +39,8 @@ local function speakLiterally(str, valMap)
 end
 
 local function speakMillitary(str)
-	return speakLiterally(str, {[0]="洞"; "幺"; "两"; "三"; "四"; "五"; "六"; "拐"; "八"; "勾"; "十";["+"]="正"; ["-"]="负"; ["."]="点"; [""]=""})
+	return speakLiterally(str,
+		{ [0] = "洞", "幺", "两", "三", "四", "五", "六", "拐", "八", "勾", "十", ["+"] = "正", ["-"] = "负", ["."] = "点", [""] = "" })
 end
 
 local function splitNumStr(str)
@@ -43,8 +57,9 @@ local function splitNumStr(str)
 end
 
 local function speakBar(str, posMap, valMap)
-	posMap = posMap or {[1]="仟"; [2]="佰"; [3]="拾"; [4]=""}
-	valMap = valMap or {[0]="零"; "一"; "二"; "三" ;"四"; "五"; "六"; "七"; "八"; "九"} -- the length of valMap[0] should not excess 1
+	posMap = posMap or { [1] = "仟", [2] = "佰", [3] = "拾", [4] = "" }
+	valMap = valMap or
+	{ [0] = "零", "一", "二", "三", "四", "五", "六", "七", "八", "九" } -- the length of valMap[0] should not excess 1
 
 	local out = ""
 	local bar = string.sub("****" .. str, -4, -1) -- the integer part of a number string can be divided into bars; each bar has 4 bits
@@ -60,37 +75,38 @@ local function speakBar(str, posMap, valMap)
 			goto continue
 		end
 		-- case3: number 0
-		local valNext = tonumber(string.sub(bar, pos+1, pos+1))
-		if ( valNext==nil or valNext==0 )then
+		local valNext = tonumber(string.sub(bar, pos + 1, pos + 1))
+		if (valNext == nil or valNext == 0) then
 			goto continue
 		else
 			out = out .. valMap[0]
 			goto continue
 		end
-	::continue::
+		::continue::
 	end
 	if out == "" then out = valMap[0] end
 	return out
 end
 
 local function speakIntOfficially(str, posMap, valMap)
-	posMap = posMap or {[1]="千"; [2]="百"; [3]="十"; [4]=""}
-	valMap = valMap or {[0]="零"; "一"; "二"; "三" ;"四"; "五"; "六"; "七"; "八"; "九"} -- the length of valMap[0] should not excess 1
+	posMap = posMap or { [1] = "千", [2] = "百", [3] = "十", [4] = "" }
+	valMap = valMap or
+	{ [0] = "零", "一", "二", "三", "四", "五", "六", "七", "八", "九" } -- the length of valMap[0] should not excess 1
 
 	-- split the number string into bars, for example, in:str=123456789 → out:tbBar={1|2345|6789}
 	local int = string.match(str, "^0*(%d+)$")
-	if int=="" then int = "0" end
+	if int == "" then int = "0" end
 	local remain = #int % 4
-	if remain==0 then remain = 4 end
-	local tbBar = {[1] = string.sub(int, 1, remain)}
-	for pos = remain+1, #int, 4 do
-		local bar = string.sub(int, pos, pos+3)
+	if remain == 0 then remain = 4 end
+	local tbBar = { [1] = string.sub(int, 1, remain) }
+	for pos = remain + 1, #int, 4 do
+		local bar = string.sub(int, pos, pos + 3)
 		table.insert(tbBar, bar)
 	end
 	-- generate the suffixes of each bar, for example, tbSpeakBarSuffix={亿|万|""}
-	local tbSpeakBarSuffix = {[1]=""}
+	local tbSpeakBarSuffix = { [1] = "" }
 	for iBar = 2, #tbBar do
-		local suffix = (iBar % 2 == 0) and ("万"..tbSpeakBarSuffix[1]) or ("亿"..tbSpeakBarSuffix[2])
+		local suffix = (iBar % 2 == 0) and ("万" .. tbSpeakBarSuffix[1]) or ("亿" .. tbSpeakBarSuffix[2])
 		table.insert(tbSpeakBarSuffix, 1, suffix)
 	end
 	-- speak each bar
@@ -111,8 +127,9 @@ local function speakIntOfficially(str, posMap, valMap)
 end
 
 local function speakDecMoney(str, posMap, valMap)
-	posMap = posMap or {[1]="角"; [2]="分"; [3]="厘"; [4]="毫"}
-	valMap = valMap or {[0]="零"; "壹"; "贰"; "叁" ;"肆"; "伍"; "陆"; "柒"; "捌"; "玖"} -- the length of valMap[0] should not excess 1
+	posMap = posMap or { [1] = "角", [2] = "分", [3] = "厘", [4] = "毫" }
+	valMap = valMap or
+	{ [0] = "零", "壹", "贰", "叁", "肆", "伍", "陆", "柒", "捌", "玖" } -- the length of valMap[0] should not excess 1
 
 	local dec = string.sub(str, 1, 4)
 	dec = string.gsub(dec, "0*$", "")
@@ -141,7 +158,8 @@ end
 local function speakMoney(str)
 	local part = splitNumStr(str)
 	local speakSym = speakLiterally(part.sym)
-	local speakInt = speakIntOfficially(part.int, {[1]="仟"; [2]="佰"; [3]="拾"; [4]=""}, {[0]="零"; "壹"; "贰"; "叁" ;"肆"; "伍"; "陆"; "柒"; "捌"; "玖"}) .. "元"
+	local speakInt = speakIntOfficially(part.int, { [1] = "仟", [2] = "佰", [3] = "拾", [4] = "" },
+		{ [0] = "零", "壹", "贰", "叁", "肆", "伍", "陆", "柒", "捌", "玖" }) .. "元"
 	local speakDec = speakDecMoney(part.dec)
 	local out = speakSym .. speakInt .. speakDec
 	return out
@@ -170,7 +188,7 @@ local function translator(input, seg, env)
 			yield(Candidate("number", seg.start, seg._end, speakLiterally(input2), " 冷读"))
 			yield(Candidate("number", seg.start, seg._end, speakMillitary(input2), " 军语"))
 		else
-			local ok, ret = pcall(load, "return "..input2) -- from Lua 5.3, the `loadstring` function is replaced by `load`
+			local ok, ret = pcall(load, "return " .. input2) -- from Lua 5.3, the `loadstring` function is replaced by `load`
 			if ok then yield(Candidate("number", seg.start, seg._end, tostring(ret()), " 计算")) end
 		end
 		if string.match(input2, "^[%+%-]?%d*$") then -- plz, i dont want to deal with base conversion with decimals

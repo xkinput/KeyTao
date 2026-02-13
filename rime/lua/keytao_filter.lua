@@ -6,11 +6,11 @@ local function hint(cand, context, reverse)
     if utf8.len(cand.text) < 2 then
         return false
     end
-    
+
     local lookup = " " .. reverse:lookup(cand.text) .. " "
-    local short = string.match(lookup, " ([bcdefghjklmnpqrstwxyz][auiov]+) ") or 
-                  string.match(lookup, " ([bcdefghjklmnpqrstwxyz][bcdefghjklmnpqrstwxyz]) ")
-    local input = context.input 
+    local short = string.match(lookup, " ([bcdefghjklmnpqrstwxyz][auiov]+) ") or
+        string.match(lookup, " ([bcdefghjklmnpqrstwxyz][bcdefghjklmnpqrstwxyz]) ")
+    local input = context.input
     if short and utf8.len(input) > utf8.len(short) and not startswith(short, input) then
         cand:get_genuine().comment = cand.comment .. "〔" .. short .. "〕"
         return true
@@ -57,7 +57,7 @@ local function filter(input, env)
 end
 
 local function init(env)
-    env.reverse = ReverseDb("build/xkjd6.extended.reverse.bin")
+    env.reverse = ReverseDb("build/keytao.extended.reverse.bin")
 end
 
 return { init = init, func = filter }

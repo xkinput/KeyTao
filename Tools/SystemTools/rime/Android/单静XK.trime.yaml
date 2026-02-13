@@ -409,7 +409,7 @@ vars_map:
 preset_keyboards:
   __include: xingaqr:/kbs
   
-  xkjd6: #星空键道6
+  keytao: #星空键道6
     __include: preset_keyboards/default
     __patch:
       #第一行上
@@ -484,14 +484,14 @@ preset_keyboards:
       "keys/@25/swipe_down": "paste"
       
   
-  xkjd6dz: #星空键道6单字
-    __include: /preset_keyboards/xkjd6
+  keytao-dz: #星空键道6单字
+    __include: /preset_keyboards/keytao
     __patch:
       #第四行下
       "keys/@33/hint": "键道6单"
 
   xklb: #星空两笔
-    __include: /preset_keyboards/xkjd6
+    __include: /preset_keyboards/keytao
     __patch:
      #第一行上
       "keys/@1/long_click": "丨丨"
@@ -561,7 +561,7 @@ preset_keyboards:
       "keys/@33/hint": "两笔单"
 
   xkyb: #星空一笔
-    __include: /preset_keyboards/xkjd6
+    __include: /preset_keyboards/keytao
     __patch:
       #第一行上
       "keys/@1/long_click": "iu"

@@ -2,9 +2,9 @@
 # encoding: utf-8
 # 
 # 词库内容以外挂文件形式导入
-# 请看xkjd6.extended.dict.yaml内容
+# 请看keytao.extended.dict.yaml内容
 ---
-name: xkjd6
+name: keytao
 version: "Q1"
 sort: original
 ...

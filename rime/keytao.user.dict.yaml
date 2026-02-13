@@ -2,7 +2,7 @@
 # 键道6用户词库
 # 该文件以UTF-8编码保存
 ---
-name: xkjd6.user
+name: keytao.user
 version: "Q1"
 sort: original
 ...

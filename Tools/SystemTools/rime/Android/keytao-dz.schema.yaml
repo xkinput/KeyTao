@@ -1,12 +1,15 @@
-# Rime schema settings
+﻿# Rime schema settings
 # encoding: utf-8
 
 schema:
-  schema_id: xkjd6
-  name: 键道6
+  schema_id: keytao-dz
+  name: 键道6单字
   version: "1"
   author:
     - 发明人 大牛
+  dependencies:
+    - keytao-cx
+
 
 # Layout config
 layout:
@@ -25,26 +28,38 @@ layout:
     - derive/^([bcdefghjklmnpqrstwxyz;`]{2}[avuio`]{5}).$/$1`/
     - derive/^[bcdefghjklmnpqrstwxyz;]{2}([avuio`]*)$/``$1/
 
+  # input_code:
+  #   date: orq
+  #   time: ouj
+  #   week: oxq
+
+  patterns:
+    special: "^(?:;?[avuio])[a-z]{0,}"
+    # input_code: "^(?:orq?|ouj?|oxq?)"
+
+
 switches:
+  - options: [ _keyboard_functions, _keyboard_qwerty ]
+    states: [ "ㄓ", "ㄓ"]
   - name: ascii_mode
     reset: 0
-    states: [ 中文, 西文 ]
+    states: [ 中, 英 ]
+  #简繁转换
+  - name: simplification
+  #全半转换
   - name: full_shape
-    states: [ 半角, 全角 ]
-  - name: s2tw
-    reset: 0
-    states: [ 简体, 繁體 ]
+  #表情字符
+  - name: emoji_cn
   - name: sbb_hint
     reset: 1 # 改成0默认关闭
     states: [ "关₆₃₀", "开₆₃₀" ]
-  - name: sbb_disable_full
-    reset: 0 # 改成1默认关闭全码
-    states: [ "开₆₃₀全码", "关₆₃₀全码" ]
-  - name: topup_hint
-    reset: 1
-    states: [ "关顶功提示", "开顶功提示" ]
+  - name: danzi_mode
+    reset: 0 # 改成1默认单字
+    states: [ 词组, 单字 ]
+
 
 punctuator:
+  import_preset: symbols
   full_shape:
     ' ' : { commit: '　' }
     ',' : { commit: ， }
@@ -52,18 +67,18 @@ punctuator:
     '<' : [ 《, 〈, «, ‹ ]
     '>' : [ 》, 〉, », › ]
     '?' : { commit: ？ }
-    '/' : { commit: ？ }
     ';' : { commit: ； }
     ':' : { commit: ： }
     '''' : { pair: [ '‘', '’' ] }
     '"' : { pair: [ '“', '”' ] }
+    # '/' : { commit: ？ }
     '\' : [ 、, ＼ ]
     '|' : [ ·, ｜, '§', '¦' ]
     '`' : ｀
     '~' : ～
     '!' : { commit: ！ }
-    '@' : ＠
-    '#' : ＃
+    '@' : [ ＠, ☯ ]
+    '#' : [ ＃, ⌘ ]
     '%' : [ ％, '°', '℃' ]
     '$' : [ ￥, '$', '€', '£', '¥', '¢', '¤' ]
     '^' : { commit: …… }
@@ -71,10 +86,10 @@ punctuator:
     '*' : [ ＊, ·, ・, ×, ※, ❂ ]
     '(' : （
     ')' : ）
-    '-' : '-'
+    '-' : －
     '_' : ——
-    '+' : '+'
-    '=' : '='
+    '+' : ＋
+    '=' : ＝
     '[' : [ 「, 【, 〔, ［ ]
     ']' : [ 」, 】, 〕, ］ ]
     '{' : [ 『, 〖, ｛ ]
@@ -84,8 +99,8 @@ punctuator:
     '.' : { commit: 。 }
     '<' : [ 《, 〈, «, ‹ ]
     '>' : [ 》, 〉, », › ]
+    # '/' : { commit: / }
     '?' : { commit: ？ }
-    '/' : { commit: ？ }
     ';' : { commit: ； }
     ':' : { commit: ： }
     '''' : { pair: [ '‘', '’' ] }
@@ -113,6 +128,7 @@ punctuator:
     '{' : [ 『, 〖, ｛ ]
     '}' : [ 』, 〗, ｝ ]
 
+
 engine:
   processors:
     - ascii_composer
@@ -133,29 +149,31 @@ engine:
     - fallback_segmentor
   translators:
     - punct_translator
-    - table_translator@custom_phrase
     - table_translator
+    - table_translator@custom_phrase
+    - table_translator@danzi_lookup
     - history_translator@repeat_history
     - lua_translator@date_time_translator
     - lua_translator@number_translator
   filters:
-    - simplifier
     - uniquifier
     - simplifier@emoji_cn
-    - simplifier@s2tw
+    - simplifier@simplification
+    - lua_filter@keytao_filter
     - reverse_lookup_filter@danzi_lookup
-    - lua_filter@xkjd6_filter
+
 
 speller:
   algebra:
     __include: "layout/algebra"
   auto_select: false
   auto_select_unique_candidate: false
-  alphabet: "zyxwvutsrqponmlkjihgfedcba;`"
-  initials: "abcdefghijklmnopqrstuvwxyz;`"
+  alphabet: "zyxwvutsrqponmlkjihgfedcba;=/`"
+  initials: "abcdefghijklmnopqrstuvwxyz;=/`"
+
 
 translator:
-  dictionary: xkjd6.extended
+  dictionary: keytao-dz.extended
   enable_charset_filter: false
   enable_completion: true
   enable_encoder: true
@@ -164,22 +182,34 @@ translator:
   encode_commit_history: true
   max_phrase_length: 6
 
+
 repeat_history:
   input: ;h #重复上次上屏内容
   size: 1
   initial_quality: 10000
+
 
 emoji_cn:
   opencc_config: emoji.json
   option_name: emoji_cn
   tips: all
 
-s2tw:
+
+simplification:
   opencc_config: s2tw.json
-  option_name: s2tw
+  option_name: simplification
+
+
+custom_phrase:
+  dictionary: ""
+  user_dict: user_dict
+  db_class: stabledb
+  enable_sentence: false
+  initial_quality: "0"
+
 
 danzi_lookup:
-  dictionary: xkjd6.extended
+  dictionary: keytao-dz.extended
   tags: [ danzi_lookup ]
   overwrite_comment: true
   enable_charset_filter: false
@@ -193,34 +223,27 @@ danzi_lookup:
     - xform/$/〕/
     - xform/ /, /
 
-custom_phrase:
-  dictionary: ""
-  user_dict: user_dict
-  db_class: stabledb
-  enable_sentence: false
-
-punctuator:
-  import_preset: symbols
 
 key_binder:
   bindings:
     - {accept: minus, send: Page_Up, when: has_menu}
     - {accept: equal, send: Page_Down, when: has_menu}
-    - { when: always, accept: F6, select: .next }
-    - { when: always, accept: F7, toggle: s2tw }
-    - { when: has_menu, accept: "'", send: 2 }
+    # - { when: has_menu, accept: "'", send: 2 }
     - { when: has_menu, accept: "&", toggle: emoji_cn}
+    - { when: has_menu, accept: "^", toggle: bmms}
+
 
 recognizer:
-  import_preset: default
   patterns:
-    english: "^'[A-Z|a-z]*'?$"
-    danzi_lookup: "[a-z`]*`+[a-z`]*"
     punct: "^/([0-9]0?|[a-z]+)$"
+    danzi_lookup: "[a-z`]*`+[a-z`]*"
     email: "^[a-z][-_.0-9a-z]*@.*$"
     uppercase: "[A-Z][-_+.'0-9A-Za-z]*$"
     pinyin: "(?<![`A-Z])`[a-z']*;?$"
     url: "^(www[.]|https?:|ftp:|mailto:).*$"
+    jsq: "^=[^;']+$"
+    english: "^'[A-Z|a-z]*'?$"
+
 
 topup:
   __include: "layout/topup"
@@ -229,3 +252,4 @@ topup:
   auto_clear: true
   min_length_danzi: 2
   topup_command: true
+

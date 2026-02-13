@@ -2,7 +2,7 @@
 # encoding: utf-8
 
 schema:
-  schema_id: xkjd6cx
+  schema_id: keytao-cx
   name: 键道6反查
   version: "1"
 
@@ -50,7 +50,7 @@ speller:
     - derive/^(.....).$/$1`/
 
 translator:
-  dictionary: xkjd6cx
+  dictionary: keytao-cx
   enable_charset_filter: false
   enable_completion: true
   enable_sentence: false

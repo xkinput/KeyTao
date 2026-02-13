@@ -427,7 +427,7 @@ preset_keyboards:
       "keys/@41/composing": tone2
       "keys/@42/composing": tone3
       "keys/@44/composing": tone4
-  xkjd6: #星空键道6
+  keytao: #星空键道6
     __include: /preset_keyboards/qwerty
     __patch:
       #符号
@@ -437,11 +437,11 @@ preset_keyboards:
       "keys/@30/composing": Cixuan
       "keys/@44/composing": '.'
 
-  xkjd6dz: #星空键道6单字
-    __include: /preset_keyboards/xkjd6
+  keytao-dz: #星空键道6单字
+    __include: /preset_keyboards/keytao
 
   xklb: #星空两笔
-    __include: /preset_keyboards/xkjd6
+    __include: /preset_keyboards/keytao
     key_symbol_offset_x: 2
     key_symbol_offset_y: 1
 
@@ -449,7 +449,7 @@ preset_keyboards:
     __include: /preset_keyboards/xklb
 
   xkyb: #星空一笔
-    __include: /preset_keyboards/xkjd6
+    __include: /preset_keyboards/keytao
 
   xkybdz: #星空一笔单字
     __include: /preset_keyboards/xkyb
