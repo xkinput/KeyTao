@@ -1,0 +1,13 @@
+# Rime dictionary
+# encoding: utf-8
+---
+name: keytao.phrase
+version: "2026.02.13"
+sort: by_weight
+columns:
+  - text
+  - code
+  - weight
+...
+
+asdfas	asf	100
