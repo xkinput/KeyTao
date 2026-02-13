@@ -105,9 +105,9 @@ YB=""
 LB=""
 rime=~/.local/share/fcitx5/rime
 
-xkjd=../../../../KeyTao
-xklb=../../../../rime_xklb
-xkyb=../../../../rime_xkybd
+xkjd=../../../KeyTao
+xklb=../../../rime_xklb
+xkyb=../../../rime_xkybd
 
 bak=./备份
 count=0
@@ -173,7 +173,6 @@ clear
 
 isHaveDict "键道6" $xkjd
 if [ $? == 1 ]; then
-	cp -rf ../rime/*.yaml $rime/
 	JD="键道6"
 fi
 isHaveDict "一笔一道魔道" $xkyb
@@ -192,14 +191,7 @@ fi
 sleep 1
 clear
 
-if [ ! -d $rime ]; then
-	echo ""
-else
-	cp -rf ../*.yaml $rime/
-	echo "· 全局配置文件						完成"
-fi
-
-isHaveUserDict "键道6" xkjd6.user.dict.yaml
+isHaveUserDict "键道6" keytao.user.dict.yaml
 isHaveUserDict "一笔" xkyb.user.dict.yaml
 isHaveUserDict "两笔" xklb.user.dict.yaml
 

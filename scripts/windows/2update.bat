@@ -82,13 +82,13 @@ echo 备份原有词库		完成
 
 taskkill /f /im WeaselServer.exe
 del "%rimeUserDir%\" /S /Q
-xcopy "..\..\..\rime" "%rimeUserDir%\" /Y /E
+xcopy "..\..\rime" "%rimeUserDir%\" /Y /E
 echo 复制码表文件		完成
 
 rmdir "%rimeUserDir%\Windows" /S /Q
 echo 删除冗余文件		完成
 
-xcopy "..\rime\Windows\*" "%rimeUserDir%\" /Y /E
+xcopy "..\..\schema\windows\*" "%rimeUserDir%\" /Y /E
 echo 复制独有配置		完成
 
 cls

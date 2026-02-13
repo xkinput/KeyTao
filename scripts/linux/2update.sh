@@ -7,10 +7,13 @@ LB=""
 rime=~/.local/share/fcitx5/rime
 
 jd=$(pwd);
-xkjd=../../../../KeyTao
-xklb=../../../../rime_xklb
-xkyb=../../../../rime_xkybd
+xkjd=../../../KeyTao
+xklb=../../../rime_xklb
+xkyb=../../../rime_xkybd
+schema="../../schema/mac"
+extend_dicts="../../extend-dicts"
 userDict=./用户数据
+
 echo "获取键道最新词库..."
 git pull
 echo "获取两笔最新词库..."
@@ -90,8 +93,7 @@ clear
 
 isHaveDict "键道6" $xkjd
 if [ $? == 1 ]; then
-	cp -rf ../rime/*.yaml $rime/
-	cp -rf ../rime/Linux/* $rime/
+	cp -rf $schema/* $rime/
 	JD="键道6"
 fi
 isHaveDict "一笔一道魔道" $xkyb
@@ -117,9 +119,9 @@ else
 	echo "· 全局配置文件						完成"
 fi
 
-isHaveUserDict "键道6" xkjd6.user.dict.yaml
-isHaveUserDict "键道6" xkjd6.extended.dict.yaml
-isHaveUserDict "键道6" xkjd6dz.extended.dict.yaml
+isHaveUserDict "键道6" keytao.user.dict.yaml
+isHaveUserDict "键道6" keytao.extended.dict.yaml
+isHaveUserDict "键道6" keytao_dz.extended.dict.yaml
 isHaveUserDict "一笔" xkyb.user.dict.yaml
 isHaveUserDict "两笔" xklb.user.dict.yaml
 

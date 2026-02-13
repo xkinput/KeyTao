@@ -16,11 +16,13 @@
 
 | 路径                                   |         作用         |
 | :------------------------------------- | :------------------: |
-| [/Tools](./Tools)                         |       工具目录       |
-| [/Tools/Extended](./Tools/Extended)       |       扩展码表       |
-| [/Tools/SystemTools](./Tools/SystemTools) |  各系统配置文件工具  |
+| [/docs](./docs)                           |       文档目录       |
+| [/extend-dicts](./extend-dicts)           |       扩展词典       |
 | [/rime](./rime)                           | 主码表文件夹[主码表] |
-| [README.md](./README.md)                  |  readme.md说明文件  |
+| [/schema](./schema)                       | 各系统方案配置文件   |
+| [/scripts](./scripts)                     | 各系统脚本工具       |
+| [/INSTALL_NIXOS.md](./INSTALL_NIXOS.md)   | NixOS 安装指南       |
+| [/README.md](./README.md)                 |    项目说明文件      |
 
 ---
 
@@ -36,7 +38,7 @@
 * Linux 首选安装方式：
   详见wiki页教程：[Linux安装rime键道教程][linux安装键道6]
 * **NixOS 安装方式 🆕：**
-  详见：**[NixOS 安装指南](./INSTALL_NIXOS.md)** | [配置示例](./examples/nixos-config-example.md)
+  详见：**[NixOS 安装指南](./INSTALL_NIXOS.md)** | [配置示例](./docs/nixos-config-example.md)
 
   使用 Nix Flakes 一键安装，支持 Home Manager 模块自动管理配置文件。
 * Mac 首选安装方式：
@@ -62,7 +64,7 @@
 
      ```bash
      # 跳转到KeyTao目录中Mac脚本目录
-     cd KeyTao/Tools/SystemTools/MacTools/
+     cd KeyTao/scripts/mac/
      # 执行2update.sh 选择安装键道6词库y
      ./2update.sh
      # 待完成后尝试输入即可
@@ -122,7 +124,7 @@
 git clone https://github.com/xkinput/KeyTao
 # 切换到项目文件夹
 cd KeyTao
-# 在文件管理器打开当前目录（`pwd` 可以查看目录位置），进入 KeyTao/Tools/SystemTools/ 对应系统的工具目录执行复制码表工具（1install），再重新部署即可更新完成
+# 在文件管理器打开当前目录（`pwd` 可以查看目录位置），进入 KeyTao/scripts/ 对应系统的工具目录执行复制码表工具（1install），再重新部署即可更新完成
 ```
 
 ##### 获取更新：
@@ -230,9 +232,9 @@ git pull
 [207]: https://github.com/lyserenity/xkjd6_tc
 [208]: https://github.com/xkinput/KeyTao/releases
 [209]: https://github.com/xkinput/KeyTao/repository/archive/master.zip
-[210]: https://github.com/xkinput/KeyTao/tree/master/Tools/SystemTools
+[210]: https://github.com/xkinput/KeyTao/tree/master/scripts
 [211]: https://github.com/xkinput/KeyTao/tree/master/rime
-[212]: https://github.com/xkinput/KeyTao/tree/master/SystemTools/Android
+[212]: https://github.com/xkinput/KeyTao/tree/master/schema/android
 [213]: https://gitee.com/morler/rime_xklb
 [214]: https://gitee.com/morler
 [215]: https://github.com/dzyht/rime_xkyb

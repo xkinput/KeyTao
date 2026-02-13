@@ -2,10 +2,12 @@
 
 rootDir=`dirname $0`
 cd $rootDir
-xkjd="../../../../KeyTao/"
-xklb="../../../../rime_xklb"
-xkyb="../../../../rime_xkyb"
+xkjd="../../../KeyTao/"
+xklb="../../../rime_xklb"
+xkyb="../../../rime_xkyb"
 rime="$HOME/Library/Rime"
+schema="../../schema/mac"
+extend_dicts="../../extend-dicts"
 bak="./备份"
 userDict="./用户数据"
 
@@ -78,9 +80,8 @@ clear
 
 isHaveDict "键道6" $xkjd
 if [ $? == 1 ]; then
-    cp -rf ../rime/xkjd6dz.schema.yaml $rime/
-    cp -f ../rime/Mac/*.yaml $rime/
-    cp -f ../../Extended/xkjd6.iboot.dict.yaml $rime/
+    cp -f "$schema"/*.yaml $rime/
+    cp -f "$extend_dicts/keytao.iboot.dict.yaml" $rime/
 
     JD="键道6"
 fi
@@ -105,10 +106,10 @@ else
 	echo "全局配置文件						完成"
 fi
 
-isHaveUserDict "键道6" "xkjd6.user.dict.yaml"
-isHaveUserDict "键道6" "xkjd6.extended.dict.yaml"
+isHaveUserDict "键道6" "keytao.user.dict.yaml"
+isHaveUserDict "键道6" "keytao.extended.dict.yaml"
 isHaveUserDict "键道6" "squirrel.custom.yaml"
-isHaveUserDict "键道6" "xkjd6dz.extended.dict.yaml"
+isHaveUserDict "键道6" "keytao-dz.extended.dict.yaml"
 isHaveUserDict "一笔" "xkyb.user.dict.yaml"
 isHaveUserDict "两笔" "xklb.user.dict.yaml"
 
