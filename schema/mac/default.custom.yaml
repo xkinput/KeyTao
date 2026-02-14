@@ -1,0 +1,17 @@
+# default.custom.yaml
+patch:
+  switcher:
+    caption: '「切换方案」'
+    hotkeys:
+      - 'Control+grave'
+      - 'F4'
+  schema_list:
+    - schema: keytao
+    - schema: keytao-dz
+    - schema: keytao-bj
+  menu:
+    page_size: 6
+  ascii_composer/good_old_caps_lock: true
+  ascii_composer/switch_key:
+    Caps_Lock: commit_text
+    Shift_L: commit_text

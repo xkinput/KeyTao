@@ -1,19 +1,46 @@
-# 星空键道6 - NixOS 安装指南
+# 星空键道6 - Nix 安装指南
 
-本仓库现已支持通过 Nix Flakes 在 NixOS 系统中便捷安装。
+本仓库现已支持通过 Nix Flakes 在 NixOS 和 macOS 系统中便捷安装。
 
 ## 包含的文件
 
-Nix 包会自动安装以下文件到 Rime 数据目录：
+Nix 包会自动根据系统平台安装以下文件到 Rime 数据目录：
 
-- **主码表文件**：`rime/` 目录下的所有词库和配置（67个文件）
+- **主码表文件**：`rime/` 目录下的所有词库和配置
 - **Linux 专用配置**：
-  - `Tools/SystemTools/default.yaml` - 系统默认配置
-  - `Tools/SystemTools/default.custom.yaml` - 用户自定义配置模板
-  - `Tools/SystemTools/rime/Linux/xkjd6.schema.yaml` - Linux 版键道6方案
-  - `Tools/SystemTools/rime/Linux/xkjd6dz.schema.yaml` - Linux 版键道6单字方案
+  - `schema/linux/keytao.schema.yaml` - Linux 版键道6方案
+  - `schema/linux/keytao-dz.schema.yaml` - Linux 版键道6单字方案
+- **macOS 专用配置**：
+  - `schema/mac/keytao.schema.yaml` - Mac 版键道6方案
+  - `schema/mac/keytao-dz.schema.yaml` - Mac 版键道6单字方案
+  - `schema/mac/default.custom.yaml` - 默认配置
+  - `schema/mac/squirrel.custom.yaml` - 鼠须管配置
+  - 自动部署到 `~/Library/Rime` 目录（鼠须管默认目录）
 
-与手动安装脚本（`Tools/SystemTools/LinuxTools/1install.sh`）效果完全一致。
+与手动安装脚本（`scripts/linux/1install.sh` 或 `scripts/mac/2update.sh`）效果完全一致。
+
+## 前提条件
+
+### macOS 用户
+
+**在使用 Nix 安装键道之前，必须先手动安装鼠须管（Squirrel）输入法。**
+
+鼠须管目前尚未在 Nix 中打包，请通过以下方式之一安装：
+
+**方式 1：官方下载**
+- 访问 https://rime.im/download/#macOS
+- 下载并安装 Squirrel.app
+
+**方式 2：Homebrew**
+```bash
+brew install --cask squirrel
+```
+
+安装完成后，在"系统偏好设置 > 键盘 > 输入法"中添加"鼠须管"。
+
+### Linux 用户
+
+确保已安装 Rime 输入法前端（fcitx5-rime 或 ibus-rime），可通过 Nix 配置自动安装。
 
 ## 安装方式
 
@@ -40,7 +67,7 @@ Nix 包会自动安装以下文件到 Rime 数据目录：
       modules = [
         # 导入 rime-keytao 的 Home Manager 模块
         rime-keytao.homeManagerModules.default
-    
+  
         # 你的其他配置
         ./home.nix
       ];
@@ -57,9 +84,14 @@ Nix 包会自动安装以下文件到 Rime 数据目录：
   programs.rime-keytao = {
     enable = true;
   
-    # 可选：指定 Rime 数据目录（默认是 fcitx5）
-    rimeDataDir = ".local/share/fcitx5/rime";  # fcitx5-rime
-    # rimeDataDir = ".config/ibus/rime";       # ibus-rime
+    # 可选：指定 Rime 数据目录
+    # macOS：自动使用 Library/Rime（鼠须管默认目录，无需配置）
+    # Linux：自动使用 .local/share/fcitx5/rime
+  
+    # 仅在需要自定义时配置：
+    # rimeDataDir = ".local/share/fcitx5/rime";  # fcitx5-rime
+    # rimeDataDir = ".config/ibus/rime";         # ibus-rime
+    # rimeDataDir = "Library/Rime";              # macOS Squirrel（默认值）
   };
 }
 ```
@@ -140,7 +172,35 @@ fcitx5-remote -r
 
 ## 使用不同的 Rime 前端
 
-### fcitx5-rime（推荐）
+### macOS - 鼠须管（Squirrel）
+
+> **⚠️ 重要前提**：鼠须管目前尚未在 Nix 中打包，需要先手动安装。
+> 
+> 请访问 https://rime.im/download/#macOS 下载并安装鼠须管，或使用 Homebrew：
+> ```bash
+> brew install --cask squirrel
+> ```
+
+macOS 系统会自动检测并使用 `~/Library/Rime` 作为默认目录，无需额外配置：
+
+```nix
+# home.nix - macOS 用户无需指定 rimeDataDir
+programs.rime-keytao = {
+  enable = true;
+  # 系统自动使用 Library/Rime
+};
+```
+
+部署方式：
+
+```bash
+# 方式1: 命令行重新部署
+/Library/Input\ Methods/Squirrel.app/Contents/MacOS/Squirrel --reload
+
+# 方式2: 在鼠须管菜单中选择"重新部署"
+```
+
+### fcitx5-rime（Linux 推荐）
 
 确保你的系统已安装并启用 fcitx5-rime：
 
@@ -202,7 +262,6 @@ fcitx5-remote -r
 ```bash
 # 编辑自定义配置
 vim ~/.local/share/fcitx5/rime/default.custom.yaml
-vim ~/.local/share/fcitx5/rime/xkjd6.custom.yaml
 
 # 重新部署
 fcitx5-remote -r
@@ -210,7 +269,34 @@ fcitx5-remote -r
 
 ## 故障排查
 
-### 重新部署 Rime 后仍看不到键道方案
+### macOS - 重新部署后仍看不到键道方案
+
+1. 检查文件是否正确安装：
+
+```bash
+ls -la ~/Library/Rime/*.schema.yaml
+```
+
+2. 查看 Rime 日志：
+
+```bash
+cat ~/Library/Rime/rime.log
+```
+
+3. 清除 Rime 缓存并重新部署：
+
+```bash
+rm -rf ~/Library/Rime/build
+/Library/Input\ Methods/Squirrel.app/Contents/MacOS/Squirrel --reload
+```
+
+4. 检查鼠须管是否正在运行：
+
+```bash
+ps aux | grep Squirrel
+```
+
+### Linux - 重新部署 Rime 后仍看不到键道方案
 
 1. 检查文件是否正确链接：
 

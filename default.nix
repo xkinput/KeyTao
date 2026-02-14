@@ -1,6 +1,7 @@
-{ lib
-, stdenvNoCC
-, fetchFromGitHub
+{
+  lib,
+  stdenvNoCC,
+  fetchFromGitHub,
 }:
 
 stdenvNoCC.mkDerivation rec {
@@ -11,19 +12,26 @@ stdenvNoCC.mkDerivation rec {
 
   installPhase = ''
     runHook preInstall
-    
+
     mkdir -p $out/share/rime-data
-    
+
     # Install main rime config files
     cp -r rime/* $out/share/rime-data/
-    
-    # Install Linux-specific system tools config files
-    cp Tools/SystemTools/default.yaml $out/share/rime-data/
-    cp Tools/SystemTools/default.custom.yaml $out/share/rime-data/
-    
-    # Install Linux-specific schema files
-    cp Tools/SystemTools/rime/Linux/*.yaml $out/share/rime-data/
-    
+
+    # Install platform-specific schema files
+    ${
+      if stdenvNoCC.isDarwin then
+        ''
+          # macOS: Install Mac-specific configs
+          cp schema/mac/*.yaml $out/share/rime-data/
+        ''
+      else
+        ''
+          # Linux: Install Linux-specific schemas
+          cp schema/linux/*.yaml $out/share/rime-data/
+        ''
+    }
+
     runHook postInstall
   '';
 

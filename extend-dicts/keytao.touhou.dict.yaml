@@ -1,0 +1,566 @@
+---
+name: keytao.touhou
+version: "Q1"
+sort: original
+...
+###o键引导，并非完全是东方专有词汇的都不以o引导，例：幻想乡 hxxav（然而还是加了幻想乡 ohxx）
+###该码表五字词为osssss，六字及以上词为是osssss(末声)
+#PS：少数后加的词还是遵循官方规则
+###人名优先
+###旧作角色极少数未收录，只在设定中出场且戏份过少的角色未收录（魂魄妖忌除外，因为收录太早）
+###收录大部分角色常用外号
+###人名中常用的部分，比如“铃仙·优昙华院·因幡”中的“铃仙”、“因幡”，会单独编码，但是基本不会单独出现的比如姓氏，例如：“优昙华院”，则不会单独编码（然而还是编码了）
+###游戏内未直接出现名称的地点大概率不收录（视人气部分收录）
+###符卡不收录（数量太多），也可能某天会更新
+###收录列表：作品名，人名，游戏外其他出版物名，大部分地点，异变名，事件名，标志建筑物、物品名，用语名，常用STG术语名，符卡名（鸽）
+#————————————
+#作品、人名
+东方	odf
+ZUN	ozun
+#——旧作
+#——灵异传
+灵异传	olyf
+魅魔	omwml
+菊理	ojllk
+矜羯罗	ojjl
+依莉斯	oyls
+萨丽爱尔	oslxx
+#——封魔录
+封魔录	ofml
+魔梨沙	omleo
+玄爷	oxtye
+里香	olkxx
+明罗	omgll
+邪眼西格玛	oxyxgm
+#——梦时空
+梦时空	omek
+冈崎梦美	ogqmm
+爱莲	oxhlm
+小兔姬	oxtj
+卡娜·安娜贝拉尔	oknxnx
+北白河千百合	obbhqh
+千百合	oqbh
+留琴	olqqb
+#——幻想乡
+奥莲姬	oxlju
+艾丽	oxhlk
+梦月	omryh
+幻月	ohtyh
+梦子	omrzk
+#——怪绮谈
+怪绮谈	ogqt
+神绮	oenqk
+#——西方作
+秋霜玉	oqey
+稀翁玉	oxwy
+幡紫龙	ofzl
+五月雨	owyy
+#——红魔乡
+红魔乡	ohmx
+冴月麟	oyyl
+毛玉	omzyl
+灵梦	olgmr
+博丽	obllk
+博丽灵梦	obllm
+雾雨魔理沙	owymle
+雾雨	owjyl
+魔理沙	omle
+露米娅	olmy
+大妖精	odyj
+大酱	odsjx
+琪露诺	oqln
+红美铃	ohmla
+美铃	omwlg
+小恶魔	oxxm
+帕秋莉	opql
+诺蕾姬	onlj
+帕秋莉·诺蕾姬	opqlnj
+姆Q	omjq
+帕琪	opsqk
+咲夜	oxcye
+十六夜咲夜	oelyxy
+斯卡蕾特	osklt
+蕾米莉亚	olmly
+蕾米莉亚·斯卡蕾特	olmlyt
+蕾米	olwmk
+芙兰朵露	ofldl
+芙兰	ofjlf
+芙兰朵露·斯卡蕾特	ofldlt
+#——妖妖梦
+妖妖梦	oyym
+蕾蒂	olwdk
+霍瓦特洛克	ohwtlk
+蕾蒂·霍瓦特洛克	oldhwk
+玛格特洛依德	omgtld
+爱丽丝·玛格特洛依德	oxlsmd
+莉莉霍瓦特	ollhwt
+莉莉白	ollb
+骚灵	oszlg
+普莉兹姆利巴	oplzmb
+露娜萨	olns
+露娜萨·普莉兹姆利巴	olnspb
+梅露兰	omll
+梅露兰·普莉兹姆利巴	omllpb
+莉莉卡	ollk
+莉莉卡·普莉兹姆利巴	ollkpb
+露娜萨·普莉兹姆利巴	oplzln
+梅露兰·普莉兹姆利巴	oplzml
+莉莉卡·普莉兹姆利巴	oplzll
+妖梦	oyzmr
+魂魄妖梦	ohpym
+西行寺幽幽子	oxxsyz
+幽幽子	oyyz
+八云蓝	obyl
+紫妈	ozkms
+紫妹	ozkmw
+紫老太婆	ozltp
+八云紫	obyz
+八云	bsyw
+魂魄妖忌	ohpyj
+蕾拉	olwls
+蕾拉·普莉兹姆利巴	ollplb
+#——萃梦想
+萃梦想	ocmx
+伊吹萃香	oywcx
+萃香	ocbxx
+#——永夜抄
+永夜抄	oyyj
+莉格露·奈特巴格	olglng
+莉格露	olgl
+米斯蒂娅·萝蕾拉	omsdyl
+米斯蒂娅	omsdy
+米斯琪	omsq
+小碎骨	oxsg
+小夜雀	oxyq
+上白泽慧音	oebzhy
+慧音	ohbyb
+因幡帝	oyfd
+因幡天为	oyftw
+因幡	oybff
+黑兔子	ohtz
+铃仙·优昙华院·因幡	olxytf
+优昙华院	oythy
+铃仙	olgxm
+受兔	oedtj
+永琳	oyylb
+八意永琳	obyyl
+八意	obsyk
+八亿永琳	obyylu
+蓬莱山辉夜	oplehy
+NEET姬	oneetj
+藤原妹红	otymh
+火鸡	ohljk
+妹红	omwhy
+#——花映塚
+花映塚	ohyf
+射命丸文	oemww
+文文	ownwn
+梅蒂欣·梅兰可莉	omdxml
+梅蒂欣	omdx
+毒人偶	odrx
+风见幽香	ofjyx
+幽香	oydxx
+花妈	ohqms
+小野冢小町	oxyfxd
+小町	oxcdg
+乳町	orjdg
+四季映姬·亚玛萨那度	osjyd
+四季映姬·夜摩仙那度	osjydi
+四季映姬	osjyj
+#——风神录
+风神录	ofel
+秋静叶	oqjy
+秋穰子	oqrz
+秋姐妹	oqjm
+键山雏	ojej
+转转	oftft
+荷取	oheql
+河城荷取	ohjhq
+河童重工	ohtfg
+犬走椛	oqzh
+早苗	ozzmc
+东风谷早苗	odfgzm
+八坂神奈子	obbenz
+钢加农	ogjn
+神妈	oenms
+神奈子	oenz
+洩矢诹访子	oxezfz
+诹访子	ozfz
+青蛙子	oqwz
+#——绯想天
+绯想天	ofxt
+比那名居	obnmj
+比那名居天子	obnmjz
+永江衣玖	oyjyj
+衣玖	oykjq
+名居守	omje
+#——地灵殿
+地灵殿	odld
+琪斯美	oqsm
+小桶	oxcty
+黑谷山女	ohgen
+山女	oefnl
+水桥帕露西	oeqplx
+帕露西	oplx
+星熊勇仪	oxxyy
+勇仪王	oyyw
+勇仪	oyyyk
+古明地觉	ogmdj
+古明地	ogmd
+小五	oxcwj
+火焰猫燐	ohyml
+阿燐	oxslb
+猫燐	omzlb
+猫车	omzwe
+阿空	oxsky
+灵乌路空	olwlk
+古明地恋	ogmdl
+恋恋	olmlm
+#——星莲船
+星莲船	oxlj
+娜兹玲	onzl
+多多良小伞	oddlxs
+小伞	oxcsf
+云居一轮	oyjyl
+一轮	oyklw
+云山	oywef
+村纱水蜜	oceem
+村纱	ocwes
+水蜜	oebmk
+寅丸星	oywx
+毘沙门天	opemt
+圣白莲	oebl
+白莲	obhlm
+莲妈	olmms
+封兽鵺	ofey
+命莲	omglm
+#——非想天则
+非想天则	ofxtz
+大鲶鱼	odny
+太岁星君	otsxj
+大太法师	odtfe
+提泰妮娅	ottny
+歌利亚	ogly
+#——文花帖
+文花帖	owht
+姬海棠果	ojhtg
+姬海棠	ojht
+羽立	oyllk
+姬海棠羽立	ojhtyl
+姬海棠极	ojhtj
+#——妖精大战争
+妖精大战争	oyjdqq
+#——神灵庙
+神灵庙	oelm
+幽谷响子	oygxz
+响子	oxxzk
+宫古芳香	oggfx
+芳香	ofpxx
+霍青娥	ohqx
+青娥	oqgxe
+苏我屠自古	oswtzg
+屠自古	otzg
+物部布都	owbbd
+布都	objdj
+丰聪耳神子	ofcxez
+神子	oenzk
+二婶子	oxez
+二岩猯藏	oxytz
+二岩	oxjyf
+猯藏	ottzp
+大狸子	odlz
+#——心绮楼
+心绮楼	oxql
+秦心	oqbxb
+秦河胜	qheva
+#——辉针城
+辉针城	ohqj
+若鹭姬	orlj
+赤蛮奇	owmq
+今泉影狼	ojqyl
+影狼	oyglp
+九十九弁弁	ojejbb
+弁弁	obmbm
+九十九八桥	ojejbq
+八桥	obsqc
+鬼人正邪	ogrqx
+少名针妙丸	oemqmw
+针妙丸	oqmw
+小碗	oxcwf
+堀川雷鼓	okwlg
+雷鼓	olwgj
+鼓哥	ogjge
+#——深秘录
+深秘录	oeml
+宇佐见堇子	oyzjjz
+堇子	ojbzk
+#——绀珠传
+绀珠传	ogqf
+清兰	oqglf
+铃瑚	olghj
+哆来咪·苏伊特	odlmst
+哆来咪	odlm
+稀神探女	oxetn
+探女	otfnl
+克劳恩皮丝	oklxps
+皮丝	opksk
+美国妖精	omgyj
+纯狐	ojwhj
+赫卡提亚·拉碧斯拉祖利	ohktyl
+赫卡提亚	ohkty
+赫卡	oheks
+变T女神	obtne
+#——凭依华
+凭依华	opyh
+依神女苑	oyeny
+女苑	onlyt
+依神紫苑	oyezy
+紫苑	ozkyt
+#——天空璋
+天空璋	otkq
+爱塔妮缇拉尔瓦	oxtntw
+拉尔瓦	olxw
+坂田合欢乃	obthhn
+合欢乃	ohhn
+欢姐	ohtjd
+高丽野阿吽	oglyxh
+阿吽	oxshy
+矢田寺成美	oetsjm
+成美	ojrmw
+尔子田里乃	oxztln
+丁礼田舞	odtllw
+摩多罗隐岐奈	omdlyn
+摩多罗	omdl
+#——香霖堂
+香霖堂	oxlt
+森近霖之助	osjlff
+霖之助	olff
+朱鹭子	oqlz
+#——三月精
+三月精	osyj
+桑尼米尔克	osnmxk
+桑尼	ospnk
+露娜切露德	olnqld
+露娜	oljns
+斯塔萨菲雅	ostsfy
+斯塔	oskts
+#——儚月抄
+儚月抄	omyj
+绵月丰姬	omyfj
+丰姬	ofrjk
+绵月依姬	omyyj
+依姬	oykjk
+冷仙	olrxm
+#——求闻史纪
+求闻史纪	oqwej
+稗田阿求	obtxq
+阿求	oxsqq
+稗田	obhtm
+#——秘封俱乐部
+秘封	omkfr
+秘封俱乐部	omfjlb
+宇佐见莲子	oyzjlz
+莲子	olmzk
+玛艾露贝莉·赫恩	omxlbx
+梅莉	omwlk
+#————茨歌仙
+茨歌仙	ocgx
+茨木华扇	ocmhe
+华扇	ohqef
+茨华仙	ochx
+本子仙	obzx
+#————铃奈庵
+铃奈庵	olnx
+本居小铃	objxl
+小铃	oxclg
+作死铃	ozsl
+#——其它出版物
+求闻口授	oqwke
+文果真报	owgqb
+外来韦编	owlwb
+紫香花	ozxh
+蓬莱人形	oplrx
+梦违科学世纪	omwkxj
+大空魔术	odkme
+卯酉东海道	omydhd
+未知之花 魅知之旅	owffhl
+鸟船遗迹	onwyj
+伊奘诺物质	oyznwf
+燕石博物志	oyebwf
+旧约酒吧	ojyjb
+幺乐团	oyyta
+幻想曲拔萃	ohxqbc
+全人类的天乐录	oqrldl
+核热造神非想天则	ohrzez
+暗黑能乐集心绮楼‎	oxhnyl
+深秘乐曲集	oemyqj
+完全凭依唱片名录	owqpyl
+黄昏酒场	ohhjj
+博丽幻想书谱	oblhxp
+#————虚拟出版物
+幻想乡风土记	ohxxfj
+幻想乡缘起	ohxxyq
+百鬼夜行绘卷	obgyxj
+#地点、建筑
+#——旧作
+幻梦界	ohmj
+#——新作
+幻想乡	ohxx
+博丽神社	oblee
+兽道	oeddz
+人间之里	orjfl
+人里	ornlk
+红魔馆	ohmg
+雾之湖	owfh
+白玉楼	obylu
+幽冥结界	oymjj
+迷途之家	omtfj
+永远亭	oyyt
+寺子屋	oszw
+中有之道	ofyfd
+再思之道	ozsfd
+无缘塚	owyf
+太阳花田	otyht
+有顶天	oydt
+是非曲直厅	oefqft
+妖怪之山	oygfe
+迷途竹林	omtql
+法界	ofsjd
+命莲寺	omls
+灼热地狱	ofrdy
+旧都	ojqdj
+梦殿大祀庙	omddem
+守矢神社	oeeee
+迷途竹林	omtql
+天守阁	otrg
+月之都	oyfdu
+莲台野	olty
+第四槐安通道	odshxd
+静海	ojghh
+#事件
+异变	oykbm
+例大祭	oldj
+童祭	otyjk
+#——异变
+红雾异变	ohwyb
+春雪异变	ojxyb
+永夜异变	oyyyb
+吸血鬼异变	oxxgyb
+月面战争	oymqq
+妖怪扩张计划	oygtqh
+#用语、种族、身份
+博丽大结界	obldjj
+魔法使	omfe
+骚灵	oszlg
+守矢	oedek
+异变	oykbm
+蓬莱人	oplr
+抱头蹲防	obtdf
+隙间	oxkjm
+油库里	oykl
+罪袋	ozbdh
+付丧神	ofse
+#——物品、道具
+封魔针	ofmq
+御币	oylbk
+御札	oylfs
+阴阳玉	oyyy
+赛钱箱	osqx
+八卦炉	obgl
+迷你八卦炉	omnbgl
+魔炮	omlpz
+楼观剑	olgj
+白楼剑	oblj
+西行妖	oxxy
+人魂灯	rhdi
+御柱	oylqj
+净玻璃之镜	ojllfj
+悔悟之棒	ohwfb
+圣辇船	oenw
+魔人经卷	omrjj
+飞仓	ofwcp
+蓬莱玉枝	oplyf
+蓬莱之药	oplfy
+花果子念报	ohgznb
+文文新闻	owwxw
+星熊杯	oxxb
+伊吹瓢	oywp
+百药枡	obye
+绯想之剑	ofxfj
+要石	oyzek
+万宝槌	owbw
+辉针剑	ohqji
+绀珠之药	ogqfy
+希望之面	oxwfm
+神秘珠	oemq
+#——STG术语
+残机	ocfjk
+自机	ozkjk
+子机	ozkjka
+控枪	okyqx
+被弹	obwdf
+灵击	olgjk
+续关	oxlgt
+击破撞	ojpf
+判定点	opdd
+体术	otkej
+得点	odedm
+消弹	oxcdf
+倍率	obwll
+回收线	ohex
+决死	ojhsk
+抱B撞	obbf
+擦弹	ocsdf
+道中	odzfy
+非符	ofwfj
+收卡	oedks
+全避	oqtbk
+时符	oekfj
+森罗结界	osljj
+灵界	olgjd
+季节解放	ojjjf
+随机弹	osjd
+固定弹	ogdd
+自机狙	ozjj
+奇数弹	ojjd
+偶数弹	oxed
+死尸弹	osed
+尸体弹	oetd
+处理落	ojll
+底力	odklk
+诱导	oyddz
+背板	obwbf
+尻击	okzjk
+速攻	osjgy
+混关	ohwgt
+满身疮痍	omewy
+白弹	obhdf
+敌弹	odkdf
+点弹	odmdf
+小玉	oxcyl
+环玉	ohtyl
+米弹	omkdf
+链弹	olmdf
+针弹	oqndf
+札弹	ofsdf
+鳞弹	olbdf
+铳弹	owydf
+杆菌弹	ogjd
+星弹	oxgdf
+中玉	ofyyl
+椭弹	otldf
+刀弹	odzdf
+蝶弹	odddf
+水光弹	oegd
+炎弹	oyfdf
+心弹	oxbdf
+滴弹	odkdfa
+箭弹	ojmdf
+大玉	odsyl
+光玉	ogxyl
+终符	ofyfj
+非符	ofwfj
+#符卡
+梦想封印	omxfy
+灵符「梦想封印」	omxfy
+灵符「梦想封印」	olgfj

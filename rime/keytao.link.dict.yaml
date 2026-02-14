@@ -1,0 +1,37 @@
+---
+name: keytao.link
+version: "Q1"
+sort: original
+...
+http://	http
+# HTTP头
+https://docs.qq.com/sheet/BFdiXU0nyc1W1kwuZl3Gx31r2KLm2k3F8YzI4	oyb
+# 议表地址
+http://daniushuangpin.ys168.com/	owp
+# 大牛网盘地址
+http://xxjd.ys168.com/	owp
+# 小小键道地址
+https://xkinput.github.io	ogw
+# 星空输入法地址
+https://github.com/xkinput/KeyTao/commits/master	ogx
+# 键道6更新记录地址
+http://xkinput.github.io/tools/search	ocx
+# 星空方案单字查询
+https://xkinput.github.io/tools/contribution	ojl
+# 议表处理工具地址
+https://docs.qq.com/form/fill/DRWlwcUplU3dzaEFq	ojc
+# 快捷加词地址
+http://xxjd.ys168.com/	oxx
+# 小小键道地址
+https://github.com/xkinput/KeyTao	orj
+# rime键道地址
+https://github.com/lyserenity/rime_xkjd	orx
+# rime小小地址
+@gmail.com	;ag
+# Gmail邮箱
+@outlook.com	;ao
+# Outlook邮箱
+@qq.com	;aq
+# QQ邮箱
+@163.com	;aw
+# 网易邮箱

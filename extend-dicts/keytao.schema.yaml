@@ -1,0 +1,283 @@
+﻿# Rime schema settings
+# encoding: utf-8
+
+# 显示全拼功能：
+# - 缺陷：
+#   - 例如，输入 xh 显示 「ai | xue」，无法分辨为「学」或「爱」字
+#   - 仅对单字与两字词组生效，三字及以上词组无法正确显示
+# - 关闭：若想取消该功能，可以删除 「preedit_format:」至 「xlit」该行，
+#   或是将 「 - erase/^.*/」取消注释
+
+schema:
+  schema_id: keytao
+  name: 键道6
+  version: "1"
+  dependencies:
+    - keytao-cx
+
+switches:
+  - name: ascii_mode
+    reset: 0
+    states: [ 中文, 西文 ]
+  - name: full_shape
+    states: [ 半角, 全角 ]
+  - name: s2tw
+    reset: 0
+    states: [ 简体, 繁體 ]
+  - name: wxw_prompt
+    reset: 1
+    states: [ 630关, 630开 ]
+  - name: sbb_disable_full
+    reset: 0 # 改成1默认关闭全码
+    states: [ "开₆₃₀全码", "关₆₃₀全码" ]
+  - name: EN2en
+    reset: 1
+  - name: topup_hint
+    reset: 1
+    states: [ "关顶功提示", "开顶功提示" ]
+    
+punctuator:
+  full_shape:
+    ' ' : { commit: '　' }
+    ',' : { commit: ， }
+    '.' : { commit: 。 }
+    '<' : [ 《, 〈, «, ‹ ]
+    '>' : [ 》, 〉, », › ]
+    '?' : { commit: ？ }
+    '/' : { commit: ？ }
+    ';' : { commit: ； }
+    ':' : { commit: ： }
+    '''' : { pair: [ '‘', '’' ] }
+    '"' : { pair: [ '“', '”' ] }
+    '\' : [ 、, ＼ ]
+    '|' : [ ·, ｜, '§', '¦' ]
+    '`' : ｀
+    '~' : ～
+    '!' : { commit: ！ }
+    '@' : ＠
+    '#' : ＃
+    '%' : [ ％, '°', '℃' ]
+    '$' : [ ￥, '$', '€', '£', '¥', '¢', '¤' ]
+    '^' : { commit: …… }
+    '&' : ＆
+    '*' : [ ＊, ·, ・, ×, ※, ❂ ]
+    '(' : （
+    ')' : ）
+    '-' : '-'
+    '_' : ——
+    '+' : '+'
+    '=' : '='
+    '[' : [ 「, 【, 〔, ［ ]
+    ']' : [ 」, 】, 〕, ］ ]
+    '{' : [ 『, 〖, ｛ ]
+    '}' : [ 』, 〗, ｝ ]
+  half_shape:
+    ',' : { commit: ， }
+    '.' : { commit: 。 }
+    '<' : [ 《, 〈, «, ‹ ]
+    '>' : [ 》, 〉, », › ]
+    '?' : { commit: ？ }
+    '/' : { commit: ？ }
+    ';' : { commit: ； }
+    ':' : { commit: ： }
+    '''' : { pair: [ '‘', '’' ] }
+    '"' : { pair: [ '“', '”' ] }
+    '\' : [ 、, '\', ＼ ]
+    '|' : [ ·, '|', ｜, '§', '¦' ]
+    '`' : '`'
+    '~' : [ '~', ～ ]
+    '!' : { commit: ！ }
+    '@' : '@'
+    '#' : '#'
+    '%' : [ '%', ％, '°', '℃' ]
+    '$' : [ ￥, '$', '€', '£', '¥', '¢', '¤' ]
+    '^' : { commit: …… }
+    '&' : '&'
+    '*' : [ '*', ＊, ·, ・, ×, ※, ❂ ]
+    '(' : （
+    ')' : ）
+    '-' : '-'
+    '_' : ——
+    '+' : '+'
+    '=' : '='
+    '[' : [ 「, 【, 〔, ［ ]
+    ']' : [ 」, 】, 〕,  ］ ]
+    '{' : [ 『, 〖, ｛ ]
+    '}' : [ 』, 〗, ｝ ]
+
+engine:
+  processors:
+    - ascii_composer
+    - recognizer
+    - key_binder
+    - speller
+    - punctuator
+    - selector
+    - navigator
+    - express_editor
+  segmentors:
+    - ascii_segmentor
+    - matcher
+    - abc_segmentor
+    - punct_segmentor
+    - fallback_segmentor
+  translators:
+    - punct_translator
+    - table_translator@custom_phrase
+    - reverse_lookup_translator
+    - table_translator
+    - lua_translator@date_time_translator
+  filters:
+    - simplifier
+    - uniquifier
+    - simplifier@emoji_cn
+    - simplifier@s2tw
+    - simplifier@bmms
+    - simplifier@wxw_prompt
+    - simplifier@EN2en      
+    - reverse_lookup_translator
+
+speller:
+  auto_select: true
+  alphabet: "zyxwvutsrqponmlkjihgfedcba;"
+  initials: "abcdefghijklmnopqrstuvwxyz;"
+
+translator:
+  dictionary: keytao.extended
+  enable_charset_filter: false
+  enable_completion: true
+  enable_encoder: true
+  enable_sentence: false
+  enable_user_dict: false
+  encode_commit_history: true
+  max_phrase_length: 6
+  preedit_format:
+    # - erase/^.*/
+    - xform/([bcdefghjklmnpqrstwxyz]{3})([bcdefghjklmnpqrstwxyz])/$1\u$2/
+    - xform/^([bcdefghjklmnpqrstwxyz])([bcdefghjklmnpqrstwxyz])/$1\u$2'/
+    - xform/(^|[a-z][a-z])?x(F|P|Z|E|N|R|J|H)/$1V$2/
+    - xform/(^|[a-z][a-z])?([bdjlmnpqtxy])G/$1$2ING/
+    - xform/(^|[a-z][a-z])?([fw])G/$1$2[0]UAI/
+    - xform/(^|[a-z][a-z])?([eghk])G/$1$2UAI/
+    - xform/(^|[a-z][a-z])?(\w)M/$1$2IAN/
+    - xform/(^|[a-z][a-z])?(\w)C/$1$2IAO/
+    - xform/(^|[a-z][a-z])?([jlnqx])X/$1$2IANG/
+    - xform/(^|[a-z][a-z])?([fw])X/$1$2[0]UANG/
+    - xform/(^|[a-z][a-z])?([ghke])X/$1$2UANG/
+    - xform/(^|[a-z][a-z])?([djlmnqx])Q/$1$2IU/
+    - xform/(^|[a-z][a-z])?([eghkr])Q/$1$2UA/
+    - xform/(^|[a-z][a-z])?([fw])Q/$1$2[0]UA/
+    - xform/(^|[a-z][a-z])?([Vcdghklmnrstyze])E/$1$2E/
+    - xform/(^|[a-z][a-z])?([fqjw])E/$1$2[0]E/
+    - xform/(^|[a-z][a-z])?([qj])R/$1$2[0]ENG/
+    - xform/(^|[a-z][a-z])?([jq])N/$1$2[0]EN/
+    - xform/(^|[a-z][a-z])?([Vbcfghkmnprswze])N/$1$2EN/
+    - xform/(^|[a-z][a-z])?([bcdVfghklmnprstwze])R/$1$2ENG/
+    - xform/(^|[a-z][a-z])?([fw])T/$1$2[0]UAN/
+    - xform/(^|[a-z][a-z])?([cdghjklnqrstxyz])T/$1$2UAN/
+    - xform/(^|[a-z][a-z])?(V)J/$1VER/$
+    - xform/(^|[a-z][a-z])?([jq])J/$1$2[0]U/
+    - xform/(^|[a-z][a-z])?([Vebcdfghjklmnpqrstwxyz])J/$1$2U/
+    - xform/(^|[a-z][a-z])?([cdghklnrstyz])Y/$1$2ONG/
+    - xform/(^|[a-z][a-z])?([fw])Y/$1$2[0]ONG/
+    - xform/(^|[a-z][a-z])?([jqx])Y/$1$2IONG/
+    - xform/(^|[a-z][a-z])?([jq])P/$1$2[0]ANG/
+    - xform/(^|[a-z][a-z])?([Vbcdfghklmnprstwyze])P/$1$2ANG/
+    - xform/(^|[a-z][a-z])?([jq])S/$1$2IA/
+    - xform/(^|[a-z][a-z])?([x])S/$1$2IA \| $1A/
+    - xform/(^|[a-z][a-z])?([fw])S/$1$2A \| $1$2[0]A/
+    - xform/(^|[a-z][a-z])?([bcdghklmnpstyze])S/$1$2A/
+    - xform/(^|[a-z][a-z])?([cghkprsetyz])D/$1$2OU/
+    - xform/(^|[a-z][a-z])?([fw])D/$1$2[0]OU \| $1$2OU/
+    - xform/(^|[a-z][a-z])?([bpjqtx])D/$1$2IE/
+    - xform/(^|[a-z][a-z])?([dlmn])D/$2IE \| $2OU/
+    - xform/(^|[a-z][a-z])?([jq])F/$1$2[0]AN/
+    - xform/(^|[a-z][a-z])?([Vbcdfghklmnprstwyze])F/$1$2AN/
+    - xform/(^|[a-z][a-z])?([bcdmpstzhgkewh])H/$1$2AI/
+    - xform/(^|[a-z][a-z])?([f])H/$2[0]AI/
+    - xform/(^|[a-z][a-z])?([y])H/$1$2UE/
+    - xform/(^|[a-z][a-z])?([jq])H/$1$2UE \| $2[0]AI/
+    - xform/(^|[a-z][a-z])?([nl])H/$1$2AI \| $1$2vE/
+    - xform/(^|[a-z][a-z])?([V])H/$1AI \| $1XUE/
+    - xform/(^|[a-z][a-z])?([fw])K/$1$2[0]I/
+    - xform/(^|[a-z][a-z])?([bcdeghjklmnpqrstxyz])K/$1$2I/
+    - xform/(^|[a-z][a-z])?([bmp])L/$1$2O/
+    - xform/(^|[a-z][a-z])?([cdeghkzrst])L/$1$2UO/
+    - xform/(^|[a-z][a-z])?([qj])L/$1$2v/
+    - xform/(^|[a-z][a-z])?([l])L/$1$2v \| $1$2O \| $1$2UO/
+    - xform/(^|[a-z][a-z])?([n])L/$1$2v \| $1$2UO/
+    - xform/(^|[a-z][a-z])?([x])L/$1$2v \| $1O/
+    - xform/(^|[a-z][a-z])?([y])L/$1$2u \| $2O/
+    - xform/(^|[a-z][a-z])?([fw])L/$2O \| $2[0]UO/
+    - xform/(^|[a-z][a-z])?([ecdghkrstz])L/$1$2UO/
+    - xform/(^|[a-z][a-z])?([jwfq])Z/$2[0]AO/
+    - xform/(^|[a-z][a-z])?([Vbcdghklmnprstyze])Z/$1$2AO/
+    - xform/(^|[a-z][a-z])?([bjlmnpqxy])B/$2IN/
+    - xform/(^|[a-z][a-z])?([fw])B/$1$2[0]UI/
+    - xform/(^|[a-z][a-z])?([cdghkrstze])B/$2UI/
+    - xform/(^|[a-z][a-z])?([bmnp])W/$1$2EI/
+    - xform/(^|[a-z][a-z])?([fw])W/$2EI/
+    - xform/(^|[a-z][a-z])?([ckrsty])W/$1$2UN/
+    - xform/(^|[a-z][a-z])?([deghjlqxz])W/$1$2EI \| $1$2UN/
+    - xform/e(\w)/sH$1/
+    - xform/q\[0\](\w)/zh$1/
+    - xform/f\[0\](\w)/zh$1/
+    - xform/j\[0\](\w)/ch$1/
+    - xform/w\[0\](\w)/ch$1/
+    - xform/V(\w)/$1/
+    - 'xlit|BPMFDTNLGKHJQXZCSRZCSIUVAOE|bpmfdtnlgkhjqxzcsrzcsiuvaoe'
+
+emoji_cn:
+  opencc_config: emoji.json
+  option_name: emoji_cn
+  tips: all
+
+s2tw:
+  opencc_config: s2tw.json
+  option_name: s2tw
+
+wxw_prompt:
+  opencc_config: wxwprompt.json
+  option_name: wxw_prompt
+  show_in_comment: true
+  comment_format:
+    - "xform/^([bcdefghjklmnpqrstwxyz]{2,4})([avuio]{0,3})_(.+)$/〔$3, $1$2〕/"
+    - xform/^([a-z]+)$/$2/
+  tips: all
+
+EN2en:
+  opencc_config: EN2en.json
+  option_name: EN2en
+
+bmms:
+  opencc_config: pinyin.json
+  option_name: bmms
+  show_in_comment: true
+  comment_format:
+    - xform/'/ /
+
+reverse_lookup:
+  dictionary: keytao-cx
+  comment_format:
+    - xform/^/〔/
+    - xform/$/〕/
+    - xform/ /, /
+
+punctuator:
+  import_preset: symbols
+
+key_binder:
+  bindings:
+    - {accept: minus, send: Page_Up, when: has_menu}
+    - {accept: equal, send: Page_Down, when: has_menu}
+    - { when: always, accept: F6, select: .next }
+    - { when: always, accept: F7, toggle: s2tw }
+    - { when: has_menu, accept: "'", send: 2 }
+    - { when: has_menu, accept: "&", toggle: emoji_cn}
+    - { when: has_menu, accept: "^", toggle: bmms}
+
+recognizer:
+  import_preset: default
+  patterns:
+    reverse_lookup: "[a-z`]*`+[a-z`]*"
+    punct: "^/([0-9]0?|[a-z]+)$"
