@@ -31,14 +31,6 @@ cd /d %~dp0
 if '%1'=='ELEV' (del "%vbsGetPrivileges%" 1>nul 2>nul  &  shift /1)
 
 set gitBash=git
-set gitPath=..\..\..\..\_TOOLS\MinGit\cmd\git.exe
-
-set weaselVersion=0.14.3
-set weaselInstallPath="C:\Program Files (x86)\Rime\weasel-%weaselVersion%"
-
-if exist %gitPath% (
-  set gitBash=%gitPath%
-)
 
 echo 本机git版本为：
 %gitBash% --version
@@ -51,7 +43,7 @@ if %ERRORLEVEL% EQU 0 (
 ) else (
   cls
   echo.
-  echo 未安装git程序，请安装git程序！
+  echo 未安装git程序，请安装git程序！https://git-scm.com/install/windows
   ping -n 3 127.1 >nul
   echo.
   echo 十秒后自动退出...
@@ -85,9 +77,6 @@ del "%rimeUserDir%\" /S /Q
 xcopy "..\..\rime" "%rimeUserDir%\" /Y /E
 echo 复制码表文件		完成
 
-rmdir "%rimeUserDir%\Windows" /S /Q
-echo 删除冗余文件		完成
-
 xcopy "..\..\schema\windows\*" "%rimeUserDir%\" /Y /E
 echo 复制独有配置		完成
 
@@ -95,13 +84,11 @@ cls
 
 if exist "%CD%\用户数据\" (
   xcopy ".\用户数据\*" "%rimeUserDir%\" /Y /E
-  xcopy ".\用户数据\preview\*" %weaselInstallPath%\data\preview\ /Y /E
   echo 还原用户数据		完成
 ) else (
   mkdir "%CD%\用户数据\"
 )
 
-type ..\rime\Windows\_*.txt
 echo.
 echo.
 
