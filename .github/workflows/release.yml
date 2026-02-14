@@ -1,0 +1,113 @@
+name: Release Packages
+
+on:
+  push:
+    tags:
+      - 'v*'
+  workflow_dispatch:
+    inputs:
+      version:
+        description: 'Release version (e.g., v1.0.0)'
+        required: true
+        default: 'v1.0.0'
+
+jobs:
+  build-and-release:
+    runs-on: ubuntu-latest
+    
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+      
+      - name: Get version
+        id: version
+        run: |
+          if [ "${{ github.event_name }}" == "workflow_dispatch" ]; then
+            echo "VERSION=${{ github.event.inputs.version }}" >> $GITHUB_OUTPUT
+          else
+            echo "VERSION=${GITHUB_REF#refs/tags/}" >> $GITHUB_OUTPUT
+          fi
+      
+      - name: Create release directories
+        run: |
+          mkdir -p release/keytao-linux
+          mkdir -p release/keytao-mac
+          mkdir -p release/keytao-windows
+          mkdir -p release/keytao-android
+      
+      - name: Build Linux package
+        run: |
+          cp -r rime/* release/keytao-linux/
+          cp -r schema/linux/* release/keytao-linux/
+          cd release
+          zip -r keytao-linux-${{ steps.version.outputs.VERSION }}.zip keytao-linux
+      
+      - name: Build Mac package
+        run: |
+          cp -r rime/* release/keytao-mac/
+          cp -r schema/mac/* release/keytao-mac/
+          cd release
+          zip -r keytao-mac-${{ steps.version.outputs.VERSION }}.zip keytao-mac
+      
+      - name: Build Windows package
+        run: |
+          cp -r rime/* release/keytao-windows/
+          cp -r schema/windows/* release/keytao-windows/
+          cd release
+          zip -r keytao-windows-${{ steps.version.outputs.VERSION }}.zip keytao-windows
+      
+      - name: Build Android package
+        run: |
+          cp -r rime/* release/keytao-android/
+          if [ -d "schema/android" ]; then
+            cp -r schema/android/* release/keytao-android/
+          fi
+          cd release
+          zip -r keytao-android-${{ steps.version.outputs.VERSION }}.zip keytao-android
+      
+      - name: Generate checksums
+        run: |
+          cd release
+          sha256sum keytao-*.zip > checksums.txt
+          cat checksums.txt
+      
+      - name: Create Release
+        uses: softprops/action-gh-release@v1
+        with:
+          tag_name: ${{ steps.version.outputs.VERSION }}
+          name: KeyTao ${{ steps.version.outputs.VERSION }}
+          body: |
+            ## KeyTao 输入法方案 ${{ steps.version.outputs.VERSION }}
+            
+            ### 安装说明
+            
+            下载对应平台的压缩包，解压后将所有文件复制到您的 Rime 用户目录，然后重新部署即可使用。
+            
+            #### 各平台 Rime 用户目录位置：
+            
+            - **Linux (Fcitx5-rime)**: `~/.local/share/fcitx5/rime/`
+            - **Linux (iBus-rime)**: `~/.config/ibus/rime/`
+            - **macOS (鼠须管)**: `~/Library/Rime/`
+            - **Windows (小狼毫)**: `%APPDATA%\Rime\`
+            - **Android (同文)**: `/storage/emulated/0/rime/`
+            
+            ### 文件说明
+            
+            - `keytao-linux-*.zip` - Linux 平台专用版本
+            - `keytao-mac-*.zip` - macOS 平台专用版本
+            - `keytao-windows-*.zip` - Windows 平台专用版本
+            - `keytao-android-*.zip` - Android 平台专用版本
+            - `checksums.txt` - SHA256 校验和
+            
+            ### 更新内容
+            
+            请查看 [提交历史](https://github.com/${{ github.repository }}/commits/${{ steps.version.outputs.VERSION }}) 了解详细更新。
+          files: |
+            release/keytao-*.zip
+            release/checksums.txt
+          draft: false
+          prerelease: false
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
