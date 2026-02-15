@@ -1,614 +1,620 @@
-# 键道6 525单字扩展 @msc802
+# Rime dictionary
+# encoding: utf-8
 ---
-name : keytao.css-single
-version :  "2018.01.19"
-sort: original
+name: keytao.css-single
+version: "2026.02.15"
+sort: by_weight
+columns:
+  - text
+  - code
+  - weight
 ...
-边	ba
-便	bi
-病	bo
-八	bu
-百	bv
-层	ca
-此	ci
-词	co
-采	cu
-存	cv
-队	da
-打	di
-道	do
-第	du
-东	dv
-书	ea
-手	ei
-单	eo
-十	eu
-事	ev
-法	fa
-指	fi
-方	fo
-者	fu
-至	fv
-改	ga
-国	gi
-官	go
-公	gu
-工	gv
-活	ha
-化	hi
-火	ho
-乎	hu
-画	hv
-结	ja
-今	ji
-家	jo
-几	ju
-机	jv
-渴	ka
-苦	ki
-客	ko
-科	ku
-块	kv
-力	la
-令	li
-量	lo
-利	lu
-李	lv
-马	ma
-命	mi
-门	mo
-卖	mu
-万	mv
-纳	na
-念	ni
-哪	no
-南	nu
-耐	nv
-派	pa
-拍	pi
-判	po
-牌	pu
-飘	pv
-张	qa
-钱	qi
-情	qo
-者	qu
-其	qv
-柔	ra
-荣	ri
-让	ro
-入	ru
-辱	rv
-司	sa
-思	si
-虽	so
-私	su
-死	sv
-通	ta
-提	ti
-它	to
-腿	tu
-土	tv
-卫	wa
-位	wi
-文	wo
-物	wu
-万	wv
-消	xa
-见	xi
-心	xo
-向	xu
-现	xv
-又	ya
-由	yi
-语	yo
-移	yu
-友	yv
-子	za
-作	zi
-足	zo
-自	zu
-左	zv
-弁	bao
-辟	bav
-菠	bii
-堡	bio
-扮	biu
-辈	biv
-鄙	bou
-辨	bov
-刨	bua
-鼻	bui
-簸	buv
-榜	bvo
-碚	bvu
-措	ciu
-衰	cov
-裁	cuo
-殂	cvu
-璨	cvv
-凳	dao
-娣	dau
-巅	dia
-铤	dio
-掂	diu
-叨	doa
-递	dou
-敦	dov
-耋	duo
-遁	duu
-笛	duv
-殆	dvu
-淑	eai
-屎	eav
-蜀	eia
-蔬	eii
-裳	eio
-拾	eiu
-侍	eiv
-识	eoa
-曙	eoi
-实	eoo
-市	eov
-饰	eua
-适	euv
-世	evi
-述	evo
-石	evu
-示	evv
-织	faa
-召	fau
-昼	fav
-蜘	fia
-藩	fii
-执	fiu
-傅	fiv
-访	foa
-闸	foi
-宙	foo
-嘲	fou
-妆	fov
-犯	fua
-支	fuo
-脂	fuu
-智	fuv
-辐	fva
-敷	fvi
-志	fvo
-植	fvu
-夫	fvv
-果	gia
-拘	giu
-疙	gov
-皋	gui
-辜	guo
-篙	guv
-攻	gvi
-瞽	gvo
-格	gvu
-浒	hao
-弘	hav
-花	hii
-华	hiu
-褐	hoa
-阂	hoi
-憾	hoo
-糊	hou
-豪	hov
-狐	hua
-壶	hvo
-桓	hvv
-继	jaa
-孑	jai
-贱	jao
-嫁	jau
-己	jav
-界	jia
-监	jii
-敞	jio
-捡	jiu
-讥	joa
-晶	joi
-寂	joo
-剪	jou
-净	jov
-急	jua
-戟	juo
-季	juv
-鞠	jvi
-圾	jvo
-极	jvu
-橱	jvv
-恪	koo
-颏	kov
-络	laa
-戮	lao
-履	lav
-螺	lia
-伶	lii
-铝	lio
-揽	liu
-颅	liv
-谅	loa
-踉	loi
-帘	loo
-凉	lov
-黎	luv
-李	lva
-吏	lvi
-厘	lvu
-珑	lvv
-马	maa
-媚	mau
-墨	mia
-慕	mii
-咪	moo
-摩	mov
-耄	muo
-牡	muv
-拈	niu
-屁	pav
-毗	pia
-菩	pii
-堡	pio
-拌	piu
-刨	pua
-魄	pui
-膨	puv
-绮	qaa
-沏	qav
-崭	qia
-禽	qio
-揿	qiu
-虔	qiv
-祈	qoa
-寨	qoo
-嘲	qou
-旗	qov
-迁	quv
-妻	qva
-期	qvi
-趋	qvo
-戚	qvu
-栈	qvv
-俟	sia
-祀	soa
-悚	soo
-肆	svi
-厮	svu
-统	taa
-骰	tia
-铤	tio
-叨	toa
-剔	toi
-惕	too
-瘫	tov
-魄	tui
-箨	tuv
-檀	tvo
-驰	waa
-姹	wau
-慰	wav
-胃	wia
-偎	wii
-捂	wiu
-喂	woi
-惋	woo
-嘲	wou
-妄	wov
-勿	wua
-微	wuu
-午	wuv
-巫	wvi
-戊	wvu
-梧	wvv
-险	xai
-浒	xao
-溪	xau
-淅	xav
-瞎	xia
-贤	xii
-祥	xoa
-暧	xoi
-嚣	xoo
-熄	xou
-玄	xov
-蟹	xua
-息	xui
-兮	xuo
-衔	xuu
-箱	xuv
-熙	xvi
-霭	xvo
-袭	xvu
-刑	xvv
-彝	yaa
-隐	yai
-羽	yao
-娱	yau
-湮	yav
-遗	yia
-莹	yii
-佑	yiv
-议	yoa
-易	yoi
-愉	yoo
-益	you
-意	yov
-禹	yui
-舀	yuo
-腴	yuu
-腌	yuv
-鸦	yva
-柚	yvi
-垣	yvo
-尤	yvu
-远	yvv
-综	zaa
-眦	zia
-坐	zii
-撮	ziu
-诅	zoa
-兹	zou
-咨	zov
-哉	zuo
-拌	piuo
-拌	biuo
-煎	jouo
-鹃	jouu
-剂	jovi
-瘠	jovo	迹
-靖	jovv	酱	桨
-脊	jovu
-浆	jova
-饥	juau
-咎	juao	狡
-雏	juai	飓
-乘	juvi
-剩	euvi	乘
-笺	juvv	籍	秤	嵇
-矫	juvu
-槛	kvii
-槛	jvii
-髻	jviv
-颊	jvov	楫
-矶	jvuu
-杵	jvuv
-搏	biuv
-掰	biuu
-悲	bivo
-辫	bova
-痹	bovi	禀
-魄	tuiu
-魄	puiu
-魄	buiu
-撮	ziuo
-撮	ciuo
-睇	diao
-佚	yiuv
-佚	diuv
-诋	doau
-笃	duva
-犊	duvu
-漱	eavi
-蔼	xiio	莘
-莘	eiio
-葚	riiv
-葚	eiiv
-势	eiua
-逝	eiuo	誓
-拭	eiuv
-讪	eoai	视
-衫	eoau
-禅	joao
-禅	eoao
-恃	eoov
-施	eovu
-庶	eovo
-衰	eovi
-衰	covi
-蚀	euai
-氏	fuav
-氏	euav
-舐	euvu	牲
-矢	euvv
-梳	evov
-戍	evuo
-绯	faai
-纣	faav
-盅	fiai
-蜉	fiau
-抚	fiuv
-拂	fiua
-蛰	fiui	挚
-蛰	qiui
-翡	fiva	侄
-蜚	fivi
-袱	foai	扉
-谪	qoao
-谪	foao
-寨	qoov
-寨	foov
-庄	fovv
-炙	fuao
-孵	fuau
-斧	fuou
-番	puoi
-番	fuoi
-孚	fuoa
-肤	fuvv
-秩	fuvu
-稚	fuvi
-矾	fvuu
-冈	giau
-蛊	giai
-恭	gvii
-贡	gvia
-巩	gviu
-诙	hoav	诃
-晖	hoio
-悍	hooo
-寰	hooi	恍
-亵	xovi	吓
-吓	hovi
-琥	hvvi
-纪	jaaa
-津	jaav	绩
-骋	jaai
-绞	jaao
-绛	jaau
-鸡	jaou
-涧	jaoi
-嫉	jauo	迦
-汲	jaua
-届	javi
-暨	javo	忌
-郡	java
-屐	javu	犟
-巾	jiai
-俭	jiiv	荐
-鉴	jiii
-菊	jiiu
-镌	jioi	倡
-锦	jiou
-隽	jioa
-捷	jiuv	拣	尖	撅
-掬	jiuu	拘
-拘	giuu
-抉	jiua
-攫	jiui
-谗	joau
-诘	joav	谏	唧
-悸	joou
-宸	joov
-憬	jooo
-柩	jvvu
-窠	kooi
-缕	laao
-骡	laai
-漉	laov
-沥	lavu
-蛎	liav
-锣	lioi
-佬	liuo
-抡	liui
-赁	liua
-庐	lovo
-嘹	lovu
-喇	lovi
-篱	luvo
-栗	lviv
-烈	lvuo
-厉	lvuv
-橹	lvua	励
-缈	maai
-暮	miio
-蓦	miia	茅
-捻	niui
-劈	pava
-譬	pavo	辟
-辟	bavo
-蒲	piia
-缱	qaai
-蛛	qiau
-岖	qiav	崎
-俟	siao
-俟	qiao
-觑	qivi
-嘱	qoav
-诛	qoau
-谯	qoai
-憔	qooi
-凄	qovv
-嘁	qovu
-乞	quva
-筑	quvv
-杞	qvav
-欺	qviu	政
-樵	qvio
-契	xvvv
-契	qvvv
-愫	soov
-酥	sviu
-袒	toao
-蹋	toio	蹄	遢
-坍	tvou
-畏	wiav
-巍	wiau
-帷	wiai
-苇	wiiv	茬
-薇	wiiu
-偎	wiia
-闻	woiv
-剜	wooi	忡
-炽	wouo
-啻	wovo	瘟
-乌	wuaa
-猥	wuai
-鲔	wuav
-顽	wvvv
-韦	wvva
-陷	xaiu
-媳	xauu
-嬉	xauv
-娴	xauo
-涎	xaui
-絮	xaua
-峡	xiav
-黯	xiao
-藕	xiiv
-谐	xoav
-询	xoau
-谑	xoai
-诶	xoaa	诩
-煦	xoio
-跹	xoiu
-呷	xoia
-惺	xooo
-襄	xovo
-吁	yovv
-吁	xovv
-饷	xuau
-皑	xuii
-奚	xuoa
-牺	xuvv
-膝	xuvi
-垩	xviv
-皙	xvuu	鸥
-绎	yaaa	驿
-缢	yaao
-渝	yaiv
-潆	yaii
-甬	yaoi	翼
-豫	yaou	溢
-羿	yaov	淤
-姻	yaui
-漪	yaua	渔
-嫣	yauv
-蚁	yiao	愚
-伊	yiav	崖	屿	曳
-蚴	yiaa	幽
-萤	yiii
-萦	yiia
-虞	yivo	逾	偃
-邑	yoai	谕
-谀	yoau
-呦	yoaa	哟
-曰	yoii
-阎	yoiu
-怡	yooa	忆
-喑	yoov	宇	噫
-慵	yooo	誉
-恙	youo	炎	烊
-焰	youu
-鹰	yovu
-噎	yovo	咦
-臾	yuiv	粤
-燕	yvio
-焉	yviv	榆
-檐	yvua
-厣	yvui	雁
-迂	yvvo
-瑜	yvvi
-籽	zoua	孳
-恣	zovo
+
+边	ba	10
+弁	bao	10
+辟	bav	10
+辟	bavo	10
+便	bi	10
+菠	bii	10
+堡	bio	10
+扮	biu	10
+拌	biuo	10
+掰	biuu	10
+搏	biuv	10
+辈	biv	10
+悲	bivo	10
+病	bo	10
+鄙	bou	10
+辨	bov	10
+辫	bova	10
+痹	bovi	10
+八	bu	10
+刨	bua	10
+鼻	bui	10
+魄	buiu	10
+簸	buv	10
+百	bv	10
+榜	bvo	10
+碚	bvu	10
+层	ca	10
+此	ci	10
+措	ciu	10
+撮	ciuo	10
+词	co	10
+衰	cov	10
+衰	covi	10
+采	cu	10
+裁	cuo	10
+存	cv	10
+殂	cvu	10
+璨	cvv	10
+队	da	10
+凳	dao	10
+娣	dau	10
+打	di	10
+巅	dia	10
+睇	diao	10
+铤	dio	10
+掂	diu	10
+佚	diuv	10
+道	do	10
+叨	doa	10
+诋	doau	10
+递	dou	10
+敦	dov	10
+第	du	10
+耋	duo	10
+遁	duu	10
+笛	duv	10
+笃	duva	10
+犊	duvu	10
+东	dv	10
+殆	dvu	10
+书	ea	10
+淑	eai	10
+屎	eav	10
+漱	eavi	10
+手	ei	10
+蜀	eia	10
+蔬	eii	10
+莘	eiio	10
+葚	eiiv	10
+裳	eio	10
+拾	eiu	10
+势	eiua	10
+逝	eiuo	10
+拭	eiuv	10
+侍	eiv	10
+单	eo	10
+识	eoa	10
+讪	eoai	10
+禅	eoao	10
+衫	eoau	10
+曙	eoi	10
+实	eoo	10
+恃	eoov	10
+市	eov	10
+衰	eovi	10
+庶	eovo	10
+施	eovu	10
+十	eu	10
+饰	eua	10
+蚀	euai	10
+氏	euav	10
+适	euv	10
+剩	euvi	10
+舐	euvu	10
+矢	euvv	10
+事	ev	10
+世	evi	10
+述	evo	10
+梳	evov	10
+石	evu	10
+戍	evuo	10
+示	evv	10
+法	fa	10
+织	faa	10
+绯	faai	10
+纣	faav	10
+召	fau	10
+昼	fav	10
+指	fi	10
+蜘	fia	10
+盅	fiai	10
+蜉	fiau	10
+藩	fii	10
+执	fiu	10
+拂	fiua	10
+蛰	fiui	10
+抚	fiuv	10
+傅	fiv	10
+翡	fiva	10
+蜚	fivi	10
+方	fo	10
+访	foa	10
+袱	foai	10
+谪	foao	10
+闸	foi	10
+宙	foo	10
+寨	foov	10
+嘲	fou	10
+妆	fov	10
+庄	fovv	10
+者	fu	10
+犯	fua	10
+炙	fuao	10
+孵	fuau	10
+氏	fuav	10
+支	fuo	10
+孚	fuoa	10
+番	fuoi	10
+斧	fuou	10
+脂	fuu	10
+智	fuv	10
+稚	fuvi	10
+秩	fuvu	10
+肤	fuvv	10
+至	fv	10
+辐	fva	10
+敷	fvi	10
+志	fvo	10
+植	fvu	10
+矾	fvuu	10
+夫	fvv	10
+改	ga	10
+国	gi	10
+果	gia	10
+蛊	giai	10
+冈	giau	10
+拘	giu	10
+拘	giuu	10
+官	go	10
+疙	gov	10
+公	gu	10
+皋	gui	10
+辜	guo	10
+篙	guv	10
+工	gv	10
+攻	gvi	10
+贡	gvia	10
+恭	gvii	10
+巩	gviu	10
+瞽	gvo	10
+格	gvu	10
+活	ha	10
+浒	hao	10
+弘	hav	10
+化	hi	10
+花	hii	10
+华	hiu	10
+火	ho	10
+褐	hoa	10
+诙	hoav	10
+阂	hoi	10
+晖	hoio	10
+憾	hoo	10
+寰	hooi	10
+悍	hooo	10
+糊	hou	10
+豪	hov	10
+吓	hovi	10
+乎	hu	10
+狐	hua	10
+画	hv	10
+壶	hvo	10
+桓	hvv	10
+琥	hvvi	10
+结	ja	10
+继	jaa	10
+纪	jaaa	10
+骋	jaai	10
+绞	jaao	10
+绛	jaau	10
+津	jaav	10
+孑	jai	10
+贱	jao	10
+涧	jaoi	10
+鸡	jaou	10
+嫁	jau	10
+汲	jaua	10
+嫉	jauo	10
+己	jav	10
+郡	java	10
+届	javi	10
+暨	javo	10
+屐	javu	10
+今	ji	10
+界	jia	10
+巾	jiai	10
+监	jii	10
+鉴	jiii	10
+菊	jiiu	10
+俭	jiiv	10
+敞	jio	10
+隽	jioa	10
+镌	jioi	10
+锦	jiou	10
+捡	jiu	10
+抉	jiua	10
+攫	jiui	10
+掬	jiuu	10
+捷	jiuv	10
+家	jo	10
+讥	joa	10
+禅	joao	10
+谗	joau	10
+诘	joav	10
+晶	joi	10
+寂	joo	10
+憬	jooo	10
+悸	joou	10
+宸	joov	10
+剪	jou	10
+煎	jouo	10
+鹃	jouu	10
+净	jov	10
+浆	jova	10
+剂	jovi	10
+瘠	jovo	10
+脊	jovu	10
+靖	jovv	10
+几	ju	10
+急	jua	10
+雏	juai	10
+咎	juao	10
+饥	juau	10
+戟	juo	10
+季	juv	10
+乘	juvi	10
+矫	juvu	10
+笺	juvv	10
+机	jv	10
+鞠	jvi	10
+槛	jvii	10
+髻	jviv	10
+圾	jvo	10
+颊	jvov	10
+极	jvu	10
+矶	jvuu	10
+杵	jvuv	10
+橱	jvv	10
+柩	jvvu	10
+渴	ka	10
+苦	ki	10
+客	ko	10
+恪	koo	10
+窠	kooi	10
+颏	kov	10
+科	ku	10
+块	kv	10
+槛	kvii	10
+力	la	10
+络	laa	10
+骡	laai	10
+缕	laao	10
+戮	lao	10
+漉	laov	10
+履	lav	10
+沥	lavu	10
+令	li	10
+螺	lia	10
+蛎	liav	10
+伶	lii	10
+铝	lio	10
+锣	lioi	10
+揽	liu	10
+赁	liua	10
+抡	liui	10
+佬	liuo	10
+颅	liv	10
+量	lo	10
+谅	loa	10
+踉	loi	10
+帘	loo	10
+凉	lov	10
+喇	lovi	10
+庐	lovo	10
+嘹	lovu	10
+利	lu	10
+黎	luv	10
+篱	luvo	10
+李	lv	10
+李	lva	10
+吏	lvi	10
+栗	lviv	10
+厘	lvu	10
+橹	lvua	10
+烈	lvuo	10
+厉	lvuv	10
+珑	lvv	10
+马	ma	10
+马	maa	10
+缈	maai	10
+媚	mau	10
+命	mi	10
+墨	mia	10
+慕	mii	10
+蓦	miia	10
+暮	miio	10
+门	mo	10
+咪	moo	10
+摩	mov	10
+卖	mu	10
+耄	muo	10
+牡	muv	10
+万	mv	10
+纳	na	10
+念	ni	10
+拈	niu	10
+捻	niui	10
+哪	no	10
+南	nu	10
+耐	nv	10
+派	pa	10
+屁	pav	10
+劈	pava	10
+譬	pavo	10
+拍	pi	10
+毗	pia	10
+菩	pii	10
+蒲	piia	10
+堡	pio	10
+拌	piu	10
+拌	piuo	10
+判	po	10
+牌	pu	10
+刨	pua	10
+魄	pui	10
+魄	puiu	10
+番	puoi	10
+膨	puv	10
+飘	pv	10
+张	qa	10
+绮	qaa	10
+缱	qaai	10
+沏	qav	10
+钱	qi	10
+崭	qia	10
+俟	qiao	10
+蛛	qiau	10
+岖	qiav	10
+禽	qio	10
+揿	qiu	10
+蛰	qiui	10
+虔	qiv	10
+觑	qivi	10
+情	qo	10
+祈	qoa	10
+谯	qoai	10
+谪	qoao	10
+诛	qoau	10
+嘱	qoav	10
+寨	qoo	10
+憔	qooi	10
+寨	qoov	10
+嘲	qou	10
+旗	qov	10
+嘁	qovu	10
+凄	qovv	10
+者	qu	10
+迁	quv	10
+乞	quva	10
+筑	quvv	10
+其	qv	10
+妻	qva	10
+杞	qvav	10
+期	qvi	10
+樵	qvio	10
+欺	qviu	10
+趋	qvo	10
+戚	qvu	10
+栈	qvv	10
+契	qvvv	10
+柔	ra	10
+荣	ri	10
+葚	riiv	10
+让	ro	10
+入	ru	10
+辱	rv	10
+司	sa	10
+思	si	10
+俟	sia	10
+俟	siao	10
+虽	so	10
+祀	soa	10
+悚	soo	10
+愫	soov	10
+私	su	10
+死	sv	10
+肆	svi	10
+酥	sviu	10
+厮	svu	10
+通	ta	10
+统	taa	10
+提	ti	10
+骰	tia	10
+铤	tio	10
+它	to	10
+叨	toa	10
+袒	toao	10
+剔	toi	10
+蹋	toio	10
+惕	too	10
+瘫	tov	10
+腿	tu	10
+魄	tui	10
+魄	tuiu	10
+箨	tuv	10
+土	tv	10
+檀	tvo	10
+坍	tvou	10
+卫	wa	10
+驰	waa	10
+姹	wau	10
+慰	wav	10
+位	wi	10
+胃	wia	10
+帷	wiai	10
+巍	wiau	10
+畏	wiav	10
+偎	wii	10
+偎	wiia	10
+薇	wiiu	10
+苇	wiiv	10
+捂	wiu	10
+文	wo	10
+喂	woi	10
+闻	woiv	10
+惋	woo	10
+剜	wooi	10
+嘲	wou	10
+炽	wouo	10
+妄	wov	10
+啻	wovo	10
+物	wu	10
+勿	wua	10
+乌	wuaa	10
+猥	wuai	10
+鲔	wuav	10
+微	wuu	10
+午	wuv	10
+万	wv	10
+巫	wvi	10
+戊	wvu	10
+梧	wvv	10
+韦	wvva	10
+顽	wvvv	10
+消	xa	10
+险	xai	10
+陷	xaiu	10
+浒	xao	10
+溪	xau	10
+絮	xaua	10
+涎	xaui	10
+娴	xauo	10
+媳	xauu	10
+嬉	xauv	10
+淅	xav	10
+见	xi	10
+瞎	xia	10
+黯	xiao	10
+峡	xiav	10
+贤	xii	10
+蔼	xiio	10
+藕	xiiv	10
+心	xo	10
+祥	xoa	10
+诶	xoaa	10
+谑	xoai	10
+询	xoau	10
+谐	xoav	10
+暧	xoi	10
+呷	xoia	10
+煦	xoio	10
+跹	xoiu	10
+嚣	xoo	10
+惺	xooo	10
+熄	xou	10
+玄	xov	10
+亵	xovi	10
+襄	xovo	10
+吁	xovv	10
+向	xu	10
+蟹	xua	10
+饷	xuau	10
+息	xui	10
+皑	xuii	10
+兮	xuo	10
+奚	xuoa	10
+衔	xuu	10
+箱	xuv	10
+膝	xuvi	10
+牺	xuvv	10
+现	xv	10
+熙	xvi	10
+垩	xviv	10
+霭	xvo	10
+袭	xvu	10
+皙	xvuu	10
+刑	xvv	10
+契	xvvv	10
+又	ya	10
+彝	yaa	10
+绎	yaaa	10
+缢	yaao	10
+隐	yai	10
+潆	yaii	10
+渝	yaiv	10
+羽	yao	10
+甬	yaoi	10
+豫	yaou	10
+羿	yaov	10
+娱	yau	10
+漪	yaua	10
+姻	yaui	10
+嫣	yauv	10
+湮	yav	10
+由	yi	10
+遗	yia	10
+蚴	yiaa	10
+蚁	yiao	10
+伊	yiav	10
+莹	yii	10
+萦	yiia	10
+萤	yiii	10
+佚	yiuv	10
+佑	yiv	10
+虞	yivo	10
+语	yo	10
+议	yoa	10
+呦	yoaa	10
+邑	yoai	10
+谀	yoau	10
+易	yoi	10
+曰	yoii	10
+阎	yoiu	10
+愉	yoo	10
+怡	yooa	10
+慵	yooo	10
+喑	yoov	10
+益	you	10
+恙	youo	10
+焰	youu	10
+意	yov	10
+噎	yovo	10
+鹰	yovu	10
+吁	yovv	10
+移	yu	10
+禹	yui	10
+臾	yuiv	10
+舀	yuo	10
+腴	yuu	10
+腌	yuv	10
+友	yv	10
+鸦	yva	10
+柚	yvi	10
+燕	yvio	10
+焉	yviv	10
+垣	yvo	10
+尤	yvu	10
+檐	yvua	10
+厣	yvui	10
+远	yvv	10
+瑜	yvvi	10
+迂	yvvo	10
+子	za	10
+综	zaa	10
+作	zi	10
+眦	zia	10
+坐	zii	10
+撮	ziu	10
+撮	ziuo	10
+足	zo	10
+诅	zoa	10
+兹	zou	10
+籽	zoua	10
+咨	zov	10
+恣	zovo	10
+自	zu	10
+哉	zuo	10
+左	zv	10
