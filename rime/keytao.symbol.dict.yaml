@@ -1,57 +1,62 @@
-﻿---
+# Rime dictionary
+# encoding: utf-8
+---
 name: keytao.symbol
-version: "Q1"
-sort: original
+version: "2026.02.15"
+sort: by_weight
+columns:
+  - text
+  - code
+  - weight
 ...
-# 特殊
-の	dea
-①	oyk
-②	oxj
-③	osf
-④	osk
-⑤	owj
-⑥	olq
-⑦	oqk
-⑧	obs
-⑨	ojq
-⑩	oek
-×	ojh
-√	og
-♂	nfi
-♀	nl
-*#06#	xjlji
-# 标点
-；	;
-：	;;
-@	;a
-%	;b
--	;c
-、	;d
-（	;e
-“	;f
-”	;g
-》	;i
-→	;j
-←	;jz
-↑	;je
-↓	;jx
-【	;k
-】	;l
-’	;m
-‘	;n
-·	;o
-——	;p
-‰	;q
-）	;r
-……	;s
-！	;t
-《	;u
-=	;v
-？	;w
-+	;x
-〇	;y
-____	;z
-？”	;wg
-！”	;tg
-……”	;sg
-。”	;jg
+
+；	;	10
+：	;;	10
+@	;a	10
+%	;b	10
+-	;c	10
+、	;d	10
+（	;e	10
+“	;f	10
+”	;g	10
+》	;i	10
+→	;j	10
+↑	;je	10
+。”	;jg	10
+↓	;jx	10
+←	;jz	10
+【	;k	10
+】	;l	10
+’	;m	10
+‘	;n	10
+·	;o	10
+——	;p	10
+‰	;q	10
+）	;r	10
+……	;s	10
+……”	;sg	10
+！	;t	10
+！”	;tg	10
+《	;u	10
+=	;v	10
+？	;w	10
+？”	;wg	10
++	;x	10
+〇	;y	10
+____	;z	10
+の	dea	10
+♂	nfi	11
+♀	nl	11
+⑧	obs	10
+⑩	oek	10
+√	og	10
+×	ojh	10
+⑨	ojq	10
+⑥	olq	10
+⑦	oqk	10
+③	osf	10
+④	osk	10
+⑤	owj	10
+②	oxj	10
+①	oyk	10
+*#06#	xjlji	10
