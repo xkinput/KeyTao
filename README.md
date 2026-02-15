@@ -1,10 +1,8 @@
 <h1 align="center">星空键道6</h1>
 
-> 作者：**吅吅大山** | [键道官网][904] | [键道6词库议表][916] | [键道6查码工具][917]
+> 作者：**吅吅大山** | [键道官网][904] | [键道6查码工具][917] | [键道文档][900]
 
-> 交流群：[加入官方QQ大群][903] | [加入键道6群][928] | [加入TG群][929]
-
-> 方案文档：[键道详尽操作指南][900] | [简易Wiki文档][921] | [键道6白话文教程][901]
+> 社区：[加入官方QQ大群][903] | [加入键道6群][928] | [加入TG群][929]
 
 > [键魂][221] - 键道初学者用的「键道」虚拟键位软件。学完规则不用记忆键位就能立即上手体验「键道」打字的乐趣！
 
@@ -12,7 +10,7 @@
 
 ---
 
-#### 目录结构说明：
+#### 目录说明：
 
 | 路径                                   |         作用         |
 | :------------------------------------- | :------------------: |
@@ -26,7 +24,7 @@
 
 ---
 
-#### 首次安装：
+#### 安装教程：
 
 * Windows 首选安装方式： 推荐手动安装小狼毫、Git，下载本项目，执行 Windows 目录下更新程序
 
@@ -72,10 +70,6 @@
      # 待完成后尝试输入即可
      ```
 
-  Mac可使用 [SCU][925] 做日常配置操作
-
-  > 注意：请确保设备含有网络、可使用项目内配备的升级工具做升级码表到最新。
-  >
 * Android 首选安装方式：[Android键道6安装包][927]
 
   > 首先：安装安装包，打包内包含码表与皮肤，以及词库（内置词库比较旧，建议安装后继续下一步，来更新词库）
@@ -143,38 +137,13 @@ git pull
 
 > 重新部署，并尝试输入文字。安装完成。
 
-#### 键道6方案[文档][930]
-
 #### 扩展说明：
 
 1. 扩展控制文件为 keytao.extended.dict.yaml / keytao-dz.extended.dict.yaml
 2. 文件中有详细说明。
 
-#### 分支说明：
-
-> master 为定期更新稳定内容。
 
 ---
-
-#### 若你想要发起 PR 为本项目做出贡献：
-
-##### 创建远程仓库，指向 PR 提交者的仓库
-
-1. 指定上游地址`git remote add upstream https://github.com/xkinput/KeyTao.git`
-2. 从该远程仓库拉取代码`git fetch upstream`
-   > **如果上游更新内容含有 缩减仓库历史，请在 push 代码前 pull rebase
-   > 详见：[缩减仓库说明][908]**
-   >
-3. 将该仓库的上游分支合并到自己分支`git merge upstream`
-4. 推送到自己的仓库
-   `git push origin master`
-
-##### 提交commit规范：
-
-* 码表分类：[据议表调整： x个] 外加调整：词组 编码... x个
-* 工具类：系统名：工具名 文件名 纠错/添加/删除
-
-> 详见：**[git-简明指南][909] / [git入门][919] [码云PR教程][907] / [博客PR教程][906] / [缩减仓库说明][908]**
 
 ---
 
@@ -214,7 +183,6 @@ git pull
 
 > 键道的跨平台使用离不开以上优秀的输入平台
 
-[999]: https://github.com/xkinput/KeyTao
 [linux安装键道6]: https://github.com/xkinput/KeyTao/wiki/Linux%E5%AE%89%E8%A3%85rime%E9%94%AE%E9%81%936%E6%95%99%E7%A8%8B
 [101]: https://github.com/rime/weasel
 [102]: https://github.com/rime/squirrel
@@ -224,55 +192,29 @@ git pull
 [106]: https://github.com/jimmy54/iRime
 [107]: https://im.logcg.com/
 [108]: https://chinput.com/portal.php
-[200]: https://github.com/rime
-[201]: http://rime.im
-[202]: https://github.com/osfans
 [203]: https://github.com/dgod/yong
 [204]: https://github.com/xkinput/KeyTao
 [205]: https://xkinput.github.io/xxxk-help
 [206]: https://github.com/tswwe
 [207]: https://github.com/lyserenity/xkjd6_tc
-[208]: https://github.com/xkinput/KeyTao/releases
-[209]: https://github.com/xkinput/KeyTao/repository/archive/master.zip
-[210]: https://github.com/xkinput/KeyTao/tree/master/scripts
-[211]: https://github.com/xkinput/KeyTao/tree/master/rime
-[212]: https://github.com/xkinput/KeyTao/tree/master/schema/android
 [213]: https://gitee.com/morler/rime_xklb
 [214]: https://gitee.com/morler
-[215]: https://github.com/dzyht/rime_xkyb
 [216]: https://gitee.com/dzyht
 [217]: https://gitee.com/dzyht/rime_xkybd
 [218]: https://getquicker.net/Sharedaction?code=05ec6884-ae9f-44ed-5f89-08d9b92d74db
 [219]: https://telegra.ph/iRime-%E5%A6%82%E4%BD%95%E5%AF%BC%E5%85%A5%E8%BE%93%E5%85%A5%E6%96%B9%E6%A1%88---%E4%BB%A5%E9%94%AE%E9%81%93%E4%B8%BA%E4%BE%8B-12-25
 [220]: https://telegra.ph/Android-%E5%AE%89%E8%A3%85%E9%94%AE%E9%81%93%E5%90%8C%E6%96%87%E8%BE%93%E5%85%A5%E6%B3%95%E5%9B%BE%E6%96%87%E6%95%99%E7%A8%8B-12-25
 [221]: https://ispoto.github.io/KeySoul/
-[900]: https://pingshunhuangalex.gitbook.io/rime-xkjd/
-[901]: https://xkinput.github.io/xxxk-help/#/schema-xkjd6
-[902]: http://daniushuangpin.ys168.com
+[900]: https://keytao-docs.vercel.app
 [903]: https://jq.qq.com/?_wv=1027&k=5sTEYIQ
-[904]: https://xkinput.github.io
+[904]: https://keytao.vercel.app
 [905]: https://git-scm.com/
-[906]: http://www.ruanyifeng.com/blog/2017/07/pull_request.html
-[907]: http://git.mydoc.io/?t=180700
-[908]: http://git.mydoc.io/?t=83153
-[909]: http://rogerdudler.github.io/git-guide/index.zh.html
-[910]: http://sj.qq.com/myapp/detail.htm?apkName=com.aor.pocketgit
-[911]: https://www.jianguoyun.com/p/DV2MIxsQ67buBhjNl1w
 [912]: https://npm.taobao.org/mirrors/git-for-windows
 [913]: https://hanhngiox.net/install/ios.html
-[914]: https://pan.baidu.com/s/1uvTbIKwxzJU-Udk4WeDAwQ
-[915]: https://pan.baidu.com/s/1BiXlCS4JualOtXvbbTeAQQ
-[916]: https://docs.qq.com/sheet/BFdiXU0nyc1W1kwuZl3Gx31r2KLm2k3F8YzI4
-[917]: http://xkinput.github.io/tools/search
+[917]: https://keytao.vercel.app/phrases
 [918]: https://gitee.com/all-about-git
-[919]: https://www.liaoxuefeng.com/wiki/0013739516305929606dd18361248578c67b8067c8c017b000/001373962845513aefd77a99f4145f0a2c7a7ca057e7570000
-[920]: https://pan.baidu.com/s/1S9ktUAFcqJjjnqovEBSLig
-[921]: https://github.com/xkinput/KeyTao/wikis
-[923]: http://rimejd.ys168.com
 [924]: https://rime.im/download/#macOS
-[925]: https://github.com/neolee/SCU
 [926]: https://f-droid.org/zh_Hans/packages/com.manichord.mgit
 [927]: https://wwa.lanzoux.com/b0dhdlkj
 [928]: https://jq.qq.com/?_wv=1027&k=c1T3vOwc
 [929]: https://t.me/xkinput
-[930]: https://keytao-docs.vercel.app/
