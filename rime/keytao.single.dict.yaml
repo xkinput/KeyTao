@@ -2,7 +2,7 @@
 # encoding: utf-8
 ---
 name: keytao.single
-version: "2026.02.15"
+version: "2026.02.16"
 sort: by_weight
 columns:
   - text
@@ -1998,7 +1998,7 @@ columns:
 栋	dyvv	10
 栋	dyvvai	10
 动	dyvvau	10
-到	dz	11
+到	dz	10
 刀	dza	10
 刀	dzauu	10
 导	dzav	10
@@ -2490,7 +2490,7 @@ columns:
 奭	ekvvuo	10
 栻	ekvvv	10
 栻	ekvvvi	10
-说	el	11
+说	el	10
 妁	ela	10
 妁	elauua	10
 铄	eli	10
@@ -7720,7 +7720,7 @@ columns:
 啃	knoivi	10
 硍	knv	10
 硍	knvuav	10
-抗	kp	11
+抗	kp	10
 扛	kpi	10
 伉	kpio	10
 钪	kpioo	10
@@ -11776,7 +11776,7 @@ columns:
 璋	qpvvo	10
 璋	qpvvov	10
 杖	qpvvuo	10
-求	qq	11
+求	qq	10
 泅	qqa	10
 泅	qqaiai	10
 巯	qqao	10
@@ -15496,7 +15496,7 @@ columns:
 唔	xro	10
 嗯	xroiav	10
 唔	xrovia	10
-下	xs	11
+下	xs	10
 阿	xsa	10
 阿	xsaivo	10
 遐	xsav	10
