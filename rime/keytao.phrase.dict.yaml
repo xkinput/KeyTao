@@ -2,7 +2,7 @@
 # encoding: utf-8
 ---
 name: keytao.phrase
-version: "2026.02.16"
+version: "2026.02.17"
 sort: by_weight
 columns:
   - text
@@ -105806,6 +105806,7 @@ columns:
 险胜	xmera	100
 先声	xmeru	100
 羡煞	xmes	100
+厦门市	xmev	100
 鲜爽	xmex	100
 嫌少	xmez	100
 心目中	xmf	100
