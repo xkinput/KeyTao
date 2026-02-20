@@ -2,7 +2,7 @@
 # encoding: utf-8
 ---
 name: keytao.phrase
-version: "2026.02.17"
+version: "2026.02.20"
 sort: by_weight
 columns:
   - text
@@ -10214,8 +10214,9 @@ columns:
 叠被	ddbwa	100
 喋喋不休	ddbx	100
 动荡不安	ddbxv	100
-都保	ddbz	100
+豆包	ddbz	100
 谍报	ddbzo	100
+都保	ddbzu	100
 叠翠	ddcb	100
 躲躲藏藏	ddcc	100
 迭代次数	ddce	100
@@ -13499,6 +13500,7 @@ columns:
 多远	dlytu	100
 德鲁伊	dlyu	100
 大老远	dlyv	100
+达利园	dlyvu	100
 多云	dlyw	100
 顿了一下	dlyx	100
 多用	dlyy	100
@@ -30643,10 +30645,11 @@ columns:
 霏霏	fwfwv	100
 肥壮	fwfx	100
 服务中心	fwfxu	100
-债务国	fwg	100
+氛围感	fwg	100
 飞归	fwgb	100
 菲戈	fwge	100
 肥甘	fwgf	100
+债务国	fwgi	100
 腓骨	fwgj	100
 飞过	fwgl	100
 奉为圭臬	fwgn	100
@@ -116004,6 +116007,7 @@ columns:
 园亭	yttg	100
 远台	ytth	100
 原图	yttj	100
+倚天屠龙记	yttji	100
 愿替	yttk	100
 圆体	yttki	100
 原体	yttkv	100
