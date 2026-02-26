@@ -2,7 +2,7 @@
 # encoding: utf-8
 ---
 name: keytao.phrase
-version: "2026.02.20"
+version: "2026.02.26"
 sort: by_weight
 columns:
   - text
@@ -46328,8 +46328,9 @@ columns:
 结识	jdekao	100
 届时	jdekao	101
 结石	jdekav	100
-揭示	jdeki	100
+借势	jdeki	100
 节食	jdekii	100
+揭示	jdekiv	100
 街市	jdeku	100
 皆是	jdekv	100
 解说	jdel	100
@@ -60668,6 +60669,7 @@ columns:
 联产承包责任制	ljjf	100
 六朝金粉	ljjfo	100
 路径	ljjg	100
+蜡炬成灰泪始干	ljjgi	100
 路经	ljjgo	100
 芦柴	ljjh	100
 老奸巨猾	ljjhu	100
@@ -62969,6 +62971,7 @@ columns:
 垃圾	lsjk	100
 辣鸡	lsjko	100
 拉锯	lsjl	100
+蜡炬	lsjli	100
 拉抻	lsjn	100
 拉长	lsjp	100
 拉肠	lsjpi	100
@@ -88953,8 +88956,8 @@ columns:
 退居	tbjla	100
 推荐	tbjm	100
 特别节目	tbjmu	100
-听不出	tbjo	100
-听不见	tbjov	100
+听不见	tbjo	100
+听不出	tbjov	100
 退场	tbjp	100
 腿长	tbjpu	100
 推究	tbjq	100
@@ -92385,6 +92388,7 @@ columns:
 天纵	tmzy	100
 天造	tmzz	100
 糖尿病	tnb	100
+糖尿病人	tnbr	100
 他娘的	tnd	100
 天南地北	tndb	100
 拖泥带水	tnde	100
@@ -119779,6 +119783,7 @@ columns:
 作宅	zlfh	100
 作赋	zlfj	100
 佐夫	zlfji	100
+左腹	zlfjv	100
 坐支	zlfk	100
 坐直	zlfki	100
 坐着	zlfl	100
