@@ -2,7 +2,7 @@
 # encoding: utf-8
 ---
 name: keytao.supplement
-version: "2026.02.26"
+version: "2026.02.27"
 sort: by_weight
 columns:
   - text
