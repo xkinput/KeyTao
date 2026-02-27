@@ -67,14 +67,17 @@
           };
 
           config = mkIf cfg.enable {
-            # Use activation script instead of home.file to handle existing directories
             home.activation.installRimeKeytao = lib.hm.dag.entryAfter [ "writeBoundary" ] ''
               $DRY_RUN_CMD mkdir -p "${config.home.homeDirectory}/${cfg.rimeDataDir}"
 
-              # Use rsync to sync files, preserving existing user data
-              # Set proper permissions (files: 644, dirs: 755) instead of copying read-only Nix store permissions
-              $DRY_RUN_CMD ${pkgs.rsync}/bin/rsync -av --ignore-existing \
+              # Sync schema/dict files from Nix store, overwriting stale files.
+              # Exclude user-generated data that must never be overwritten.
+              $DRY_RUN_CMD ${pkgs.rsync}/bin/rsync -av \
                 --chmod=D0755,F0644 \
+                --exclude='*.userdb/' \
+                --exclude='user.yaml' \
+                --exclude='installation.yaml' \
+                --exclude='sync/' \
                 "${cfg.package}/share/rime-data/" \
                 "${config.home.homeDirectory}/${cfg.rimeDataDir}/"
 
