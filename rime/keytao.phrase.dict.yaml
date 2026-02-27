@@ -2,7 +2,7 @@
 # encoding: utf-8
 ---
 name: keytao.phrase
-version: "2026.02.26"
+version: "2026.02.27"
 sort: by_weight
 columns:
   - text
@@ -42735,6 +42735,7 @@ columns:
 画图	hqtj	100
 话题	hqtk	100
 滑梯	hqtka	100
+花体	hqtki	100
 华佗	hqtl	100
 滑脱	hqtla	100
 华天	hqtm	100
@@ -42834,6 +42835,8 @@ columns:
 黄雀在后	hqzhv	100
 华族	hqzj	100
 华兹	hqzk	100
+花字	hqzki	100
+花子	hqzkia	100
 化作	hqzl	100
 画作	hqzlv	100
 猾贼	hqzw	100
@@ -43421,6 +43424,7 @@ columns:
 皇太子	htz	100
 还嘴	htzb	100
 还则	htze	100
+花体字	htzi	100
 环子	htzk	100
 唤作	htzl	100
 换作	htzli	100
@@ -58934,6 +58938,7 @@ columns:
 临泽	lbze	100
 林子	lbzk	100
 邻座	lbzl	100
+连笔字	lbzv	100
 凛遵	lbzw	100
 聊表	lcbc	100
 料别	lcbd	100
@@ -61798,6 +61803,7 @@ columns:
 脸部	lmbj	100
 连绵不绝	lmbjv	100
 练笔	lmbk	100
+连笔	lmbkv	100
 联播	lmbl	100
 连播	lmblv	100
 连变	lmbm	100
@@ -97721,8 +97727,9 @@ columns:
 吻去	wnql	100
 文曲	wnqlo	100
 文钱	wnqm	100
-瘟疹	wnqn	100
-问诊	wnqno	100
+问诊	wnqn	100
+温针	wnqna	100
+瘟疹	wnqno	100
 文章	wnqp	100
 蚊帐	wnqpi	100
 文裘	wnqq	100
