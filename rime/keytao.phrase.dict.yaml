@@ -2,7 +2,7 @@
 # encoding: utf-8
 ---
 name: keytao.phrase
-version: "2026.02.27"
+version: "2026.03.08"
 sort: by_weight
 columns:
   - text
@@ -60238,6 +60238,7 @@ columns:
 来报	lhbz	100
 六合彩	lhc	100
 来凑	lhcd	100
+来财	lhch	100
 来此	lhck	100
 绿化带	lhd	100
 来的	lhde	100
@@ -79736,6 +79737,7 @@ columns:
 去日	qlrk	100
 趋弱	qlrl	100
 取人	qlrn	100
+主理人	qlro	100
 其乐融融	qlrr	100
 浅蓝色	qls	100
 去岁	qlsb	100
@@ -102366,8 +102368,9 @@ columns:
 斜线	xdxm	100
 谢恩	xdxn	100
 小打小闹	xdxni	100
-瓯绣	xdxq	100
+邪修	xdxq	100
 兄弟阋墙	xdxqo	100
+瓯绣	xdxqv	100
 写下	xdxs	100
 卸下	xdxsu	100
 鞋楦	xdxt	100
@@ -111512,6 +111515,7 @@ columns:
 严判	yfpf	100
 意志品质	yfpfo	100
 燕平	yfpg	100
+验牌	yfph	100
 烟铺	yfpj	100
 眼皮	yfpk	100
 沿坡	yfpl	100

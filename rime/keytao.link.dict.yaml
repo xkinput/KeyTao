@@ -2,7 +2,7 @@
 # encoding: utf-8
 ---
 name: keytao.link
-version: "2026.02.27"
+version: "2026.03.08"
 sort: by_weight
 columns:
   - text
@@ -17,8 +17,10 @@ columns:
 http://	http	10000
 https://keytao.vercel.app/phrases	ocx	10000
 https://keytao.vercel.app	ogw	10000
+https://keytao.rea.ink	ogw	10001
 https://github.com/xkinput/KeyTao/releases	ogx	10000
 https://keytao.vercel.app	ojc	10000
+https://keytao.rea.ink	ojc	10001
 https://github.com/xkinput/KeyTao	orj	10000
 https://github.com/lyserenity/rime_xkjd	orx	10000
 http://daniushuangpin.ys168.com/	owp	10000
