@@ -2,7 +2,7 @@
 # encoding: utf-8
 ---
 name: keytao.phrase
-version: "2026.03.14"
+version: "2026.04.09"
 sort: by_weight
 columns:
   - text
@@ -1227,6 +1227,7 @@ columns:
 班主	bfqjv	100
 办起	bfqk	100
 半旗	bfqko	100
+搬去	bfql	100
 搬迁	bfqm	100
 并发症	bfqo	100
 班长	bfqp	100
@@ -15362,8 +15363,9 @@ columns:
 断代	dtdh	100
 缎带	dtdha	100
 得天独厚	dtdhu	100
-端底	dtdk	100
-端的	dtdko	100
+短笛	dtdk	100
+端底	dtdko	100
+端的	dtdkou	100
 独挑大梁	dtdl	100
 断电	dtdm	100
 端点	dtdmo	100
@@ -18014,6 +18016,7 @@ columns:
 首善之区	eefq	100
 设法	eefs	100
 摄篆	eeft	100
+爽身粉	eefv	100
 奢费	eefw	100
 舌状	eefx	100
 实施方案	eefxo	100
@@ -25341,7 +25344,8 @@ columns:
 服装厂	ffjuo	100
 反封建	ffjuv	100
 榨汁机	ffjv	100
-反唇	ffjw	100
+犯蠢	ffjw	100
+反唇	ffjwu	100
 反将	ffjx	100
 种种迹象	ffjxu	100
 丰富经验	ffjy	100
@@ -26722,6 +26726,7 @@ columns:
 附二	fjxj	100
 费尽心机	fjxja	100
 反唇相讥	fjxju	100
+反唇相稽	fjxjuv	100
 复习	fjxk	100
 伏羲	fjxki	100
 父系	fjxku	100
@@ -45322,6 +45327,7 @@ columns:
 晋剧	jbjl	100
 沉博绝丽	jbjla	100
 金句	jbjli	100
+金橘	jbjliv	100
 近距	jbjlu	100
 觐见	jbjm	100
 仅见	jbjmi	100
@@ -55742,6 +55748,7 @@ columns:
 科隆	kelyu	100
 科龙	kelyuv	100
 看什么	kem	100
+颗秒	kemc	100
 客满	kemf	100
 科名	kemg	100
 可买	kemh	100
@@ -68174,6 +68181,7 @@ columns:
 妈宝	msbza	100
 马刺	msck	100
 马村	mscw	100
+马槽	mscz	100
 马队	msdb	100
 马吊	msdc	100
 马窦	msdd	100
@@ -75674,6 +75682,7 @@ columns:
 炮炼	pzlm	100
 跑啦	pzls	100
 跑垒	pzlw	100
+跑量	pzlx	100
 泡牢	pzlz	100
 佩兹曼	pzm	100
 迫在眉睫	pzmj	100
@@ -75763,6 +75772,7 @@ columns:
 抛在	pzzhi	100
 泡足	pzzj	100
 袍子	pzzk	100
+跑姿	pzzko	100
 炮座	pzzl	100
 泡澡	pzzz	100
 泡枣	pzzza	100
@@ -78438,6 +78448,7 @@ columns:
 牵肠挂肚	qjgdv	100
 诸葛	qjge	100
 主歌	qjgeo	100
+主格	qjgeov	100
 逐个	qjgev	100
 主干	qjgf	100
 猪肝	qjgfu	100
@@ -82692,6 +82703,9 @@ columns:
 情绪激动	qxjdo	100
 抢车	qxje	100
 谦虚谨慎	qxjeo	100
+情绪价值	qxjf	100
+曲线积分	qxjfi	100
+敲响警钟	qxjfo	100
 强劲	qxjg	100
 曲线救国	qxjgi	100
 抢镜	qxjgii	100
@@ -88127,6 +88141,7 @@ columns:
 死死的	ssd	100
 撒刁	ssdc	100
 撒的	ssde	100
+萨德	ssdei	100
 撒旦	ssdf	100
 萨当	ssdp	100
 死死地	ssdv	100
@@ -99009,6 +99024,7 @@ columns:
 穿越	wtyh	100
 传阅	wtyhi	100
 穿衣	wtyk	100
+川渝	wtyl	100
 传统艺能	wtyn	100
 传扬	wtyp	100
 串通一气	wtyq	100
@@ -102448,6 +102464,7 @@ columns:
 欧阳	xdypv	100
 相得益彰	xdyq	100
 欧亚	xdys	100
+泄压	xdysa	100
 欧元	xdyt	100
 谢园	xdyto	100
 相对应	xdyv	100
@@ -109246,6 +109263,7 @@ columns:
 一遍遍	ybbvo	100
 硬邦邦	ybbvv	100
 因被	ybbw	100
+以备不时之需	ybbx	100
 引爆	ybbz	100
 音爆	ybbzo	100
 也不错	ybc	100
@@ -110904,8 +110922,9 @@ columns:
 鹰视狼顾	yelgo	100
 也来	yelh	100
 夜来	yelho	100
-耶鲁	yelj	100
-夜路	yeljo	100
+夜路	yelj	100
+野路	yelji	100
+耶鲁	yeljv	100
 夜里	yelk	100
 耶律	yell	100
 衣衫褴褛	yello	100
