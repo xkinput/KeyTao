@@ -26,8 +26,7 @@
 
 #### 安装教程：
 
-* 前往下载 **[KeyTao 键道安装更新程序](https://github.com/xkinput/keytao-installer/releases/latest)**，可自动完成 Rime 与键道方案的安装与更新，支持 Windows / macOS / Linux / Android。
-
+* 前往下载 **[KeyTao 键道安装更新程序](https://github.com/xkinput/keytao-installer/releases/latest)**，可自动完成键道方案的安装与更新，支持 Windows / macOS / Linux / Android。
 * Linux 如果遇到fcitx/ibus问题可查看[安装 fcitx/rime 教程][linux安装键道6]
 * **Nix/NixOS 安装方式 🆕：**
   详见：**[Nix 安装指南](./INSTALL_NIXOS.md)** | [配置示例](./docs/nixos-config-example.md)
