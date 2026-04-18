@@ -2,7 +2,7 @@
 
 > 作者：**吅吅大山** | [键道官网][904] | [键道6查码工具][917] | [键道文档][900]
 
-> 社区：[加入官方QQ大群][903] | [加入键道6群][928] | [加入TG群][929]
+> 社区：[星空输入法QQ群][903] | [星空键道QQ群][928] | [加入TG群][929]
 
 > [键魂][221] - 键道初学者用的「键道」虚拟键位软件。学完规则不用记忆键位就能立即上手体验「键道」打字的乐趣！
 
@@ -12,81 +12,29 @@
 
 #### 目录说明：
 
-| 路径                                   |         作用         |
-| :------------------------------------- | :------------------: |
-| [/docs](./docs)                           |       文档目录       |
-| [/extend-dicts](./extend-dicts)           |       扩展词典       |
-| [/rime](./rime)                           | 主码表文件夹[主码表] |
-| [/schema](./schema)                       | 各系统方案配置文件   |
-| [/scripts](./scripts)                     | 各系统脚本工具       |
-| [/INSTALL_NIXOS.md](./INSTALL_NIXOS.md)   | NixOS 安装指南       |
-| [/README.md](./README.md)                 |    项目说明文件      |
+| 路径                                 |         作用         |
+| :----------------------------------- | :------------------: |
+| [/docs](./docs)                         |       文档目录       |
+| [/extend-dicts](./extend-dicts)         |       扩展词典       |
+| [/rime](./rime)                         | 主码表文件夹[主码表] |
+| [/schema](./schema)                     |  各系统方案配置文件  |
+| [/scripts](./scripts)                   |    各系统脚本工具    |
+| [/INSTALL_NIXOS.md](./INSTALL_NIXOS.md) |    NixOS 安装指南    |
+| [/README.md](./README.md)               |     项目说明文件     |
 
 ---
 
 #### 安装教程：
 
-* Windows 首选安装方式： 推荐手动安装小狼毫、Git，下载本项目，执行 Windows 目录下更新程序
+> **推荐：** 前往 [keytao-installer](https://github.com/xkinput/keytao-installer/releases/latest) 下载键道安装更新程序，可自动完成 Rime 与键道方案的安装与更新，支持 Windows / macOS / Linux / Android。
 
-  > 说明：打包内包含完整本项目，克隆完成后，请按照下面 Git 安装后同步最新码表 `git pull` 后，升级到最新码表。
-  >
-
-  > 若有疑问，请查看安装教程：https://www.bilibili.com/video/av53185153
-  >
-* Linux 首选安装方式：
-  详见wiki页教程：[Linux安装rime键道教程][linux安装键道6]
+* Linux 如果遇到fcitx/ibus问题可查看[安装 fcitx/rime 教程][linux安装键道6]
 * **Nix/NixOS 安装方式 🆕：**
   详见：**[Nix 安装指南](./INSTALL_NIXOS.md)** | [配置示例](./docs/nixos-config-example.md)
 
   使用 Nix Flakes 一键安装，支持 Home Manager 模块自动管理配置文件。
-  
+
   > **macOS 用户注意**：使用 Nix 安装前需先手动安装鼠须管（见下方 Mac 安装方式）。
-* Mac 首选安装方式：
-
-  1. 安装鼠须管
-
-     > 有两种方式安装鼠须管，请选其1操作即可
-     >
-
-     1. 下载 [鼠须管文件安装][924]
-     2. brew方式(需要提前安装brew)
-
-        ```bash
-        brew install --cask squirrel
-        ```
-  2. 克隆rime键道仓库
-
-     ```bash
-     # github仓库
-     git clone https://github.com/xkinput/KeyTao/
-     ```
-  3. 执行Mac专有脚本以完成键道码表部署
-
-     ```bash
-     # 跳转到KeyTao目录中Mac脚本目录
-     cd KeyTao/scripts/mac/
-     # 执行2update.sh 选择安装键道6词库y
-     ./2update.sh
-     # 待完成后尝试输入即可
-     ```
-
-* Android 首选安装方式：[Android键道6安装包][927]
-
-  > 首先：安装安装包，打包内包含码表与皮肤，以及词库（内置词库比较旧，建议安装后继续下一步，来更新词库）
-  >
-
-  > 使用MGit来克隆rime键道最新词库：，请按照下面[安卓系统MGit](#android-系统-git)安装后克隆 `https://github.com/xkinput/KeyTao` 最新码表，复制最新码表到对应用户目录，重新部署以升级到最新码表。
-  >
-
-  > 更新方式：安装上面所讲的MGit，进入KeyTao，点击侧栏里的 `拉取`等待完成后，再次将最新码表复制到用户目录，重新部署同文输入法即可。
-  >
-
-  > 若有疑问，请查看安装教程。
-  > 图文教程：[Android 安装「键道」同文输入法图文教程][220]
-  >
-
-  > 视频教程：https://www.bilibili.com/video/av53238185
-  > `<a name="ios-install"></a>`
   >
 * iOS 首选安装方式：
 
@@ -99,49 +47,10 @@
 
 > 并击功能教学视频：https://www.bilibili.com/video/av68282400/
 
-#### 安装 Git 使用说明：使用 Git 程序（可滚动更新）
-
- **[Git下载地址罗列][918]**
-
-* ##### Windows 系统 Git：
-
-  [官网][905] | [国内镜像源][912]
-* Linux 系统 Git：[自行安装]
-* Mac 系统 Git：内建 git 程序，无需另外安装
-* ##### Android 系统 Git：
-
-  [下载(MGit)][926]
-* iOS 系统：现阶段无法使用 git 更新，请参考[首次安装方式](#ios-install)
-
-##### 使用简述：
-
-```bash
-# 需要安装 Git 后，将克隆项目到本地（打开 git bash 中输入，下面一样的）
-git clone https://github.com/xkinput/KeyTao
-# 切换到项目文件夹
-cd KeyTao
-# 在文件管理器打开当前目录（`pwd` 可以查看目录位置），进入 KeyTao/scripts/ 对应系统的工具目录执行复制码表工具（1install），再重新部署即可更新完成
-```
-
-##### 获取更新：
-
-1. 获取上游地址的 master 分支
-
-```bash
-git pull
-```
-
-2. 获取后，执行复制码表工具（2update），再重新部署即可更新完成
-
-#### 最后：
-
-> 重新部署，并尝试输入文字。安装完成。
-
 #### 扩展说明：
 
 1. 扩展控制文件为 keytao.extended.dict.yaml / keytao-dz.extended.dict.yaml
 2. 文件中有详细说明。
-
 
 ---
 
@@ -203,18 +112,11 @@ git pull
 [217]: https://gitee.com/dzyht/rime_xkybd
 [218]: https://getquicker.net/Sharedaction?code=05ec6884-ae9f-44ed-5f89-08d9b92d74db
 [219]: https://telegra.ph/iRime-%E5%A6%82%E4%BD%95%E5%AF%BC%E5%85%A5%E8%BE%93%E5%85%A5%E6%96%B9%E6%A1%88---%E4%BB%A5%E9%94%AE%E9%81%93%E4%B8%BA%E4%BE%8B-12-25
-[220]: https://telegra.ph/Android-%E5%AE%89%E8%A3%85%E9%94%AE%E9%81%93%E5%90%8C%E6%96%87%E8%BE%93%E5%85%A5%E6%B3%95%E5%9B%BE%E6%96%87%E6%95%99%E7%A8%8B-12-25
 [221]: https://ispoto.github.io/KeySoul/
 [900]: https://keytao-docs.vercel.app
-[903]: https://jq.qq.com/?_wv=1027&k=5sTEYIQ
+[903]: https://qm.qq.com/q/PU65aZoNOg
 [904]: https://keytao.vercel.app
-[905]: https://git-scm.com/
-[912]: https://npm.taobao.org/mirrors/git-for-windows
 [913]: https://hanhngiox.net/install/ios.html
 [917]: https://keytao.vercel.app/phrases
-[918]: https://gitee.com/all-about-git
-[924]: https://rime.im/download/#macOS
-[926]: https://f-droid.org/zh_Hans/packages/com.manichord.mgit
-[927]: https://wwa.lanzoux.com/b0dhdlkj
-[928]: https://jq.qq.com/?_wv=1027&k=c1T3vOwc
+[928]: https://qm.qq.com/q/uNFITZVL4A
 [929]: https://t.me/xkinput
