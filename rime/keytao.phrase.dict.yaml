@@ -2,7 +2,7 @@
 # encoding: utf-8
 ---
 name: keytao.phrase
-version: "2026.04.09"
+version: "2026.04.19"
 sort: by_weight
 columns:
   - text
@@ -3617,7 +3617,8 @@ columns:
 比偶	bkxdv	100
 弊恶	bkxe	100
 彼岸	bkxf	100
-狴犴	bkxfu	100
+币安	bkxfu	100
+狴犴	bkxfuu	100
 笔形	bkxg	100
 鼻血	bkxh	100
 必爱	bkxho	100
@@ -13592,6 +13593,7 @@ columns:
 垫上	dmepi	100
 点上	dmepii	100
 点杀	dmes	100
+颠勺	dmez	100
 大拇指	dmf	100
 点缀	dmfb	100
 淀帚	dmfd	100
@@ -13625,6 +13627,7 @@ columns:
 电感	dmgfi	100
 典故	dmgj	100
 点过	dmgl	100
+颠锅	dmglu	100
 低买高卖	dmgm	100
 电挂	dmgq	100
 电官	dmgt	100
@@ -23152,6 +23155,7 @@ columns:
 是我国	ewg	100
 顺杆	ewgf	100
 谁敢	ewgfo	100
+顺拐	ewgg	100
 生物工程	ewgj	100
 谁给	ewgw	100
 什刹海	ewh	100
@@ -26984,6 +26988,7 @@ columns:
 治山	fkef	100
 至善	fkefv	100
 直率	fkeg	100
+直晒	fkeh	100
 指数	fkej	100
 众口铄金	fkeji	100
 之术	fkejo	100
@@ -28969,7 +28974,7 @@ columns:
 只怕你	fpn	100
 访南	fpnf	100
 房奴	fpnj	100
-防粘	fpnm	100
+防黏	fpnm	100
 放牛	fpnq	100
 方能	fpnr	100
 放哪	fpns	100
@@ -37857,6 +37862,7 @@ columns:
 宫女	gynl	100
 公牛	gynq	100
 功能	gynr	100
+供能	gynri	100
 供暖	gynt	100
 公园内	gynu	100
 宫内	gynw	100
@@ -45999,7 +46005,7 @@ columns:
 叫你	jcnk	100
 教你	jcnku	100
 娇女	jcnl	100
-胶粘	jcnm	100
+胶黏	jcnm	100
 娇嫩	jcnn	100
 胶囊	jcnp	100
 交能	jcnr	100
@@ -47502,7 +47508,7 @@ columns:
 陈芝麻烂谷子	jfmza	100
 就只能	jfn	100
 积重难返	jfnf	100
-缠粘	jfnm	100
+缠黏	jfnm	100
 产能	jfnr	100
 嘲风弄月	jfny	100
 警匪片	jfp	100
@@ -47592,7 +47598,8 @@ columns:
 接风洗尘	jfxji	100
 产需	jfxl	100
 接踵而来	jfxli	100
-馋涎	jfxm	100
+产线	jfxm	100
+馋涎	jfxmu	100
 就这些	jfxo	100
 蝉虾	jfxs	100
 甲状腺素	jfxsi	100
@@ -49810,6 +49817,7 @@ columns:
 鸡毛	jkmza	100
 集贸	jkmzi	100
 尽可能	jkn	100
+季鸟	jknc	100
 尽可能地	jknd	100
 济南	jknf	100
 暨南	jknfa	100
@@ -64569,6 +64577,7 @@ columns:
 老房	lzfpu	100
 老冯	lzfr	100
 老发	lzfs	100
+连字符	lzfv	100
 老肥	lzfw	100
 老庄	lzfx	100
 老中	lzfy	100
@@ -70357,7 +70366,7 @@ columns:
 耐火	nhhl	100
 闹哄哄	nhho	100
 黏糊糊	nhhu	100
-粘合剂	nhj	100
+黏合剂	nhj	100
 奶精	nhjg	100
 内环境	nhji	100
 疟疾	nhjk	100
@@ -71074,7 +71083,7 @@ columns:
 你妈的	nmdi	100
 你们的	nmdii	100
 年度	nmdj	100
-粘度	nmdjo	100
+黏度	nmdjo	100
 年底	nmdk	100
 那么多年	nmdn	100
 诺曼底	nmdo	100
@@ -71104,17 +71113,16 @@ columns:
 南美洲	nmf	100
 浓墨重彩	nmfc	100
 念咒	nmfd	100
-粘着	nmfe	100
+黏着	nmfe	100
 念着	nmfei	100
 撵着	nmfeio	100
 黏着	nmfeu	100
 年饭	nmff	100
 那么这个	nmfg	100
 黏附	nmfj	100
-粘附	nmfjo	100
 年制	nmfk	100
-粘滞	nmfko	100
-粘着	nmfl	100
+黏滞	nmfko	100
+黏着	nmfl	100
 念佛	nmfli	100
 碾庄	nmfm	100
 年份	nmfn	100
@@ -71126,7 +71134,7 @@ columns:
 碾庄	nmfx	100
 年终	nmfy	100
 内蒙古	nmg	100
-粘过	nmgl	100
+黏过	nmgl	100
 念过	nmgli	100
 年过	nmglu	100
 年光	nmgm	100
@@ -71146,7 +71154,6 @@ columns:
 那么好的	nmhda	100
 黏合	nmhe	100
 那么回事	nmhea	100
-粘合	nmheo	100
 你们好	nmhi	100
 黏糊	nmhj	100
 年货	nmhl	100
@@ -71160,12 +71167,12 @@ columns:
 年仅	nmjb	100
 年近	nmjbu	100
 年金	nmjbui	100
-粘胶	nmjc	100
+黏胶	nmjc	100
 年焦	nmjcu	100
 年届	nmjd	100
 那么简单	nmjda	100
 你们觉得	nmjdi	100
-粘结	nmjdo	100
+黏结	nmjdo	100
 纳米技术	nmje	100
 年产	nmjf	100
 脑满肠肥	nmjfu	100
@@ -71177,7 +71184,7 @@ columns:
 年纪	nmjk	100
 念及	nmjki	100
 年级	nmjku	100
-粘聚	nmjl	100
+黏聚	nmjl	100
 年间	nmjm	100
 年检	nmjmu	100
 年鉴	nmjmui	100
@@ -71212,14 +71219,14 @@ columns:
 年满	nmmf	100
 年命	nmmg	100
 年迈	nmmh	100
-粘米	nmmk	100
+黏米	nmmk	100
 年末	nmml	100
-粘膜	nmmlo	100
+黏膜	nmmlo	100
 黏膜	nmmlu	100
 年貌	nmmz	100
 那么难	nmn	100
 撵你	nmnk	100
-粘腻	nmnko	100
+黏腻	nmnko	100
 男默女泪	nmnl	100
 年年	nmnm	100
 黏黏	nmnmu	100
@@ -71230,7 +71237,7 @@ columns:
 碾平	nmpg	100
 年谱	nmpj	100
 农牧区	nmq	100
-粘着	nmqe	100
+黏着	nmqe	100
 念着	nmqei	100
 撵着	nmqeio	100
 黏着	nmqeu	100
@@ -71249,7 +71256,7 @@ columns:
 农民起义	nmqy	100
 那么热	nmr	100
 年入	nmrj	100
-粘人	nmrn	100
+黏人	nmrn	100
 那么容易	nmry	100
 柠檬酸	nms	100
 年岁	nmsb	100
@@ -71262,23 +71269,21 @@ columns:
 黏贴	nmtdu	100
 年头	nmtduo	100
 黏土	nmtj	100
-粘土	nmtjo	100
 碾砣	nmtl	100
 年迈体弱	nmtr	100
 柠檬茶	nmw	100
 黏稠	nmwd	100
-粘稠	nmwdo	100
 念完	nmwf	100
 念物	nmwj	100
 年齿	nmwk	100
 撵我	nmwl	100
 那么我们	nmwm	100
-粘网	nmwp	100
+黏网	nmwp	100
 农民问题	nmwt	100
 牛魔王	nmwu	100
 年味	nmww	100
 年尾	nmwwu	100
-粘虫	nmwy	100
+黏虫	nmwy	100
 匿名信	nmx	100
 那么小	nmxa	100
 女明星	nmxao	100
@@ -71290,7 +71295,6 @@ columns:
 怒目而视	nmxea	100
 南无阿弥陀佛	nmxf	100
 黏性	nmxg	100
-粘性	nmxgo	100
 你妹啊	nmxi	100
 年息	nmxk	100
 年限	nmxm	100
@@ -71306,7 +71310,6 @@ columns:
 怒目圆瞪	nmyda	100
 农民运动	nmydo	100
 黏液	nmye	100
-粘液	nmyeo	100
 年夜	nmyeu	100
 那么一种	nmyf	100
 那么一个	nmyg	100
@@ -71328,7 +71331,6 @@ columns:
 年租	nmzj	100
 你们自己	nmzji	100
 年资	nmzk	100
-粘着	nmzl	100
 哪门子	nmzo	100
 年增	nmzr	100
 年尊	nmzw	100
@@ -75734,6 +75736,7 @@ columns:
 炮塔	pzts	100
 跑团	pztt	100
 炮筒	pzty	100
+跑通	pztyo	100
 跑车	pzwe	100
 炮车	pzweo	100
 跑完	pzwf	100
@@ -79442,6 +79445,7 @@ columns:
 欺压	qkysv	100
 起源	qkyt	100
 祈愿	qkyto	100
+弃元	qkytov	100
 棋院	qkytv	100
 奇缘	qkytva	100
 气韵	qkyw	100
@@ -86984,13 +86988,13 @@ columns:
 苏军	sjjw	100
 速将	sjjx	100
 苏超	sjjz	100
-三角裤	sjk	100
+三剑客	sjk	100
 素口	sjkd	100
 苏克	sjke	100
 诉苦	sjkj	100
 随处可见	sjkja	100
 素宽	sjkt	100
-三剑客	sjkv	100
+三角裤	sjkv	100
 三角恋	sjl	100
 塑料	sjlc	100
 三长两短	sjld	100
@@ -87065,7 +87069,7 @@ columns:
 速算	sjst	100
 所见所闻	sjsw	100
 诉讼	sjsy	100
-三级跳	sjt	100
+三件套	sjt	100
 塑条	sjtc	100
 苏铁	sjtd	100
 苏特	sjte	100
@@ -87075,7 +87079,7 @@ columns:
 俗体	sjtk	100
 丧尽天良	sjtl	100
 苏堂	sjtp	100
-三件套	sjtv	100
+三级跳	sjtv	100
 速通	sjty	100
 俗套	sjtz	100
 私家车	sjw	100
@@ -102454,8 +102458,9 @@ columns:
 偶一	xdyki	100
 谢意	xdyko	100
 写意	xdykoo	100
-欧意	xdykv	100
+欧易	xdykv	100
 邪异	xdykva	100
+欧意	xdykvo	100
 偶遇	xdyl	100
 泄欲	xdyla	100
 写于	xdylo	100
@@ -112343,6 +112348,7 @@ columns:
 英姿	ygzki	100
 蝇子	ygzkia	100
 硬座	ygzl	100
+油光锃亮	ygzla	100
 营葬	ygzp	100
 一鼓作气	ygzq	100
 一棍子打死	ygzs	100
@@ -114158,6 +114164,7 @@ columns:
 雨声	ylerv	100
 淤沙	yles	100
 一路上	ylev	100
+右利手	ylevu	100
 虞舜	ylew	100
 与谁	ylewv	100
 玉霜	ylex	100
@@ -119843,6 +119850,7 @@ columns:
 做声	zleri	100
 做啥	zles	100
 在路上	zlev	100
+左利手	zlevu	100
 租赁费	zlf	100
 作者	zlfe	100
 坐着	zlfei	100
