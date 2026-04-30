@@ -83,12 +83,20 @@ jobs:
           sha256sum keytao-*.zip > checksums.txt
           cat checksums.txt
       
+      - name: Get latest commit message
+        id: commit_msg
+        run: |
+          MSG=$(git log -1 --pretty=format:"%s")
+          echo "msg=${MSG}" >> $GITHUB_OUTPUT
+      
       - name: Create Release
         uses: softprops/action-gh-release@v1
         with:
           tag_name: ${{ steps.version.outputs.VERSION }}
           name: KeyTao ${{ steps.version.outputs.VERSION }}
           body: |
+            > ${{ steps.commit_msg.outputs.msg }}
+            
             ## KeyTao 输入法方案 ${{ steps.version.outputs.VERSION }}
             
             ### 安装说明
@@ -109,7 +117,14 @@ jobs:
             - `keytao-mac-*.zip` - macOS 平台专用版本
             - `keytao-windows-*.zip` - Windows 平台专用版本
             - `keytao-android-*.zip` - Android 平台专用版本
+            - `keytao-ios-*.zip` - iOS / iPad 平台专用版本（元书输入法）
             - `checksums.txt` - SHA256 校验和
+            
+            ### iOS / iPad 安装说明（元书输入法）
+            
+            1. 复制上方 `keytao-ios-*.zip` 的下载链接
+            2. 打开 [元书输入法](https://apps.apple.com/app/id6744464701) → 输入方案 → 右上角「下载方案」→ 填写方案名称和下载链接 → 保存 → 点击下载
+            3. 返回「输入方案」→ 右上角「方案目录切换」→ 进入键道目录 → 右上角「打开」→ 部署 → 等待完成
             
             ### 更新内容
             
@@ -146,8 +161,8 @@ jobs:
           
           for file in release/keytao-*.zip release/checksums.txt; do
             echo "Uploading $file ..."
-            curl -s -X POST \
-              "https://gitee.com/api/v5/repos/xkinput/KeyTao/releases/${RELEASE_ID}/attach_files" \
-              -F "access_token=${GITEE_TOKEN}" \
-              -F "file=@${file}"
+            UPLOAD_RESP=$(curl -s -X POST \
+              "https://gitee.com/api/v5/repos/xkinput/KeyTao/releases/${RELEASE_ID}/attach_files?access_token=${GITEE_TOKEN}" \
+              -F "file=@${file}")
+            echo "$UPLOAD_RESP"
           done

@@ -35,10 +35,9 @@
 
   > **macOS 用户注意**：使用 Nix 安装前需先手动安装鼠须管（见下方 Mac 安装方式）。
   >
-* iOS 首选安装方式：
+* iOS 安装方式：
 
-  - iRime：至 app store 搜寻 iRime 下载 app，内有教程；请参考 [iRime 部署「键道」图文教程][219] 或 [iOS平台安装部署教程][913]
-  - 落格（付费软件）：至 app store 搜寻落格下载 app，至「对数云-主码表」下载「星空键道6.2 -- 官方版本]
+  - **[元书输入法][106]**：至 App Store 搜索「元书输入法」下载，进入「输入方案 → 下载方案」，填写 `keytao-ios-*.zip` 的下载链接即可一键下载，然后切换目录到键道即可自动部署
 
 #### 并击功能：
 
@@ -83,11 +82,11 @@
 
 ### 键道可以运行在以下平台中：
 
-| Windows                |          Linux          |      Apple 装置      |        Android        |
-| ---------------------- | :----------------------: | :------------------: | :-------------------: |
-| [Windows(weasel)][101] | [Linux(ibus-rime)][104] | [Mac(squirrel)][102] | [Android(trime)][105] |
-| [Windows(小小)][203]   | [Linux(fcitx-rime)][103] |  [iOS(iRime)][106]  | [Android(小小)][203] |
-| [Windows(多多)][108]   |    [Linux(小小)][203]    |   [iOS(落格)][107]   |                      |
+| Windows                |          Linux          |              Apple 装置              |        Android        |
+| ---------------------- | :----------------------: | :----------------------------------: | :-------------------: |
+| [Windows(weasel)][101] | [Linux(ibus-rime)][104] |         [Mac(squirrel)][102]         | [Android(trime)][105] |
+| [Windows(小小)][203]   | [Linux(fcitx-rime)][103] |           [iOS(元书)][106]           | [Android(小小)][203] |
+| [Windows(多多)][108]   |    [Linux(小小)][203]    | [iOS(iRime)][920] / [iOS(落格)][107] |                      |
 
 > 键道的跨平台使用离不开以上优秀的输入平台
 
@@ -97,8 +96,9 @@
 [103]: https://github.com/fcitx/fcitx-rime
 [104]: https://github.com/rime/ibus-rime
 [105]: https://github.com/osfans/trime
-[106]: https://github.com/jimmy54/iRime
+[106]: https://apps.apple.com/app/id6744464701
 [107]: https://im.logcg.com/
+[920]: https://github.com/jimmy54/iRime
 [108]: https://chinput.com/portal.php
 [203]: https://github.com/dgod/yong
 [204]: https://github.com/xkinput/KeyTao
