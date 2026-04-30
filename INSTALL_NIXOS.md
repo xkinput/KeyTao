@@ -7,13 +7,10 @@
 Nix 包会自动根据系统平台安装以下文件到 Rime 数据目录：
 
 - **主码表文件**：`rime/` 目录下的所有词库和配置
-- **Linux 专用配置**：
-  - `schema/linux/keytao.schema.yaml` - Linux 版键道6方案
-  - `schema/linux/keytao-dz.schema.yaml` - Linux 版键道6单字方案
-- **macOS 专用配置**：
-  - `schema/mac/keytao.schema.yaml` - Mac 版键道6方案
-  - `schema/mac/keytao-dz.schema.yaml` - Mac 版键道6单字方案
-  - `schema/mac/default.custom.yaml` - 默认配置
+- **桌面通用方案**（Linux / macOS / Windows 共用）：
+  - `schema/desktop/keytao.schema.yaml` - 键道6方案
+  - `schema/desktop/keytao-dz.schema.yaml` - 键道6单字方案
+- **macOS 专用配置**（覆盖通用方案）：
   - `schema/mac/squirrel.custom.yaml` - 鼠须管配置
   - 自动部署到 `~/Library/Rime` 目录（鼠须管默认目录）
 
