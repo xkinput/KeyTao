@@ -10,7 +10,7 @@ jd=$(pwd)
 xkjd=../../../KeyTao
 xklb=../../../rime_xklb
 xkyb=../../../rime_xkybd
-schema="../../schema/mac"
+schema="../../schema/desktop"
 extend_dicts="../../extend-dicts"
 userDict=./用户数据
 
@@ -134,6 +134,6 @@ sleep 2
 echo "==========================================="
 echo "已安装方案：$count个 $JD $YB $LB"
 sleep 1
-echo "检查部署成功后若未退出请Ctrl + C 结束"
+echo "请前往输入法中部署"
 echo "==========================================="
 exit

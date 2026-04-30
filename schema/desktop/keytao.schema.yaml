@@ -5,6 +5,8 @@ schema:
   schema_id: keytao
   name: 键道6
   version: "2.2"
+  dependencies:
+    - keytao-cx
 
 
 # Layout config
@@ -72,8 +74,8 @@ punctuator:
     # '/' : { commit: ？ }
     ';' : { commit: ； }
     ':' : { commit: ： }
-    '''' : { pair: [ '‘', '’' ] }
-    '"' : { pair: [ '“', '”' ] }
+    '''' : { pair: [ ''', ''' ] }
+    '"' : { pair: [ '"', '"' ] }
     '\' : [ '、', '＼' ]
     '|' : [ '·', '｜', '§', '¦' ]
     '`' : "｀"
@@ -102,11 +104,11 @@ punctuator:
     '<' : [ 《, 〈, «, ‹ ]
     '>' : [ 》, 〉, », › ]
     '?' : { commit: ？ }
-    '/' : ['/']
+    '/' : [ '/' ]
     ';' : { commit: ； }
     ':' : { commit: ： }
-    '''' : { pair: [ '‘', '’' ] }
-    '"' : { pair: [ '“', '”' ] }
+    '''' : { pair: [ ''', ''' ] }
+    '"' : { pair: [ '"', '"' ] }
     '\' : [ 、, '\', ＼ ]
     '|' : [ ·, '|', ｜, '§', '¦' ]
     '`' : '`'
@@ -197,8 +199,9 @@ emoji_cn:
 
 
 s2tw:
-  opencc_config: s2t.json
+  opencc_config: s2tw.json
   option_name: s2tw
+
 
 danzi_lookup:
   dictionary: keytao.extended
@@ -221,6 +224,7 @@ custom_phrase:
   user_dict: user_dict
   db_class: stabledb
   enable_sentence: false
+  initial_quality: "0"
 
 
 key_binder:
