@@ -22,13 +22,14 @@ stdenvNoCC.mkDerivation rec {
     ${
       if stdenvNoCC.isDarwin then
         ''
-          # macOS: Install Mac-specific configs
+          # macOS: Install desktop schema, then overlay Mac-specific configs
+          cp schema/desktop/*.yaml $out/share/rime-data/
           cp schema/mac/*.yaml $out/share/rime-data/
         ''
       else
         ''
-          # Linux: Install Linux-specific schemas
-          cp schema/linux/*.yaml $out/share/rime-data/
+          # Linux: Install desktop schema
+          cp schema/desktop/*.yaml $out/share/rime-data/
         ''
     }
 
