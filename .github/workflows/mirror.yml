@@ -18,3 +18,4 @@ jobs:
           dst_token: ${{ secrets.GITEE_TOKEN }}
           static_list: "KeyTao"
           account_type: org
+          force_update: true
