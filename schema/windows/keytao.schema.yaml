@@ -28,16 +28,6 @@ layout:
     - derive/^([bcdefghjklmnpqrstwxyz;`]{2}[avuio`]{5}).$/$1`/
     - derive/^[bcdefghjklmnpqrstwxyz;]{2}([avuio`]*)$/``$1/
 
-  # input_code:
-  #   date: orq
-  #   time: ouj
-  #   week: oxq
-
-  patterns:
-    special: "^(?:;?[avuio])[a-z]{0,}"
-    # input_code: "^(?:orq?|ouj?|oxq?)"
-
-
 switches:
   - name: ascii_mode
     reset: 0
@@ -67,18 +57,18 @@ punctuator:
     '<' : [ 《, 〈, «, ‹ ]
     '>' : [ 》, 〉, », › ]
     '?' : { commit: ？ }
+    '/' : { commit: ？ }
     ';' : { commit: ； }
     ':' : { commit: ： }
     '''' : { pair: [ '‘', '’' ] }
     '"' : { pair: [ '“', '”' ] }
-    # '/' : { commit: / }
     '\' : [ 、, ＼ ]
     '|' : [ ·, ｜, '§', '¦' ]
     '`' : ｀
     '~' : ～
     '!' : { commit: ！ }
-    '@' : [ ＠, ☯ ]
-    '#' : [ ＃, ⌘ ]
+    '@' : ＠
+    '#' : ＃
     '%' : [ ％, '°', '℃' ]
     '$' : [ ￥, '$', '€', '£', '¥', '¢', '¤' ]
     '^' : { commit: …… }
@@ -86,10 +76,10 @@ punctuator:
     '*' : [ ＊, ·, ・, ×, ※, ❂ ]
     '(' : （
     ')' : ）
-    '-' : －
+    '-' : '-'
     '_' : ——
-    '+' : ＋
-    '=' : [ '=' ]
+    '+' : '+'
+    '=' : '='
     '[' : [ 「, 【, 〔, ［ ]
     ']' : [ 」, 】, 〕, ］ ]
     '{' : [ 『, 〖, ｛ ]
@@ -99,8 +89,8 @@ punctuator:
     '.' : { commit: 。 }
     '<' : [ 《, 〈, «, ‹ ]
     '>' : [ 》, 〉, », › ]
-    '/' : { commit: / }
     '?' : { commit: ？ }
+    '/' : { commit: ？ }
     ';' : { commit: ； }
     ':' : { commit: ： }
     '''' : { pair: [ '‘', '’' ] }
@@ -152,25 +142,22 @@ engine:
     - table_translator
     - history_translator@repeat_history
     - table_translator@custom_phrase
-    - table_translator@danzi_lookup
     - lua_translator@date_time_translator
     - lua_translator@number_translator
   filters:
-    - uniquifier
     - simplifier@emoji_cn
     - simplifier@s2tw
-    # - lua_filter@hint_filter
-    - lua_filter@keytao_filter
+    - uniquifier
     - reverse_lookup_filter@danzi_lookup
-
+    - lua_filter@keytao_filter
 
 speller:
   algebra:
     __include: "layout/algebra"
   auto_select: false
   auto_select_unique_candidate: false
-  alphabet: "zyxwvutsrqponmlkjihgfedcba;/=`"
-  initials: "abcdefghijklmnopqrstuvwxyz;/=`"
+  alphabet: "abcdefghijklmnopqrstuvwxyz;/`"
+  initials: "abcdefghijklmnopqrstuvwxyz;/`"
 
 
 translator:
@@ -242,13 +229,13 @@ key_binder:
 
 recognizer:
   patterns:
+    # __include: "layout/patterns"
     punct: "^/([0-9]0?|[a-z]+)$"
     danzi_lookup: "[a-z`]*`+[a-z`]*"
     email: "^[a-z][-_.0-9a-z]*@.*$"
     uppercase: "[A-Z][-_+.'0-9A-Za-z]*$"
     pinyin: "(?<![`A-Z])`[a-z']*;?$"
     url: "^(www[.]|https?:|ftp:|mailto:).*$"
-    english: "^'[A-Z|a-z]*'?$"
     jsq: "^=[^;']+$"
 
 

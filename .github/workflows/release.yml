@@ -36,27 +36,28 @@ jobs:
           mkdir -p release/keytao-mac
           mkdir -p release/keytao-windows
           mkdir -p release/keytao-android
+          mkdir -p release/keytao-ios
       
       - name: Build Linux package
         run: |
           cp -r rime/* release/keytao-linux/
           cp -r schema/linux/* release/keytao-linux/
-          cd release
-          zip -r keytao-linux-${{ steps.version.outputs.VERSION }}.zip keytao-linux
+          cd release/keytao-linux
+          zip -r ../keytao-linux-${{ steps.version.outputs.VERSION }}.zip .
       
       - name: Build Mac package
         run: |
           cp -r rime/* release/keytao-mac/
           cp -r schema/mac/* release/keytao-mac/
-          cd release
-          zip -r keytao-mac-${{ steps.version.outputs.VERSION }}.zip keytao-mac
+          cd release/keytao-mac
+          zip -r ../keytao-mac-${{ steps.version.outputs.VERSION }}.zip .
       
       - name: Build Windows package
         run: |
           cp -r rime/* release/keytao-windows/
           cp -r schema/windows/* release/keytao-windows/
-          cd release
-          zip -r keytao-windows-${{ steps.version.outputs.VERSION }}.zip keytao-windows
+          cd release/keytao-windows
+          zip -r ../keytao-windows-${{ steps.version.outputs.VERSION }}.zip .
       
       - name: Build Android package
         run: |
@@ -64,8 +65,17 @@ jobs:
           if [ -d "schema/android" ]; then
             cp -r schema/android/* release/keytao-android/
           fi
-          cd release
-          zip -r keytao-android-${{ steps.version.outputs.VERSION }}.zip keytao-android
+          cd release/keytao-android
+          zip -r ../keytao-android-${{ steps.version.outputs.VERSION }}.zip .
+      
+      - name: Build iOS package
+        run: |
+          cp -r rime/* release/keytao-ios/
+          if [ -d "schema/ios" ]; then
+            cp -r schema/ios/* release/keytao-ios/
+          fi
+          cd release/keytao-ios
+          zip -r ../keytao-ios-${{ steps.version.outputs.VERSION }}.zip .
       
       - name: Generate checksums
         run: |
@@ -111,3 +121,33 @@ jobs:
           prerelease: false
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+      
+      - name: Create Gitee Release and upload assets
+        env:
+          GITEE_TOKEN: ${{ secrets.GITEE_TOKEN }}
+          VERSION: ${{ steps.version.outputs.VERSION }}
+        run: |
+          RELEASE_BODY="KeyTao 输入法方案 ${VERSION}，下载对应平台压缩包解压后复制到 Rime 用户目录重新部署即可。"
+          
+          RESPONSE=$(curl -s -X POST \
+            "https://gitee.com/api/v5/repos/xkinput/KeyTao/releases" \
+            -F "access_token=${GITEE_TOKEN}" \
+            -F "tag_name=${VERSION}" \
+            -F "name=KeyTao ${VERSION}" \
+            -F "body=${RELEASE_BODY}" \
+            -F "target_commitish=master")
+          
+          RELEASE_ID=$(echo "$RESPONSE" | jq -r '.id')
+          if [ -z "$RELEASE_ID" ] || [ "$RELEASE_ID" = "null" ]; then
+            echo "Failed to create Gitee release: $RESPONSE"
+            exit 1
+          fi
+          echo "Gitee release created, id=$RELEASE_ID"
+          
+          for file in release/keytao-*.zip release/checksums.txt; do
+            echo "Uploading $file ..."
+            curl -s -X POST \
+              "https://gitee.com/api/v5/repos/xkinput/KeyTao/releases/${RELEASE_ID}/attach_files" \
+              -F "access_token=${GITEE_TOKEN}" \
+              -F "file=@${file}"
+          done

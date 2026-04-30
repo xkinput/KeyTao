@@ -45,6 +45,7 @@ switches:
     states: [ "关顶功提示", "开顶功提示" ]
 
 punctuator:
+  import_preset: symbols
   full_shape:
     ' ' : { commit: '　' }
     ',' : { commit: ， }
@@ -133,16 +134,15 @@ engine:
     - fallback_segmentor
   translators:
     - punct_translator
-    - table_translator@custom_phrase
     - table_translator
     - history_translator@repeat_history
+    - table_translator@custom_phrase
     - lua_translator@date_time_translator
     - lua_translator@number_translator
   filters:
-    - simplifier
-    - uniquifier
     - simplifier@emoji_cn
     - simplifier@s2tw
+    - uniquifier
     - reverse_lookup_filter@danzi_lookup
     - lua_filter@keytao_filter
 
@@ -151,8 +151,8 @@ speller:
     __include: "layout/algebra"
   auto_select: false
   auto_select_unique_candidate: false
-  alphabet: "zyxwvutsrqponmlkjihgfedcba;`"
-  initials: "abcdefghijklmnopqrstuvwxyz;`"
+  alphabet: "abcdefghijklmnopqrstuvwxyz;/`"
+  initials: "abcdefghijklmnopqrstuvwxyz;/`"
 
 translator:
   dictionary: keytao.extended
@@ -208,19 +208,19 @@ key_binder:
     - {accept: equal, send: Page_Down, when: has_menu}
     - { when: always, accept: F6, select: .next }
     - { when: always, accept: F7, toggle: s2tw }
-    - { when: has_menu, accept: "'", send: 2 }
+    # - { when: has_menu, accept: "'", send: 2 }
     - { when: has_menu, accept: "&", toggle: emoji_cn}
 
 recognizer:
-  import_preset: default
   patterns:
-    english: "^'[A-Z|a-z]*'?$"
-    danzi_lookup: "[a-z`]*`+[a-z`]*"
+    # __include: "layout/patterns"
     punct: "^/([0-9]0?|[a-z]+)$"
+    danzi_lookup: "[a-z`]*`+[a-z`]*"
     email: "^[a-z][-_.0-9a-z]*@.*$"
     uppercase: "[A-Z][-_+.'0-9A-Za-z]*$"
     pinyin: "(?<![`A-Z])`[a-z']*;?$"
     url: "^(www[.]|https?:|ftp:|mailto:).*$"
+    jsq: "^=[^;']+$"
 
 topup:
   __include: "layout/topup"
