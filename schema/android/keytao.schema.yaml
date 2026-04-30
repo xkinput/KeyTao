@@ -239,6 +239,7 @@ key_binder:
 
 recognizer:
   patterns:
+    # __include: "layout/patterns"
     punct: "^/([0-9]0?|[a-z]+)$"
     danzi_lookup: "[a-z`]*`+[a-z`]*"
     email: "^[a-z][-_.0-9a-z]*@.*$"
@@ -246,7 +247,6 @@ recognizer:
     pinyin: "(?<![`A-Z])`[a-z']*;?$"
     url: "^(www[.]|https?:|ftp:|mailto:).*$"
     jsq: "^=[^;']+$"
-    english: "^'[A-Z|a-z]*'?$"
 
 
 topup:
