@@ -118,13 +118,7 @@ jobs:
             - `keytao-windows-*.zip` - Windows 平台专用版本
             - `keytao-android-*.zip` - Android 平台专用版本
             - `keytao-ios-*.zip` - iOS / iPad 平台专用版本（元书输入法）
-            - `checksums.txt` - SHA256 校验和
-            
-            ### iOS / iPad 安装说明（元书输入法）
-            
-            1. 复制上方 `keytao-ios-*.zip` 的下载链接
-            2. 打开 [元书输入法](https://apps.apple.com/app/id6744464701) → 输入方案 → 右上角「下载方案」→ 填写方案名称和下载链接 → 保存 → 点击下载
-            3. 返回「输入方案」→ 右上角「方案目录切换」→ 进入键道目录 → 右上角「打开」→ 部署 → 等待完成
+            - `checksums.txt` - SHA256 校验
             
             ### 更新内容
             

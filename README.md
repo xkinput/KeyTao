@@ -37,7 +37,11 @@
   >
 * iOS 安装方式：
 
-  - **[元书输入法][106]**：至 App Store 搜索「元书输入法」下载，进入「输入方案 → 下载方案」，填写 `keytao-ios-*.zip` 的下载链接即可一键下载，然后切换目录到键道即可自动部署
+  - **[元书输入法][106]**：至 App Store 搜索「元书输入法」下载，进入「输入方案 → 下载方案」，填写以下稳定链接即可自动获取最新 iOS 码表包：
+    ```
+    https://keytao.vercel.app/api/install/ios-latest
+    ```
+    下载后切换目录到键道即可自动部署
 
 #### 并击功能：
 
@@ -96,7 +100,7 @@
 [103]: https://github.com/fcitx/fcitx-rime
 [104]: https://github.com/rime/ibus-rime
 [105]: https://github.com/osfans/trime
-[106]: https://apps.apple.com/app/id6744464701
+[106]: https://apps.apple.com/cn/app/%E5%85%83%E4%B9%A6%E8%BE%93%E5%85%A5%E6%B3%95/id6744464701
 [107]: https://im.logcg.com/
 [920]: https://github.com/jimmy54/iRime
 [108]: https://chinput.com/portal.php
