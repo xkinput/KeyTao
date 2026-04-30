@@ -1,0 +1,2914 @@
+# Trime default style settings
+# encoding: utf-8
+
+# 键盘布局引用字段：
+
+# 主键盘
+顶部0-9:
+  key_back_color: 顶部0-9
+  hilited_key_back_color: 顶部0-9高亮
+  key_text_color: 顶部0-9字色
+  hilited_key_text_color: 顶部0-9字高亮
+  key_symbol_color: 顶部0-9符色
+  hilited_key_symbol_color: 顶部0-9符高亮
+q:
+  key_back_color: q
+  hilited_key_back_color: q高亮
+  key_text_color: q字色
+  hilited_key_text_color: q字高亮
+  key_symbol_color: q符色
+  hilited_key_symbol_color: q符高亮
+w:
+  key_back_color: w
+  hilited_key_back_color: w高亮
+  key_text_color: w字色
+  hilited_key_text_color: w字高亮
+  key_symbol_color: w符色
+  hilited_key_symbol_color: w符高亮
+e:
+  key_back_color: e
+  hilited_key_back_color: e高亮
+  key_text_color: e字色
+  hilited_key_text_color: e字高亮
+  key_symbol_color: e符色
+  hilited_key_symbol_color: e符高亮
+r:
+  key_back_color: r
+  hilited_key_back_color: r高亮
+  key_text_color: r字色
+  hilited_key_text_color: r字高亮
+  key_symbol_color: r符色
+  hilited_key_symbol_color: r符高亮
+t:
+  key_back_color: t
+  hilited_key_back_color: t高亮
+  key_text_color: t字色
+  hilited_key_text_color: t字高亮
+  key_symbol_color: t符色
+  hilited_key_symbol_color: t符高亮
+y:
+  key_back_color: y
+  hilited_key_back_color: y高亮
+  key_text_color: y字色
+  hilited_key_text_color: y字高亮
+  key_symbol_color: y符色
+  hilited_key_symbol_color: y符高亮
+u:
+  key_back_color: u
+  hilited_key_back_color: u高亮
+  key_text_color: u字色
+  hilited_key_text_color: u字高亮
+  key_symbol_color: u符色
+  hilited_key_symbol_color: u符高亮
+i:
+  key_back_color: i
+  hilited_key_back_color: i高亮
+  key_text_color: i字色
+  hilited_key_text_color: i字高亮
+  key_symbol_color: i符色
+  hilited_key_symbol_color: i符高亮
+o:
+  key_back_color: o
+  hilited_key_back_color: o高亮
+  key_text_color: o字色
+  hilited_key_text_color: o字高亮
+  key_symbol_color: o符色
+  hilited_key_symbol_color: o符高亮
+p:
+  key_back_color: p
+  hilited_key_back_color: p高亮
+  key_text_color: p字色
+  hilited_key_text_color: p字高亮
+  key_symbol_color: p符色
+  hilited_key_symbol_color: p符高亮
+a:
+  key_back_color: a
+  hilited_key_back_color: a高亮
+  key_text_color: a字色
+  hilited_key_text_color: a字高亮
+  key_symbol_color: a符色
+  hilited_key_symbol_color: a符高亮
+s:
+  key_back_color: s
+  hilited_key_back_color: s高亮
+  key_text_color: s字色
+  hilited_key_text_color: s字高亮
+  key_symbol_color: s符色
+  hilited_key_symbol_color: s符高亮
+d:
+  key_back_color: d
+  hilited_key_back_color: d高亮
+  key_text_color: d字色
+  hilited_key_text_color: d字高亮
+  key_symbol_color: d符色
+  hilited_key_symbol_color: d符高亮
+f:
+  key_back_color: f
+  hilited_key_back_color: f高亮
+  key_text_color: f字色
+  hilited_key_text_color: f字高亮
+  key_symbol_color: f符色
+  hilited_key_symbol_color: f符高亮
+g:
+  key_back_color: g
+  hilited_key_back_color: g高亮
+  key_text_color: g字色
+  hilited_key_text_color: g字高亮
+  key_symbol_color: g符色
+  hilited_key_symbol_color: g符高亮
+h:
+  key_back_color: h
+  hilited_key_back_color: h高亮
+  key_text_color: h字色
+  hilited_key_text_color: h字高亮
+  key_symbol_color: h符色
+  hilited_key_symbol_color: h符高亮
+j:
+  key_back_color: j
+  hilited_key_back_color: j高亮
+  key_text_color: j字色
+  hilited_key_text_color: j字高亮
+  key_symbol_color: j符色
+  hilited_key_symbol_color: j符高亮
+k:
+  key_back_color: k
+  hilited_key_back_color: k高亮
+  key_text_color: k字色
+  hilited_key_text_color: k字高亮
+  key_symbol_color: k符色
+  hilited_key_symbol_color: k符高亮
+l:
+  key_back_color: l
+  hilited_key_back_color: l高亮
+  key_text_color: l字色
+  hilited_key_text_color: l字高亮
+  key_symbol_color: l符色
+  hilited_key_symbol_color: l符高亮
+z:
+  key_back_color: z
+  hilited_key_back_color: z高亮
+  key_text_color: z字色
+  hilited_key_text_color: z字高亮
+  key_symbol_color: z符色
+  hilited_key_symbol_color: z符高亮
+x:
+  key_back_color: x
+  hilited_key_back_color: x高亮
+  key_text_color: x字色
+  hilited_key_text_color: x字高亮
+  key_symbol_color: x符色
+  hilited_key_symbol_color: x符高亮
+c:
+  key_back_color: c
+  hilited_key_back_color: c高亮
+  key_text_color: c字色
+  hilited_key_text_color: c字高亮
+  key_symbol_color: c符色
+  hilited_key_symbol_color: c符高亮
+v:
+  key_back_color: v
+  hilited_key_back_color: v高亮
+  key_text_color: v字色
+  hilited_key_text_color: v字高亮
+  key_symbol_color: v符色
+  hilited_key_symbol_color: v符高亮
+b:
+  key_back_color: b
+  hilited_key_back_color: b高亮
+  key_text_color: b字色
+  hilited_key_text_color: b字高亮
+  key_symbol_color: b符色
+  hilited_key_symbol_color: b符高亮
+n:
+  key_back_color: n
+  hilited_key_back_color: n高亮
+  key_text_color: n字色
+  hilited_key_text_color: n字高亮
+  key_symbol_color: n符色
+  hilited_key_symbol_color: n符高亮
+m:
+  key_back_color: m
+  hilited_key_back_color: m高亮
+  key_text_color: m字色
+  hilited_key_text_color: m字高亮
+  key_symbol_color: m符色
+  hilited_key_symbol_color: m符高亮
+# 功能键
+功能:
+# 用于增设转换键常态符号定义
+  key_symbol_color: 常态符色
+  hilited_key_symbol_color: 常态符高亮
+功能风:
+# 供数字键盘、编辑键盘引用，默认跟随转换键常态风格
+  key_back_color: 功能风
+  hilited_key_back_color: 功能风高亮
+  key_text_color: 功能风字色
+  hilited_key_text_color: 功能风字高亮
+  key_symbol_color: 功能风符色
+  hilited_key_symbol_color: 功能风符高亮
+数字:
+  key_back_color: 数字
+  hilited_key_back_color: 数字高亮
+  key_text_color: 数字字色
+  hilited_key_text_color: 数字字高亮
+  key_symbol_color: 数字符色
+  hilited_key_symbol_color: 数字符高亮
+逗号:
+  key_back_color: 逗号
+  hilited_key_back_color: 逗号高亮
+  key_text_color: 逗号字色
+  hilited_key_text_color: 逗号字高亮
+  key_symbol_color: 逗号符色
+  hilited_key_symbol_color: 逗号符高亮
+空格:
+  key_back_color: 空格
+  hilited_key_back_color: 空格高亮
+  key_text_color: 空格字色
+  hilited_key_text_color: 空格字高亮
+  key_symbol_color: 空格符色
+  hilited_key_symbol_color: 空格符高亮
+句号:
+  key_back_color: 句号
+  hilited_key_back_color: 句号高亮
+  key_text_color: 句号字色
+  hilited_key_text_color: 句号字高亮
+  key_symbol_color: 句号符色
+  hilited_key_symbol_color: 句号符高亮
+回车:
+  key_back_color: 回车
+  hilited_key_back_color: 回车高亮
+  key_text_color: 回车字色
+  hilited_key_text_color: 回车字高亮
+  key_symbol_color: 回车符色
+  hilited_key_symbol_color: 回车符高亮
+退格:
+  key_back_color: 退格
+  hilited_key_back_color: 退格高亮
+  key_text_color: 退格字色
+  hilited_key_text_color: 退格字高亮
+  key_symbol_color: 退格符色
+  hilited_key_symbol_color: 退格符高亮
+
+# 数字（九宫）键盘
+1:
+  key_back_color: 1
+  hilited_key_back_color: 1高亮
+  key_text_color: 1字色
+  hilited_key_text_color: 1字高亮
+  key_symbol_color: 1符色
+  hilited_key_symbol_color: 1符高亮
+2:
+  key_back_color: 2
+  hilited_key_back_color: 2高亮
+  key_text_color: 2字色
+  hilited_key_text_color: 2字高亮
+  key_symbol_color: 2符色
+  hilited_key_symbol_color: 2符高亮
+3:
+  key_back_color: 3
+  hilited_key_back_color: 3高亮
+  key_text_color: 3字色
+  hilited_key_text_color: 3字高亮
+  key_symbol_color: 3符色
+  hilited_key_symbol_color: 3符高亮
+4:
+  key_back_color: 4
+  hilited_key_back_color: 4高亮
+  key_text_color: 4字色
+  hilited_key_text_color: 4字高亮
+  key_symbol_color: 4符色
+  hilited_key_symbol_color: 4符高亮
+5:
+  key_back_color: 5
+  hilited_key_back_color: 5高亮
+  key_text_color: 5字色
+  hilited_key_text_color: 5字高亮
+  key_symbol_color: 5符色
+  hilited_key_symbol_color: 5符高亮
+6:
+  key_back_color: 6
+  hilited_key_back_color: 6高亮
+  key_text_color: 6字色
+  hilited_key_text_color: 6字高亮
+  key_symbol_color: 6符色
+  hilited_key_symbol_color: 6符高亮
+7:
+  key_back_color: 7
+  hilited_key_back_color: 7高亮
+  key_text_color: 7字色
+  hilited_key_text_color: 7字高亮
+  key_symbol_color: 7符色
+  hilited_key_symbol_color: 7符高亮
+8:
+  key_back_color: 8
+  hilited_key_back_color: 8高亮
+  key_text_color: 8字色
+  hilited_key_text_color: 8字高亮
+  key_symbol_color: 8符色
+  hilited_key_symbol_color: 8符高亮
+9:
+  key_back_color: 9
+  hilited_key_back_color: 9高亮
+  key_text_color: 9字色
+  hilited_key_text_color: 9字高亮
+  key_symbol_color: 9符色
+  hilited_key_symbol_color: 9符高亮
+0:
+  key_back_color: 0
+  hilited_key_back_color: 0高亮
+  key_text_color: 0字色
+  hilited_key_text_color: 0字高亮
+  key_symbol_color: 0符色
+  hilited_key_symbol_color: 0符高亮
+数字符1:
+  key_back_color: 数字符1
+  hilited_key_back_color: 数字符1高亮
+  key_text_color: 数字符1字色
+  hilited_key_text_color: 数字符1字高亮
+  key_symbol_color: 数字符1符色
+  hilited_key_symbol_color: 数字符1符高亮
+数字符2:
+  key_back_color: 数字符2
+  hilited_key_back_color: 数字符2高亮
+  key_text_color: 数字符2字色
+  hilited_key_text_color: 数字符2字高亮
+  key_symbol_color: 数字符2符色
+  hilited_key_symbol_color: 数字符2符高亮
+数字符3:
+  key_back_color: 数字符3
+  hilited_key_back_color: 数字符3高亮
+  key_text_color: 数字符3字色
+  hilited_key_text_color: 数字符3字高亮
+  key_symbol_color: 数字符3符色
+  hilited_key_symbol_color: 数字符3符高亮
+数字返回:
+  key_back_color: 数字返回
+  hilited_key_back_color: 数字返回高亮
+  key_text_color: 数字返回字色
+  hilited_key_text_color: 数字返回字高亮
+  key_symbol_color: 数字返回符色
+  hilited_key_symbol_color: 数字返回符高亮
+数字逗号:
+  key_back_color: 数字逗号
+  hilited_key_back_color: 数字逗号高亮
+  key_text_color: 数字逗号字色
+  hilited_key_text_color: 数字逗号字高亮
+  key_symbol_color: 数字逗号符色
+  hilited_key_symbol_color: 数字逗号符高亮
+数字句号:
+  key_back_color: 数字句号
+  hilited_key_back_color: 数字句号高亮
+  key_text_color: 数字句号字色
+  hilited_key_text_color: 数字句号字高亮
+  key_symbol_color: 数字句号符色
+  hilited_key_symbol_color: 数字句号符高亮
+数字回车:
+  key_back_color: 数字回车
+  hilited_key_back_color: 数字回车高亮
+  key_text_color: 数字回车字色
+  hilited_key_text_color: 数字回车字高亮
+  key_symbol_color: 数字回车符色
+  hilited_key_symbol_color: 数字回车符高亮
+数字编辑:
+  key_back_color: 数字编辑
+  hilited_key_back_color: 数字编辑高亮
+  key_text_color: 数字编辑字色
+  hilited_key_text_color: 数字编辑字高亮
+  key_symbol_color: 数字编辑符色
+  hilited_key_symbol_color: 数字编辑符高亮
+数字空格:
+  key_back_color: 数字空格
+  hilited_key_back_color: 数字空格高亮
+  key_text_color: 数字空格字色
+  hilited_key_text_color: 数字空格字高亮
+  key_symbol_color: 数字空格符色
+  hilited_key_symbol_color: 数字空格符高亮
+数字退格:
+  key_back_color: 数字退格
+  hilited_key_back_color: 数字退格高亮
+  key_text_color: 数字退格字色
+  hilited_key_text_color: 数字退格字高亮
+  key_symbol_color: 数字退格符色
+  hilited_key_symbol_color: 数字退格符高亮
+
+# 30键专用
+分:
+  key_back_color: 分
+  hilited_key_back_color: 分高亮
+  key_text_color: 分字色
+  hilited_key_text_color: 分字高亮
+  key_symbol_color: 分符色
+  hilited_key_symbol_color: 分符高亮
+逗:
+  key_back_color: 逗
+  hilited_key_back_color: 逗高亮
+  key_text_color: 逗字色
+  hilited_key_text_color: 逗字高亮
+  key_symbol_color: 逗符色
+  hilited_key_symbol_color: 逗符高亮
+句:
+  key_back_color: 句
+  hilited_key_back_color: 句高亮
+  key_text_color: 句字色
+  hilited_key_text_color: 句字高亮
+  key_symbol_color: 句符色
+  hilited_key_symbol_color: 句符高亮
+斜:
+  key_back_color: 斜
+  hilited_key_back_color: 斜高亮
+  key_text_color: 斜字色
+  hilited_key_text_color: 斜字高亮
+  key_symbol_color: 斜符色
+  hilited_key_symbol_color: 斜符高亮
+
+
+# 后备配色（兜底用）
+fallback_colors:
+  # root_background: back_color #键盘+状态栏 整体背景
+  # liquid_keyboard_background: keyboard_back_color #liquidKeyboard流式键盘
+  # long_text_back_color: 长文本列表
+
+# 主键盘
+  顶部0-9: off_key_back_color
+  顶部0-9高亮: hilited_off_key_back_color
+  顶部0-9字色: off_key_text_color
+  顶部0-9字高亮: 顶部0-9字色 #(字高亮，符色，符高亮均跟随自身)
+  顶部0-9符色: 顶部0-9字色
+  顶部0-9符高亮: 顶部0-9符色
+  q: 按键
+  q高亮: 按键高亮
+  q字色: 按键字色
+  q字高亮: 按键字高亮
+  q符色: 按键符色
+  q符高亮: 按键符高亮
+  w: 按键
+  w高亮: 按键高亮
+  w字色: 按键字色
+  w字高亮: 按键字高亮
+  w符色: 按键符色
+  w符高亮: 按键符高亮
+  e: 按键
+  e高亮: 按键高亮
+  e字色: 按键字色
+  e字高亮: 按键字高亮
+  e符色: 按键符色
+  e符高亮: 按键符高亮
+  r: 按键
+  r高亮: 按键高亮
+  r字色: 按键字色
+  r字高亮: 按键字高亮
+  r符色: 按键符色
+  r符高亮: 按键符高亮
+  t: 按键
+  t高亮: 按键高亮
+  t字色: 按键字色
+  t字高亮: 按键字高亮
+  t符色: 按键符色
+  t符高亮: 按键符高亮
+  y: 按键
+  y高亮: 按键高亮
+  y字色: 按键字色
+  y字高亮: 按键字高亮
+  y符色: 按键符色
+  y符高亮: 按键符高亮
+  u: 按键
+  u高亮: 按键高亮
+  u字色: 按键字色
+  u字高亮: 按键字高亮
+  u符色: 按键符色
+  u符高亮: 按键符高亮
+  i: 按键
+  i高亮: 按键高亮
+  i字色: 按键字色
+  i字高亮: 按键字高亮
+  i符色: 按键符色
+  i符高亮: 按键符高亮
+  o: 按键
+  o高亮: 按键高亮
+  o字色: 按键字色
+  o字高亮: 按键字高亮
+  o符色: 按键符色
+  o符高亮: 按键符高亮
+  p: 按键
+  p高亮: 按键高亮
+  p字色: 按键字色
+  p字高亮: 按键字高亮
+  p符色: 按键符色
+  p符高亮: 按键符高亮
+  a: 按键
+  a高亮: 按键高亮
+  a字色: 按键字色
+  a字高亮: 按键字高亮
+  a符色: 按键符色
+  a符高亮: 按键符高亮
+  s: 按键
+  s高亮: 按键高亮
+  s字色: 按键字色
+  s字高亮: 按键字高亮
+  s符色: 按键符色
+  s符高亮: 按键符高亮
+  d: 按键
+  d高亮: 按键高亮
+  d字色: 按键字色
+  d字高亮: 按键字高亮
+  d符色: 按键符色
+  d符高亮: 按键符高亮
+  f: 按键
+  f高亮: 按键高亮
+  f字色: 按键字色
+  f字高亮: 按键字高亮
+  f符色: 按键符色
+  f符高亮: 按键符高亮
+  g: 按键
+  g高亮: 按键高亮
+  g字色: 按键字色
+  g字高亮: 按键字高亮
+  g符色: 按键符色
+  g符高亮: 按键符高亮
+  h: 按键
+  h高亮: 按键高亮
+  h字色: 按键字色
+  h字高亮: 按键字高亮
+  h符色: 按键符色
+  h符高亮: 按键符高亮
+  j: 按键
+  j高亮: 按键高亮
+  j字色: 按键字色
+  j字高亮: 按键字高亮
+  j符色: 按键符色
+  j符高亮: 按键符高亮
+  k: 按键
+  k高亮: 按键高亮
+  k字色: 按键字色
+  k字高亮: 按键字高亮
+  k符色: 按键符色
+  k符高亮: 按键符高亮
+  l: 按键
+  l高亮: 按键高亮
+  l字色: 按键字色
+  l字高亮: 按键字高亮
+  l符色: 按键符色
+  l符高亮: 按键符高亮
+  z: 按键
+  z高亮: 按键高亮
+  z字色: 按键字色
+  z字高亮: 按键字高亮
+  z符色: 按键符色
+  z符高亮: 按键符高亮
+  x: 按键
+  x高亮: 按键高亮
+  x字色: 按键字色
+  x字高亮: 按键字高亮
+  x符色: 按键符色
+  x符高亮: 按键符高亮
+  c: 按键
+  c高亮: 按键高亮
+  c字色: 按键字色
+  c字高亮: 按键字高亮
+  c符色: 按键符色
+  c符高亮: 按键符高亮
+  v: 按键
+  v高亮: 按键高亮
+  v字色: 按键字色
+  v字高亮: 按键字高亮
+  v符色: 按键符色
+  v符高亮: 按键符高亮
+  b: 按键
+  b高亮: 按键高亮
+  b字色: 按键字色
+  b字高亮: 按键字高亮
+  b符色: 按键符色
+  b符高亮: 按键符高亮
+  n: 按键
+  n高亮: 按键高亮
+  n字色: 按键字色
+  n字高亮: 按键字高亮
+  n符色: 按键符色
+  n符高亮: 按键符高亮
+  m: 按键
+  m高亮: 按键高亮
+  m字色: 按键字色
+  m字高亮: 按键字高亮
+  m符色: 按键符色
+  m符高亮: 按键符高亮
+# 功能键（字高亮，符色，符高亮均跟随自身）
+  功能风: off_key_back_color
+  功能风高亮: hilited_off_key_back_color
+  功能风字色: off_key_text_color
+  功能风字高亮: 功能风字色
+  功能风符色: 功能风字色
+  功能风符高亮: 功能风符色
+  数字: off_key_back_color
+  数字高亮: hilited_off_key_back_color
+  数字字色: off_key_text_color
+  数字字高亮: 数字字色
+  数字符色: 数字字色
+  数字符高亮: 数字符色
+  逗号: off_key_back_color
+  逗号高亮: hilited_off_key_back_color
+  逗号字色: off_key_text_color
+  逗号字高亮: 逗号字色
+  逗号符色: 逗号字色
+  逗号符高亮: 逗号符色
+  空格: 按键
+  空格高亮: 按键高亮
+  空格字色: 按键字色
+  空格字高亮: 空格字色
+  空格符色: 空格字色
+  空格符高亮: 空格符色
+  句号: off_key_back_color
+  句号高亮: hilited_off_key_back_color
+  句号字色: off_key_text_color
+  句号字高亮: 句号字色
+  句号符色: 句号字色
+  句号符高亮: 句号符色
+  回车: off_key_back_color
+  回车高亮: hilited_off_key_back_color
+  回车字色: off_key_text_color
+  回车字高亮: 回车字色
+  回车符色: 回车字色
+  回车符高亮: 回车符色
+  退格: off_key_back_color
+  退格高亮: hilited_off_key_back_color
+  退格字色: off_key_text_color
+  退格字高亮: 退格字色
+  退格符色: 退格字色
+  退格符高亮: 退格符色
+
+# 数字（九宫）键盘
+  1: 按键
+  1高亮: 按键高亮
+  1字色: 按键字色
+  1字高亮: 按键字高亮
+  1符色: 按键符色
+  1符高亮: 按键符高亮
+  2: 按键
+  2高亮: 按键高亮
+  2字色: 按键字色
+  2字高亮: 按键字高亮
+  2符色: 按键符色
+  2符高亮: 按键符高亮
+  3: 按键
+  3高亮: 按键高亮
+  3字色: 按键字色
+  3字高亮: 按键字高亮
+  3符色: 按键符色
+  3符高亮: 按键符高亮
+  4: 按键
+  4高亮: 按键高亮
+  4字色: 按键字色
+  4字高亮: 按键字高亮
+  4符色: 按键符色
+  4符高亮: 按键符高亮
+  5: 按键
+  5高亮: 按键高亮
+  5字色: 按键字色
+  5字高亮: 按键字高亮
+  5符色: 按键符色
+  5符高亮: 按键符高亮
+  6: 按键
+  6高亮: 按键高亮
+  6字色: 按键字色
+  6字高亮: 按键字高亮
+  6符色: 按键符色
+  6符高亮: 按键符高亮
+  7: 按键
+  7高亮: 按键高亮
+  7字色: 按键字色
+  7字高亮: 按键字高亮
+  7符色: 按键符色
+  7符高亮: 按键符高亮
+  8: 按键
+  8高亮: 按键高亮
+  8字色: 按键字色
+  8字高亮: 按键字高亮
+  8符色: 按键符色
+  8符高亮: 按键符高亮
+  9: 按键
+  9高亮: 按键高亮
+  9字色: 按键字色
+  9字高亮: 按键字高亮
+  9符色: 按键符色
+  9符高亮: 按键符高亮
+  0: 按键
+  0高亮: 按键高亮
+  0字色: 按键字色
+  0字高亮: 按键字高亮
+  0符色: 按键符色
+  0符高亮: 按键符高亮
+  数字符1: 功能风
+  数字符1高亮: 功能风高亮
+  数字符1字色: 功能风字色
+  数字符1字高亮: 功能风字高亮
+  数字符1符色: 功能风符色
+  数字符1符高亮: 功能风符高亮
+  数字符2: 功能风
+  数字符2高亮: 功能风高亮
+  数字符2字色: 功能风字色
+  数字符2字高亮: 功能风字高亮
+  数字符2符色: 功能风符色
+  数字符2符高亮: 功能风符高亮
+  数字符3: 功能风
+  数字符3高亮: 功能风高亮
+  数字符3字色: 功能风字色
+  数字符3字高亮: 功能风字高亮
+  数字符3符色: 功能风符色
+  数字符3符高亮: 功能风符高亮
+  数字返回: 数字
+  数字返回高亮: 数字高亮
+  数字返回字色: 数字字色
+  数字返回字高亮: 数字字高亮
+  数字返回符色: 数字符色
+  数字返回符高亮: 数字符高亮
+  数字逗号: 逗号
+  数字逗号高亮: 逗号高亮
+  数字逗号字色: 逗号字色
+  数字逗号字高亮: 逗号字高亮
+  数字逗号符色: 逗号符色
+  数字逗号符高亮: 逗号符高亮
+  数字句号: 句号
+  数字句号高亮: 句号高亮
+  数字句号字色: 句号字色
+  数字句号字高亮: 句号字高亮
+  数字句号符色: 句号符色
+  数字句号符高亮: 句号符高亮
+  数字回车: 回车
+  数字回车高亮: 回车高亮
+  数字回车字色: 回车字色
+  数字回车字高亮: 回车字高亮
+  数字回车符色: 回车符色
+  数字回车符高亮: 回车符高亮
+  数字编辑: 功能风
+  数字编辑高亮: 功能风高亮
+  数字编辑字色: 功能风字色
+  数字编辑字高亮: 功能风字高亮
+  数字编辑符色: 功能风符色
+  数字编辑符高亮: 功能风符高亮
+  数字空格: 功能风
+  数字空格高亮: 功能风高亮
+  数字空格字色: 功能风字色
+  数字空格字高亮: 功能风字高亮
+  数字空格符色: 功能风符色
+  数字空格符高亮: 功能风符高亮
+  数字退格: 退格
+  数字退格高亮: 退格高亮
+  数字退格字色: 退格字色
+  数字退格字高亮: 退格字高亮
+  数字退格符色: 退格符色
+  数字退格符高亮: 退格符高亮
+
+# 30键专用
+  分: 按键
+  分高亮: 按键高亮
+  分字色: 按键字色
+  分字高亮: 按键字高亮
+  分符色: 按键符色
+  分符高亮: 按键符高亮
+  逗: 按键
+  逗高亮: 按键高亮
+  逗字色: 按键字色
+  逗字高亮: 按键字高亮
+  逗符色: 按键符色
+  逗符高亮: 按键符高亮
+  句: 按键
+  句高亮: 按键高亮
+  句字色: 按键字色
+  句字高亮: 按键字高亮
+  句符色: 按键符色
+  句符高亮: 按键符高亮
+  斜: 按键
+  斜高亮: 按键高亮
+  斜字色: 按键字色
+  斜字高亮: 按键字高亮
+  斜符色: 按键符色
+  斜符高亮: 按键符高亮
+
+
+# 内置参数
+# 🟠 背景：
+  hilited_candidate_back_color: 状态栏首选（高亮标注项）+非首选高亮 #🔴#可随光标移动
+  hilited_back_color: 编码+悬浮窗首选（高亮标注项） #可随光标移动
+  candidate_separator_color: 候选分割线 #宽度由candidate_spacing参数控制
+  hilited_popup_back_color: 气泡高亮
+  编码+悬浮窗首选（高亮标注项）: 状态栏首选（高亮标注项）+非首选高亮 #➊
+  候选分割线: 状态栏首选（高亮标注项）+非首选高亮 #➋
+  气泡高亮: 编码+悬浮窗首选（高亮标注项） #➌ #➊
+#==================================================================
+
+  keyboard_background: 键盘(状态栏+底栏) #🔴
+  candidate_background: 状态栏
+  text_back_color: 悬浮窗^
+  popup_back_color: 气泡
+  状态栏: 键盘(状态栏+底栏) #➊
+  悬浮窗^: 键盘(状态栏+底栏) #➋
+  气泡: 悬浮窗^ #➌ #➊
+  back_color: 悬浮窗^
+#==================================================================
+
+  key_back_color: 按键
+  hilited_key_back_color: 按键高亮
+#==================================================================
+
+# 🟠 字色：
+  hilited_candidate_text_color: 首选（高亮标注项） #🔴#可随光标移动
+  hilited_comment_text_color: 首选提示 #可随光标移动
+  hilited_popup_text_color: 气泡字高亮
+  hilited_label_color: 首选序号 #可随光标移动
+  首选提示: 首选（高亮标注项） #➊
+  首选序号: 首选（高亮标注项） #➋
+  气泡字高亮: 首选（高亮标注项） #➌
+#==================================================================
+
+  candidate_text_color: 非首选 #🔴
+  border_color: 悬浮窗边框
+  hilited_text_color: 编码
+  text_color: “^”插入符号
+  comment_text_color: 非首选提示
+  label_color: 非首选序号
+  popup_text_color: 气泡字色
+  key_border_color: 按键边框 #边框宽度由key_border参数控制
+  悬浮窗边框: 非首选 #➊
+  编码: 非首选 #➋
+  “^”插入符号: 非首选 #➌
+  非首选提示: 非首选 #➍
+  非首选序号: 非首选 #➎
+  气泡字色: 非首选 #➏
+  按键边框: 非首选 #➐
+#==================================================================
+
+  key_text_color: 按键字色 #🔴
+  hilited_key_text_color: 按键字高亮
+  key_symbol_color: 按键符色
+  hilited_key_symbol_color: 按键符高亮
+  shadow_color: 按键文字阴影 #阴影半径由shadow_radius参数控制
+  按键字高亮: 按键字色 #➊
+  按键符色: 按键字色 #➋
+  按键符高亮: 按键符色 #➌ #➊
+  按键文字阴影: 按键字色 #➍
+#==================================================================
+
+# 🟠 Shift键：
+  off_key_back_color: 常态背景
+  on_key_back_color: 锁定背景
+  锁定背景: 常态背景
+
+  hilited_off_key_back_color: 常态背景高亮
+  hilited_on_key_back_color: 锁定背景高亮
+  锁定背景高亮: 常态背景高亮
+
+  off_key_text_color: 常态字色
+  hilited_off_key_text_color: 常态字高亮
+  常态字高亮: 常态字色
+  常态符色: 常态字色
+  常态符高亮: 常态符色
+
+  on_key_text_color: 锁定字色
+  hilited_on_key_text_color: 锁定字高亮
+  锁定字高亮: 锁定字色
+
+# 配色方案：
+#（🔴以下配色项注释参数无定义则跟随，悬浮窗、候选项、分割线、气泡及边框——定义图片背景报错；各项参数以顿号分隔🔴）
+preset_color_schemes:
+  default:
+    name: 默认
+    dark_scheme: default_dark #指定夜间配色
+# 🟠 背景：
+    状态栏首选（高亮标注项）+非首选高亮: 0x00 #编码+悬浮窗首选（高亮标注项）、候选分割线、气泡高亮
+    气泡高亮: 0xB4B8C1
+    键盘(状态栏+底栏): 0xD0D3DC #状态栏、悬浮窗^、气泡
+    状态栏: Q/默认/ztl.9.png
+    悬浮窗^: 0xFDFDFD
+    按键: Q/默认/zj.9.png
+    按键高亮: Q/默认/zjh.9.png
+    回车: Q/默认/hc.9.png
+    回车高亮: Q/默认/hch.9.png
+# 🟠 字色：
+    首选（高亮标注项）: 0x303030 #首选提示、首选序号、气泡字高亮
+    非首选: 0x535353 #悬浮窗边框、编码、“^”插入符号、非首选提示、非首选序号、气泡字色、按键边框
+    按键字色: 0x535353 #按键字高亮、按键符色、按键符高亮、按键文字阴影
+    回车字色: 0xF9F9F9
+# 🟠 Shift键：
+    常态背景: Q/默认/gn.9.png #锁定背景
+    常态背景高亮: Q/默认/gnh.9.png #锁定背景高亮
+    常态字色: 0x323232 #常态字高亮、常态符色、常态符高亮
+    锁定字色: 0xE9300E #锁定字高亮
+
+  default_dark:
+    name: 默认  •  深色
+    light_scheme: default #指定日间配色
+# 🟠 背景：
+    状态栏首选（高亮标注项）+非首选高亮: 0x00 #编码+悬浮窗首选（高亮标注项）、候选分割线、气泡高亮
+    气泡高亮: 0x545454
+    键盘(状态栏+底栏): 0x292929 #状态栏、悬浮窗^、气泡
+    状态栏: Q/默认  •  深色/ztl.9.png
+    悬浮窗^: 0x3A3A3A
+    按键: Q/默认  •  深色/zj.9.png
+    按键高亮: Q/默认  •  深色/zjh.9.png
+# 🟠 字色：
+    首选（高亮标注项）: 0xF0F0F0 #首选提示、首选序号、气泡字高亮
+    非首选: 0xDDDDDD #悬浮窗边框、编码、“^”插入符号、非首选提示、非首选序号、气泡字色、按键边框
+    按键字色: 0xDDDDDD #按键字高亮、按键符色、按键符高亮、按键文字阴影
+# 🟠 Shift键：
+    常态背景: Q/默认  •  深色/gn.9.png #锁定背景
+    常态背景高亮: Q/默认  •  深色/gnh.9.png #锁定背景高亮
+    常态字色: 0xDDDDDD #常态字高亮、常态符色、常态符高亮
+    锁定字色: 0xE9300E #锁定字高亮
+
+  e:
+    name: 朦胧
+    dark_scheme: default_dark #指定夜间配色
+# 🟠 背景：
+    状态栏首选（高亮标注项）+非首选高亮: 0x00 #编码+悬浮窗首选（高亮标注项）、候选分割线、气泡高亮
+    气泡高亮: 0xDDE47E
+    键盘(状态栏+底栏): 0xF5F6FA #状态栏、悬浮窗^、气泡
+    状态栏: Q/朦胧/ztl.9.png
+    按键: Q/朦胧/zj.9.png
+    按键高亮: Q/朦胧/zjh.9.png
+    顶部0-9: Q/朦胧/a.9.png
+    q: Q/朦胧/q.9.png
+    w: Q/朦胧/w.9.png
+    e: Q/朦胧/e.9.png
+    r: Q/朦胧/r.9.png
+    t: Q/朦胧/t.9.png
+    y: Q/朦胧/t.9.png
+    u: Q/朦胧/r.9.png
+    i: Q/朦胧/e.9.png
+    o: Q/朦胧/w.9.png
+    p: Q/朦胧/q.9.png
+    a: Q/朦胧/a.9.png
+    s: Q/朦胧/s.9.png
+    d: Q/朦胧/d.9.png
+    f: Q/朦胧/f.9.png
+    g: Q/朦胧/g.9.png
+    h: Q/朦胧/f.9.png
+    j: Q/朦胧/d.9.png
+    k: Q/朦胧/s.9.png
+    l: Q/朦胧/a.9.png
+    z: Q/朦胧/z.9.png
+    x: Q/朦胧/x.9.png
+    c: Q/朦胧/c.9.png
+    v: Q/朦胧/v.9.png
+    b: Q/朦胧/c.9.png
+    n: Q/朦胧/x.9.png
+    m: Q/朦胧/z.9.png
+    a高亮: Q/朦胧/gnh.9.png
+    s高亮: Q/朦胧/gnh.9.png
+    k高亮: Q/朦胧/gnh.9.png
+    l高亮: Q/朦胧/gnh.9.png
+    z高亮: Q/朦胧/gnh.9.png
+    x高亮: Q/朦胧/gnh.9.png
+    c高亮: Q/朦胧/gnh.9.png
+    v高亮: Q/朦胧/gnh.9.png
+    b高亮: Q/朦胧/gnh.9.png
+    n高亮: Q/朦胧/gnh.9.png
+    m高亮: Q/朦胧/gnh.9.png
+    空格: Q/朦胧/a.9.png
+    回车: Q/朦胧/a.9.png
+    1: Q/朦胧/w.9.png
+    2: Q/朦胧/e.9.png
+    3: Q/朦胧/w.9.png
+    4: Q/朦胧/s.9.png
+    5: Q/朦胧/d.9.png
+    6: Q/朦胧/s.9.png
+    7: Q/朦胧/x.9.png
+    8: Q/朦胧/c.9.png
+    9: Q/朦胧/x.9.png
+    0: Q/朦胧/a.9.png
+    7高亮: Q/朦胧/gnh.9.png
+    8高亮: Q/朦胧/gnh.9.png
+    9高亮: Q/朦胧/gnh.9.png
+# 🟠 字色：
+    首选（高亮标注项）: 0xF04E46 #首选提示、首选序号、气泡字高亮
+    非首选: 0x353535 #悬浮窗边框、编码、“^”插入符号、非首选提示、非首选序号、气泡字色、按键边框
+    按键字色: 0x454545 #按键字高亮、按键符色、按键符高亮、按键文字阴影
+    顶部0-9字色: 0x454545
+# 🟠 Shift键：
+    常态背景: Q/朦胧/q.9.png #锁定背景
+    常态背景高亮: Q/朦胧/gnh.9.png #锁定背景高亮
+    常态字色: 0x353535 #常态字高亮、常态符色、常态符高亮
+    锁定字色: 0xE9300E #锁定字高亮
+
+  e0:
+    name: 极简彩虹
+    author: 移植自百度
+    dark_scheme: default_dark #指定夜间配色
+# 🟠 背景：
+    状态栏首选（高亮标注项）+非首选高亮: 0x00 #编码+悬浮窗首选（高亮标注项）、候选分割线、气泡高亮
+    气泡高亮: 0xF3F0EF
+    键盘(状态栏+底栏): 0xDED4CE #状态栏、悬浮窗^、气泡
+    状态栏: Q/极简彩虹/ztl.9.png
+    按键: Q/极简彩虹/zj.9.png
+    按键高亮: Q/极简彩虹/zjh.9.png
+    q: Q/极简彩虹/q.9.png
+    w: Q/极简彩虹/w.9.png
+    e: Q/极简彩虹/e.9.png
+    r: Q/极简彩虹/r.9.png
+    t: Q/极简彩虹/t.9.png
+    y: Q/极简彩虹/y.9.png
+    u: Q/极简彩虹/u.9.png
+    i: Q/极简彩虹/i.9.png
+    o: Q/极简彩虹/o.9.png
+    p: Q/极简彩虹/p.9.png
+    a: Q/极简彩虹/a.9.png
+    s: Q/极简彩虹/s.9.png
+    d: Q/极简彩虹/d.9.png
+    f: Q/极简彩虹/f.9.png
+    g: Q/极简彩虹/g.9.png
+    h: Q/极简彩虹/h.9.png
+    j: Q/极简彩虹/j.9.png
+    k: Q/极简彩虹/k.9.png
+    l: Q/极简彩虹/l.9.png
+    z: Q/极简彩虹/z.9.png
+    x: Q/极简彩虹/x.9.png
+    c: Q/极简彩虹/c.9.png
+    v: Q/极简彩虹/v.9.png
+    b: Q/极简彩虹/b.9.png
+    n: Q/极简彩虹/n.9.png
+    m: Q/极简彩虹/m.9.png
+    空格: Q/极简彩虹/zj.9.png
+    回车: Q/极简彩虹/hc.9.png
+# 🟠 字色：
+    首选（高亮标注项）: 0xF04E46 #首选提示、首选序号、气泡字高亮
+    非首选: 0x454545 #悬浮窗边框、编码、“^”插入符号、非首选提示、非首选序号、气泡字色、按键边框
+    按键字色: 0x454545 #按键字高亮、按键符色、按键符高亮、按键文字阴影
+    回车字色: 0x353535
+# 🟠 Shift键：
+    常态背景: Q/极简彩虹/gn.9.png #锁定背景
+    常态背景高亮: Q/极简彩虹/zjh.9.png #锁定背景高亮
+    常态字色: 0x404040 #常态字高亮、常态符色、常态符高亮
+    锁定字色: 0xE9300E #锁定字高亮
+
+  e1:
+    name: 小鹤
+    dark_scheme: default_dark #指定夜间配色
+# 🟠 背景：
+    状态栏首选（高亮标注项）+非首选高亮: 0x00 #编码+悬浮窗首选（高亮标注项）、候选分割线、气泡高亮
+    气泡高亮: 0xB4B8C1
+    键盘(状态栏+底栏): 0xD0D3DC #状态栏、悬浮窗^、气泡
+    状态栏: Q/小鹤/ztl.9.png
+    悬浮窗^: 0xFDFDFD
+    按键: Q/小鹤/zj.9.png
+    按键高亮: Q/小鹤/zjh.9.png
+    顶部0-9: Q/小鹤/zj.9.png
+    回车: Q/小鹤/hc.9.png
+    回车高亮: Q/小鹤/hch.9.png
+# 🟠 字色：
+    首选（高亮标注项）: 0x303030 #首选提示、首选序号、气泡字高亮
+    非首选: 0x535353 #悬浮窗边框、编码、“^”插入符号、非首选提示、非首选序号、气泡字色、按键边框
+    按键字色: 0x535353 #按键字高亮、按键符色、按键符高亮、按键文字阴影
+    顶部0-9字色: 0x535353
+# 🟠 Shift键：
+    常态背景: Q/小鹤/gn.9.png #锁定背景
+    常态背景高亮: Q/小鹤/gnh.9.png #锁定背景高亮
+    常态字色: 0xF9F9F9 #常态字高亮、常态符色、常态符高亮
+    锁定字色: 0xE9300E #锁定字高亮
+
+  e2:
+    name: 哔哩粉
+    dark_scheme: default_dark #指定夜间配色
+# 🟠 背景：
+    状态栏首选（高亮标注项）+非首选高亮: 0x00 #编码+悬浮窗首选（高亮标注项）、候选分割线、气泡高亮
+    气泡高亮: 0xF17CA8
+    键盘(状态栏+底栏): 0xD1D4DD #状态栏、悬浮窗^、气泡
+    状态栏: Q/哔哩粉/ztl.9.png
+    悬浮窗^: 0xFDFDFD
+    按键: Q/哔哩粉/zj.9.png
+    按键高亮: Q/哔哩粉/zjh.9.png
+    顶部0-9: Q/哔哩粉/zj.9.png
+# 🟠 字色：
+    首选（高亮标注项）: 0xFF0299 #首选提示、首选序号、气泡字高亮
+    气泡字高亮: 0x303030
+    非首选: 0x353535 #悬浮窗边框、编码、“^”插入符号、非首选提示、非首选序号、气泡字色、按键边框
+    按键字色: 0x535353 #按键字高亮、按键符色、按键符高亮、按键文字阴影
+    顶部0-9字色: 0x535353
+# 🟠 Shift键：
+    常态背景: Q/哔哩粉/gn.9.png #锁定背景
+    常态背景高亮: Q/哔哩粉/gnh.9.png #锁定背景高亮
+    常态字色: 0xFEEEEE #常态字高亮、常态符色、常态符高亮
+    锁定字色: 0x00FF00 #锁定字高亮
+
+  f:
+    name: 机械 · 极度
+    author: 移植自百度
+    dark_scheme: f0 #指定夜间配色
+# 🟠 背景：
+    状态栏首选（高亮标注项）+非首选高亮: 0x00 #编码+悬浮窗首选（高亮标注项）、候选分割线、气泡高亮
+    气泡高亮: 0x4A505C
+    键盘(状态栏+底栏): 0x1F2024 #状态栏、悬浮窗^、气泡
+    状态栏: Q/机械 · 极度/ztl.9.png
+    悬浮窗^: 0x3D3F47
+    按键: Q/机械 · 极度/zj.9.png
+    按键高亮: Q/机械 · 极度/zjh.9.png
+# 🟠 字色：
+    首选（高亮标注项）: 0xFFDD80 #首选提示、首选序号、气泡字高亮
+    非首选: 0xEEEEEE #悬浮窗边框、编码、“^”插入符号、非首选提示、非首选序号、气泡字色、按键边框
+    按键字色: 0x303030 #按键字高亮、按键符色、按键符高亮、按键文字阴影
+# 🟠 Shift键：
+    常态背景: Q/机械 · 极度/gn.9.png #锁定背景
+    常态背景高亮: Q/机械 · 极度/gnh.9.png #锁定背景高亮
+    常态字色: 0xEEEEEE #常态字高亮、常态符色、常态符高亮
+    锁定字色: 0xFFDD80 #锁定字高亮
+
+  f0:
+    name: 机械 · 极度  •  深色
+    author: 移植自百度
+    light_scheme: f #指定日间配色
+# 🟠 背景：
+    状态栏首选（高亮标注项）+非首选高亮: 0x00 #编码+悬浮窗首选（高亮标注项）、候选分割线、气泡高亮
+    气泡高亮: 0x4A505C
+    键盘(状态栏+底栏): 0x1F2024 #状态栏、悬浮窗^、气泡
+    状态栏: Q/机械 · 极度  •  深色/ztl.9.png
+    悬浮窗^: 0x2E3138
+    按键: Q/机械 · 极度  •  深色/zj.9.png
+    按键高亮: Q/机械 · 极度  •  深色/zjh.9.png
+# 🟠 字色：
+    首选（高亮标注项）: 0xFFDD80 #首选提示、首选序号、气泡字高亮
+    非首选: 0xCCCCCC #悬浮窗边框、编码、“^”插入符号、非首选提示、非首选序号、气泡字色、按键边框
+    按键字色: 0xCCCCCC #按键字高亮、按键符色、按键符高亮、按键文字阴影
+# 🟠 Shift键：
+    常态背景: Q/机械 · 极度  •  深色/gn.9.png #锁定背景
+    常态背景高亮: Q/机械 · 极度  •  深色/gnh.9.png #锁定背景高亮
+    常态字色: 0xCCCCCC #常态字高亮、常态符色、常态符高亮
+    锁定字色: 0xFFDD80 #锁定字高亮
+
+  f0001:
+    name: 机械 · 说梦
+    author: 移植自百度
+    dark_scheme: f0002 #指定夜间配色
+# 🟠 背景：
+    状态栏首选（高亮标注项）+非首选高亮: 0x00 #编码+悬浮窗首选（高亮标注项）、候选分割线、气泡高亮
+    气泡高亮: 0xFFDFB7
+    键盘(状态栏+底栏): Q/机械 · 说梦/jp.9.png #状态栏、悬浮窗^、气泡
+    气泡: 0x425B89
+    状态栏: Q/机械 · 说梦/ztl.9.png
+    悬浮窗^: 0x1F3158
+    按键: Q/机械 · 说梦/zj.9.png
+    按键高亮: Q/机械 · 说梦/zjh.9.png
+    空格: Q/机械 · 说梦/kg.9.png
+    空格高亮: Q/机械 · 说梦/kgh.9.png
+    回车: Q/机械 · 说梦/hc.9.png
+    回车高亮: Q/机械 · 说梦/hch.9.png
+    退格: Q/机械 · 说梦/tg.9.png
+    退格高亮: Q/机械 · 说梦/tgh.9.png
+# 🟠 字色：
+    首选（高亮标注项）: 0xFCDBB3 #首选提示、首选序号、气泡字高亮
+    气泡字高亮: 0xB08752
+    非首选: 0xEBF2FF #悬浮窗边框、编码、“^”插入符号、非首选提示、非首选序号、气泡字色、按键边框
+    按键字色: 0x101E38 #按键字高亮、按键符色、按键符高亮、按键文字阴影
+    空格字色: 0xF8CC96
+    回车字色: 0x82423F
+    退格字色: 0xB08752
+# 🟠 Shift键：
+    常态背景: Q/机械 · 说梦/gn.9.png #锁定背景
+    常态背景高亮: Q/机械 · 说梦/gnh.9.png #锁定背景高亮
+    常态字色: 0xF8CC96 #常态字高亮、常态符色、常态符高亮
+    锁定字色: 0xFA8179 #锁定字高亮
+
+  f0002:
+    name: 机械 · 说梦  •  深色
+    author: 移植自百度
+    light_scheme: f0001 #指定日间配色
+# 🟠 背景：
+    状态栏首选（高亮标注项）+非首选高亮: 0x00 #编码+悬浮窗首选（高亮标注项）、候选分割线、气泡高亮
+    气泡高亮: 0xE2C6A2
+    键盘(状态栏+底栏): Q/机械 · 说梦  •  深色/jp.9.png #状态栏、悬浮窗^、气泡
+    气泡: 0x425B89
+    状态栏: Q/机械 · 说梦  •  深色/ztl.9.png
+    悬浮窗^: 0x172847
+    按键: Q/机械 · 说梦  •  深色/zj.9.png
+    按键高亮: Q/机械 · 说梦  •  深色/zjh.9.png
+    空格: Q/机械 · 说梦  •  深色/kg.9.png
+    空格高亮: Q/机械 · 说梦  •  深色/kgh.9.png
+    回车: Q/机械 · 说梦  •  深色/hc.9.png
+    回车高亮: Q/机械 · 说梦  •  深色/hch.9.png
+    退格: Q/机械 · 说梦  •  深色/tg.9.png
+    退格高亮: Q/机械 · 说梦  •  深色/tgh.9.png
+# 🟠 字色：
+    首选（高亮标注项）: 0xFCDBB3 #首选提示、首选序号、气泡字高亮
+    气泡字高亮: 0xB08752
+    非首选: 0xEBF2FF #悬浮窗边框、编码、“^”插入符号、非首选提示、非首选序号、气泡字色、按键边框
+    按键字色: 0xE4EEFF #按键字高亮、按键符色、按键符高亮、按键文字阴影
+    空格字色: 0xF8CC96
+    回车字色: 0x82423F
+    退格字色: 0xB08752
+# 🟠 Shift键：
+    常态背景: Q/机械 · 说梦  •  深色/gn.9.png #锁定背景
+    常态背景高亮: Q/机械 · 说梦  •  深色/gnh.9.png #锁定背景高亮
+    常态字色: 0xF8CC96 #常态字高亮、常态符色、常态符高亮
+    锁定字色: 0xFA8179 #锁定字高亮
+
+  f0007:
+    name: 说梦
+    author: 移植自百度
+    dark_scheme: f0008 #指定夜间配色
+# 🟠 背景：
+    状态栏首选（高亮标注项）+非首选高亮: 0x00 #编码+悬浮窗首选（高亮标注项）、候选分割线、气泡高亮
+    气泡高亮: 0xFFDFB7
+    键盘(状态栏+底栏): Q/说梦/jp.9.png #状态栏、悬浮窗^、气泡
+    气泡: 0x425B89
+    状态栏: Q/说梦/ztl.9.png
+    悬浮窗^: 0x1F3158
+    按键: Q/说梦/zj.9.png
+    按键高亮: Q/说梦/zjh.9.png
+    空格: Q/说梦/kg.9.png
+    回车: Q/说梦/hc.9.png
+    回车高亮: Q/说梦/tg.9.png
+    退格: Q/说梦/tg.9.png
+    退格高亮: Q/说梦/hc.9.png
+# 🟠 字色：
+    首选（高亮标注项）: 0xFCDBB3 #首选提示、首选序号、气泡字高亮
+    气泡字高亮: 0xB08752
+    非首选: 0xEBF2FF #悬浮窗边框、编码、“^”插入符号、非首选提示、非首选序号、气泡字色、按键边框
+    按键字色: 0x101E38 #按键字高亮、按键符色、按键符高亮、按键文字阴影
+    空格字色: 0xF8CC96
+    回车字色: 0x82423F
+    退格字色: 0xB08752
+# 🟠 Shift键：
+    常态背景: Q/说梦/zjh.9.png #锁定背景
+    常态背景高亮: Q/说梦/zj.9.png #锁定背景高亮
+    常态字色: 0xF8CC96 #常态字高亮、常态符色、常态符高亮
+    锁定字色: 0xFA8179 #锁定字高亮
+
+  f0008:
+    name: 说梦  •  深色
+    author: 移植自百度
+    light_scheme: f0007 #指定日间配色
+# 🟠 背景：
+    状态栏首选（高亮标注项）+非首选高亮: 0x00 #编码+悬浮窗首选（高亮标注项）、候选分割线、气泡高亮
+    气泡高亮: 0xE2C6A2
+    键盘(状态栏+底栏): Q/说梦  •  深色/jp.9.png #状态栏、悬浮窗^、气泡
+    气泡: 0x425B89
+    状态栏: Q/说梦  •  深色/ztl.9.png
+    悬浮窗^: 0x172847
+    按键: Q/说梦  •  深色/zj.9.png
+    按键高亮: Q/说梦  •  深色/zjh.9.png
+    空格: Q/说梦  •  深色/kg.9.png
+    空格高亮: Q/说梦  •  深色/zj.9.png
+    回车: Q/说梦  •  深色/hc.9.png
+    回车高亮: Q/说梦  •  深色/tg.9.png
+    退格: Q/说梦  •  深色/tg.9.png
+    退格高亮: Q/说梦  •  深色/hc.9.png
+# 🟠 字色：
+    首选（高亮标注项）: 0xFCDBB3 #首选提示、首选序号、气泡字高亮
+    气泡字高亮: 0xB08752
+    非首选: 0xEBF2FF #悬浮窗边框、编码、“^”插入符号、非首选提示、非首选序号、气泡字色、按键边框
+    按键字色: 0xE4EEFF #按键字高亮、按键符色、按键符高亮、按键文字阴影
+    空格字色: 0xF8CC96
+    回车字色: 0x82423F
+    退格字色: 0xB08752
+    顶部0-9字高亮: 0x82423F
+    顶部0-9符高亮: 0x82423F
+    数字字高亮: 0x82423F
+    数字符高亮: 0x82423F
+    功能风字高亮: 0x82423F
+    功能风符高亮: 0x82423F
+    逗号字高亮: 0x82423F
+    逗号符高亮: 0x82423F
+    句号字高亮: 0x82423F
+    句号符高亮: 0x82423F
+# 🟠 Shift键：
+    常态背景: Q/说梦  •  深色/gn.9.png #锁定背景
+    常态背景高亮: Q/说梦  •  深色/zjh.9.png #锁定背景高亮
+    常态字色: 0xF8CC96 #常态字高亮、常态符色、常态符高亮
+    常态字高亮: 0x82423F
+    常态符高亮: 0x82423F
+    锁定字色: 0xFA8179 #锁定字高亮
+
+  g:
+    name: 唐 · 海浪起
+    author: 移植自百度
+    dark_scheme: g0 #指定夜间配色
+# 🟠 背景：
+    状态栏首选（高亮标注项）+非首选高亮: 0x00 #编码+悬浮窗首选（高亮标注项）、候选分割线、气泡高亮
+    气泡高亮: 0xBA6F59
+    键盘(状态栏+底栏): Q/唐 · 海浪起/jp.9.png #状态栏、悬浮窗^、气泡
+    状态栏: Q/唐 · 海浪起/ztl.9.png
+    悬浮窗^: 0x472424
+    按键: Q/唐 · 海浪起/zj.9.png
+    按键高亮: Q/唐 · 海浪起/zjh.9.png
+    空格: Q/唐 · 海浪起/kg.9.png
+    空格高亮: Q/唐 · 海浪起/kgh.9.png
+    回车: Q/唐 · 海浪起/hc.9.png
+    回车高亮: Q/唐 · 海浪起/hch.9.png
+# 🟠 字色：
+    首选（高亮标注项）: 0x7ACCAD #首选提示、首选序号、气泡字高亮
+    非首选: 0xFCD9CA #悬浮窗边框、编码、“^”插入符号、非首选提示、非首选序号、气泡字色、按键边框
+    按键字色: 0x6D220B #按键字高亮、按键符色、按键符高亮、按键文字阴影
+    空格字色: 0xFFD7C7
+# 🟠 Shift键：
+    常态背景: Q/唐 · 海浪起/gn.9.png #锁定背景
+    常态背景高亮: Q/唐 · 海浪起/gnh.9.png #锁定背景高亮
+    常态字色: 0xFFD7C7 #常态字高亮、常态符色、常态符高亮
+    锁定字色: 0x7ACCAD #锁定字高亮
+
+  g0:
+    __include: /preset_color_schemes/g
+    __patch:
+    name: 唐 · 海浪起  •  深色
+    author: 移植自百度
+    light_scheme: g #指定日间配色
+# 🟠 背景：
+    气泡高亮: 0x80402D
+    键盘(状态栏+底栏): Q/唐 · 海浪起  •  深色/jp.9.png #状态栏、悬浮窗^、气泡
+    状态栏: Q/唐 · 海浪起  •  深色/ztl.9.png
+    悬浮窗^: 0x3C1212
+    按键: Q/唐 · 海浪起  •  深色/zj.9.png
+# 🟠 字色：
+    首选（高亮标注项）: 0x50B38D #首选提示、首选序号、气泡字高亮
+    非首选: 0xEDB7A1 #悬浮窗边框、编码、“^”插入符号、非首选提示、非首选序号、气泡字色、按键边框
+    按键字色: 0x6D220B #按键字高亮、按键符色、按键符高亮、按键文字阴影
+    空格字色: 0xFFC5AE
+# 🟠 Shift键：
+    常态背景: Q/唐 · 海浪起  •  深色/gn.9.png #锁定背景
+    常态字色: 0xFFC5AE #常态字高亮、常态符色、常态符高亮
+
+  g1:
+    name: 宋 · 凉风至
+    author: 移植自百度
+    dark_scheme: g2 #指定夜间配色
+# 🟠 背景：
+    状态栏首选（高亮标注项）+非首选高亮: 0x00 #编码+悬浮窗首选（高亮标注项）、候选分割线、气泡高亮
+    气泡高亮: 0x176671
+    键盘(状态栏+底栏): 0x07424A #状态栏、悬浮窗^、气泡
+    状态栏: Q/宋 · 凉风至/ztl.9.png
+    按键: Q/宋 · 凉风至/zj.9.png
+    按键高亮: Q/宋 · 凉风至/zjh.9.png
+    空格: Q/宋 · 凉风至/kg.9.png
+    空格高亮: Q/宋 · 凉风至/kgh.9.png
+    回车: Q/宋 · 凉风至/hc.9.png
+    回车高亮: Q/宋 · 凉风至/zj.9.png
+# 🟠 字色：
+    首选（高亮标注项）: 0xEDD9A7 #首选提示、首选序号、气泡字高亮
+    非首选: 0xE7F3F9 #悬浮窗边框、编码、“^”插入符号、非首选提示、非首选序号、气泡字色、按键边框
+    按键字色: 0x558098 #按键字高亮、按键符色、按键符高亮、按键文字阴影
+    回车字高亮: 0x558098
+# 🟠 Shift键：
+    常态背景: Q/宋 · 凉风至/gn.9.png #锁定背景
+    常态背景高亮: Q/宋 · 凉风至/gnh.9.png #锁定背景高亮
+    常态字色: 0xE7F3F9 #常态字高亮、常态符色、常态符高亮
+    锁定字色: 0xEFD256 #锁定字高亮
+
+  g2:
+    name: 宋 · 凉风至  •  深色
+    author: 移植自百度
+    light_scheme: g1 #指定日间配色
+# 🟠 背景：
+    状态栏首选（高亮标注项）+非首选高亮: 0x00 #编码+悬浮窗首选（高亮标注项）、候选分割线、气泡高亮
+    气泡高亮: 0x103C42
+    键盘(状态栏+底栏): 0x05282D #状态栏、悬浮窗^、气泡
+    状态栏: Q/宋 · 凉风至  •  深色/ztl.9.png
+    按键: Q/宋 · 凉风至  •  深色/zj.9.png
+    按键高亮: Q/宋 · 凉风至  •  深色/zjh.9.png
+    顶部0-9: Q/宋 · 凉风至  •  深色/zj.9.png
+    顶部0-9高亮: Q/宋 · 凉风至  •  深色/zjh.9.png
+    空格: Q/宋 · 凉风至  •  深色/kg.9.png
+    空格高亮: Q/宋 · 凉风至  •  深色/kgh.9.png
+    回车: Q/宋 · 凉风至  •  深色/hc.9.png
+    回车高亮: Q/宋 · 凉风至  •  深色/zj.9.png
+# 🟠 字色：
+    首选（高亮标注项）: 0xDBCA9E #首选提示、首选序号、气泡字高亮
+    非首选: 0xD3DCE0 #悬浮窗边框、编码、“^”插入符号、非首选提示、非首选序号、气泡字色、按键边框
+    按键字色: 0xA4BECD #按键字高亮、按键符色、按键符高亮、按键文字阴影
+    顶部0-9字色: 0xA4BECD
+    回车字高亮: 0xA4BECD
+# 🟠 Shift键：
+    常态背景: Q/宋 · 凉风至  •  深色/gn.9.png #锁定背景
+    常态背景高亮: Q/宋 · 凉风至  •  深色/hc.9.png #锁定背景高亮
+    常态字色: 0xBAC9D1 #常态字高亮、常态符色、常态符高亮
+    锁定字色: 0xFF9600 #锁定字高亮
+
+  g3:
+    name: 元 · 书卷里
+    author: 移植自百度
+    dark_scheme: g4 #指定夜间配色
+# 🟠 背景：
+    状态栏首选（高亮标注项）+非首选高亮: 0x00 #编码+悬浮窗首选（高亮标注项）、候选分割线、气泡高亮
+    气泡高亮: 0xB8A38D
+    键盘(状态栏+底栏): Q/元 · 书卷里/jp.9.png #状态栏、悬浮窗^、气泡
+    状态栏: Q/元 · 书卷里/ztl.9.png
+    悬浮窗^: 0x9B8A77
+    按键: Q/元 · 书卷里/zj.9.png
+    按键高亮: Q/元 · 书卷里/zjh.9.png
+    数字: Q/元 · 书卷里/sz.9.png
+    空格: Q/元 · 书卷里/kg.9.png
+    空格高亮: Q/元 · 书卷里/kgh.9.png
+    回车: Q/元 · 书卷里/hc.9.png
+    回车高亮: Q/元 · 书卷里/hch.9.png
+# 🟠 字色：
+    首选（高亮标注项）: 0xFFDBB8 #首选提示、首选序号、气泡字高亮
+    非首选: 0xFFF4E5 #悬浮窗边框、编码、“^”插入符号、非首选提示、非首选序号、气泡字色、按键边框
+    按键字色: 0x615444 #按键字高亮、按键符色、按键符高亮、按键文字阴影
+    回车字色: 0x4F4437
+# 🟠 Shift键：
+    常态背景: Q/元 · 书卷里/gn.9.png #锁定背景
+    常态背景高亮: Q/元 · 书卷里/gnh.9.png #锁定背景高亮
+    常态字色: 0xEEDECA #常态字高亮、常态符色、常态符高亮
+    锁定字色: 0xFFFC00 #锁定字高亮
+
+  g4:
+    name: 元 · 书卷里  •  深色
+    author: 移植自百度
+    light_scheme: g3 #指定日间配色
+# 🟠 背景：
+    状态栏首选（高亮标注项）+非首选高亮: 0x00 #编码+悬浮窗首选（高亮标注项）、候选分割线、气泡高亮
+    气泡高亮: 0x70675C
+    键盘(状态栏+底栏): Q/元 · 书卷里  •  深色/jp.9.png #状态栏、悬浮窗^、气泡
+    状态栏: Q/元 · 书卷里  •  深色/ztl.9.png
+    悬浮窗^: 0x3E362E
+    按键: Q/元 · 书卷里  •  深色/zj.9.png
+    按键高亮: Q/元 · 书卷里  •  深色/zjh.9.png
+    空格: Q/元 · 书卷里  •  深色/kg.9.png
+    空格高亮: Q/元 · 书卷里  •  深色/kgh.9.png
+    回车: Q/元 · 书卷里  •  深色/zj.9.png
+# 🟠 字色：
+    首选（高亮标注项）: 0xFFDBB8 #首选提示、首选序号、气泡字高亮
+    非首选: 0xF7E7D3 #悬浮窗边框、编码、“^”插入符号、非首选提示、非首选序号、气泡字色、按键边框
+    按键字色: 0xF7E7D3 #按键字高亮、按键符色、按键符高亮、按键文字阴影
+# 🟠 Shift键：
+    常态背景: Q/元 · 书卷里  •  深色/gn.9.png #锁定背景
+    常态背景高亮: Q/元 · 书卷里  •  深色/gnh.9.png #锁定背景高亮
+    常态字色: 0xF7E7D3 #常态字高亮、常态符色、常态符高亮
+    锁定字色: 0xFFFC00 #锁定字高亮
+
+  g5:
+    name: 明 · 山水间
+    author: 移植自百度
+    dark_scheme: g6 #指定夜间配色
+# 🟠 背景：
+    状态栏首选（高亮标注项）+非首选高亮: 0x00 #编码+悬浮窗首选（高亮标注项）、候选分割线、气泡高亮
+    气泡高亮: 0x3B4350
+    键盘(状态栏+底栏): 0x2C3441 #状态栏、悬浮窗^、气泡
+    状态栏: Q/明 · 山水间/ztl.9.png
+    悬浮窗^: 0xF5F5F5
+    按键: Q/明 · 山水间/zj.9.png
+    按键高亮: Q/明 · 山水间/zjh.9.png
+    空格: Q/明 · 山水间/kg.9.png
+    空格高亮: Q/明 · 山水间/kgh.9.png
+    回车: Q/明 · 山水间/hc.9.png
+    回车高亮: Q/明 · 山水间/hch.9.png
+# 🟠 字色：
+    首选（高亮标注项）: 0xD04E46 #首选提示、首选序号、气泡字高亮
+    非首选: 0x2C3441 #悬浮窗边框、编码、“^”插入符号、非首选提示、非首选序号、气泡字色、按键边框
+    按键字色: 0xECF3FF #按键字高亮、按键符色、按键符高亮、按键文字阴影
+    空格字色: 0x505764
+    顶部0-9字高亮: 0x505764
+    退格字高亮: 0x505764
+    数字字高亮: 0x505764
+    逗号字高亮: 0x505764
+    句号字高亮: 0x505764
+    顶部0-9符高亮: 0x505764
+    退格符高亮: 0x505764
+    数字符高亮: 0x505764
+    逗号符高亮: 0x505764
+    句号符高亮: 0x505764
+    回车字色: 0x505764
+    回车字高亮: 0xECF3FF
+    回车符高亮: 0xECF3FF
+# 🟠 Shift键：
+    常态背景: Q/明 · 山水间/gn.9.png #锁定背景
+    常态背景高亮: Q/明 · 山水间/gnh.9.png #锁定背景高亮
+    常态字色: 0xDDE2EB #常态字高亮、常态符色、常态符高亮
+    常态字高亮: 0x505764
+    常态符高亮: 0x505764
+    锁定字色: 0xFA7069 #锁定字高亮
+
+  g6:
+    name: 明 · 山水间  •  深色
+    author: 移植自百度
+    light_scheme: g5 #指定日间配色
+# 🟠 背景：
+    状态栏首选（高亮标注项）+非首选高亮: 0x00 #编码+悬浮窗首选（高亮标注项）、候选分割线、气泡高亮
+    气泡高亮: 0x3B4350
+    键盘(状态栏+底栏): 0x222731 #状态栏、悬浮窗^、气泡
+    状态栏: Q/明 · 山水间  •  深色/ztl.9.png
+    悬浮窗^: 0x242B35
+    按键: Q/明 · 山水间  •  深色/zj.9.png
+    按键高亮: Q/明 · 山水间  •  深色/zjh.9.png
+    空格: Q/明 · 山水间  •  深色/kg.9.png
+    空格高亮: Q/明 · 山水间  •  深色/kgh.9.png
+# 🟠 字色：
+    首选（高亮标注项）: 0xFA7069 #首选提示、首选序号、气泡字高亮
+    非首选: 0xECF3FF #悬浮窗边框、编码、“^”插入符号、非首选提示、非首选序号、气泡字色、按键边框
+    按键字色: 0xECF3FF #按键字高亮、按键符色、按键符高亮、按键文字阴影
+    空格字色: 0x505764
+    顶部0-9字高亮: 0x505764
+    退格字高亮: 0x505764
+    数字字高亮: 0x505764
+    逗号字高亮: 0x505764
+    句号字高亮: 0x505764
+    顶部0-9符高亮: 0x505764
+    退格符高亮: 0x505764
+    数字符高亮: 0x505764
+    逗号符高亮: 0x505764
+    句号符高亮: 0x505764
+    回车字色: 0xDBDFE8
+    回车字高亮: 0x505764
+    回车符高亮: 0xECF3FF
+# 🟠 Shift键：
+    常态背景: Q/明 · 山水间  •  深色/gn.9.png #锁定背景
+    常态背景高亮: Q/明 · 山水间  •  深色/gnh.9.png #锁定背景高亮
+    常态字色: 0xDBDFE8 #常态字高亮、常态符色、常态符高亮
+    常态字高亮: 0x505764
+    常态符高亮: 0x505764
+    锁定字色: 0xFA7069 #锁定字高亮
+
+  g7:
+    name: 清 · 深宫外
+    author: 移植自百度
+    dark_scheme: g8 #指定夜间配色
+# 🟠 背景：
+    状态栏首选（高亮标注项）+非首选高亮: 0x00 #编码+悬浮窗首选（高亮标注项）、候选分割线、气泡高亮
+    气泡高亮: 0x1A5175
+    键盘(状态栏+底栏): 0x0F2F44 #状态栏、悬浮窗^、气泡
+    状态栏: Q/清 · 深宫外/ztl.9.png
+    按键: Q/清 · 深宫外/zj.9.png
+    按键高亮: Q/清 · 深宫外/zjh.9.png
+    空格: Q/清 · 深宫外/kg.9.png
+    空格高亮: Q/清 · 深宫外/kgh.9.png
+    回车: Q/清 · 深宫外/hc.9.png
+    回车高亮: Q/清 · 深宫外/hch.9.png
+# 🟠 字色：
+    首选（高亮标注项）: 0xFFE2B2 #首选提示、首选序号、气泡字高亮
+    非首选: 0xFFF6E5 #悬浮窗边框、编码、“^”插入符号、非首选提示、非首选序号、气泡字色、按键边框
+    按键字色: 0x32414E #按键字高亮、按键符色、按键符高亮、按键文字阴影
+    回车字色: 0xF5D09C
+# 🟠 Shift键：
+    常态背景: Q/清 · 深宫外/gn.9.png #锁定背景
+    常态背景高亮: Q/清 · 深宫外/zj.9.png #锁定背景高亮
+    常态字色: 0xFAD6A0 #常态字高亮、常态符色、常态符高亮
+    锁定字色: 0xFA7069 #锁定字高亮
+
+  g8:
+    name: 清 · 深宫外  •  深色
+    author: 移植自百度
+    light_scheme: g7 #指定日间配色
+# 🟠 背景：
+    状态栏首选（高亮标注项）+非首选高亮: 0x00 #编码+悬浮窗首选（高亮标注项）、候选分割线、气泡高亮
+    气泡高亮: 0x0A3253
+    键盘(状态栏+底栏): 0x021426 #状态栏、悬浮窗^、气泡
+    状态栏: Q/清 · 深宫外  •  深色/ztl.9.png
+    按键: Q/清 · 深宫外  •  深色/zj.9.png
+    按键高亮: Q/清 · 深宫外  •  深色/zjh.9.png
+    顶部0-9: Q/清 · 深宫外  •  深色/zj.9.png
+    顶部0-9高亮: Q/清 · 深宫外  •  深色/zjh.9.png
+    空格: Q/清 · 深宫外  •  深色/kg.9.png
+    空格高亮: Q/清 · 深宫外  •  深色/kgh.9.png
+    回车: Q/清 · 深宫外  •  深色/hc.9.png
+    回车高亮: Q/清 · 深宫外  •  深色/hch.9.png
+# 🟠 字色：
+    首选（高亮标注项）: 0xFFE2B2 #首选提示、首选序号、气泡字高亮
+    非首选: 0xFFF6E5 #悬浮窗边框、编码、“^”插入符号、非首选提示、非首选序号、气泡字色、按键边框
+    按键字色: 0xFFE2A6 #按键字高亮、按键符色、按键符高亮、按键文字阴影
+    顶部0-9字色: 0xFFE2A6
+    回车字色: 0xFEDDA2
+# 🟠 Shift键：
+    常态背景: Q/清 · 深宫外  •  深色/gn.9.png #锁定背景
+    常态背景高亮: Q/清 · 深宫外  •  深色/zj.9.png #锁定背景高亮
+    常态字色: 0xFFE2A6 #常态字高亮、常态符色、常态符高亮
+    锁定字色: 0xFA7069 #锁定字高亮
+
+  g9:
+    name: 心动草莓
+    author: 移植自百度
+    dark_scheme: default_dark #指定夜间配色
+# 🟠 背景：
+    状态栏首选（高亮标注项）+非首选高亮: 0x00 #编码+悬浮窗首选（高亮标注项）、候选分割线、气泡高亮
+    气泡高亮: 0xD3A6A6
+    键盘(状态栏+底栏): Q/心动草莓/jp.9.png #状态栏、悬浮窗^、气泡
+    状态栏: Q/心动草莓/ztl.9.png
+    悬浮窗^: 0xEBD3CF
+    按键: Q/心动草莓/zj.9.png
+    按键高亮: Q/心动草莓/zjh.9.png
+    顶部0-9: Q/心动草莓/zj.9.png
+# 🟠 字色：
+    首选（高亮标注项）: 0x303030 #首选提示、首选序号、气泡字高亮
+    非首选: 0xAD7577 #悬浮窗边框、编码、“^”插入符号、非首选提示、非首选序号、气泡字色、按键边框
+    按键字色: 0xB77276 #按键字高亮、按键符色、按键符高亮、按键文字阴影
+# 🟠 Shift键：
+    常态背景: Q/心动草莓/gn.9.png #锁定背景
+    常态背景高亮: Q/心动草莓/zjh.9.png #锁定背景高亮
+    常态字色: 0xB77276 #常态字高亮、常态符色、常态符高亮
+    锁定字色: 0xE9300E #锁定字高亮
+
+  h:
+    name: 落叶
+    author: 移植自搜狗
+    dark_scheme: default_dark #指定夜间配色
+# 🟠 背景：
+    状态栏首选（高亮标注项）+非首选高亮: 0x00 #编码+悬浮窗首选（高亮标注项）、候选分割线、气泡高亮
+    气泡高亮: 0xAAB492
+    键盘(状态栏+底栏): Q/落叶/jp.9.png #状态栏、悬浮窗^、气泡
+    状态栏: Q/落叶/ztl.9.png
+    悬浮窗^: 0xE0D0BE
+    按键: Q/落叶/zj.9.png
+    按键高亮: Q/落叶/qwerfghcvb.9.png
+    顶部0-9: Q/落叶/zj.9.png
+    顶部0-9字色: 0x9B7761
+    l: Q/落叶/l.9.png
+    m: Q/落叶/m.9.png
+    t高亮: Q/落叶/tyuiop.9.png
+    y高亮: Q/落叶/tyuiop.9.png
+    u高亮: Q/落叶/tyuiop.9.png
+    i高亮: Q/落叶/tyuiop.9.png
+    o高亮: Q/落叶/tyuiop.9.png
+    p高亮: Q/落叶/tyuiop.9.png
+    a高亮: Q/落叶/asdzx.9.png
+    s高亮: Q/落叶/asdzx.9.png
+    d高亮: Q/落叶/asdzx.9.png
+    z高亮: Q/落叶/asdzx.9.png
+    x高亮: Q/落叶/asdzx.9.png
+    j高亮: Q/落叶/jklnm.9.png
+    k高亮: Q/落叶/jklnm.9.png
+    l高亮: Q/落叶/jklnm.9.png
+    n高亮: Q/落叶/jklnm.9.png
+    m高亮: Q/落叶/jklnm.9.png
+    数字: Q/落叶/sz.9.png
+    数字高亮: Q/落叶/asdzx.9.png
+    逗号: Q/落叶/dh.9.png
+    逗号高亮: Q/落叶/asdzx.9.png
+    句号: Q/落叶/jh.9.png
+    句号高亮: Q/落叶/jklnm.9.png
+    空格: Q/落叶/kg.9.png
+    空格高亮: Q/落叶/kgh.9.png
+    退格: Q/落叶/tg.9.png
+    退格高亮: Q/落叶/jklnm.9.png
+    回车: Q/落叶/hc.9.png
+    回车高亮: Q/落叶/jklnm.9.png
+    功能风: Q/落叶/zj.9.png
+# 🟠 字色：
+    首选（高亮标注项）: 0x172501 #首选提示、首选序号、气泡字高亮
+    非首选: 0x5B6745 #悬浮窗边框、编码、“^”插入符号、非首选提示、非首选序号、气泡字色、按键边框
+    按键字色: 0x9B7761 #按键字高亮、按键符色、按键符高亮、按键文字阴影
+# 🟠 Shift键：
+    常态背景: Q/落叶/gn.9.png #锁定背景
+    常态背景高亮: Q/落叶/asdzx.9.png #锁定背景高亮
+    常态字色: 0xA1685C #常态字高亮、常态符色、常态符高亮
+    锁定字色: 0xE9300E #锁定字高亮
+
+  h0:
+    name: 简约光影
+    author: 移植自搜狗
+    dark_scheme: default_dark #指定夜间配色
+# 🟠 背景：
+    状态栏首选（高亮标注项）+非首选高亮: 0x00 #编码+悬浮窗首选（高亮标注项）、候选分割线、气泡高亮
+    气泡高亮: 0xA3C1DE
+    键盘(状态栏+底栏): Q/简约光影/jp.png #状态栏、悬浮窗^、气泡
+    状态栏: Q/简约光影/ztl.9.png
+    悬浮窗^: 0xCADCEE
+    按键: Q/简约光影/zj.9.png
+    按键高亮: Q/简约光影/zjh.9.png
+    顶部0-9: Q/简约光影/gn.9.png
+    空格: Q/简约光影/gn.9.png
+    空格高亮: Q/简约光影/gnh.9.png
+# 🟠 字色：
+    首选（高亮标注项）: 0x25A1A8 #首选提示、首选序号、气泡字高亮
+    非首选: 0x6B7B8C #悬浮窗边框、编码、“^”插入符号、非首选提示、非首选序号、气泡字色、按键边框
+    按键字色: 0x2E3136 #按键字高亮、按键符色、按键符高亮、按键文字阴影
+# 🟠 Shift键：
+    常态背景: Q/简约光影/gn.9.png #锁定背景
+    常态背景高亮: Q/简约光影/gnh.9.png #锁定背景高亮
+    常态字色: 0x2E3136 #常态字高亮、常态符色、常态符高亮
+    锁定字色: 0xE9300E #锁定字高亮
+
+  h1:
+    name: 森 · 桃源里
+    author: 移植自搜狗
+    dark_scheme: default_dark #指定夜间配色
+# 🟠 背景：
+    状态栏首选（高亮标注项）+非首选高亮: 0x00 #编码+悬浮窗首选（高亮标注项）、候选分割线、气泡高亮
+    气泡高亮: 0xD8B2A9
+    键盘(状态栏+底栏): Q/森 · 桃源里/jp.9.png #状态栏、悬浮窗^、气泡
+    状态栏: Q/森 · 桃源里/ztl.9.png
+    悬浮窗^: 0xF4EADE
+    按键: Q/森 · 桃源里/zj.9.png
+    按键高亮: Q/森 · 桃源里/zjh.9.png
+    空格: Q/森 · 桃源里/kg.9.png
+    空格高亮: Q/森 · 桃源里/kgh.9.png
+# 🟠 字色：
+    首选（高亮标注项）: 0x56190E #首选提示、首选序号、气泡字高亮
+    非首选: 0x81615A #悬浮窗边框、编码、“^”插入符号、非首选提示、非首选序号、气泡字色、按键边框
+    按键字色: 0xA07168 #按键字高亮、按键符色、按键符高亮、按键文字阴影
+# 🟠 Shift键：
+    常态背景: Q/森 · 桃源里/gn.9.png #锁定背景
+    常态背景高亮: Q/森 · 桃源里/gnh.9.png #锁定背景高亮
+    常态字色: 0xFCEAE7 #常态字高亮、常态符色、常态符高亮
+    锁定字色: 0xE9300E #锁定字高亮
+
+  h1000:
+    name: 森 · 零度
+    author: 移植自搜狗
+    dark_scheme: h1001 #指定夜间配色
+# 🟠 背景：
+    状态栏首选（高亮标注项）+非首选高亮: 0x00 #编码+悬浮窗首选（高亮标注项）、候选分割线、气泡高亮
+    气泡高亮: 0xF1F1F1
+    键盘(状态栏+底栏): Q/森 · 零度/jp.9.png #状态栏、悬浮窗^、气泡
+    状态栏: Q/森 · 零度/ztl.9.png
+    悬浮窗^: 0xD1D2CF
+    按键: Q/森 · 零度/zj.9.png
+    按键高亮: Q/森 · 零度/zjh.9.png
+    顶部0-9: Q/森 · 零度/tg.9.png
+    退格: Q/森 · 零度/tg.9.png
+    数字: Q/森 · 零度/tg.9.png
+    逗号: Q/森 · 零度/tg.9.png
+    空格: Q/森 · 零度/kg.9.png
+    句号: Q/森 · 零度/tg.9.png
+    回车: Q/森 · 零度/hc.9.png
+    功能风: Q/森 · 零度/tg.9.png
+    1: Q/森 · 零度/1.9.png
+    1高亮: Q/森 · 零度/1h.9.png
+# 🟠 字色：
+    首选（高亮标注项）: 0x5D734B #首选提示、首选序号、气泡字高亮
+    非首选: 0x303336 #悬浮窗边框、编码、“^”插入符号、非首选提示、非首选序号、气泡字色、按键边框
+    按键字色: 0x303336 #按键字高亮、按键符色、按键符高亮、按键文字阴影
+    回车字色: 0xCFD0CC
+    回车字高亮: 0x303336
+    回车符高亮: 0x303336
+# 🟠 Shift键：
+    常态背景: Q/森 · 零度/gn.9.png #锁定背景
+    常态背景高亮: Q/森 · 零度/zjh.9.png #锁定背景高亮
+    常态字色: 0x303336 #常态字高亮、常态符色、常态符高亮
+    锁定字色: 0xAA5034 #锁定字高亮
+
+  h1001:
+    name: 森 · 零度  •  深色
+    author: 移植自搜狗
+    light_scheme: h1000 #指定日间配色
+# 🟠 背景：
+    状态栏首选（高亮标注项）+非首选高亮: 0x00 #编码+悬浮窗首选（高亮标注项）、候选分割线、气泡高亮
+    气泡高亮: 0x484947
+    键盘(状态栏+底栏): Q/森 · 零度  •  深色/jp.9.png #状态栏、悬浮窗^、气泡
+    状态栏: Q/森 · 零度  •  深色/ztl.9.png
+    悬浮窗^: 0x2D2F2E
+    按键: Q/森 · 零度  •  深色/zj.9.png
+    按键高亮: Q/森 · 零度  •  深色/zjh.9.png
+    顶部0-9: Q/森 · 零度  •  深色/tg.9.png
+    退格: Q/森 · 零度  •  深色/tg.9.png
+    数字: Q/森 · 零度  •  深色/tg.9.png
+    逗号: Q/森 · 零度  •  深色/tg.9.png
+    空格: Q/森 · 零度  •  深色/kg.9.png
+    句号: Q/森 · 零度  •  深色/tg.9.png
+    回车: Q/森 · 零度  •  深色/hc.9.png
+    功能风: Q/森 · 零度  •  深色/tg.9.png
+    1: Q/森 · 零度  •  深色/1.9.png
+    1高亮: Q/森 · 零度  •  深色/1h.9.png
+# 🟠 字色：
+    首选（高亮标注项）: 0xB8CCA7 #首选提示、首选序号、气泡字高亮
+    非首选: 0xE9E9E9 #悬浮窗边框、编码、“^”插入符号、非首选提示、非首选序号、气泡字色、按键边框
+    按键字色: 0xE9E9E9 #按键字高亮、按键符色、按键符高亮、按键文字阴影
+    回车字色: 0xCFD0CC
+# 🟠 Shift键：
+    常态背景: Q/森 · 零度  •  深色/gn.9.png #锁定背景
+    常态背景高亮: Q/森 · 零度  •  深色/zjh.9.png #锁定背景高亮
+    常态字色: 0xE9E9E9 #常态字高亮、常态符色、常态符高亮
+    锁定字色: 0xE57C5C #锁定字高亮
+
+  h2:
+    name: 指尖生花
+    author: 移植自百度
+    dark_scheme: h3 #指定夜间配色
+# 🟠 背景：
+    状态栏首选（高亮标注项）+非首选高亮: 0x00 #编码+悬浮窗首选（高亮标注项）、候选分割线、气泡高亮
+    气泡高亮: 0xEDEFEA
+    键盘(状态栏+底栏): Q/指尖生花/jp.9.png #状态栏、悬浮窗^、气泡
+    状态栏: Q/指尖生花/ztl.9.png
+    悬浮窗^: 0xD4E0D6
+    按键: Q/指尖生花/w.9.png
+    按键高亮: Q/指尖生花/gl.9.png
+    顶部0-9: Q/指尖生花/w.9.png
+    q: Q/指尖生花/q.9.png
+    e: Q/指尖生花/q.9.png
+    t: Q/指尖生花/q.9.png
+    u: Q/指尖生花/q.9.png
+    o: Q/指尖生花/q.9.png
+    s: Q/指尖生花/q.9.png
+    f: Q/指尖生花/f.9.png
+    g: Q/指尖生花/g.9.png
+    h: Q/指尖生花/h.9.png
+    k: Q/指尖生花/q.9.png
+    x: Q/指尖生花/q.9.png
+    v: Q/指尖生花/q.9.png
+    n: Q/指尖生花/q.9.png
+    数字: Q/指尖生花/sz.9.png
+    逗号: Q/指尖生花/w.9.png
+    空格: Q/指尖生花/q.9.png
+    句号: Q/指尖生花/w.9.png
+    退格: Q/指尖生花/tg.9.png
+    回车: Q/指尖生花/hc.9.png
+    1: Q/指尖生花/1.9.png
+    3: Q/指尖生花/q.9.png
+    5: Q/指尖生花/5.9.png
+    7: Q/指尖生花/q.9.png
+    9: Q/指尖生花/q.9.png
+    0: Q/指尖生花/q.9.png
+    数字符1: Q/指尖生花/w.9.png
+    数字符2: Q/指尖生花/w.9.png
+    数字符3: Q/指尖生花/w.9.png
+    数字空格: Q/指尖生花/w.9.png
+    数字编辑: Q/指尖生花/w.9.png
+# 🟠 字色：
+    首选（高亮标注项）: 0x42664C #首选提示、首选序号、气泡字高亮
+    非首选: 0x28402F #悬浮窗边框、编码、“^”插入符号、非首选提示、非首选序号、气泡字色、按键边框
+    按键字色: 0x36573F #按键字高亮、按键符色、按键符高亮、按键文字阴影
+    退格字色: 0xFFF2C6
+# 🟠 Shift键：
+    常态背景: Q/指尖生花/gn.9.png #锁定背景
+    常态背景高亮: Q/指尖生花/gl.9.png #锁定背景高亮
+    常态字色: 0x36573F #常态字高亮、常态符色、常态符高亮
+    锁定字色: 0xE9300E #锁定字高亮
+
+  h3:
+    name: 指尖生花  •  深色
+    author: 移植自百度
+    light_scheme: h2 #指定日间配色
+# 🟠 背景：
+    状态栏首选（高亮标注项）+非首选高亮: 0x00 #编码+悬浮窗首选（高亮标注项）、候选分割线、气泡高亮
+    气泡高亮: 0x434844
+    键盘(状态栏+底栏): Q/指尖生花  •  深色/jp.9.png #状态栏、悬浮窗^、气泡
+    状态栏: Q/指尖生花  •  深色/ztl.9.png
+    悬浮窗^: 0x313432
+    按键: Q/指尖生花  •  深色/w.9.png
+    按键高亮: Q/指尖生花  •  深色/gl.9.png
+    顶部0-9: Q/指尖生花  •  深色/w.9.png
+    q: Q/指尖生花  •  深色/q.9.png
+    e: Q/指尖生花  •  深色/q.9.png
+    t: Q/指尖生花  •  深色/q.9.png
+    u: Q/指尖生花  •  深色/q.9.png
+    o: Q/指尖生花  •  深色/q.9.png
+    s: Q/指尖生花  •  深色/q.9.png
+    f: Q/指尖生花  •  深色/f.9.png
+    g: Q/指尖生花  •  深色/g.9.png
+    h: Q/指尖生花  •  深色/h.9.png
+    k: Q/指尖生花  •  深色/q.9.png
+    x: Q/指尖生花  •  深色/q.9.png
+    v: Q/指尖生花  •  深色/q.9.png
+    n: Q/指尖生花  •  深色/q.9.png
+    数字: Q/指尖生花  •  深色/sz.9.png
+    逗号: Q/指尖生花  •  深色/w.9.png
+    空格: Q/指尖生花  •  深色/q.9.png
+    句号: Q/指尖生花  •  深色/w.9.png
+    退格: Q/指尖生花  •  深色/tg.9.png
+    回车: Q/指尖生花  •  深色/hc.9.png
+    1: Q/指尖生花  •  深色/1.9.png
+    3: Q/指尖生花  •  深色/q.9.png
+    5: Q/指尖生花  •  深色/5.9.png
+    7: Q/指尖生花  •  深色/q.9.png
+    9: Q/指尖生花  •  深色/q.9.png
+    0: Q/指尖生花  •  深色/q.9.png
+    数字符1: Q/指尖生花  •  深色/w.9.png
+    数字符2: Q/指尖生花  •  深色/w.9.png
+    数字符3: Q/指尖生花  •  深色/w.9.png
+    数字空格: Q/指尖生花  •  深色/w.9.png
+    数字编辑: Q/指尖生花  •  深色/w.9.png
+# 🟠 字色：
+    首选（高亮标注项）: 0x99CCA6 #首选提示、首选序号、气泡字高亮
+    非首选: 0xE9F5EC #悬浮窗边框、编码、“^”插入符号、非首选提示、非首选序号、气泡字色、按键边框
+    按键字色: 0xDFEFE3 #按键字高亮、按键符色、按键符高亮、按键文字阴影
+    退格字色: 0xFFF2C6
+# 🟠 Shift键：
+    常态背景: Q/指尖生花  •  深色/gn.9.png #锁定背景
+    常态背景高亮: Q/指尖生花  •  深色/gl.9.png #锁定背景高亮
+    常态字色: 0xDDEDE1 #常态字高亮、常态符色、常态符高亮
+    锁定字色: 0xE9300E #锁定字高亮
+
+  h3000:
+    name: 清雅颂
+    author: 移植自搜狗
+    dark_scheme: h3001 #指定夜间配色
+# 🟠 背景：
+    状态栏首选（高亮标注项）+非首选高亮: 0x00 #编码+悬浮窗首选（高亮标注项）、候选分割线、气泡高亮
+    气泡高亮: 0xEEEEEE
+    键盘(状态栏+底栏): 0xD8D8D8 #状态栏、悬浮窗^、气泡
+    状态栏: Q/清雅颂/ztl.9.png
+    按键: Q/清雅颂/zj.9.png
+    按键高亮: Q/清雅颂/zjh.9.png
+    顶部0-9: Q/清雅颂/sz.9.png
+    退格: Q/清雅颂/tg.9.png
+    数字: Q/清雅颂/sz.9.png
+    逗号: Q/清雅颂/sz.9.png
+    空格: Q/清雅颂/kg.9.png
+    句号: Q/清雅颂/sz.9.png
+    回车: Q/清雅颂/hc.9.png
+    功能风: Q/清雅颂/sz.9.png
+    1: Q/清雅颂/1.9.png
+# 🟠 字色：
+    首选（高亮标注项）: 0xE53F3F #首选提示、首选序号、气泡字高亮
+    非首选: 0x3B3B3B #悬浮窗边框、编码、“^”插入符号、非首选提示、非首选序号、气泡字色、按键边框
+    按键字色: 0x606060 #按键字高亮、按键符色、按键符高亮、按键文字阴影
+# 🟠 Shift键：
+    常态背景: Q/清雅颂/gn.9.png #锁定背景
+    常态背景高亮: Q/清雅颂/gnh.9.png #锁定背景高亮
+    常态字色: 0x575757 #常态字高亮、常态符色、常态符高亮
+    锁定字色: 0xE53F3F #锁定字高亮
+
+  h3001:
+    name: 清雅颂  •  深色
+    author: 移植自搜狗
+    light_scheme: h3000 #指定日间配色
+# 🟠 背景：
+    状态栏首选（高亮标注项）+非首选高亮: 0x00 #编码+悬浮窗首选（高亮标注项）、候选分割线、气泡高亮
+    气泡高亮: 0x4F4F4F
+    键盘(状态栏+底栏): 0x383838 #状态栏、悬浮窗^、气泡
+    状态栏: Q/清雅颂  •  深色/ztl.9.png
+    按键: Q/清雅颂  •  深色/zj.9.png
+    按键高亮: Q/清雅颂  •  深色/zjh.9.png
+    顶部0-9: Q/清雅颂  •  深色/sz.9.png
+    退格: Q/清雅颂  •  深色/tg.9.png
+    数字: Q/清雅颂  •  深色/sz.9.png
+    逗号: Q/清雅颂  •  深色/sz.9.png
+    空格: Q/清雅颂  •  深色/kg.9.png
+    句号: Q/清雅颂  •  深色/sz.9.png
+    回车: Q/清雅颂  •  深色/hc.9.png
+    功能风: Q/清雅颂  •  深色/sz.9.png
+    1: Q/清雅颂  •  深色/1.9.png
+# 🟠 字色：
+    首选（高亮标注项）: 0xFF6666 #首选提示、首选序号、气泡字高亮
+    非首选: 0xE9E9E9 #悬浮窗边框、编码、“^”插入符号、非首选提示、非首选序号、气泡字色、按键边框
+    按键字色: 0xE9E9E9 #按键字高亮、按键符色、按键符高亮、按键文字阴影
+# 🟠 Shift键：
+    常态背景: Q/清雅颂  •  深色/gn.9.png #锁定背景
+    常态背景高亮: Q/清雅颂  •  深色/gnh.9.png #锁定背景高亮
+    常态字色: 0xE9E9E9 #常态字高亮、常态符色、常态符高亮
+    锁定字色: 0xFF6666 #锁定字高亮
+
+  h3002:
+    name: 粉色星星
+    author: 移植自搜狗
+    light_scheme: default #指定日间配色
+# 🟠 背景：
+    状态栏首选（高亮标注项）+非首选高亮: 0x00 #编码+悬浮窗首选（高亮标注项）、候选分割线、气泡高亮
+    气泡高亮: 0x754E5A
+    键盘(状态栏+底栏): Q/粉色星星/jp.9.png #状态栏、悬浮窗^、气泡
+    状态栏: Q/粉色星星/ztl.9.png
+    悬浮窗^: 0x3E2A2F
+    按键: Q/粉色星星/zj.9.png
+    按键高亮: Q/粉色星星/zjh.9.png
+    顶部0-9: Q/粉色星星/zj.9.png
+    数字: Q/粉色星星/sz.9.png
+    空格: Q/粉色星星/kg.9.png
+    回车: Q/粉色星星/hc.9.png
+# 🟠 字色：
+    首选（高亮标注项）: 0xF6A7BE #首选提示、首选序号、气泡字高亮
+    非首选: 0xE9E9E9 #悬浮窗边框、编码、“^”插入符号、非首选提示、非首选序号、气泡字色、按键边框
+    按键字色: 0xE9E9E9 #按键字高亮、按键符色、按键符高亮、按键文字阴影
+    数字字色: 0xFABACD
+    回车字色: 0xFABACD
+# 🟠 Shift键：
+    常态背景: Q/粉色星星/gn.9.png #锁定背景
+    常态背景高亮: Q/粉色星星/zjh.9.png #锁定背景高亮
+    常态字色: 0xE9E9E9 #常态字高亮、常态符色、常态符高亮
+    锁定字色: 0xFA6666 #锁定字高亮
+
+  h3003:
+    name: 炫彩OS
+    author: 移植自搜狗
+    dark_scheme: default_dark #指定夜间配色
+# 🟠 背景：
+    状态栏首选（高亮标注项）+非首选高亮: 0x00 #编码+悬浮窗首选（高亮标注项）、候选分割线、气泡高亮
+    气泡高亮: 0xB3B0BA
+    键盘(状态栏+底栏): Q/炫彩OS/jp.9.png #状态栏、悬浮窗^、气泡
+    悬浮窗^: 0xDEDBE7
+    状态栏: Q/炫彩OS/ztl.9.png
+    按键: Q/炫彩OS/zj.9.png
+    按键高亮: Q/炫彩OS/zjh.9.png
+    顶部0-9: Q/炫彩OS/gnf.9.png
+    顶部0-9高亮: Q/炫彩OS/tg.9.png
+    退格: Q/炫彩OS/tg.9.png
+    数字: Q/炫彩OS/sz.9.png
+    逗号: Q/炫彩OS/gnf.9.png
+    逗号高亮: Q/炫彩OS/tg.9.png
+    空格: Q/炫彩OS/kg.9.png
+    空格高亮: Q/炫彩OS/gnf.9.png
+    句号: Q/炫彩OS/gnf.9.png
+    句号高亮: Q/炫彩OS/tg.9.png
+    回车: Q/炫彩OS/hc.9.png
+    功能风: Q/炫彩OS/gnf.9.png
+    功能风高亮: Q/炫彩OS/tg.9.png
+# 🟠 字色：
+    首选（高亮标注项）: 0xC63517 #首选提示、首选序号、气泡字高亮
+    非首选: 0x4A5766 #悬浮窗边框、编码、“^”插入符号、非首选提示、非首选序号、气泡字色、按键边框
+    按键字色: 0x4A5766 #按键字高亮、按键符色、按键符高亮、按键文字阴影
+    顶部0-9字色: 0xDBE8F8
+    退格字色: 0xFFD5DC
+    数字字色: 0xECDAFF
+    逗号字色: 0xDBE8F8
+    空格字色: 0xFAF2EC
+    句号字色: 0xDBE8F8
+    回车字色: 0xD5F3FF
+# 🟠 Shift键：
+    常态背景: Q/炫彩OS/gn.9.png #锁定背景
+    锁定背景: Q/炫彩OS/tg.9.png
+    常态背景高亮: Q/炫彩OS/gnf.9.png #锁定背景高亮
+    常态字色: 0xD5FFF0 #常态字高亮、常态符色、常态符高亮
+    锁定字色: 0xFFD5DC #锁定字高亮
+
+  h4:
+    name: Gboard  •  深色
+# 🟠 背景：
+    状态栏首选（高亮标注项）+非首选高亮: 0x00 #编码+悬浮窗首选（高亮标注项）、候选分割线、气泡高亮
+    气泡高亮: 0x484C4F
+    键盘(状态栏+底栏): 0x292E33 #状态栏、悬浮窗^、气泡
+    按键: Q/Gboard  •  深色/zj.9.png
+    按键高亮: Q/Gboard  •  深色/zjh.9.png
+    回车: Q/Gboard  •  深色/hc.9.png
+# 🟠 字色：
+    首选（高亮标注项）: 0xF0F0F0 #首选提示、首选序号、气泡字高亮
+    非首选: 0xDDDDDD #悬浮窗边框、编码、“^”插入符号、非首选提示、非首选序号、气泡字色、按键边框
+    按键字色: 0xDDDDDD #按键字高亮、按键符色、按键符高亮、按键文字阴影
+    回车字色: 0xF9F9F9
+# 🟠 Shift键：
+    常态背景: Q/Gboard  •  深色/gn.9.png #锁定背景
+    常态背景高亮: Q/Gboard  •  深色/gnh.9.png #锁定背景高亮
+    常态字色: 0xDDDDDD #常态字高亮、常态符色、常态符高亮
+    锁定字色: 0xE9300E #锁定字高亮
+
+  h5:
+    name: Gboard  •  咖啡
+# 🟠 背景：
+    状态栏首选（高亮标注项）+非首选高亮: 0x00 #编码+悬浮窗首选（高亮标注项）、候选分割线、气泡高亮
+    气泡高亮: 0x6D5853
+    键盘(状态栏+底栏): 0x4E342E #状态栏、悬浮窗^、气泡
+    按键: Q/Gboard  •  咖啡/zj.9.png
+    按键高亮: Q/Gboard  •  咖啡/zjh.9.png
+    回车: Q/Gboard  •  咖啡/hc.9.png
+    回车高亮: Q/Gboard  •  咖啡/hch.9.png
+# 🟠 字色：
+    首选（高亮标注项）: 0xF0F0F0 #首选提示、首选序号、气泡字高亮
+    非首选: 0xDCD6D5 #悬浮窗边框、编码、“^”插入符号、非首选提示、非首选序号、气泡字色、按键边框
+    按键字色: 0xF9F9F9 #按键字高亮、按键符色、按键符高亮、按键文字阴影
+    回车字色: 0xF9F9F9
+# 🟠 Shift键：
+    常态背景: Q/Gboard  •  咖啡/gn.9.png #锁定背景
+    常态背景高亮: Q/Gboard  •  咖啡/gnh.9.png #锁定背景高亮
+    常态字色: 0xF9F9F9 #常态字高亮、常态符色、常态符高亮
+    锁定字色: 0xE9300E #锁定字高亮
+
+  h6:
+    name: Gboard  •  墨绿
+# 🟠 背景：
+    状态栏首选（高亮标注项）+非首选高亮: 0x00 #编码+悬浮窗首选（高亮标注项）、候选分割线、气泡高亮
+    气泡高亮: 0x2E8479
+    键盘(状态栏+底栏): 0x00695C #状态栏、悬浮窗^、气泡
+    按键: Q/Gboard  •  墨绿/zj.9.png
+    按键高亮: Q/Gboard  •  墨绿/zjh.9.png
+    回车: Q/Gboard  •  墨绿/hc.9.png
+    回车高亮: Q/Gboard  •  墨绿/hch.9.png
+# 🟠 字色：
+    首选（高亮标注项）: 0xFDFDFD #首选提示、首选序号、气泡字高亮
+    非首选: 0xCCE1DE #悬浮窗边框、编码、“^”插入符号、非首选提示、非首选序号、气泡字色、按键边框
+    按键字色: 0xFDFDFD #按键字高亮、按键符色、按键符高亮、按键文字阴影
+    回车字色: 0xF9F9F9
+# 🟠 Shift键：
+    常态背景: Q/Gboard  •  墨绿/gn.9.png #锁定背景
+    常态背景高亮: Q/Gboard  •  墨绿/gnh.9.png #锁定背景高亮
+    常态字色: 0xFDFDFD #常态字高亮、常态符色、常态符高亮
+    锁定字色: 0xE9300E #锁定字高亮
+
+  h7:
+    name: 浅绿
+    dark_scheme: default_dark #指定夜间配色
+    author: 移植自搜狗
+# 🟠 背景：
+    状态栏首选（高亮标注项）+非首选高亮: 0x00 #编码+悬浮窗首选（高亮标注项）、候选分割线、气泡高亮
+    气泡高亮: 0xAFCFCC
+    键盘(状态栏+底栏): Q/浅绿/jp.9.png #状态栏、悬浮窗^、气泡
+    状态栏: Q/浅绿/ztl.9.png
+    悬浮窗^: 0xC8DEDC
+    按键: Q/浅绿/zj.9.png
+    按键高亮: Q/浅绿/zjh.9.png
+    数字: Q/浅绿/sz.9.png
+    空格: Q/浅绿/gn.9.png
+    空格高亮: Q/浅绿/zj.9.png
+    回车: Q/浅绿/hc.9.png
+# 🟠 字色：
+    首选（高亮标注项）: 0x4D7E79 #首选提示、首选序号、气泡字高亮
+    非首选: 0x454545 #悬浮窗边框、编码、“^”插入符号、非首选提示、非首选序号、气泡字色、按键边框
+    按键字色: 0x454545 #按键字高亮、按键符色、按键符高亮、按键文字阴影
+# 🟠 Shift键：
+    常态背景: Q/浅绿/gn.9.png #锁定背景
+    常态背景高亮: Q/浅绿/zj.9.png #锁定背景高亮
+    常态字色: 0x454545 #常态字高亮、常态符色、常态符高亮
+    锁定字色: 0xE9300E #锁定字高亮
+
+  h8:
+    name: 拟态
+    dark_scheme: h8000 #指定夜间配色
+    author: 移植自搜狗
+# 🟠 背景：
+    状态栏首选（高亮标注项）+非首选高亮: 0x00 #编码+悬浮窗首选（高亮标注项）、候选分割线、气泡高亮
+    气泡高亮: 0xE0E0E0
+    键盘(状态栏+底栏): 0xE0E0E0 #状态栏、悬浮窗^、气泡
+    气泡: 0xCBCBCB
+    状态栏: Q/拟态/zj.9.png
+    按键: Q/拟态/zj.9.png
+    按键高亮: Q/拟态/zjh.9.png
+# 🟠 字色：
+    首选（高亮标注项）: 0xFA636E #首选提示、首选序号、气泡字高亮
+    非首选: 0x454545 #悬浮窗边框、编码、“^”插入符号、非首选提示、非首选序号、气泡字色、按键边框
+    按键字色: 0x454545 #按键字高亮、按键符色、按键符高亮、按键文字阴影
+    回车字色: 0xFA636E
+# 🟠 Shift键：
+    常态背景: Q/拟态/zj.9.png #锁定背景
+    常态背景高亮: Q/拟态/zjh.9.png #锁定背景高亮
+    常态字色: 0x454545 #常态字高亮、常态符色、常态符高亮
+    锁定字色: 0xFA5D60 #锁定字高亮
+
+  h8000:
+    name: 拟态  •  深色
+    light_scheme: h8 #指定夜间配色
+    author: 移植自搜狗
+# 🟠 背景：
+    状态栏首选（高亮标注项）+非首选高亮: 0x00 #编码+悬浮窗首选（高亮标注项）、候选分割线、气泡高亮
+    气泡高亮: 0x303138
+    键盘(状态栏+底栏): 0x303138 #状态栏、悬浮窗^、气泡
+    气泡: 0x202126
+    状态栏: Q/拟态  •  深色/zj.9.png
+    按键: Q/拟态  •  深色/zj.9.png
+    按键高亮: Q/拟态  •  深色/zjh.9.png
+# 🟠 字色：
+    首选（高亮标注项）: 0xDA636E #首选提示、首选序号、气泡字高亮
+    非首选: 0xAAAAAA #悬浮窗边框、编码、“^”插入符号、非首选提示、非首选序号、气泡字色、按键边框
+    按键字色: 0xAAAAAA #按键字高亮、按键符色、按键符高亮、按键文字阴影
+    回车字色: 0xDA636E
+# 🟠 Shift键：
+    常态背景: Q/拟态  •  深色/zj.9.png #锁定背景
+    常态背景高亮: Q/拟态  •  深色/zjh.9.png #锁定背景高亮
+    常态字色: 0xAAAAAA #常态字高亮、常态符色、常态符高亮
+    锁定字色: 0xDA5D60 #锁定字高亮
+
+  h9:
+    name: 拟态 · 极
+    dark_scheme: h9000 #指定夜间配色
+    author: 移植自搜狗
+# 🟠 背景：
+    状态栏首选（高亮标注项）+非首选高亮: 0x00 #编码+悬浮窗首选（高亮标注项）、候选分割线、气泡高亮
+    气泡高亮: 0xD2D2D2
+    键盘(状态栏+底栏): 0xE4E4E4 #状态栏、悬浮窗^、气泡
+    状态栏: Q/拟态 · 极/zj.9.png
+    按键: Q/拟态 · 极/zj.9.png
+    按键高亮: Q/拟态 · 极/zjh.9.png
+# 🟠 字色：
+    首选（高亮标注项）: 0xFA636E #首选提示、首选序号、气泡字高亮
+    非首选: 0x454545 #悬浮窗边框、编码、“^”插入符号、非首选提示、非首选序号、气泡字色、按键边框
+    按键字色: 0x454545 #按键字高亮、按键符色、按键符高亮、按键文字阴影
+    回车字色: 0xFA636E
+# 🟠 Shift键：
+    常态背景: Q/拟态 · 极/zj.9.png #锁定背景
+    常态背景高亮: Q/拟态 · 极/zjh.9.png #锁定背景高亮
+    常态字色: 0x454545 #常态字高亮、常态符色、常态符高亮
+    锁定字色: 0xFA5D60 #锁定字高亮
+
+  h9000:
+    name: 拟态 · 极  •  深色
+    light_scheme: h9 #指定夜间配色
+    author: 移植自搜狗
+# 🟠 背景：
+    状态栏首选（高亮标注项）+非首选高亮: 0x00 #编码+悬浮窗首选（高亮标注项）、候选分割线、气泡高亮
+    气泡高亮: 0x2A2B32
+    键盘(状态栏+底栏): 0x3E3F48 #状态栏、悬浮窗^、气泡
+    状态栏: Q/拟态 · 极  •  深色/zj.9.png
+    按键: Q/拟态 · 极  •  深色/zj.9.png
+    按键高亮: Q/拟态 · 极  •  深色/zjh.9.png
+# 🟠 字色：
+    首选（高亮标注项）: 0xDA636E #首选提示、首选序号、气泡字高亮
+    非首选: 0xAAAAAA #悬浮窗边框、编码、“^”插入符号、非首选提示、非首选序号、气泡字色、按键边框
+    按键字色: 0xAAAAAA #按键字高亮、按键符色、按键符高亮、按键文字阴影
+    回车字色: 0xDA636E
+# 🟠 Shift键：
+    常态背景: Q/拟态 · 极  •  深色/zj.9.png #锁定背景
+    常态背景高亮: Q/拟态 · 极  •  深色/zjh.9.png #锁定背景高亮
+    常态字色: 0xAAAAAA #常态字高亮、常态符色、常态符高亮
+    锁定字色: 0xDA5D60 #锁定字高亮
+
+  j:
+    name: 唐 · 不负韶华
+    author: 移植自搜狗
+    dark_scheme: j0 #指定夜间配色
+# 🟠 背景：
+    状态栏首选（高亮标注项）+非首选高亮: 0x00 #编码+悬浮窗首选（高亮标注项）、候选分割线、气泡高亮
+    气泡高亮: 0x0F5159
+    键盘(状态栏+底栏): 0x022B31 #状态栏、悬浮窗^、气泡
+    状态栏: Q/唐 · 不负韶华/ztl.9.png
+    按键: Q/唐 · 不负韶华/zj.9.png
+    按键高亮: Q/唐 · 不负韶华/zjh.9.png
+    顶部0-9: Q/唐 · 不负韶华/kgh.9.png
+    退格: Q/唐 · 不负韶华/tg.9.png
+    退格高亮: Q/唐 · 不负韶华/hc.9.png
+    数字: Q/唐 · 不负韶华/sz.9.png
+    逗号: Q/唐 · 不负韶华/kgh.9.png
+    空格: Q/唐 · 不负韶华/kg.9.png
+    空格高亮: Q/唐 · 不负韶华/kgh.9.png
+    句号: Q/唐 · 不负韶华/kgh.9.png
+    回车: Q/唐 · 不负韶华/hc.9.png
+    回车高亮: Q/唐 · 不负韶华/tg.9.png
+    功能风: Q/唐 · 不负韶华/kgh.9.png
+# 🟠 字色：
+    首选（高亮标注项）: 0x26BF96 #首选提示、首选序号、气泡字高亮
+    非首选: 0xBDECF2 #悬浮窗边框、编码、“^”插入符号、非首选提示、非首选序号、气泡字色、按键边框
+    按键字色: 0x0D4952 #按键字高亮、按键符色、按键符高亮、按键文字阴影
+    按键字高亮: 0x97D5DE
+    按键符高亮: 0x97D5DE
+    顶部0-9字高亮: 0x0D4952
+    顶部0-9符高亮: 0x0D4952
+    退格字色: 0x0D4952
+    逗号字高亮: 0x0D4952
+    逗号符高亮: 0x0D4952
+    空格字高亮: 0x97D5DE
+    空格符高亮: 0x97D5DE
+    句号字高亮: 0x0D4952
+    句号符高亮: 0x0D4952
+    数字字高亮: 0x0D4952
+    数字符高亮: 0x0D4952
+    回车字色: 0xD8EAE9
+    回车字高亮: 0x0D4952
+    回车符高亮: 0x0D4952
+    功能风字高亮: 0x0D4952
+    功能风符高亮: 0x0D4952
+# 🟠 Shift键：
+    常态背景: Q/唐 · 不负韶华/gn.9.png #锁定背景
+    常态背景高亮: Q/唐 · 不负韶华/zj.9.png #锁定背景高亮
+    常态字色: 0x97D5DE #常态字高亮、常态符色、常态符高亮
+    常态字高亮: 0x0D4952
+    常态符高亮: 0x0D4952
+    锁定字色: 0xE9300E #锁定字高亮
+
+  j0:
+    name: 唐 · 不负韶华  •  深色
+    author: 移植自搜狗
+    light_scheme: j #指定日间配色
+# 🟠 背景：
+    状态栏首选（高亮标注项）+非首选高亮: 0x00 #编码+悬浮窗首选（高亮标注项）、候选分割线、气泡高亮
+    气泡高亮: 0x0D4952
+    键盘(状态栏+底栏): 0x022B31 #状态栏、悬浮窗^、气泡
+    状态栏: Q/唐 · 不负韶华  •  深色/ztl.9.png
+    按键: Q/唐 · 不负韶华  •  深色/zj.9.png
+    按键高亮: Q/唐 · 不负韶华  •  深色/zjh.9.png
+    顶部0-9: Q/唐 · 不负韶华  •  深色/kgh.9.png
+    退格: Q/唐 · 不负韶华  •  深色/tg.9.png
+    退格高亮: Q/唐 · 不负韶华  •  深色/hc.9.png
+    数字: Q/唐 · 不负韶华  •  深色/sz.9.png
+    逗号: Q/唐 · 不负韶华  •  深色/kgh.9.png
+    空格: Q/唐 · 不负韶华  •  深色/kg.9.png
+    空格高亮: Q/唐 · 不负韶华  •  深色/kgh.9.png
+    句号: Q/唐 · 不负韶华  •  深色/kgh.9.png
+    回车: Q/唐 · 不负韶华  •  深色/hc.9.png
+    回车高亮: Q/唐 · 不负韶华  •  深色/tg.9.png
+    功能风: Q/唐 · 不负韶华  •  深色/kgh.9.png
+# 🟠 字色：
+    首选（高亮标注项）: 0x26BF96 #首选提示、首选序号、气泡字高亮
+    非首选: 0xBDECF2 #悬浮窗边框、编码、“^”插入符号、非首选提示、非首选序号、气泡字色、按键边框
+    按键字色: 0xB3E4EB #按键字高亮、按键符色、按键符高亮、按键文字阴影
+    退格字色: 0x0D4952
+    回车字色: 0xD8EAE9
+    回车字高亮: 0x0D4952
+# 🟠 Shift键：
+    常态背景: Q/唐 · 不负韶华  •  深色/gn.9.png #锁定背景
+    常态背景高亮: Q/唐 · 不负韶华  •  深色/zj.9.png #锁定背景高亮
+    常态字色: 0x97D5DE #常态字高亮、常态符色、常态符高亮
+    锁定字色: 0xE9300E #锁定字高亮
+
+  j1:
+    name: 宋 · 落纸云烟
+    author: 移植自搜狗
+    dark_scheme: j2 #指定夜间配色
+# 🟠 背景：
+    状态栏首选（高亮标注项）+非首选高亮: 0x00 #编码+悬浮窗首选（高亮标注项）、候选分割线、气泡高亮
+    气泡高亮: 0xE7E1DE
+    键盘(状态栏+底栏): Q/宋 · 落纸云烟/jp.9.png #状态栏、悬浮窗^、气泡
+    状态栏: Q/宋 · 落纸云烟/ztl.9.png
+    悬浮窗^: 0xCDC2BF
+    按键: Q/宋 · 落纸云烟/zj.9.png
+    按键高亮: Q/宋 · 落纸云烟/zjh.9.png
+    顶部0-9: Q/宋 · 落纸云烟/kgh.9.png
+    退格: Q/宋 · 落纸云烟/tg.9.png
+    退格高亮: Q/宋 · 落纸云烟/hc.9.png
+    数字: Q/宋 · 落纸云烟/sz.9.png
+    逗号: Q/宋 · 落纸云烟/kgh.9.png
+    空格: Q/宋 · 落纸云烟/kg.9.png
+    空格高亮: Q/宋 · 落纸云烟/kgh.9.png
+    句号: Q/宋 · 落纸云烟/kgh.9.png
+    回车: Q/宋 · 落纸云烟/hc.9.png
+    回车高亮: Q/宋 · 落纸云烟/sz.9.png
+    功能风: Q/宋 · 落纸云烟/kgh.9.png
+# 🟠 字色：
+    首选（高亮标注项）: 0xAA5034 #首选提示、首选序号、气泡字高亮
+    非首选: 0x403A38 #悬浮窗边框、编码、“^”插入符号、非首选提示、非首选序号、气泡字色、按键边框
+    按键字色: 0x5F5856 #按键字高亮、按键符色、按键符高亮、按键文字阴影
+    退格字色: 0xF3EFEE
+    回车字色: 0xF3EFEE
+    回车字高亮: 0x5F5856
+    回车符高亮: 0x5F5856
+# 🟠 Shift键：
+    常态背景: Q/宋 · 落纸云烟/gn.9.png #锁定背景
+    常态背景高亮: Q/宋 · 落纸云烟/zj.9.png #锁定背景高亮
+    常态字色: 0x5F5856 #常态字高亮、常态符色、常态符高亮
+    锁定字色: 0xAA5034 #锁定字高亮
+
+  j2:
+    name: 宋 · 落纸云烟  •  深色
+    author: 移植自搜狗
+    light_scheme: j1 #指定日间配色
+# 🟠 背景：
+    状态栏首选（高亮标注项）+非首选高亮: 0x00 #编码+悬浮窗首选（高亮标注项）、候选分割线、气泡高亮
+    气泡高亮: 0x615957
+    键盘(状态栏+底栏): Q/宋 · 落纸云烟  •  深色/jp.9.png #状态栏、悬浮窗^、气泡
+    状态栏: Q/宋 · 落纸云烟  •  深色/ztl.9.png
+    悬浮窗^: 0x3C3736
+    按键: Q/宋 · 落纸云烟  •  深色/zj.9.png
+    按键高亮: Q/宋 · 落纸云烟  •  深色/zjh.9.png
+    顶部0-9: Q/宋 · 落纸云烟  •  深色/gnf.9.png
+    退格: Q/宋 · 落纸云烟  •  深色/tg.9.png
+    数字: Q/宋 · 落纸云烟  •  深色/sz.9.png
+    逗号: Q/宋 · 落纸云烟  •  深色/gnf.9.png
+    空格: Q/宋 · 落纸云烟  •  深色/kg.9.png
+    句号: Q/宋 · 落纸云烟  •  深色/gnf.9.png
+    回车: Q/宋 · 落纸云烟  •  深色/sz.9.png
+    功能风: Q/宋 · 落纸云烟  •  深色/gnf.9.png
+# 🟠 字色：
+    首选（高亮标注项）: 0xE57C5C #首选提示、首选序号、气泡字高亮
+    非首选: 0xEBDDD8 #悬浮窗边框、编码、“^”插入符号、非首选提示、非首选序号、气泡字色、按键边框
+    按键字色: 0xEBDDD8 #按键字高亮、按键符色、按键符高亮、按键文字阴影
+# 🟠 Shift键：
+    常态背景: Q/宋 · 落纸云烟  •  深色/gn.9.png #锁定背景
+    常态背景高亮: Q/宋 · 落纸云烟  •  深色/zj.9.png #锁定背景高亮
+    常态字色: 0xEBDDD8 #常态字高亮、常态符色、常态符高亮
+    锁定字色: 0xE57C5C #锁定字高亮
+
+  j3:
+    name: 元 · 弦歌三千
+    author: 移植自搜狗
+    dark_scheme: j4 #指定夜间配色
+# 🟠 背景：
+    状态栏首选（高亮标注项）+非首选高亮: 0x00 #编码+悬浮窗首选（高亮标注项）、候选分割线、气泡高亮
+    气泡高亮: 0xF4F6F9
+    键盘(状态栏+底栏): 0xCDD9E6 #状态栏、悬浮窗^、气泡
+    状态栏: Q/元 · 弦歌三千/ztl.9.png
+    按键: Q/元 · 弦歌三千/zj.9.png
+    按键高亮: Q/元 · 弦歌三千/zjh.9.png
+    g: Q/元 · 弦歌三千/g.9.png
+    g高亮: Q/元 · 弦歌三千/gh.9.png
+    顶部0-9: Q/元 · 弦歌三千/gnf.9.png
+    退格: Q/元 · 弦歌三千/tg.9.png
+    数字: Q/元 · 弦歌三千/sz.9.png
+    逗号: Q/元 · 弦歌三千/gnf.9.png
+    空格: Q/元 · 弦歌三千/kg.9.png
+    句号: Q/元 · 弦歌三千/gnf.9.png
+    回车: Q/元 · 弦歌三千/hc.9.png
+    功能风: Q/元 · 弦歌三千/gnf.9.png
+    5: Q/元 · 弦歌三千/5.9.png
+# 🟠 字色：
+    首选（高亮标注项）: 0x23384E #首选提示、首选序号、气泡字高亮
+    非首选: 0x697A8D #悬浮窗边框、编码、“^”插入符号、非首选提示、非首选序号、气泡字色、按键边框
+    按键字色: 0x455361 #按键字高亮、按键符色、按键符高亮、按键文字阴影
+    回车字色: 0xD0E0EF
+    回车字高亮: 0x455361
+    回车符高亮: 0x455361
+# 🟠 Shift键：
+    常态背景: Q/元 · 弦歌三千/gn.9.png #锁定背景
+    常态背景高亮: Q/元 · 弦歌三千/zjh.9.png #锁定背景高亮
+    常态字色: 0x455361 #常态字高亮、常态符色、常态符高亮
+    锁定字色: 0xE9300E #锁定字高亮
+
+  j4:
+    name: 元 · 弦歌三千  •  深色
+    author: 移植自搜狗
+    light_scheme: j3 #指定日间配色
+# 🟠 背景：
+    状态栏首选（高亮标注项）+非首选高亮: 0x00 #编码+悬浮窗首选（高亮标注项）、候选分割线、气泡高亮
+    气泡高亮: 0x4E545B
+    键盘(状态栏+底栏): 0x272B2F #状态栏、悬浮窗^、气泡
+    状态栏: Q/元 · 弦歌三千  •  深色/ztl.9.png
+    按键: Q/元 · 弦歌三千  •  深色/zj.9.png
+    按键高亮: Q/元 · 弦歌三千  •  深色/zjh.9.png
+    g: Q/元 · 弦歌三千  •  深色/g.9.png
+    g高亮: Q/元 · 弦歌三千  •  深色/gh.9.png
+    顶部0-9: Q/元 · 弦歌三千  •  深色/zjh.9.png
+    顶部0-9高亮: Q/元 · 弦歌三千  •  深色/zj.9.png
+    退格: Q/元 · 弦歌三千  •  深色/tg.9.png
+    数字: Q/元 · 弦歌三千  •  深色/sz.9.png
+    逗号: Q/元 · 弦歌三千  •  深色/zjh.9.png
+    逗号高亮: Q/元 · 弦歌三千  •  深色/zj.9.png
+    空格: Q/元 · 弦歌三千  •  深色/kg.9.png
+    句号: Q/元 · 弦歌三千  •  深色/zjh.9.png
+    句号高亮: Q/元 · 弦歌三千  •  深色/zj.9.png
+    回车: Q/元 · 弦歌三千  •  深色/hc.9.png
+    回车高亮: Q/元 · 弦歌三千  •  深色/zj.9.png
+    功能风: Q/元 · 弦歌三千  •  深色/zjh.9.png
+    功能风高亮: Q/元 · 弦歌三千  •  深色/zj.9.png
+    5: Q/元 · 弦歌三千  •  深色/5.9.png
+    5高亮: Q/元 · 弦歌三千  •  深色/gh.9.png
+# 🟠 字色：
+    首选（高亮标注项）: 0xC2DAF2 #首选提示、首选序号、气泡字高亮
+    非首选: 0xE1EBF5 #悬浮窗边框、编码、“^”插入符号、非首选提示、非首选序号、气泡字色、按键边框
+    按键字色: 0xD0E0EF #按键字高亮、按键符色、按键符高亮、按键文字阴影
+# 🟠 Shift键：
+    常态背景: Q/元 · 弦歌三千  •  深色/gn.9.png #锁定背景
+    常态背景高亮: Q/元 · 弦歌三千  •  深色/zjh.9.png #锁定背景高亮
+    常态字色: 0xD0E0EF #常态字高亮、常态符色、常态符高亮
+    锁定字色: 0xE9300E #锁定字高亮
+
+  j5:
+    name: 明 · 青山如黛
+    author: 移植自搜狗
+    dark_scheme: j6 #指定夜间配色
+# 🟠 背景：
+    状态栏首选（高亮标注项）+非首选高亮: 0x00 #编码+悬浮窗首选（高亮标注项）、候选分割线、气泡高亮
+    气泡高亮: 0xA1BDAC
+    键盘(状态栏+底栏): Q/明 · 青山如黛/jp.9.png #状态栏、悬浮窗^、气泡
+    状态栏: Q/明 · 青山如黛/ztl.9.png
+    悬浮窗^: 0xD3E2D8
+    按键: Q/明 · 青山如黛/zj.9.png
+    按键高亮: Q/明 · 青山如黛/zjh.9.png
+    g: Q/明 · 青山如黛/g.9.png
+    顶部0-9: Q/明 · 青山如黛/gnf.9.png
+    退格: Q/明 · 青山如黛/tg.9.png
+    数字: Q/明 · 青山如黛/sz.9.png
+    逗号: Q/明 · 青山如黛/gnf.9.png
+    空格: Q/明 · 青山如黛/kg.9.png
+    句号: Q/明 · 青山如黛/gnf.9.png
+    回车: Q/明 · 青山如黛/hc.9.png
+    功能风: Q/明 · 青山如黛/gnf.9.png
+    5: Q/明 · 青山如黛/5.9.png
+# 🟠 字色：
+    首选（高亮标注项）: 0x107039 #首选提示、首选序号、气泡字高亮
+    非首选: 0x3F5245 #悬浮窗边框、编码、“^”插入符号、非首选提示、非首选序号、气泡字色、按键边框
+    按键字色: 0x425147 #按键字高亮、按键符色、按键符高亮、按键文字阴影
+# 🟠 Shift键：
+    常态背景: Q/明 · 青山如黛/gn.9.png #锁定背景
+    常态背景高亮: Q/明 · 青山如黛/zjh.9.png #锁定背景高亮
+    常态字色: 0x425147 #常态字高亮、常态符色、常态符高亮
+    锁定字色: 0xE9300E #锁定字高亮
+
+  j6:
+    name: 明 · 青山如黛  •  深色
+    author: 移植自搜狗
+    light_scheme: j5 #指定日间配色
+# 🟠 背景：
+    状态栏首选（高亮标注项）+非首选高亮: 0x00 #编码+悬浮窗首选（高亮标注项）、候选分割线、气泡高亮
+    气泡高亮: 0x546059
+    键盘(状态栏+底栏): Q/明 · 青山如黛  •  深色/jp.9.png #状态栏、悬浮窗^、气泡
+    状态栏: Q/明 · 青山如黛  •  深色/ztl.9.png
+    悬浮窗^: 0x1B201C
+    按键: Q/明 · 青山如黛  •  深色/zj.9.png
+    按键高亮: Q/明 · 青山如黛  •  深色/zjh.9.png
+    g: Q/明 · 青山如黛  •  深色/g.9.png
+    顶部0-9: Q/明 · 青山如黛  •  深色/gnf.9.png
+    退格: Q/明 · 青山如黛  •  深色/tg.9.png
+    数字: Q/明 · 青山如黛  •  深色/sz.9.png
+    逗号: Q/明 · 青山如黛  •  深色/gnf.9.png
+    空格: Q/明 · 青山如黛  •  深色/kg.9.png
+    句号: Q/明 · 青山如黛  •  深色/gnf.9.png
+    回车: Q/明 · 青山如黛  •  深色/hc.9.png
+    功能风: Q/明 · 青山如黛  •  深色/gnf.9.png
+    5: Q/明 · 青山如黛  •  深色/5.9.png
+# 🟠 字色：
+    首选（高亮标注项）: 0xCCC8B4 #首选提示、首选序号、气泡字高亮
+    非首选: 0xCFE5D6 #悬浮窗边框、编码、“^”插入符号、非首选提示、非首选序号、气泡字色、按键边框
+    按键字色: 0xD7F3E0 #按键字高亮、按键符色、按键符高亮、按键文字阴影
+# 🟠 Shift键：
+    常态背景: Q/明 · 青山如黛  •  深色/gn.9.png #锁定背景
+    常态背景高亮: Q/明 · 青山如黛  •  深色/zjh.9.png #锁定背景高亮
+    常态字色: 0xD7F3E0 #常态字高亮、常态符色、常态符高亮
+    锁定字色: 0xE9300E #锁定字高亮
+
+  j7:
+    name: 清 · 浮光掠影
+    author: 移植自搜狗
+    dark_scheme: j8 #指定夜间配色
+# 🟠 背景：
+    状态栏首选（高亮标注项）+非首选高亮: 0x00 #编码+悬浮窗首选（高亮标注项）、候选分割线、气泡高亮
+    气泡高亮: 0xCDCDD5
+    键盘(状态栏+底栏): Q/清 · 浮光掠影/jp.9.png #状态栏、悬浮窗^、气泡
+    状态栏: Q/清 · 浮光掠影/ztl.9.png
+    悬浮窗^: 0xEAEAF3
+    按键: Q/清 · 浮光掠影/zj.9.png
+    按键高亮: Q/清 · 浮光掠影/zjh.9.png
+    g: Q/清 · 浮光掠影/g.9.png
+    顶部0-9: Q/清 · 浮光掠影/gnf.9.png
+    退格: Q/清 · 浮光掠影/tg.9.png
+    数字: Q/清 · 浮光掠影/sz.9.png
+    逗号: Q/清 · 浮光掠影/gnf.9.png
+    空格: Q/清 · 浮光掠影/kg.9.png
+    句号: Q/清 · 浮光掠影/gnf.9.png
+    回车: Q/清 · 浮光掠影/hc.9.png
+    功能风: Q/清 · 浮光掠影/gnf.9.png
+    5: Q/清 · 浮光掠影/5.9.png
+# 🟠 字色：
+    首选（高亮标注项）: 0xBA4444 #首选提示、首选序号、气泡字高亮
+    非首选: 0x414B5C #悬浮窗边框、编码、“^”插入符号、非首选提示、非首选序号、气泡字色、按键边框
+    按键字色: 0x414B5C #按键字高亮、按键符色、按键符高亮、按键文字阴影
+    退格字色: 0xDDDDDD
+# 🟠 Shift键：
+    常态背景: Q/清 · 浮光掠影/gn.9.png #锁定背景
+    常态背景高亮: Q/清 · 浮光掠影/zjh.9.png #锁定背景高亮
+    常态字色: 0x414B5C #常态字高亮、常态符色、常态符高亮
+    锁定字色: 0xBA4444 #锁定字高亮
+
+  j8:
+    name: 清 · 浮光掠影  •  深色
+    author: 移植自搜狗
+    light_scheme: j7 #指定日间配色
+# 🟠 背景：
+    状态栏首选（高亮标注项）+非首选高亮: 0x00 #编码+悬浮窗首选（高亮标注项）、候选分割线、气泡高亮
+    气泡高亮: 0x394456
+    键盘(状态栏+底栏): Q/清 · 浮光掠影  •  深色/jp.9.png #状态栏、悬浮窗^、气泡
+    状态栏: Q/清 · 浮光掠影  •  深色/ztl.9.png
+    悬浮窗^: 0x1B201C
+    按键: Q/清 · 浮光掠影  •  深色/zj.9.png
+    按键高亮: Q/清 · 浮光掠影  •  深色/zjh.9.png
+    g: Q/清 · 浮光掠影  •  深色/g.9.png
+    顶部0-9: Q/清 · 浮光掠影  •  深色/gnf.9.png
+    退格: Q/清 · 浮光掠影  •  深色/tg.9.png
+    数字: Q/清 · 浮光掠影  •  深色/sz.9.png
+    逗号: Q/清 · 浮光掠影  •  深色/gnf.9.png
+    空格: Q/清 · 浮光掠影  •  深色/kg.9.png
+    句号: Q/清 · 浮光掠影  •  深色/gnf.9.png
+    回车: Q/清 · 浮光掠影  •  深色/hc.9.png
+    功能风: Q/清 · 浮光掠影  •  深色/gnf.9.png
+    5: Q/清 · 浮光掠影  •  深色/5.9.png
+# 🟠 字色：
+    首选（高亮标注项）: 0xE55C5C #首选提示、首选序号、气泡字高亮
+    非首选: 0xD9E6FA #悬浮窗边框、编码、“^”插入符号、非首选提示、非首选序号、气泡字色、按键边框
+    按键字色: 0xD6E4FB #按键字高亮、按键符色、按键符高亮、按键文字阴影
+    数字字色: 0x414B5C
+# 🟠 Shift键：
+    常态背景: Q/清 · 浮光掠影  •  深色/gn.9.png #锁定背景
+    常态背景高亮: Q/清 · 浮光掠影  •  深色/zjh.9.png #锁定背景高亮
+    常态字色: 0xE8F2FF #常态字高亮、常态符色、常态符高亮
+    锁定字色: 0xE55C5C #锁定字高亮
+
+  j9:
+    name: 方圆
+    dark_scheme: j9000 #指定夜间配色
+    author: 移植自百度
+# 🟠 背景：
+    状态栏首选（高亮标注项）+非首选高亮: 0x00 #编码+悬浮窗首选（高亮标注项）、候选分割线、气泡高亮
+    气泡高亮: 0x2DB8B4
+    键盘(状态栏+底栏): 0xEEEEEE #状态栏、悬浮窗^、气泡
+    按键: Q/方圆/zj.9.png
+    按键高亮: Q/方圆/zjh.9.png
+    回车: Q/方圆/hc.9.png
+    回车高亮: Q/方圆/hch.9.png
+# 🟠 字色：
+    首选（高亮标注项）: 0x2EA3A1 #首选提示、首选序号、气泡字高亮
+    非首选: 0x454545 #悬浮窗边框、编码、“^”插入符号、非首选提示、非首选序号、气泡字色、按键边框
+    按键字色: 0x454545 #按键字高亮、按键符色、按键符高亮、按键文字阴影
+    气泡字高亮: 0x353535
+# 🟠 Shift键：
+    常态背景: Q/方圆/zj.9.png #锁定背景
+    常态背景高亮: Q/方圆/zjh.9.png #锁定背景高亮
+    常态字色: 0x454545 #常态字高亮、常态符色、常态符高亮
+    锁定字色: 0x2EA3A1 #锁定字高亮
+
+  j9000:
+    name: 方圆  •  深色
+    light_scheme: j9 #指定日间配色
+    author: 移植自百度
+# 🟠 背景：
+    状态栏首选（高亮标注项）+非首选高亮: 0x00 #编码+悬浮窗首选（高亮标注项）、候选分割线、气泡高亮
+    气泡高亮: 0x1F8F8A
+    键盘(状态栏+底栏): 0x131618 #状态栏、悬浮窗^、气泡
+    按键: Q/方圆  •  深色/zj.9.png
+    按键高亮: Q/方圆  •  深色/zjh.9.png
+    回车: Q/方圆  •  深色/hc.9.png
+    回车高亮: Q/方圆  •  深色/hch.9.png
+# 🟠 字色：
+    首选（高亮标注项）: 0x92E3DF #首选提示、首选序号、气泡字高亮
+    非首选: 0xBBBBBB #悬浮窗边框、编码、“^”插入符号、非首选提示、非首选序号、气泡字色、按键边框
+    按键字色: 0xBBBBBB #按键字高亮、按键符色、按键符高亮、按键文字阴影
+    气泡字高亮: 0xCCCCCC
+# 🟠 Shift键：
+    常态背景: Q/方圆  •  深色/zj.9.png #锁定背景
+    常态背景高亮: Q/方圆  •  深色/zjh.9.png #锁定背景高亮
+    常态字色: 0xBBBBBB #常态字高亮、常态符色、常态符高亮
+    锁定字色: 0x52E3DF #锁定字高亮
+
+  k:
+    name: 代号09
+    dark_scheme: k0000 #指定夜间配色
+    author: 移植自百度
+# 🟠 背景：
+    状态栏首选（高亮标注项）+非首选高亮: 0x00 #编码+悬浮窗首选（高亮标注项）、候选分割线、气泡高亮
+    气泡高亮: 0xD3A60D
+    键盘(状态栏+底栏): 0x65656D #状态栏、悬浮窗^、气泡
+    悬浮窗^: 0xE4E4F2
+    状态栏: Q/代号09/ztl.9.png
+    按键: Q/代号09/zj.9.png
+    按键高亮: Q/代号09/zjh.9.png
+    回车: Q/代号09/hc.9.png
+    回车高亮: Q/代号09/gn.9.png
+# 🟠 字色：
+    首选（高亮标注项）: 0x896A00 #首选提示、首选序号、气泡字高亮
+    气泡字高亮: 0x303030
+    非首选: 0x474747 #悬浮窗边框、编码、“^”插入符号、非首选提示、非首选序号、气泡字色、按键边框
+    按键字色: 0x303030 #按键字高亮、按键符色、按键符高亮、按键文字阴影
+    回车字色: 0x404040
+    回车字高亮: 0xF0F0F0
+    回车符高亮: 0xF0F0F0
+# 🟠 Shift键：
+    常态背景: Q/代号09/gn.9.png #锁定背景
+    常态背景高亮: Q/代号09/zjh.9.png #锁定背景高亮
+    常态字色: 0xF0F0F0 #常态字高亮、常态符色、常态符高亮
+    锁定字色: 0xF55D60 #锁定字高亮
+
+  k0000:
+    name: 代号09  •  深色
+    light_scheme: k #指定日间配色
+    author: 移植自百度
+# 🟠 背景：
+    状态栏首选（高亮标注项）+非首选高亮: 0x00 #编码+悬浮窗首选（高亮标注项）、候选分割线、气泡高亮
+    气泡高亮: 0xA7830A
+    键盘(状态栏+底栏): 0x242426 #状态栏、悬浮窗^、气泡
+    悬浮窗^: 0x505054
+    状态栏: Q/代号09  •  深色/ztl.9.png
+    按键: Q/代号09  •  深色/zj.9.png
+    按键高亮: Q/代号09  •  深色/zjh.9.png
+    回车: Q/代号09  •  深色/hc.9.png
+    回车高亮: Q/代号09  •  深色/gn.9.png
+# 🟠 字色：
+    首选（高亮标注项）: 0xF6C20F #首选提示、首选序号、气泡字高亮
+    气泡字高亮: 0xEEEEEE
+    非首选: 0xDDDDDD #悬浮窗边框、编码、“^”插入符号、非首选提示、非首选序号、气泡字色、按键边框
+    按键字色: 0xDDDDDD #按键字高亮、按键符色、按键符高亮、按键文字阴影
+    回车字色: 0x454545
+    回车字高亮: 0xDDDDDD
+    回车符高亮: 0xDDDDDD
+# 🟠 Shift键：
+    常态背景: Q/代号09  •  深色/gn.9.png #锁定背景
+    常态背景高亮: Q/代号09  •  深色/zjh.9.png #锁定背景高亮
+    常态字色: 0xDDDDDD #常态字高亮、常态符色、常态符高亮
+    锁定字色: 0xF55D60 #锁定字高亮
+
+  l:
+    name: 渐变
+    dark_scheme: l0000 #指定夜间配色
+    author: 移植自百度
+# 🟠 背景：
+    状态栏首选（高亮标注项）+非首选高亮: 0x00 #编码+悬浮窗首选（高亮标注项）、候选分割线、气泡高亮
+    气泡高亮: 0x5C9483
+    键盘(状态栏+底栏): 0x272929 #状态栏、悬浮窗^、气泡
+    悬浮窗^: 0xC5CBCD
+    状态栏: Q/渐变/ztl.9.png
+    按键: Q/渐变/g.9.png
+    按键高亮: Q/渐变/gh.9.png
+    顶部0-9: Q/渐变/gnf.9.png
+    q: Q/渐变/q.9.png
+    w: Q/渐变/w.9.png
+    e: Q/渐变/e.9.png
+    r: Q/渐变/r.9.png
+    t: Q/渐变/t.9.png
+    y: Q/渐变/y.9.png
+    u: Q/渐变/u.9.png
+    i: Q/渐变/i.9.png
+    o: Q/渐变/o.9.png
+    p: Q/渐变/p.9.png
+    a: Q/渐变/a.9.png
+    s: Q/渐变/s.9.png
+    d: Q/渐变/d.9.png
+    f: Q/渐变/f.9.png
+    h: Q/渐变/h.9.png
+    j: Q/渐变/j.9.png
+    k: Q/渐变/k.9.png
+    l: Q/渐变/l.9.png
+    z: Q/渐变/z.9.png
+    x: Q/渐变/x.9.png
+    c: Q/渐变/c.9.png
+    v: Q/渐变/v.9.png
+    b: Q/渐变/b.9.png
+    n: Q/渐变/n.9.png
+    m: Q/渐变/m.9.png
+    功能风: Q/渐变/gnf.9.png
+    数字: Q/渐变/sz.9.png
+    逗号: Q/渐变/dhZ.9.png
+    空格: Q/渐变/kg.9.png
+    句号: Q/渐变/jhZ.9.png
+    回车: Q/渐变/hc.9.png
+    退格: Q/渐变/tg.9.png
+    1: Q/渐变/1.9.png
+    2: Q/渐变/2.9.png
+    3: Q/渐变/3.9.png
+    4: Q/渐变/4.9.png
+    5: Q/渐变/5.9.png
+    6: Q/渐变/6.9.png
+    7: Q/渐变/7.9.png
+    8: Q/渐变/8.9.png
+    9: Q/渐变/9.9.png
+    0: Q/渐变/0.9.png
+    数字符1: Q/渐变/szf1.9.png
+    数字符2: Q/渐变/szf2.9.png
+    数字符3: Q/渐变/szf3.9.png
+    数字返回: Q/渐变/szfh.9.png
+    数字逗号: Q/渐变/szdh.9.png
+    数字句号: Q/渐变/szjh.9.png
+    数字编辑: Q/渐变/szbj.9.png
+    数字空格: Q/渐变/szkg.9.png
+    数字退格: Q/渐变/sztg.9.png
+    顶部0-9高亮: Q/渐变/gnfh.9.png
+    q高亮: Q/渐变/qh.9.png
+    w高亮: Q/渐变/wh.9.png
+    e高亮: Q/渐变/eh.9.png
+    r高亮: Q/渐变/rh.9.png
+    t高亮: Q/渐变/th.9.png
+    y高亮: Q/渐变/yh.9.png
+    u高亮: Q/渐变/uh.9.png
+    i高亮: Q/渐变/ih.9.png
+    o高亮: Q/渐变/oh.9.png
+    p高亮: Q/渐变/ph.9.png
+    a高亮: Q/渐变/ah.9.png
+    s高亮: Q/渐变/sh.9.png
+    d高亮: Q/渐变/dh.9.png
+    f高亮: Q/渐变/fh.9.png
+    h高亮: Q/渐变/hh.9.png
+    j高亮: Q/渐变/jh.9.png
+    k高亮: Q/渐变/kh.9.png
+    l高亮: Q/渐变/lh.9.png
+    z高亮: Q/渐变/zh.9.png
+    x高亮: Q/渐变/xh.9.png
+    c高亮: Q/渐变/ch.9.png
+    v高亮: Q/渐变/vh.9.png
+    b高亮: Q/渐变/bh.9.png
+    n高亮: Q/渐变/nh.9.png
+    m高亮: Q/渐变/mh.9.png
+    功能风高亮: Q/渐变/gnfh.9.png
+    数字高亮: Q/渐变/szh.9.png
+    逗号高亮: Q/渐变/dhZh.9.png
+    空格高亮: Q/渐变/kgh.9.png
+    句号高亮: Q/渐变/jhZh.9.png
+    回车高亮: Q/渐变/hch.9.png
+    退格高亮: Q/渐变/tgh.9.png
+    1高亮: Q/渐变/1h.9.png
+    2高亮: Q/渐变/2h.9.png
+    3高亮: Q/渐变/3h.9.png
+    4高亮: Q/渐变/4h.9.png
+    5高亮: Q/渐变/5h.9.png
+    6高亮: Q/渐变/6h.9.png
+    7高亮: Q/渐变/7h.9.png
+    8高亮: Q/渐变/8h.9.png
+    9高亮: Q/渐变/9h.9.png
+    0高亮: Q/渐变/0h.9.png
+    数字符1高亮: Q/渐变/szf1h.9.png
+    数字符2高亮: Q/渐变/szf2h.9.png
+    数字符3高亮: Q/渐变/szf3h.9.png
+    数字返回高亮: Q/渐变/szfhh.9.png
+    数字逗号高亮: Q/渐变/szdhh.9.png
+    数字句号高亮: Q/渐变/szjhh.9.png
+    数字编辑高亮: Q/渐变/szbjh.9.png
+    数字空格高亮: Q/渐变/szkgh.9.png
+    数字退格高亮: Q/渐变/sztgh.9.png
+# 🟠 字色：
+    首选（高亮标注项）: 0x303030 #首选提示、首选序号、气泡字高亮
+    非首选: 0x474747 #悬浮窗边框、编码、“^”插入符号、非首选提示、非首选序号、气泡字色、按键边框
+    按键字色: 0xEBF5FF #按键字高亮、按键符色、按键符高亮、按键文字阴影
+# 🟠 Shift键：
+    常态背景: Q/渐变/gn.9.png #锁定背景
+    常态背景高亮: Q/渐变/gnh.9.png #锁定背景高亮
+    常态字色: 0xE9F5F5 #常态字高亮、常态符色、常态符高亮
+    锁定字色: 0xF55D60 #锁定字高亮
+
+  l0000:
+    name: 渐变  •  深色
+    light_scheme: l #指定日间配色
+    author: 移植自百度
+# 🟠 背景：
+    状态栏首选（高亮标注项）+非首选高亮: 0x00 #编码+悬浮窗首选（高亮标注项）、候选分割线、气泡高亮
+    气泡高亮: 0x3C5C52
+    键盘(状态栏+底栏): 0x141414 #状态栏、悬浮窗^、气泡
+    悬浮窗^: 0x272C2C
+    状态栏: Q/渐变  •  深色/ztl.9.png
+    按键: Q/渐变  •  深色/g.9.png
+    按键高亮: Q/渐变  •  深色/gh.9.png
+    顶部0-9: Q/渐变  •  深色/gnf.9.png
+    q: Q/渐变  •  深色/q.9.png
+    w: Q/渐变  •  深色/w.9.png
+    e: Q/渐变  •  深色/e.9.png
+    r: Q/渐变  •  深色/r.9.png
+    t: Q/渐变  •  深色/t.9.png
+    y: Q/渐变  •  深色/y.9.png
+    u: Q/渐变  •  深色/u.9.png
+    i: Q/渐变  •  深色/i.9.png
+    o: Q/渐变  •  深色/o.9.png
+    p: Q/渐变  •  深色/p.9.png
+    a: Q/渐变  •  深色/a.9.png
+    s: Q/渐变  •  深色/s.9.png
+    d: Q/渐变  •  深色/d.9.png
+    f: Q/渐变  •  深色/f.9.png
+    h: Q/渐变  •  深色/h.9.png
+    j: Q/渐变  •  深色/j.9.png
+    k: Q/渐变  •  深色/k.9.png
+    l: Q/渐变  •  深色/l.9.png
+    z: Q/渐变  •  深色/z.9.png
+    x: Q/渐变  •  深色/x.9.png
+    c: Q/渐变  •  深色/c.9.png
+    v: Q/渐变  •  深色/v.9.png
+    b: Q/渐变  •  深色/b.9.png
+    n: Q/渐变  •  深色/n.9.png
+    m: Q/渐变  •  深色/m.9.png
+    功能风: Q/渐变  •  深色/gnf.9.png
+    数字: Q/渐变  •  深色/sz.9.png
+    逗号: Q/渐变  •  深色/dhZ.9.png
+    空格: Q/渐变  •  深色/kg.9.png
+    句号: Q/渐变  •  深色/jhZ.9.png
+    回车: Q/渐变  •  深色/hc.9.png
+    退格: Q/渐变  •  深色/tg.9.png
+    1: Q/渐变  •  深色/1.9.png
+    2: Q/渐变  •  深色/2.9.png
+    3: Q/渐变  •  深色/3.9.png
+    4: Q/渐变  •  深色/4.9.png
+    5: Q/渐变  •  深色/5.9.png
+    6: Q/渐变  •  深色/6.9.png
+    7: Q/渐变  •  深色/7.9.png
+    8: Q/渐变  •  深色/8.9.png
+    9: Q/渐变  •  深色/9.9.png
+    0: Q/渐变  •  深色/0.9.png
+    数字符1: Q/渐变  •  深色/szf1.9.png
+    数字符2: Q/渐变  •  深色/szf2.9.png
+    数字符3: Q/渐变  •  深色/szf3.9.png
+    数字返回: Q/渐变  •  深色/szfh.9.png
+    数字逗号: Q/渐变  •  深色/szdh.9.png
+    数字句号: Q/渐变  •  深色/szjh.9.png
+    数字编辑: Q/渐变  •  深色/szbj.9.png
+    数字空格: Q/渐变  •  深色/szkg.9.png
+    数字退格: Q/渐变  •  深色/sztg.9.png
+    顶部0-9高亮: Q/渐变  •  深色/gnfh.9.png
+    q高亮: Q/渐变  •  深色/qh.9.png
+    w高亮: Q/渐变  •  深色/wh.9.png
+    e高亮: Q/渐变  •  深色/eh.9.png
+    r高亮: Q/渐变  •  深色/rh.9.png
+    t高亮: Q/渐变  •  深色/th.9.png
+    y高亮: Q/渐变  •  深色/yh.9.png
+    u高亮: Q/渐变  •  深色/uh.9.png
+    i高亮: Q/渐变  •  深色/ih.9.png
+    o高亮: Q/渐变  •  深色/oh.9.png
+    p高亮: Q/渐变  •  深色/ph.9.png
+    a高亮: Q/渐变  •  深色/ah.9.png
+    s高亮: Q/渐变  •  深色/sh.9.png
+    d高亮: Q/渐变  •  深色/dh.9.png
+    f高亮: Q/渐变  •  深色/fh.9.png
+    h高亮: Q/渐变  •  深色/hh.9.png
+    j高亮: Q/渐变  •  深色/jh.9.png
+    k高亮: Q/渐变  •  深色/kh.9.png
+    l高亮: Q/渐变  •  深色/lh.9.png
+    z高亮: Q/渐变  •  深色/zh.9.png
+    x高亮: Q/渐变  •  深色/xh.9.png
+    c高亮: Q/渐变  •  深色/ch.9.png
+    v高亮: Q/渐变  •  深色/vh.9.png
+    b高亮: Q/渐变  •  深色/bh.9.png
+    n高亮: Q/渐变  •  深色/nh.9.png
+    m高亮: Q/渐变  •  深色/mh.9.png
+    功能风高亮: Q/渐变  •  深色/gnfh.9.png
+    数字高亮: Q/渐变  •  深色/szh.9.png
+    逗号高亮: Q/渐变  •  深色/dhZh.9.png
+    空格高亮: Q/渐变  •  深色/kgh.9.png
+    句号高亮: Q/渐变  •  深色/jhZh.9.png
+    回车高亮: Q/渐变  •  深色/hch.9.png
+    退格高亮: Q/渐变  •  深色/tgh.9.png
+    1高亮: Q/渐变  •  深色/1h.9.png
+    2高亮: Q/渐变  •  深色/2h.9.png
+    3高亮: Q/渐变  •  深色/3h.9.png
+    4高亮: Q/渐变  •  深色/4h.9.png
+    5高亮: Q/渐变  •  深色/5h.9.png
+    6高亮: Q/渐变  •  深色/6h.9.png
+    7高亮: Q/渐变  •  深色/7h.9.png
+    8高亮: Q/渐变  •  深色/8h.9.png
+    9高亮: Q/渐变  •  深色/9h.9.png
+    0高亮: Q/渐变  •  深色/0h.9.png
+    数字符1高亮: Q/渐变  •  深色/szf1h.9.png
+    数字符2高亮: Q/渐变  •  深色/szf2h.9.png
+    数字符3高亮: Q/渐变  •  深色/szf3h.9.png
+    数字返回高亮: Q/渐变  •  深色/szfhh.9.png
+    数字逗号高亮: Q/渐变  •  深色/szdhh.9.png
+    数字句号高亮: Q/渐变  •  深色/szjhh.9.png
+    数字编辑高亮: Q/渐变  •  深色/szbjh.9.png
+    数字空格高亮: Q/渐变  •  深色/szkgh.9.png
+    数字退格高亮: Q/渐变  •  深色/sztgh.9.png
+# 🟠 字色：
+    首选（高亮标注项）: 0xADB6BE #首选提示、首选序号、气泡字高亮
+    非首选: 0xADB6BE #悬浮窗边框、编码、“^”插入符号、非首选提示、非首选序号、气泡字色、按键边框
+    按键字色: 0xC3CDD6 #按键字高亮、按键符色、按键符高亮、按键文字阴影
+# 🟠 Shift键：
+    常态背景: Q/渐变  •  深色/gn.9.png #锁定背景
+    常态背景高亮: Q/渐变  •  深色/gnh.9.png #锁定背景高亮
+    常态字色: 0xBBC4CD #常态字高亮、常态符色、常态符高亮
+    锁定字色: 0xF55D60 #锁定字高亮
+
+  m:
+    name: 心动
+    author: 移植自百度+搜狗
+    dark_scheme: default_dark #指定夜间配色
+# 🟠 背景：
+    状态栏首选（高亮标注项）+非首选高亮: 0x00 #编码+悬浮窗首选（高亮标注项）、候选分割线、气泡高亮
+    气泡高亮: 0xD3A6A6
+    键盘(状态栏+底栏): Q/心动/jp.9.png #状态栏、悬浮窗^、气泡
+    状态栏: 0x00
+    悬浮窗^: 0xEBD3CF
+    按键: Q/心动/zj.9.png
+    按键高亮: Q/心动/zjh.9.png
+    顶部0-9: Q/心动/zj.9.png
+# 🟠 字色：
+    首选（高亮标注项）: 0x303030 #首选提示、首选序号、气泡字高亮
+    非首选: 0xAD7577 #悬浮窗边框、编码、“^”插入符号、非首选提示、非首选序号、气泡字色、按键边框
+    按键字色: 0xB77276 #按键字高亮、按键符色、按键符高亮、按键文字阴影
+# 🟠 Shift键：
+    常态背景: Q/心动/gn.9.png #锁定背景
+    常态背景高亮: Q/心动/zjh.9.png #锁定背景高亮
+    常态字色: 0xB77276 #常态字高亮、常态符色、常态符高亮
+    锁定字色: 0xE9300E #锁定字高亮
