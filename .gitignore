@@ -4,3 +4,4 @@ Tools/SystemTools/*/用户数据/*
 !Tools/SystemTools/*/用户数据/themes/
 !Tools/SystemTools/*/用户数据/preview/
 .DS_Store
+release/

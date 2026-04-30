@@ -1,13 +1,8 @@
+customization:
+  distribution_code_name: Weasel
+  distribution_version: 0.17.4
+  generator: "Weasel::UIStyleSettings"
+  modified_time: "Sun Apr 26 11:22:34 2026"
+  rime_version: 1.13.1
 patch:
-  style/color_scheme: static2 #主题颜色
-  style/font_point: 12 #字体大小
-  style/horizontal: false #是否横向 true开/false关
-  style/inline_preedit: true #行内显示预编辑区，隐藏候选框时必须启用
-  style/layout/border: 2 #边框
-  style/layout/margin_x: 12 #设为负值隐藏候选框
-  style/layout/margin_y: 12 #设为负值隐藏候选框
-  style/layout/hilite_padding: 4
-  style/layout/hilite_spacing: 2
-  style/layout/spacing: 5
-  style/layout/candidate_spacing: 5
-  style/layout/round_corner: 5
+  "style/color_scheme": win11_light

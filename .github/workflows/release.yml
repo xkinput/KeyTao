@@ -41,13 +41,14 @@ jobs:
       - name: Build Linux package
         run: |
           cp -r rime/* release/keytao-linux/
-          cp -r schema/linux/* release/keytao-linux/
+          cp -r schema/desktop/* release/keytao-linux/
           cd release/keytao-linux
           zip -r ../keytao-linux-${{ steps.version.outputs.VERSION }}.zip .
       
       - name: Build Mac package
         run: |
           cp -r rime/* release/keytao-mac/
+          cp -r schema/desktop/* release/keytao-mac/
           cp -r schema/mac/* release/keytao-mac/
           cd release/keytao-mac
           zip -r ../keytao-mac-${{ steps.version.outputs.VERSION }}.zip .
@@ -55,6 +56,7 @@ jobs:
       - name: Build Windows package
         run: |
           cp -r rime/* release/keytao-windows/
+          cp -r schema/desktop/* release/keytao-windows/
           cp -r schema/windows/* release/keytao-windows/
           cd release/keytao-windows
           zip -r ../keytao-windows-${{ steps.version.outputs.VERSION }}.zip .
@@ -71,9 +73,7 @@ jobs:
       - name: Build iOS package
         run: |
           cp -r rime/* release/keytao-ios/
-          if [ -d "schema/ios" ]; then
-            cp -r schema/ios/* release/keytao-ios/
-          fi
+          cp -r schema/desktop/* release/keytao-ios/
           cd release/keytao-ios
           zip -r ../keytao-ios-${{ steps.version.outputs.VERSION }}.zip .
       
