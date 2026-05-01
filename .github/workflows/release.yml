@@ -64,16 +64,16 @@ jobs:
       - name: Build Android package
         run: |
           cp -r rime/* release/keytao-android/
-          if [ -d "schema/android" ]; then
-            cp -r schema/android/* release/keytao-android/
-          fi
+          cp -r schema/android/* release/keytao-android/
           cd release/keytao-android
           zip -r ../keytao-android-${{ steps.version.outputs.VERSION }}.zip .
       
       - name: Build iOS package
         run: |
+          # iOS (Hamster) requires both desktop schema and its own skin file
           cp -r rime/* release/keytao-ios/
           cp -r schema/desktop/* release/keytao-ios/
+          cp -r schema/ios/* release/keytao-ios/
           cd release/keytao-ios
           zip -r ../keytao-ios-${{ steps.version.outputs.VERSION }}.zip .
       
