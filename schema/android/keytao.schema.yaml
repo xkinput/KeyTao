@@ -44,22 +44,24 @@ switches:
   - name: ascii_mode
     reset: 0
     states: [ 中, 英 ]
-  #简繁转换
   - name: simplification
-  #全半转换
+    reset: 0
+    states: [ 简体, 繁體 ]
   - name: full_shape
-  #表情字符
+    states: [ 半角, 全角 ]
   - name: emoji_cn
+    reset: 0
+    states: [ "关表情", "开表情" ]
   - name: sbb_hint
-    reset: 1 # 改成0默认关闭
+    reset: 1
     states: [ "关₆₃₀", "开₆₃₀" ]
   - name: sbb_disable_full
-    reset: 0 # 改成1默认关闭全码
+    reset: 0
     states: [ "开₆₃₀全码", "关₆₃₀全码" ]
   - name: danzi_mode
-    reset: 0 # 改成1默认单字
+    reset: 0
     states: [ 词组, 单字 ]
-  - name: topup_hint
+  - name: topup_hint  # lua: keytao_filter.lua
     reset: 1
     states: [ "关顶功提示", "开顶功提示" ]
 

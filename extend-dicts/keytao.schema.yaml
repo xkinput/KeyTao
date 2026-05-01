@@ -21,18 +21,19 @@ switches:
     states: [ 中文, 西文 ]
   - name: full_shape
     states: [ 半角, 全角 ]
-  - name: s2tw
+  - name: simplification
     reset: 0
     states: [ 简体, 繁體 ]
-  - name: wxw_prompt
+  - name: emoji_cn
+    reset: 0
+    states: [ "关表情", "开表情" ]
+  - name: sbb_hint
     reset: 1
-    states: [ 630关, 630开 ]
+    states: [ "关₆₃₀", "开₆₃₀" ]
   - name: sbb_disable_full
-    reset: 0 # 改成1默认关闭全码
+    reset: 0
     states: [ "开₆₃₀全码", "关₆₃₀全码" ]
-  - name: EN2en
-    reset: 1
-  - name: topup_hint
+  - name: topup_hint  # lua: keytao_filter.lua
     reset: 1
     states: [ "关顶功提示", "开顶功提示" ]
     
@@ -124,18 +125,13 @@ engine:
   translators:
     - punct_translator
     - table_translator@custom_phrase
-    - reverse_lookup_translator
     - table_translator
     - lua_translator@date_time_translator
   filters:
-    - simplifier
     - uniquifier
     - simplifier@emoji_cn
-    - simplifier@s2tw
-    - simplifier@bmms
-    - simplifier@wxw_prompt
-    - simplifier@EN2en      
-    - reverse_lookup_translator
+    - simplifier@simplification
+    - lua_filter@keytao_filter
 
 speller:
   auto_select: true
@@ -232,36 +228,9 @@ emoji_cn:
   option_name: emoji_cn
   tips: all
 
-s2tw:
+simplification:
   opencc_config: s2tw.json
-  option_name: s2tw
-
-wxw_prompt:
-  opencc_config: wxwprompt.json
-  option_name: wxw_prompt
-  show_in_comment: true
-  comment_format:
-    - "xform/^([bcdefghjklmnpqrstwxyz]{2,4})([avuio]{0,3})_(.+)$/〔$3, $1$2〕/"
-    - xform/^([a-z]+)$/$2/
-  tips: all
-
-EN2en:
-  opencc_config: EN2en.json
-  option_name: EN2en
-
-bmms:
-  opencc_config: pinyin.json
-  option_name: bmms
-  show_in_comment: true
-  comment_format:
-    - xform/'/ /
-
-reverse_lookup:
-  dictionary: keytao-cx
-  comment_format:
-    - xform/^/〔/
-    - xform/$/〕/
-    - xform/ /, /
+  option_name: simplification
 
 punctuator:
   import_preset: symbols
@@ -271,10 +240,9 @@ key_binder:
     - {accept: minus, send: Page_Up, when: has_menu}
     - {accept: equal, send: Page_Down, when: has_menu}
     - { when: always, accept: F6, select: .next }
-    - { when: always, accept: F7, toggle: s2tw }
+    - { when: always, accept: F7, toggle: simplification }
     - { when: has_menu, accept: "'", send: 2 }
     - { when: has_menu, accept: "&", toggle: emoji_cn}
-    - { when: has_menu, accept: "^", toggle: bmms}
 
 recognizer:
   import_preset: default
