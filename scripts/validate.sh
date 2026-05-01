@@ -5,7 +5,7 @@ LUAC=$(command -v luac 2>/dev/null || ls /nix/store/*/bin/luac 2>/dev/null | gre
 DEPLOYER=$(command -v rime_deployer 2>/dev/null || ls /nix/store/*/bin/rime_deployer 2>/dev/null | sort -V | tail -1)
 # RIME_SHARED can be set externally (nix devShell / CI); otherwise auto-detect
 if [ -z "${RIME_SHARED:-}" ]; then
-    RIME_SHARED=$(ls -d /nix/store/*/share/rime-data 2>/dev/null | grep fcitx5-rime | sort -V | tail -1)
+    RIME_SHARED=$(ls -d /nix/store/*/share/rime-data 2>/dev/null | grep fcitx5-rime | sort -V | tail -1 || true)
 fi
 [ -z "${RIME_SHARED:-}" ] && RIME_SHARED=/usr/share/rime-data
 SHARED=$RIME_SHARED
