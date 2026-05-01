@@ -32,8 +32,10 @@ cp -r schema/android/* release/keytao-android/
 (cd release/keytao-android && zip -qr ../keytao-android-${VERSION}.zip .)
 echo "✓ android"
 
+# iOS (Hamster) requires both desktop schema and its own skin file
 cp -r rime/* release/keytao-ios/
 cp -r schema/desktop/* release/keytao-ios/
+cp -r schema/ios/* release/keytao-ios/
 (cd release/keytao-ios && zip -qr ../keytao-ios-${VERSION}.zip .)
 echo "✓ ios"
 
