@@ -40,4 +40,4 @@ cp -r schema/ios/* release/keytao-ios/
 echo "✓ ios"
 
 echo ""
-cd release && sha256sum keytao-*.zip
+cd release && sha256sum keytao-*.zip | tee checksums.txt

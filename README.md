@@ -56,6 +56,39 @@
 
 ---
 
+#### 开发与验证：
+
+##### 验证 Schema 配置
+
+运行以下脚本可在本地对所有平台的方案做完整验证（Lua 语法 + 五平台 Rime 编译）：
+
+```bash
+bash scripts/validate.sh
+```
+
+验证内容：
+1. **Lua 语法检查** — 用 `luac -p` 检查 `rime/lua/*.lua` 所有文件
+2. **五平台编译** — 用 `rime_deployer --build` 分别编译 linux / mac / windows / android / ios 各平台的 schema 组合，任何 schema 错误都会报出
+
+CI 会在每次 Release 发布前自动运行此脚本，编译失败则阻止发布。
+
+##### Nix 开发环境
+
+使用 `nix develop` 可一键获得 `rime_deployer` 和 `luac`：
+
+```bash
+nix develop          # 进入开发 shell，自动配置 RIME_SHARED
+bash scripts/validate.sh
+```
+
+非 Nix 环境（如 Ubuntu）需手动安装依赖：
+
+```bash
+sudo apt install librime-bin rime-data lua5.4
+```
+
+---
+
 ---
 
 ### 星空系列其他 Rime 方案：

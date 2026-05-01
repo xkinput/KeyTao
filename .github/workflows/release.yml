@@ -12,9 +12,22 @@ on:
         default: 'v1.0.0'
 
 jobs:
+  validate:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      - name: Install rime_deployer and lua
+        run: sudo apt-get install -y librime-bin rime-data lua5.4
+
+      - name: Validate schemas and Lua
+        run: bash scripts/validate.sh
+
   build-and-release:
     runs-on: ubuntu-latest
-    
+    needs: validate
+
     steps:
       - name: Checkout code
         uses: actions/checkout@v4
@@ -30,58 +43,8 @@ jobs:
             echo "VERSION=${GITHUB_REF#refs/tags/}" >> $GITHUB_OUTPUT
           fi
       
-      - name: Create release directories
-        run: |
-          mkdir -p release/keytao-linux
-          mkdir -p release/keytao-mac
-          mkdir -p release/keytao-windows
-          mkdir -p release/keytao-android
-          mkdir -p release/keytao-ios
-      
-      - name: Build Linux package
-        run: |
-          cp -r rime/* release/keytao-linux/
-          cp -r schema/desktop/* release/keytao-linux/
-          cd release/keytao-linux
-          zip -r ../keytao-linux-${{ steps.version.outputs.VERSION }}.zip .
-      
-      - name: Build Mac package
-        run: |
-          cp -r rime/* release/keytao-mac/
-          cp -r schema/desktop/* release/keytao-mac/
-          cp -r schema/mac/* release/keytao-mac/
-          cd release/keytao-mac
-          zip -r ../keytao-mac-${{ steps.version.outputs.VERSION }}.zip .
-      
-      - name: Build Windows package
-        run: |
-          cp -r rime/* release/keytao-windows/
-          cp -r schema/desktop/* release/keytao-windows/
-          cp -r schema/windows/* release/keytao-windows/
-          cd release/keytao-windows
-          zip -r ../keytao-windows-${{ steps.version.outputs.VERSION }}.zip .
-      
-      - name: Build Android package
-        run: |
-          cp -r rime/* release/keytao-android/
-          cp -r schema/android/* release/keytao-android/
-          cd release/keytao-android
-          zip -r ../keytao-android-${{ steps.version.outputs.VERSION }}.zip .
-      
-      - name: Build iOS package
-        run: |
-          # iOS (Hamster) requires both desktop schema and its own skin file
-          cp -r rime/* release/keytao-ios/
-          cp -r schema/desktop/* release/keytao-ios/
-          cp -r schema/ios/* release/keytao-ios/
-          cd release/keytao-ios
-          zip -r ../keytao-ios-${{ steps.version.outputs.VERSION }}.zip .
-      
-      - name: Generate checksums
-        run: |
-          cd release
-          sha256sum keytao-*.zip > checksums.txt
-          cat checksums.txt
+      - name: Build packages
+        run: bash scripts/release.sh ${{ steps.version.outputs.VERSION }}
       
       - name: Get latest commit message
         id: commit_msg

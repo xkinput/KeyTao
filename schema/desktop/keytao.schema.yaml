@@ -42,22 +42,22 @@ switches:
     states: [ 中文, 西文 ]
   - name: full_shape
     states: [ 半角, 全角 ]
-  - name: s2tw
+  - name: simplification
     reset: 0
     states: [ 简体, 繁體 ]
+  - name: emoji_cn
+    reset: 0
+    states: [ "关表情", "开表情" ]
   - name: danzi_mode
     reset: 0
     states: [ "词组", "单字" ]
   - name: sbb_hint
-    reset: 1 # 改成0默认关闭
+    reset: 1
     states: [ "关₆₃₀", "开₆₃₀" ]
   - name: sbb_disable_full
-    reset: 0 # 改成1默认关闭全码
+    reset: 0
     states: [ "开₆₃₀全码", "关₆₃₀全码" ]
-  - name: completion
-    reset: 1
-  #   states: [ "匹配", "补全" ]
-  - name: topup_hint
+  - name: topup_hint  # lua: keytao_filter.lua
     reset: 1
     states: [ "关顶功提示", "开顶功提示" ]
 
@@ -160,7 +160,7 @@ engine:
     - lua_translator@number_translator
   filters:
     - simplifier@emoji_cn
-    - simplifier@s2tw
+    - simplifier@simplification
     - uniquifier
     - reverse_lookup_filter@danzi_lookup
     - lua_filter@keytao_filter
@@ -198,9 +198,9 @@ emoji_cn:
   tips: all
 
 
-s2tw:
+simplification:
   opencc_config: s2tw.json
-  option_name: s2tw
+  option_name: simplification
 
 
 danzi_lookup:
@@ -232,7 +232,7 @@ key_binder:
     - {accept: minus, send: Page_Up, when: has_menu}
     - {accept: equal, send: Page_Down, when: has_menu}
     - { when: always, accept: F6, select: .next }
-    - { when: always, accept: F7, toggle: s2tw }
+    - { when: always, accept: F7, toggle: simplification }
     # - { when: has_menu, accept: "'", send: 2 }
     - { when: has_menu, accept: "&", toggle: emoji_cn}
 

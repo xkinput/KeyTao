@@ -72,10 +72,12 @@ else
 	rm -rf 备份/*
 fi
 
-if [ ! -f "$rime/default.yaml" ]; then
+if [ ! -d "$rime" ]; then
 	echo "· 未发现$rime无需备份"
+elif [ -z "$(ls -A "$rime" 2>/dev/null)" ]; then
+	echo "· $rime 为空，无需备份"
 else
-	cp -rf $rime/* ./备份/
+	cp -rf "$rime"/. ./备份/
 	echo "· 备份“$rime”到“$bak”文件夹	完成"
 fi
 

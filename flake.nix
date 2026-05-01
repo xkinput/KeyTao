@@ -21,6 +21,16 @@
         packages.default = pkgs.callPackage ./default.nix { };
 
         packages.rime-keytao = self.packages.${system}.default;
+
+        devShells.default = pkgs.mkShell {
+          packages = with pkgs; [
+            librime # provides rime_deployer, rime_dict_manager, rime_patch
+            lua5_4 # provides luac
+          ];
+          shellHook = ''
+            export RIME_SHARED="${pkgs.rime-data}/share/rime-data"
+          '';
+        };
       }
     )
     // {
