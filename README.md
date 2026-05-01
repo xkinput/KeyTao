@@ -84,7 +84,7 @@ bash scripts/validate.sh
 非 Nix 环境（如 Ubuntu）需手动安装依赖：
 
 ```bash
-sudo apt install librime-bin rime-data lua5.4
+sudo apt install librime-bin librime-data lua5.4
 ```
 
 ---
