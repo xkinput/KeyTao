@@ -168,11 +168,15 @@ end
 local function baseConverse(str, from, to)
 	local str10 = str
 	if from == 16 then
-		str10 = string.format("%d", str)
+		local num = tonumber(str, 16)
+		if not num then return str end
+		str10 = num
 	end
 	local strout = str10
 	if to == 16 then
-		strout = string.format("%#x", str10)
+		local num = tonumber(str10)
+		if not num then return str end
+		strout = string.format("%#x", num)
 	end
 	return strout
 end
