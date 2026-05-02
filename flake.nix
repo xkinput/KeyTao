@@ -16,6 +16,9 @@
       system:
       let
         pkgs = nixpkgs.legacyPackages.${system};
+        librime-with-tools = pkgs.librime.overrideAttrs (old: {
+          cmakeFlags = (old.cmakeFlags or [ ]) ++ [ "-DBUILD_TOOLS=ON" ];
+        });
       in
       {
         packages.default = pkgs.callPackage ./default.nix { };
@@ -24,7 +27,7 @@
 
         devShells.default = pkgs.mkShell {
           packages = with pkgs; [
-            librime # provides rime_deployer, rime_dict_manager, rime_patch
+            librime-with-tools # provides rime_deployer, rime_console, rime_api_console, etc.
             lua5_4 # provides luac
           ];
           shellHook = ''
