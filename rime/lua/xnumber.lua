@@ -59,7 +59,7 @@ end
 local function speakBar(str, posMap, valMap)
 	posMap = posMap or { [1] = "仟", [2] = "佰", [3] = "拾", [4] = "" }
 	valMap = valMap or
-	{ [0] = "零", "一", "二", "三", "四", "五", "六", "七", "八", "九" } -- the length of valMap[0] should not excess 1
+			{ [0] = "零", "一", "二", "三", "四", "五", "六", "七", "八", "九" } -- the length of valMap[0] should not excess 1
 
 	local out = ""
 	local bar = string.sub("****" .. str, -4, -1) -- the integer part of a number string can be divided into bars; each bar has 4 bits
@@ -91,10 +91,10 @@ end
 local function speakIntOfficially(str, posMap, valMap)
 	posMap = posMap or { [1] = "千", [2] = "百", [3] = "十", [4] = "" }
 	valMap = valMap or
-	{ [0] = "零", "一", "二", "三", "四", "五", "六", "七", "八", "九" } -- the length of valMap[0] should not excess 1
+			{ [0] = "零", "一", "二", "三", "四", "五", "六", "七", "八", "九" } -- the length of valMap[0] should not excess 1
 
 	-- split the number string into bars, for example, in:str=123456789 → out:tbBar={1|2345|6789}
-	local int = string.match(str, "^0*(%d+)$")
+	local int = string.match(str, "^0*(%d+)$") or "0"
 	if int == "" then int = "0" end
 	local remain = #int % 4
 	if remain == 0 then remain = 4 end
@@ -129,7 +129,7 @@ end
 local function speakDecMoney(str, posMap, valMap)
 	posMap = posMap or { [1] = "角", [2] = "分", [3] = "厘", [4] = "毫" }
 	valMap = valMap or
-	{ [0] = "零", "壹", "贰", "叁", "肆", "伍", "陆", "柒", "捌", "玖" } -- the length of valMap[0] should not excess 1
+			{ [0] = "零", "壹", "贰", "叁", "肆", "伍", "陆", "柒", "捌", "玖" } -- the length of valMap[0] should not excess 1
 
 	local dec = string.sub(str, 1, 4)
 	dec = string.gsub(dec, "0*$", "")
@@ -188,8 +188,11 @@ local function translator(input, seg, env)
 			yield(Candidate("number", seg.start, seg._end, speakLiterally(input2), " 冷读"))
 			yield(Candidate("number", seg.start, seg._end, speakMillitary(input2), " 军语"))
 		else
-			local ok, ret = pcall(load, "return " .. input2) -- from Lua 5.3, the `loadstring` function is replaced by `load`
-			if ok then yield(Candidate("number", seg.start, seg._end, tostring(ret()), " 计算")) end
+			local chunk = load("return " .. input2)
+			if chunk then
+				local ok2, result = pcall(chunk)
+				if ok2 then yield(Candidate("number", seg.start, seg._end, tostring(result), " 计算")) end
+			end
 		end
 		if string.match(input2, "^[%+%-]?%d*$") then -- plz, i dont want to deal with base conversion with decimals
 			yield(Candidate("number", seg.start, seg._end, baseConverse(input2, 10, 16), " 进制"))
