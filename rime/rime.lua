@@ -31,10 +31,6 @@ librime-lua 样例
 collectgarbage("setpause", 50)
 collectgarbage("setstepmul", 400)
 
--- Shared ReverseDb instance so keytao_filter and for_hint do not each load
--- the same large .reverse.bin file independently.
-keytao_reverse_db = nil
-
 oboot_translator = require("oboot")
 
 
