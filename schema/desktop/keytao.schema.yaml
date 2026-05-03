@@ -156,7 +156,7 @@ engine:
     - table_translator
     - history_translator@repeat_history
     - table_translator@custom_phrase
-    - lua_translator@date_time_translator
+    - lua_translator@oboot_translator
     - lua_translator@number_translator
   filters:
     - simplifier@emoji_cn

@@ -148,7 +148,7 @@ engine:
     - history_translator@repeat_history
     - table_translator@custom_phrase
     - table_translator@danzi_lookup
-    - lua_translator@date_time_translator
+    - lua_translator@oboot_translator
     - lua_translator@number_translator
   filters:
     - simplifier@emoji_cn

@@ -35,7 +35,7 @@ collectgarbage("setstepmul", 400)
 -- the same large .reverse.bin file independently.
 keytao_reverse_db = nil
 
-date_time_translator = require("date_time")
+oboot_translator = require("oboot")
 
 
 -- single_char_filter: 候选项重排序，使单字优先
