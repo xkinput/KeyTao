@@ -2,14 +2,21 @@ local function startswith(str, start)
     return string.sub(str, 1, string.len(start)) == start
 end
 
+local function find_short(lookup, pattern)
+    return string.match(lookup, "^" .. pattern .. "%s") or
+        string.match(lookup, "%s" .. pattern .. "%s") or
+        string.match(lookup, "%s" .. pattern .. "$") or
+        string.match(lookup, "^" .. pattern .. "$")
+end
+
 local function hint(cand, input_text, input_len, env)
     if utf8.len(cand.text) < 2 then
         return false
     end
 
-    local lookup = " " .. env.reverse:lookup(cand.text) .. " "
-    local short = string.match(lookup, env.pat_short_vowel) or
-        string.match(lookup, env.pat_short_cons)
+    local lookup = env.reverse:lookup(cand.text)
+    local short = find_short(lookup, env.pat_short_vowel) or
+        find_short(lookup, env.pat_short_cons)
     if short and input_len > utf8.len(short) and not startswith(short, input_text) then
         cand:get_genuine().comment = cand.comment .. "〔" .. short .. "〕"
         return true
@@ -62,8 +69,8 @@ local function init(env)
     end
     env.reverse         = keytao_reverse_db
     env.hint_text       = env.engine.schema.config:get_string('hint_text') or '🚫'
-    env.pat_short_vowel = " ([bcdefghjklmnpqrstwxyz][auiov]+) "
-    env.pat_short_cons  = " ([bcdefghjklmnpqrstwxyz][bcdefghjklmnpqrstwxyz]) "
+    env.pat_short_vowel = "([bcdefghjklmnpqrstwxyz][auiov]+)"
+    env.pat_short_cons  = "([bcdefghjklmnpqrstwxyz][bcdefghjklmnpqrstwxyz])"
     env.pat_no_commit   = "^[bcdefghjklmnpqrstwxyz]+$"
 end
 
