@@ -66,6 +66,7 @@ local function filter(input, env)
     local first = true
     local input_text = context.input
     local input_len = utf8.len(input_text)
+    local reverse_used = false
 
     if not is_on or input_len == 0 then
         close_reverse(env)
@@ -81,11 +82,17 @@ local function filter(input, env)
             local has_630 = false
             if is_on then
                 has_630 = hint(cand, input_text, input_len, env)
+                reverse_used = reverse_used or env.reverse ~= nil
             end
             if not has_630 or not disable_full then
                 yield(cand)
             end
         end
+    end
+
+    if reverse_used then
+        close_reverse(env)
+        collectgarbage("step", 64)
     end
 end
 
@@ -95,10 +102,33 @@ local function init(env)
     env.pat_short_vowel = "([bcdefghjklmnpqrstwxyz][auiov]+)"
     env.pat_short_cons  = "([bcdefghjklmnpqrstwxyz][bcdefghjklmnpqrstwxyz])"
     env.pat_no_commit   = "^[bcdefghjklmnpqrstwxyz]+$"
+
+    -- Force full GC after each commit and when idle: Lua cannot see C++ object
+    -- sizes (ReverseDb), so without explicit GC the runtime underestimates
+    -- live memory and collects too infrequently. See librime-lua issue #206/#307.
+    local ctx           = env.engine.context
+    env._commit_conn    = ctx.commit_notifier:connect(function()
+        close_reverse(env)
+        collectgarbage()
+    end)
+    env._update_conn    = ctx.update_notifier:connect(function(context)
+        if not context:is_composing() then
+            close_reverse(env)
+            collectgarbage()
+        end
+    end)
 end
 
 local function fini(env)
     close_reverse(env)
+    if env._commit_conn then
+        env._commit_conn:disconnect()
+        env._commit_conn = nil
+    end
+    if env._update_conn then
+        env._update_conn:disconnect()
+        env._update_conn = nil
+    end
 end
 
 return { init = init, func = filter, fini = fini }
