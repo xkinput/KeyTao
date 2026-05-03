@@ -181,6 +181,31 @@ local function baseConverse(str, from, to)
 	return strout
 end
 
+local function should_eval_expression(expr)
+	if expr == "" then
+		return false
+	end
+	if not string.match(expr, "^[%d%s%+%-%*%/%^%%%(%)%.]+$") then
+		return false
+	end
+	if string.match(expr, "[%+%-%*%/%^%%%(%.]%s*$") then
+		return false
+	end
+	local depth = 0
+	for i = 1, #expr do
+		local ch = string.sub(expr, i, i)
+		if ch == "(" then
+			depth = depth + 1
+		elseif ch == ")" then
+			depth = depth - 1
+			if depth < 0 then
+				return false
+			end
+		end
+	end
+	return depth == 0
+end
+
 local function translator(input, seg, env)
 	-- env can be used for getting the state of a switch, e.g., `env.engine.context:get_option("s2tw")` returns true/false (or nil if the switch does not exist)
 	if string.sub(input, 1, 1) == "=" then
@@ -191,7 +216,7 @@ local function translator(input, seg, env)
 			yield(Candidate("number", seg.start, seg._end, speakOfficially(input2), " 文读"))
 			yield(Candidate("number", seg.start, seg._end, speakLiterally(input2), " 冷读"))
 			yield(Candidate("number", seg.start, seg._end, speakMillitary(input2), " 军语"))
-		else
+		elseif should_eval_expression(input2) then
 			local chunk = load("return " .. input2)
 			if chunk then
 				local ok2, result = pcall(chunk)
