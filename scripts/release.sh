@@ -46,7 +46,6 @@ echo "✓ android"
 
 # iOS (Hamster) requires both desktop schema and its own skin file
 cp -r rime/* release/keytao-ios/
-cp -r schema/desktop/* release/keytao-ios/
 cp -r schema/ios/* release/keytao-ios/
 write_version_file release/keytao-ios
 (cd release/keytao-ios && zip -qr ../keytao-ios-${VERSION}.zip .)

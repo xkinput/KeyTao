@@ -229,7 +229,7 @@ emoji_cn:
   tips: all
 
 simplification:
-  opencc_config: s2tw.json
+  opencc_config: s2t.json
   option_name: simplification
 
 punctuator:

@@ -204,7 +204,7 @@ emoji_cn:
 
 
 simplification:
-  opencc_config: s2tw.json
+  opencc_config: s2t.json
   option_name: simplification
 
 custom_phrase:

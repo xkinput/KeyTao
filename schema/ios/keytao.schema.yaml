@@ -2,8 +2,8 @@
 # encoding: utf-8
 
 schema:
-  schema_id: keytao-dz
-  name: 键道6单字
+  schema_id: keytao
+  name: 键道6
   version: "2.2"
   dependencies:
     - keytao-cx
@@ -26,8 +26,14 @@ layout:
     - derive/^([bcdefghjklmnpqrstwxyz;`]{2}[avuio`]{5}).$/$1`/
     - derive/^[bcdefghjklmnpqrstwxyz;]{2}([avuio`]*)$/``$1/
 
+  # input_code:
+  #   date: orq
+  #   time: ouj
+  #   week: oxq
+
   patterns:
     special: "^(?:;?[avuio])[a-z]{0,}"
+    # input_code: "^(?:orq?|ouj?|oxq?)"
 
 
 switches:
@@ -42,6 +48,9 @@ switches:
   - name: emoji_cn
     reset: 0
     states: [ "关表情", "开表情" ]
+  - name: danzi_mode
+    reset: 0
+    states: [ "词组", "单字" ]
   - name: sbb_hint
     reset: 1
     states: [ "关₆₃₀", "开₆₃₀" ]
@@ -117,7 +126,7 @@ punctuator:
     '-' : '-'
     '_' : ——
     '+' : '+'
-    '=' : '='
+    '=' : [ '=' ]
     '[' : [ 「, 【, 〔, ［ ]
     ']' : [ 」, 】, 〕,  ］ ]
     '{' : [ 『, 〖, ｛ ]
@@ -147,15 +156,16 @@ engine:
     - table_translator
     - history_translator@repeat_history
     - table_translator@custom_phrase
-    - table_translator@danzi_lookup
     - lua_translator@oboot_translator
     - lua_translator@number_translator
   filters:
-    - simplifier@emoji_cn
-    - simplifier@simplification
+    # 内置 OpenCC simplifier 与 Lua Opencc(...) 在全量重部署后均不能稳定回落。
+    # - simplifier@emoji_cn # use lua_filter@opencc_filter instead
+    # - simplifier@simplification # use lua_filter@opencc_filter instead
     - uniquifier
-    - lua_filter@keytao_filter
     - reverse_lookup_filter@danzi_lookup
+    - lua_filter@*opencc_filter
+    - lua_filter@keytao_filter
 
 
 speller:
@@ -163,12 +173,12 @@ speller:
     __include: "layout/algebra"
   auto_select: false
   auto_select_unique_candidate: false
-  alphabet: "abcdefghijklmnopqrstuvwxyz;/=`"
-  initials: "abcdefghijklmnopqrstuvwxyz;/=`"
+  alphabet: "abcdefghijklmnopqrstuvwxyz;/`"
+  initials: "abcdefghijklmnopqrstuvwxyz;/`"
 
 
 translator:
-  dictionary: keytao-dz.extended
+  dictionary: keytao.extended
   enable_charset_filter: false
   enable_completion: true
   enable_encoder: true
@@ -184,19 +194,40 @@ repeat_history:
   initial_quality: 10000
 
 
-emoji_cn:
-  opencc_config: emoji.json
-  option_name: emoji_cn
-  tips: all
+# emoji_cn:
+#   opencc_config: emoji.json
+#   option_name: emoji_cn
+#   tips: all
 
 
-simplification:
-  opencc_config: s2t.json
-  option_name: simplification
+# simplification:
+#   opencc_config: s2t.json
+#   option_name: simplification
+
+
+opencc_filter:
+  db_name: lua/opencc_filter
+  delimiter: "|"
+  comment_format: "〔%s〕"
+  chain: true
+  rules:
+    - option: emoji_cn
+      mode: append
+      comment_mode: none
+      prefix: "_em_"
+      cand_type: emoji
+      split: emoji
+      opencc_config: opencc/emoji.json
+    - option: simplification
+      mode: replace
+      comment_mode: append
+      sentence: true
+      prefix: "_s2t_"
+      opencc_config: opencc/s2t.json
 
 
 danzi_lookup:
-  dictionary: keytao-dz.extended
+  dictionary: keytao.extended
   tags: [ danzi_lookup ]
   overwrite_comment: true
   enable_charset_filter: false
@@ -231,6 +262,7 @@ key_binder:
 
 recognizer:
   patterns:
+    # __include: "layout/patterns"
     punct: "^/([0-9]0?|[a-z]+)$"
     danzi_lookup: "[a-z`]*`+[a-z`]*"
     email: "^[a-z][-_.0-9a-z]*@.*$"
@@ -238,7 +270,6 @@ recognizer:
     pinyin: "(?<![`A-Z])`[a-z']*;?$"
     url: "^(www[.]|https?:|ftp:|mailto:).*$"
     jsq: "^=[^;']+$"
-    english: "^'[A-Z|a-z]*'?$"
 
 
 topup:

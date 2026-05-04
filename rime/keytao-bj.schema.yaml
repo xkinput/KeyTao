@@ -3,7 +3,7 @@
 
 schema:
   schema_id: keytao-bj
-  name: 鍵道6并击
+  name: 键道6并击
   version: "1"
   dependencies:
     - keytao-cx
@@ -134,7 +134,7 @@ emoji_cn:
   tips: all
 
 simplification:
-  opencc_config: s2tw.json
+  opencc_config: s2t.json
   option_name: simplification
 
 custom_phrase:
