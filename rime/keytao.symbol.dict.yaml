@@ -2,7 +2,7 @@
 # encoding: utf-8
 ---
 name: keytao.symbol
-version: "2026.02.27"
+version: "2026.05.09"
 sort: by_weight
 columns:
   - text
@@ -50,13 +50,13 @@ ____	;z	10
 ⑧	obs	10
 ⑩	oek	10
 √	og	10
-×	ojh	10
 ⑨	ojq	10
 ⑥	olq	10
 ⑦	oqk	10
 ③	osf	10
 ④	osk	10
 ⑤	owj	10
+×	ows	10
 ②	oxj	10
 ①	oyk	10
 *#06#	xjlji	10

@@ -2,7 +2,7 @@
 # encoding: utf-8
 ---
 name: keytao.english
-version: "2026.02.27"
+version: "2026.05.09"
 sort: by_weight
 columns:
   - text
@@ -10,7 +10,7 @@ columns:
   - weight
 ...
 
-BiangBiang面	bbmmu	100
+BiangBiang面	bbmmv	100
 BGM	bgm	100
 B超	bjz	100
 B站	bqf	100
