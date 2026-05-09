@@ -38,9 +38,17 @@
 * iOS 安装方式：
 
   - **[元书输入法][106]**：至 App Store 搜索「元书输入法」下载，进入「输入方案 → 下载方案」，填写以下稳定链接即可自动获取最新 iOS 码表包：
+
     ```
-    https://keytao.vercel.app/api/install/ios-latest
+    填写一条下载链接即可
+    - 默认 Gitee：https://keytao.vercel.app/api/install/ios-latest
+    - 默认 Gitee：https://keytao.rea.ink/api/install/ios-latest
+    - 指定 GitHub：https://keytao.vercel.app/api/install/ios-latest?source=github
+    - 指定 GitHub：https://keytao.rea.ink/api/install/ios-latest?source=github
+
+    *国内建议优先使用* keytao.rea.ink 域名的链接
     ```
+
     下载后切换目录到键道即可自动部署
 
 #### 并击功能：
@@ -67,6 +75,7 @@ bash scripts/validate.sh
 ```
 
 验证内容：
+
 1. **Lua 语法检查** — 用 `luac -p` 检查 `rime/lua/*.lua` 所有文件
 2. **五平台编译** — 用 `rime_deployer --build` 分别编译 linux / mac / windows / android / ios 各平台的 schema 组合，任何 schema 错误都会报出
 
