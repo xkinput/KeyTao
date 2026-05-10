@@ -15,8 +15,7 @@ local function processor(key_event, env)
     local page_size = schema.page_size
     local segment = context.composition:back()
     if not segment then
-        context:clear()
-        return kAccepted
+        return kRejected
     end
     local selected_index = segment.selected_index
     local page_start = math.floor(selected_index / page_size) * page_size
