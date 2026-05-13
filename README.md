@@ -1,6 +1,6 @@
 <h1 align="center">星空键道6</h1>
 
-> 作者：**吅吅大山** | [键道官网][904] | [键道6查码工具][917] | [键道文档][900]
+> 作者：**吅吅大山** | [键道官网][904] | [在线试用][930] | [键道6查码工具][917] | [键道文档][900]
 
 > 社区：[星空输入法QQ群][903] | [星空键道QQ群][928] | [加入TG群][929]
 
@@ -165,3 +165,4 @@ sudo apt install librime-bin librime-data lua5.4
 [917]: https://keytao.vercel.app/phrases
 [928]: https://qm.qq.com/q/uNFITZVL4A
 [929]: https://t.me/xkinput
+[930]: https://keytao.vercel.app/practice
