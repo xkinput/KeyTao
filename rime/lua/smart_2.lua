@@ -15,7 +15,10 @@ local function processor(key_event, env)
     local page_size = schema.page_size
     local segment = context.composition:back()
     if not segment then
-        return kRejected
+        return kNoop
+    end
+    if not context:get_selected_candidate() then
+        return kNoop
     end
     local selected_index = segment.selected_index
     local page_start = math.floor(selected_index / page_size) * page_size
@@ -25,11 +28,7 @@ local function processor(key_event, env)
         return kAccepted
     end
 
-    if not env.engine.context:get_selected_candidate() then
-        context:clear()
-    else
-        context:commit()
-    end
+    context:commit()
     return kAccepted
 end
 
