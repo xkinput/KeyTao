@@ -2,7 +2,7 @@
 # encoding: utf-8
 ---
 name: keytao.symbol
-version: "2026.05.09"
+version: "2026.06.03"
 sort: by_weight
 columns:
   - text
@@ -13,6 +13,10 @@ columns:
 ；	;	10
 ：	;;	10
 @	;a	10
+@gmail.com	;ag	10
+@outlook.com	;ao	10
+@qq.com	;aq	10
+@163.com	;aw	10
 %	;b	10
 -	;c	10
 、	;d	10

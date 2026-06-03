@@ -2,7 +2,7 @@
 # encoding: utf-8
 ---
 name: keytao.supplement
-version: "2026.03.14"
+version: "2026.06.03"
 sort: by_weight
 columns:
   - text
@@ -48,12 +48,12 @@ columns:
 不要	by	100
 此	c	100
 从此	cc	100
-错过	cg	100
+才刚	cg	100
 聪明	cm	100
 采取	cq	100
-操心	cx	100
+从而	cx	100
 都	d	100
-电脑	dn	100
+当年	dn	100
 大小	dx	100
 识	e	100
 实	e	101
@@ -76,18 +76,18 @@ columns:
 符合	fh	100
 支	fkea	100
 执	fkfu	100
-父母	fm	100
+方面	fm	100
 富强 民主 文明 和谐 自由 平等 公正 法治 爱国 敬业 诚信 友善	fmwh	100
 庄	fxgv	100
 刚才	gc	100
 国民生产总值	gdp	100
 赶快	gk	100
-光明	gm	100
+干嘛	gm	100
 好	h	100
-花草	hc	100
+缓存	hc	100
 呵	he	100
 很快	hk	100
-后面	hm	100
+还没	hm	100
 上	i	100
 打	i	101
 龵	i	102
@@ -118,11 +118,13 @@ columns:
 寂	jkbi	100
 鸡	jkyu	100
 嫁	jsno	100
-快餐	kc	100
+酱	jx	100
+看错	kc	100
 可靠	kk	100
 开门	km	100
 啦	l	100
-两年	ln	100
+咯	ll	100
+了呢	ln	100
 凉	lx	100
 嘛	m	100
 明天	mt	100
@@ -130,6 +132,7 @@ columns:
 满意	my	100
 能	n	100
 哪怕	np	100
+呐	ns	100
 啊	o	100
 着	o	101
 丶	o	102
@@ -156,7 +159,7 @@ columns:
 噗	pj	100
 屁	pk	100
 脾气	pq	100
-平台	pt	100
+配套	pt	100
 平安	px	100
 拼音	py	100
 其	q	100
@@ -169,15 +172,16 @@ columns:
 人们	rm	100
 日期	rq	100
 热搜	rs	100
-热线	rx	100
+如下	rx	100
 三次	sc	100
 搜狗	sg	100
 思	sk	100
-司马	sm	100
+扫描	sm	100
 索取	sq	100
 思想	sx	100
+它	t	100
 太难	tn	100
-提前	tq	100
+天气	tq	100
 同学	tx	100
 得	u	100
 丿	u	101
@@ -224,16 +228,19 @@ columns:
 𡗗	vvvuo	100
 玩	w	100
 为此	wc	100
-外面	wm	100
+呜	wj	100
+完美	wm	100
 完全	wq	100
 哇	ws	100
 喂	ww	100
 重	wy	100
 嗯	x	100
+唉	xh	100
 兮	xk	100
 悉	xkpo	100
 需	xl	100
 玄	xt	100
+诶	xw	100
 意	y	100
 疫	y	101
 因此	yc	100
@@ -249,18 +256,19 @@ columns:
 怡	ykxa	100
 哟	yl	100
 愈	yl	101
-郁闷	ym	100
+要么	ym	100
 一年	yn	100
 要求	yq	100
 有人	yr	100
-以下	yx	100
+呀	ys	100
+一些	yx	100
 因而	yx	101
 咋	z	100
-字词	zc	100
+再次	zc	100
 啧	ze	100
-做饭	zf	100
-字根	zg	100
+做法	zf	100
+最高	zg	100
 在吗	zm	100
-组长	zq	100
+作者	zq	100
 昨天	zt	100
 仔细	zx	100

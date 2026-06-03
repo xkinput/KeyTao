@@ -2,7 +2,7 @@
 # encoding: utf-8
 ---
 name: keytao.single
-version: "2026.05.09"
+version: "2026.06.03"
 sort: by_weight
 columns:
   - text
@@ -2691,6 +2691,7 @@ columns:
 铩	esiouo	10
 傻	esiuia	10
 痧	eso	10
+唦	esoa	10
 啥	esoivv	10
 唼	esoo	10
 唼	esoovo	10
@@ -4491,6 +4492,7 @@ columns:
 庚	gro	10
 羹	grou	10
 羹	grouou	10
+粳	grouv	10
 哽	grov	10
 赓	grova	10
 赓	grovao	10
@@ -5288,6 +5290,7 @@ columns:
 𬣳	hnoaa	10
 𬣳	hnoaav	10
 哏	hnoavv	10
+噷	hnoo	10
 恨	hnooav	10
 痕	hnov	10
 痕	hnovav	10
@@ -9206,6 +9209,7 @@ columns:
 灭	mdvoui	10
 么	me	10
 麽	meo	10
+嚜	meoi	10
 麽	meovua	10
 么	meuaoo	10
 满	mf	10
@@ -9462,6 +9466,7 @@ columns:
 谟	mloa	10
 谟	mloaii	10
 嗼	mloi	10
+嚜	mloia	10
 嗼	mloiio	10
 寞	mloo	10
 寞	mlooii	10
@@ -9713,6 +9718,7 @@ columns:
 袂	mwoa	10
 袂	mwoaav	10
 昧	mwoi	10
+嚜	mwoia	10
 昧	mwoivv	10
 寐	mwoo	10
 寐	mwooai	10
@@ -14483,6 +14489,7 @@ columns:
 昕	xboiuu	10
 忻	xboo	10
 忻	xboouu	10
+噷	xboov	10
 炘	xbou	10
 炘	xbouuu	10
 辛	xbov	10
