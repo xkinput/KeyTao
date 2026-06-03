@@ -2,7 +2,7 @@
 # encoding: utf-8
 ---
 name: keytao.link
-version: "2026.03.08"
+version: "2026.06.03"
 sort: by_weight
 columns:
   - text
@@ -10,10 +10,6 @@ columns:
   - weight
 ...
 
-@gmail.com	;ag	10000
-@outlook.com	;ao	10000
-@qq.com	;aq	10000
-@163.com	;aw	10000
 http://	http	10000
 https://keytao.vercel.app/phrases	ocx	10000
 https://keytao.vercel.app	ogw	10000
