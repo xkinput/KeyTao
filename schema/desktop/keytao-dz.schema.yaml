@@ -42,6 +42,9 @@ switches:
   - name: emoji_cn
     reset: 0
     states: [ "关表情", "开表情" ]
+  - name: danzi_mode
+    reset: 1
+    states: [ "词组", "单字" ]
   - name: sbb_hint
     reset: 1
     states: [ "关₆₃₀", "开₆₃₀" ]
