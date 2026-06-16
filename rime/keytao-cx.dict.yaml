@@ -2692,6 +2692,7 @@ columns:
 傻	esiuia	10
 痧	eso	10
 唦	esoa	10
+唦	esoaiu	10
 啥	esoivv	10
 唼	esoo	10
 唼	esoovo	10
@@ -3056,7 +3057,6 @@ columns:
 弗	fjavau	10
 艴	fjavu	10
 艴	fjavua	10
-蝜蝂	fjbfi	10
 付	fji	10
 幅	fjia	10
 幞	fjiai	10
@@ -4493,6 +4493,7 @@ columns:
 羹	grou	10
 羹	grouou	10
 粳	grouv	10
+粳	grouvi	10
 哽	grov	10
 赓	grova	10
 赓	grovao	10
@@ -5292,6 +5293,7 @@ columns:
 哏	hnoavv	10
 噷	hnoo	10
 恨	hnooav	10
+噷	hnoovo	10
 痕	hnov	10
 痕	hnovav	10
 狠	hnu	10
@@ -7026,6 +7028,8 @@ columns:
 宬	jroo	10
 憕	jrooa	10
 憕	jrooao	10
+噌	jroou	10
+噌	jrooui	10
 宬	jroovu	10
 逞	jrov	10
 逞	jrovoa	10
@@ -9210,6 +9214,7 @@ columns:
 么	me	10
 麽	meo	10
 嚜	meoi	10
+嚜	meoiao	10
 麽	meovua	10
 么	meuaoo	10
 满	mf	10
@@ -9467,6 +9472,7 @@ columns:
 谟	mloaii	10
 嗼	mloi	10
 嚜	mloia	10
+嚜	mloiao	10
 嗼	mloiio	10
 寞	mloo	10
 寞	mlooii	10
@@ -9719,6 +9725,7 @@ columns:
 袂	mwoaav	10
 昧	mwoi	10
 嚜	mwoia	10
+嚜	mwoiao	10
 昧	mwoivv	10
 寐	mwoo	10
 寐	mwooai	10
@@ -12282,6 +12289,7 @@ columns:
 嚷	rpoovo	10
 瓤	rpov	10
 勷	rpova	10
+勷	rpovau	10
 瓤	rpovuu	10
 穰	rpu	10
 穰	rpuvov	10
@@ -12322,6 +12330,7 @@ columns:
 嵘	ryiaii	10
 蝾	ryiaii	11
 峵	ryiao	10
+峵	ryiaoo	10
 蓉	ryii	10
 蓉	ryiioo	10
 茸	ryiiv	10
@@ -14490,6 +14499,7 @@ columns:
 忻	xboo	10
 忻	xboouu	10
 噷	xboov	10
+噷	xboovo	10
 炘	xbou	10
 炘	xbouuu	10
 辛	xbov	10
@@ -14546,6 +14556,7 @@ columns:
 效	xco	10
 啸	xcoa	10
 詨	xcoao	10
+詨	xcoaov	10
 𫍲	xcoau	10
 𫍲	xcoaui	10
 啸	xcoavv	10
@@ -15507,6 +15518,7 @@ columns:
 嗯	xroiav	10
 唔	xrovia	10
 鞥	xrv	10
+鞥	xrviiv	10
 下	xs	10
 阿	xsa	10
 阿	xsaivo	10
@@ -15769,6 +15781,7 @@ columns:
 鲞	xxouua	10
 享	xxov	10
 勷	xxova	10
+勷	xxovau	10
 襄	xxovo	10
 享	xxovoa	10
 襄	xxovoo	10
