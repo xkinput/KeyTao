@@ -2,7 +2,7 @@
 # encoding: utf-8
 ---
 name: keytao.css
-version: "2026.06.16"
+version: "2026.07.05"
 sort: by_weight
 columns:
   - text
@@ -24,7 +24,7 @@ columns:
 不止	biv	100
 不是	bo	100
 不让	boa	100
-便是	boi	100
+不足	boi	100
 表情	boo	100
 不断	bou	100
 毕竟	bov	100
@@ -48,7 +48,7 @@ columns:
 脆弱	cav	100
 操作	ci	100
 从中	cia	100
-伺候	cii	100
+此人	cii	100
 存储	cio	100
 从小	ciu	100
 才会	civ	100
@@ -71,8 +71,8 @@ columns:
 才有	cvu	100
 从未	cvv	100
 到了	da	100
-电池	daa	100
-多了	dai	100
+大约	daa	100
+对了	dai	100
 都能	dao	100
 动力	dau	100
 登录	dav	100
@@ -130,10 +130,10 @@ columns:
 上来	evo	100
 上面	evu	100
 属于	evv	100
-发展	fa	100
+只能	fa	100
 发给	faa	100
 房子	fai	100
-只能	fao	100
+否则	fao	100
 这边	fau	100
 方法	fav	100
 这个	fi	100
@@ -195,7 +195,7 @@ columns:
 好了	hai	100
 还能	hao	100
 还好	hau	100
-很强	hav	100
+喝酒	hav	100
 好像	hi	100
 后果	hia	100
 行业	hii	100
@@ -204,7 +204,7 @@ columns:
 还会	hiv	100
 还是	ho	100
 话说	hoa	100
-或是	hoi	100
+会是	hoi	100
 回家	hoo	100
 好吃	hou	100
 很高	hov	100
@@ -371,7 +371,7 @@ columns:
 能有	nvu	100
 那天	nvv	100
 普通	pa	100
-评测	paa	100
+婆婆	paa	100
 牌子	pai	100
 平台	pao	100
 旁边	pau	100
@@ -524,7 +524,7 @@ columns:
 网络	waa	100
 充满	wai	100
 温柔	wao	100
-无力	wau	100
+污染	wau	100
 无法	wav	100
 我们	wi	100
 位置	wia	100
@@ -543,7 +543,7 @@ columns:
 冲向	wui	100
 充分	wuo	100
 往往	wuu	100
-微笑	wuv	100
+创造	wuv	100
 完成	wv	100
 无比	wva	100
 完整	wvi	100
@@ -631,7 +631,7 @@ columns:
 怎么	zu	100
 作用	zua	100
 做的	zui	100
-最爱	zuo	100
+作者	zuo	100
 最后	zuu	100
 自我	zuv	100
 怎样	zv	100
