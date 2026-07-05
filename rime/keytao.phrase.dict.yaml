@@ -2,7 +2,7 @@
 # encoding: utf-8
 ---
 name: keytao.phrase
-version: "2026.06.16"
+version: "2026.07.05"
 sort: by_weight
 columns:
   - text
@@ -15264,6 +15264,7 @@ columns:
 大我	dswlv	100
 大床	dswm	100
 答问	dswn	100
+打文	dswni	100
 大王	dswp	100
 打望	dswpi	100
 打王	dswpiv	100
@@ -29562,6 +29563,7 @@ columns:
 凤山	frefu	100
 封山	frefv	100
 众人拾柴火焰高	freg	100
+钟乳石	frei	100
 枫树	frej	100
 风湿	frek	100
 风蚀	freku	100
@@ -33019,7 +33021,8 @@ columns:
 狗宝	gdbz	100
 广东菜	gdc	100
 够惨	gdcf	100
-狗才	gdch	100
+购彩	gdch	100
+狗才	gdchu	100
 构词	gdck	100
 够错	gdcl	100
 沟村	gdcw	100
@@ -35372,6 +35375,7 @@ columns:
 过街	gljdv	100
 过界	gljdvi	100
 国产	gljf	100
+锅铲	gljfi	100
 国境	gljg	100
 郭靖	gljgo	100
 古灵精怪	gljgu	100
@@ -36613,6 +36617,7 @@ columns:
 更窄	grfh	100
 更富	grfj	100
 耿直	grfk	100
+骨肉分离	grfl	100
 更装	grfm	100
 更专	grft	100
 更装	grfx	100
@@ -41571,6 +41576,7 @@ columns:
 霍地	hldk	100
 或多	hldl	100
 火电	hldm	100
+哈兰德	hldo	100
 豁荡	hldp	100
 豁达	hlds	100
 祸端	hldt	100
@@ -67320,6 +67326,7 @@ columns:
 墨基	mljki	100
 莫急	mljkiu	100
 磨叽	mljko	100
+末级	mljkv	100
 默剧	mljl	100
 魔剑	mljm	100
 磨剑	mljmo	100
@@ -86713,6 +86720,7 @@ columns:
 色欲	seyl	100
 色域	seylu	100
 色样	seyp	100
+三室一厅	seyt	100
 色晕	seyw	100
 三生有幸	seyx	100
 私生子	sez	100
@@ -93563,6 +93571,7 @@ columns:
 坦坦荡荡	ttdd	100
 妥妥当当	ttddu	100
 团丁	ttdg	100
+条条大路通罗马	ttdm	100
 天天动听	ttdt	100
 妥妥的	ttdu	100
 天塌地陷	ttdx	100
@@ -101928,6 +101937,7 @@ columns:
 笑道	xcdzu	100
 孝道	xcdzuo	100
 校道	xcdzv	100
+小仓鼠	xce	100
 小睡	xceb	100
 销售	xced	100
 消瘦	xceda	100
@@ -102139,6 +102149,7 @@ columns:
 小利	xclkiu	100
 效率	xcll	100
 小罗	xclli	100
+小驴	xcllia	100
 笑脸	xclm	100
 小脸	xclmi	100
 孝廉	xclmu	100
@@ -102414,7 +102425,9 @@ columns:
 笑语	xcylu	100
 小样	xcyp	100
 小杨	xcypi	100
-小恙	xcypio	100
+小羊	xcypi	101
+小羊	xcypio	100
+小恙	xcypio	101
 小雅	xcys	100
 小鸭	xcysi	100
 校园	xcyt	100
@@ -103324,6 +103337,7 @@ columns:
 学术研讨会	xeyh	100
 小沈阳	xeyi	100
 销售员	xeyii	100
+小山羊	xeyiio	100
 学术研究	xeyj	100
 二十一世纪	xeyjv	100
 恶意	xeyk	100
@@ -103360,6 +103374,7 @@ columns:
 暗部	xfbjo	100
 安瓿	xfbjoo	100
 暗拨	xfbl	100
+安泊	xfblo	100
 岸边	xfbm	100
 安本	xfbn	100
 安装版	xfbo	100
@@ -103503,6 +103518,7 @@ columns:
 阿富汗	xfh	100
 安徽	xfhb	100
 暗合	xfhe	100
+暗河	xfheo	100
 暗含	xfhf	100
 暗涵	xfhfo	100
 暗害	xfhh	100
@@ -106123,6 +106139,7 @@ columns:
 虚名	xlmg	100
 续命	xlmga	100
 小流氓	xlmi	100
+小龙猫	xlmiv	100
 序幕	xlmj	100
 畜牧	xlmjo	100
 须弥	xlmk	100
@@ -106266,6 +106283,7 @@ columns:
 虚影	xlyg	100
 续约	xlyh	100
 瞎了眼	xlyi	100
+小羚羊	xlyio	100
 蓄意	xlyk	100
 盱眙	xlyki	100
 须臾	xlyl	100
@@ -108091,6 +108109,7 @@ columns:
 选了	xtle	100
 绚烂	xtlf	100
 炫铃	xtlg	100
+小驼羚	xtli	100
 选录	xtlj	100
 绚丽	xtlk	100
 旋律	xtll	100
@@ -108114,6 +108133,7 @@ columns:
 选吗	xtms	100
 选美	xtmw	100
 旋毛	xtmz	100
+小驼鸟	xtn	100
 玄鸟	xtnc	100
 悬拟	xtnk	100
 玄女	xtnl	100
@@ -109492,6 +109512,7 @@ columns:
 胸透	xytd	100
 兄台	xyth	100
 小丫头	xyti	100
+小羊驼	xytio	100
 凶徒	xytj	100
 胸膛	xytp	100
 象牙塔	xytu	100
@@ -109661,6 +109682,7 @@ columns:
 奥林	xzlb	100
 奥列	xzld	100
 幸灾乐祸	xzlh	100
+小藏羚	xzli	100
 奥里	xzlk	100
 熬炼	xzlm	100
 学子们	xzm	100
