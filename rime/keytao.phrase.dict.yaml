@@ -2,7 +2,7 @@
 # encoding: utf-8
 ---
 name: keytao.phrase
-version: "2026.07.05"
+version: "2026.07.08"
 sort: by_weight
 columns:
   - text
@@ -2623,6 +2623,7 @@ columns:
 捕获	bjhl	100
 补货	bjhlo	100
 不惑	bjhlv	100
+不就好了	bjhlvo	100
 不慌	bjhm	100
 不很	bjhn	100
 不化	bjhq	100
@@ -5242,6 +5243,7 @@ columns:
 坝上	bsep	100
 八省	bser	100
 巴沙	bses	100
+百岁山	bsev	100
 伴随着	bsf	100
 八周	bsfd	100
 八折	bsfe	100
@@ -22341,6 +22343,7 @@ columns:
 神奇女侠	eqnx	100
 耍弄	eqny	100
 耍闹	eqnz	100
+杀猪盘	eqp	100
 耍贫	eqpb	100
 刷屏	eqpg	100
 失去平衡	eqph	100
@@ -29944,6 +29947,7 @@ columns:
 法德	fsdea	100
 乍得	fsdeu	100
 炸弹	fsdf	100
+发单	fsdfa	100
 罚单	fsdfi	100
 法定	fsdg	100
 发呆	fsdh	100
@@ -30266,6 +30270,7 @@ columns:
 副所长	fsqv	100
 发强	fsqx	100
 法强	fsqxa	100
+重色轻友	fsqy	100
 发照	fsqz	100
 烦死人	fsr	100
 发热	fsre	100
@@ -32908,6 +32913,7 @@ columns:
 柜台	gbth	100
 归途	gbtj	100
 贵体	gbtk	100
+柜体	gbtkv	100
 妫佗	gbtl	100
 归天	gbtm	100
 跪舔	gbtmo	100
@@ -34935,6 +34941,7 @@ columns:
 轱辘	gjlj	100
 骨碌	gjlji	100
 国际劳动节	gjljia	100
+骨露	gjljiv	100
 咕噜	gjljo	100
 鼓励	gjlk	100
 孤立	gjlka	100
@@ -43298,6 +43305,7 @@ columns:
 横遭	hrzz	100
 贺岁版	hsb	100
 哈白	hsbh	100
+荤素不忌	hsbj	100
 哈勃	hsbl	100
 哈巴	hsbs	100
 好死不死	hsbsa	100
@@ -47947,6 +47955,7 @@ columns:
 竞斗	jgdd	100
 京豆	jgddo	100
 惊得	jgde	100
+敬德	jgdei	100
 景德	jgdeo	100
 静的	jgdev	100
 京蛋	jgdf	100
@@ -48368,6 +48377,8 @@ columns:
 晶体	jgtko	100
 惊天	jgtm	100
 金戈铁马	jgtmi	100
+景田	jgtmo	100
+景甜	jgtmou	100
 经堂	jgtp	100
 结构调整	jgtq	100
 鲸吞	jgtw	100
@@ -51145,7 +51156,8 @@ columns:
 槛车	jmje	100
 瞠目结舌	jmjei	100
 减产	jmjf	100
-简晶	jmjg	100
+肩颈	jmjg	100
+简晶	jmjgu	100
 坚决	jmjh	100
 紧密结合	jmjhi	100
 兼差	jmjho	100
@@ -68985,6 +68997,7 @@ columns:
 美发	mwfsoa	100
 煤砖	mwft	100
 没费	mwfw	100
+美妆	mwfx	100
 每种	mwfy	100
 没种	mwfya	100
 美中	mwfyo	100
@@ -76397,7 +76410,8 @@ columns:
 起搏器	qbqv	100
 去不去	qbqvv	100
 秦腔	qbqx	100
-正本清源	qbqy	100
+秦琼	qbqy	100
+正本清源	qbqyv	100
 枕边人	qbr	100
 禽肉	qbrd	100
 亲热	qbre	100
@@ -82884,6 +82898,7 @@ columns:
 裙撑	qwjr	100
 准将	qwjx	100
 占为己有	qwjy	100
+群嘲	qwjz	100
 请查看	qwk	100
 群口	qwkd	100
 裙裤	qwkj	100
@@ -85266,6 +85281,7 @@ columns:
 弱于	rlyl	100
 若遇	rlyli	100
 若与	rlyliv	100
+软路由	rlyv	100
 若用	rlyy	100
 若要	rlyz	100
 若泽	rlze	100
@@ -85866,6 +85882,7 @@ columns:
 软风	rtfr	100
 软炸	rtfs	100
 肉体凡胎	rtft	100
+软装	rtfx	100
 软种	rtfy	100
 软着	rtfz	100
 认同感	rtg	100
@@ -87558,6 +87575,7 @@ columns:
 苏俄	sjxe	100
 苏醒	sjxg	100
 塑性	sjxgo	100
+塑形	sjxgov	100
 俗学	sjxh	100
 苏溪	sjxk	100
 素馅	sjxm	100
@@ -97040,6 +97058,7 @@ columns:
 无限	wjxm	100
 诬陷	wjxmo	100
 无线	wjxmv	100
+五险	wjxmva	100
 吴承恩	wjxo	100
 午休	wjxq	100
 无休	wjxqv	100
@@ -104162,6 +104181,7 @@ columns:
 形态	xgth	100
 邢台	xgthv	100
 星图	xgtj	100
+星途	xgtjo	100
 形体	xgtk	100
 星体	xgtko	100
 形托	xgtl	100
@@ -111570,6 +111590,7 @@ columns:
 液蜡	yels	100
 优胜劣汰	yelt	100
 一上来	yelv	100
+硬实力	yelvo	100
 叶轮	yelw	100
 叶类	yelwo	100
 一声令下	yelx	100
@@ -118471,6 +118492,7 @@ columns:
 在本次	zbc	100
 最脆	zbcb	100
 最惨	zbcf	100
+最菜	zbch	100
 最粗	zbcj	100
 最次	zbck	100
 罪错	zbcl	100
