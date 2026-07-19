@@ -2,7 +2,7 @@
 # encoding: utf-8
 ---
 name: keytao.phrase
-version: "2026.07.12"
+version: "2026.07.19"
 sort: by_weight
 columns:
   - text
@@ -1282,6 +1282,7 @@ columns:
 不知所踪	bfsz	100
 不中听	bft	100
 巴菲特	bfta	100
+避风塘	bftau	100
 半条	bftc	100
 半头	bftd	100
 版头	bftdu	100
@@ -1456,6 +1457,7 @@ columns:
 冰滴	bgdko	100
 并多	bgdl	100
 冰点	bgdm	100
+冰垫	bgdmo	100
 不敢怠慢	bgdmv	100
 冰灯	bgdr	100
 不共戴天	bgdt	100
@@ -12027,6 +12029,7 @@ columns:
 带坏	dhhg	100
 灯火辉煌	dhhh	100
 带火	dhhl	100
+带货	dhhlv	100
 电话号码	dhhm	100
 待换	dhht	100
 动画化	dhhv	100
@@ -13547,6 +13550,7 @@ columns:
 多细	dlxk	100
 多蓄	dlxl	100
 多线	dlxm	100
+剁馅	dlxmu	100
 鼎力相助	dlxq	100
 夺下	dlxs	100
 多选	dlxt	100
@@ -13615,6 +13619,7 @@ columns:
 点拨	dmbli	100
 电波	dmblia	100
 点播	dmblii	100
+店播	dmblo	100
 独木不成林	dmblu	100
 电变	dmbm	100
 殿本	dmbn	100
@@ -16492,6 +16497,7 @@ columns:
 冬月	dyyhu	100
 但由于	dyyi	100
 电影院	dyyio	100
+代运营	dyyiv	100
 动议	dyyk	100
 冬衣	dyyku	100
 冬雨	dyyl	100
@@ -17468,6 +17474,7 @@ columns:
 手抖	eddd	100
 瘦得	edde	100
 寿诞	eddf	100
+首单	eddfo	100
 收订	eddg	100
 手袋	eddh	100
 少得多	eddi	100
@@ -22182,6 +22189,7 @@ columns:
 水平线	epx	100
 伤心	epxb	100
 上心	epxbi	100
+上新	epxbio	100
 上校	epxc	100
 上写	epxd	100
 上颚	epxe	100
@@ -24367,6 +24375,7 @@ columns:
 斐波那契	fbnq	100
 放鞭炮	fbp	100
 追平	fbpg	100
+追评	fbpgu	100
 追捧	fbpr	100
 追赔	fbpw	100
 追跑	fbpz	100
@@ -27473,6 +27482,7 @@ columns:
 质料	fklcuo	100
 之列	fkld	100
 只露	fkldo	100
+直列	fkldu	100
 值了	fkle	100
 芝兰	fklf	100
 芷兰	fklfi	100
@@ -38270,6 +38280,7 @@ columns:
 工艺	gyyk	100
 公益	gyyku	100
 公寓	gyyl	100
+公域	gyylu	100
 供养	gyyp	100
 公羊	gyypu	100
 工业园区	gyyq	100
@@ -42574,6 +42585,7 @@ columns:
 活泼可爱	hpkx	100
 航空	hpky	100
 和平里	hpl	100
+好评率	hpla	100
 杭疗	hplc	100
 行列	hpld	100
 航路	hplj	100
@@ -53350,6 +53362,7 @@ columns:
 家规	jsgb	100
 架构	jsgd	100
 加够	jsgda	100
+加购	jsgdaa	100
 价格	jsge	100
 加个	jsgea	100
 甲肝	jsgf	100
@@ -56795,6 +56808,7 @@ columns:
 开赴	khfj	100
 开服	khfjv	100
 开支	khfk	100
+开智	khfkv	100
 铠装	khfm	100
 忾愤	khfn	100
 开放	khfp	100
@@ -62102,6 +62116,7 @@ columns:
 勠力同心	lltxa	100
 流落他乡	lltxai	100
 兰陵王	llw	100
+流量池	llwa	100
 两肋插刀	llwd	100
 绫罗绸缎	llwda	100
 驴车	llwe	100
@@ -62389,6 +62404,7 @@ columns:
 链轮	lmlwi	100
 连亮	lmlx	100
 帘栊	lmly	100
+两模两样	lmlyv	100
 老妈妈	lmm	100
 怜悯	lmmb	100
 联名	lmmg	100
@@ -63472,11 +63488,13 @@ columns:
 拉床	lswm	100
 拉网	lswp	100
 拉斯维加斯	lsws	100
+拉茶	lswsi	100
 辣味	lsww	100
 腊味	lswwu	100
 拉床	lswx	100
 蜡虫	lswy	100
 硫酸锌	lsx	100
+拉新	lsxb	100
 腊雪	lsxh	100
 腊尔	lsxj	100
 拉稀	lsxk	100
@@ -75736,6 +75754,7 @@ columns:
 破铜烂铁	ptlt	100
 品头论足	ptlz	100
 评头论足	ptlzo	100
+帕特农神庙	ptnm	100
 泡腾片	ptp	100
 普通朋友	ptpy	100
 普陀区	ptq	100
@@ -85368,6 +85387,7 @@ columns:
 人民战争	rmqq	100
 人民日报	rmrb	100
 若明若暗	rmrx	100
+人模人样	rmry	100
 入木三分	rmsf	100
 人面桃花	rmth	100
 人民网	rmw	100
@@ -88097,6 +88117,7 @@ columns:
 死于	skyl	100
 私欲	skylu	100
 私语	skyluo	100
+私域	skyluv	100
 死鱼	skylv	100
 饲养	skyp	100
 死样	skypv	100
@@ -92611,6 +92632,7 @@ columns:
 天波	tmbl	100
 天边	tmbm	100
 田边	tmbmi	100
+天崩	tmbr	100
 天霸	tmbs	100
 填报	tmbz	100
 舔包	tmbzu	100
@@ -106443,6 +106465,7 @@ columns:
 鲜卑	xmbwu	100
 羡慕不已	xmby	100
 献宝	xmbz	100
+线报	xmbza	100
 现报	xmbzv	100
 新名词	xmc	100
 献策	xmce	100
@@ -108251,6 +108274,7 @@ columns:
 喧闹	xtnz	100
 阿托品	xtp	100
 选聘	xtpb	100
+选品	xtpbu	100
 选票	xtpc	100
 宣判	xtpf	100
 选派	xtph	100
@@ -112874,6 +112898,7 @@ columns:
 应征	ygqr	100
 嬴政	ygqro	100
 鹰犬	ygqt	100
+雨刮器	ygqv	100
 营墙	ygqx	100
 阳光照耀	ygqy	100
 映照	ygqz	100
@@ -114938,6 +114963,7 @@ columns:
 浴缸	ylgp	100
 渔港	ylgpa	100
 鱼缸	ylgpu	100
+雨刮	ylgq	100
 鱼贯	ylgt	100
 一两个	ylgv	100
 与狼共舞	ylgw	100
@@ -118179,6 +118205,8 @@ columns:
 妖股	yzgja	100
 要过	yzgl	100
 腰果	yzglu	100
+摇光	yzgm	100
+瑶光	yzgmv	100
 要跟	yzgn	100
 药罐	yzgt	100
 要管	yzgtv	100
