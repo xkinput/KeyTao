@@ -2,7 +2,7 @@
 # encoding: utf-8
 ---
 name: keytao.phrase
-version: "2026.07.19"
+version: "2026.07.22"
 sort: by_weight
 columns:
   - text
@@ -2285,6 +2285,7 @@ columns:
 白血	bhxhuu	100
 保护性	bhxi	100
 拜耳	bhxj	100
+鼻后嗅觉	bhxju	100
 白皙	bhxk	100
 败絮	bhxl	100
 白絮	bhxlu	100
@@ -3364,6 +3365,7 @@ columns:
 闭会	bkhboi	100
 笔会	bkhbu	100
 壁厚	bkhd	100
+鼻后	bkhdu	100
 闭合	bkhe	100
 不堪回首	bkhev	100
 不可忽视	bkhevv	100
@@ -15608,6 +15610,7 @@ columns:
 端门	dtmn	100
 短码	dtms	100
 断码	dtmso	100
+段码	dtmsu	100
 短毛	dtmz	100
 大厅内	dtn	100
 端凝	dtng	100
@@ -27399,6 +27402,7 @@ columns:
 制出	fkjjua	100
 知己	fkjk	100
 织机	fkjka	100
+值机	fkjki	100
 之际	fkjko	100
 只鸡	fkjkoa	100
 之计	fkjkoo	100
@@ -31758,6 +31762,7 @@ columns:
 中耕	fygr	100
 制药公司	fygs	100
 中观	fygt	100
+风吟港	fygu	100
 斧钺钩叉	fygw	100
 重要贡献	fygx	100
 中共	fygy	100
@@ -34906,6 +34911,7 @@ columns:
 固件	gjjm	100
 国家机密	gjjmi	100
 古剑	gjjmu	100
+古建	gjjmua	100
 高精尖	gjjo	100
 关机键	gjjov	100
 古旧	gjjq	100
@@ -35067,6 +35073,7 @@ columns:
 古筝	gjqr	100
 股权	gjqt	100
 顾全	gjqtv	100
+古建筑	gjqu	100
 攻坚战	gjqv	100
 股群	gjqw	100
 骨腔	gjqx	100
@@ -36049,6 +36056,7 @@ columns:
 根苗	gnmc	100
 根蔓	gnmf	100
 跟买	gnmh	100
+根脉	gnmhv	100
 根毛	gnmz	100
 姑奶奶	gnn	100
 跟您	gnnb	100
@@ -39379,7 +39387,7 @@ columns:
 后述	hdejuv	100
 后世	hdek	100
 后市	hdeku	100
-后是	hdekuo	100
+后室	hdekuo	100
 后事	hdekuv	100
 厚实	hdekv	100
 后说	hdel	100
@@ -56132,6 +56140,7 @@ columns:
 可凭	kepg	100
 科普	kepj	100
 磕破	kepl	100
+客片	kepm	100
 磕碰	kepr	100
 可怕	keps	100
 可啪	kepsv	100
@@ -62806,6 +62815,7 @@ columns:
 留手	lqedu	100
 六摄	lqee	100
 流山	lqef	100
+刘禅	lqefo	100
 柳树	lqej	100
 六书	lqejo	100
 流失	lqek	100
@@ -65435,6 +65445,7 @@ columns:
 妙对	mcdb	100
 庙殿	mcdm	100
 妙答	mcds	100
+秒懂	mcdy	100
 妙道	mcdz	100
 苗刀	mcdzi	100
 秒睡	mceb	100
@@ -66268,6 +66279,7 @@ columns:
 明盘	mgpf	100
 名牌	mgph	100
 铭牌	mgphi	100
+明牌	mgpho	100
 名片	mgpm	100
 名篇	mgpmu	100
 铭佩	mgpw	100
@@ -99675,6 +99687,7 @@ columns:
 威逼	wwbkv	100
 万万不可	wwbkvv	100
 微博	wwbl	100
+围脖	wwbli	100
 微薄	wwblu	100
 微波	wwblua	100
 韦伯	wwblv	100
@@ -104551,6 +104564,7 @@ columns:
 雪糕	xhgz	100
 哀告	xhgzo	100
 笑呵呵	xhh	100
+续火花	xhha	100
 学会	xhhb	100
 爱辉	xhhbu	100
 瑷珲	xhhbv	100
@@ -114831,6 +114845,7 @@ columns:
 预定	yldg	100
 预订	yldga	100
 玉带	yldh	100
+雨带	yldhv	100
 余地	yldk	100
 遇敌	yldki	100
 欲滴	yldku	100
@@ -115552,6 +115567,7 @@ columns:
 掩面而泣	ymxq	100
 一门心思	ymxs	100
 一米线	ymxv	100
+亚马尔	ymxva	100
 一脉相传	ymxw	100
 月明星稀	ymxx	100
 有没有	ymy	100
@@ -118213,6 +118229,8 @@ columns:
 要官	yzgtvo	100
 要给	yzgw	100
 摇滚	yzgwi	100
+摇光	yzgx	100
+瑶光	yzgxv	100
 邀功	yzgy	100
 药膏	yzgz	100
 夜总会	yzh	100
