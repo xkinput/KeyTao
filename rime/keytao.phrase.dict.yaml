@@ -2,7 +2,7 @@
 # encoding: utf-8
 ---
 name: keytao.phrase
-version: "2026.07.22"
+version: "2026.08.02"
 sort: by_weight
 columns:
   - text
@@ -4515,6 +4515,7 @@ columns:
 笨笨	bnbn	100
 本本	bnbnv	100
 不男不女	bnbnvi	100
+奔迸	bnbr	100
 本吧	bnbs	100
 奔北	bnbw	100
 百年不遇	bnby	100
@@ -5703,6 +5704,7 @@ columns:
 辈分	bwfni	100
 辈份	bwfnii	100
 悲愤	bwfnio	100
+百川智能	bwfnv	100
 北方	bwfp	100
 被抓	bwfq	100
 北风	bwfr	100
@@ -5862,6 +5864,7 @@ columns:
 蓓蕾	bwlwi	100
 悲凉	bwlx	100
 保持联系	bwlxi	100
+杯量	bwlxv	100
 半文盲	bwm	100
 悲悯	bwmb	100
 被秒	bwmc	100
@@ -11369,7 +11372,8 @@ columns:
 但能	dfnr	100
 但那	dfns	100
 豆制品	dfp	100
-蛋品	dfpb	100
+单品	dfpb	100
+蛋品	dfpba	100
 单凭	dfpg	100
 单排	dfph	100
 丹皮	dfpk	100
@@ -13105,6 +13109,7 @@ columns:
 低微	dkwwiu	100
 帝位	dkwwo	100
 地委	dkwwv	100
+堤围	dkwwvi	100
 抵充	dkwy	100
 滴虫	dkwya	100
 低潮	dkwz	100
@@ -17855,6 +17860,7 @@ columns:
 首张	edqpoa	100
 手球	edqq	100
 守正	edqr	100
+深度求索	edqs	100
 授权	edqt	100
 受权	edqtu	100
 受得住	edqu	100
@@ -22332,6 +22338,7 @@ columns:
 耍出	eqjj	100
 刷机	eqjk	100
 刷级	eqjka	100
+刷剧	eqjl	100
 耍奸	eqjm	100
 首期款	eqk	100
 盛情款待	eqkd	100
@@ -27599,6 +27606,7 @@ columns:
 质朴	fkpj	100
 质谱	fkpju	100
 直扑	fkpjui	100
+智谱	fkpjuo	100
 植皮	fkpk	100
 制片	fkpm	100
 纸片	fkpma	100
@@ -33618,6 +33626,7 @@ columns:
 歌美	gemw	100
 戈矛	gemz	100
 观赏鸟	gen	100
+格聂	gend	100
 歌女	genl	100
 各年	genm	100
 革囊	genp	100
@@ -34997,6 +35006,7 @@ columns:
 古庙	gjmc	100
 国计民生	gjme	100
 故名	gjmg	100
+古茗	gjmgu	100
 古墓	gjmj	100
 姑母	gjmja	100
 功成名就	gjmjv	100
@@ -55495,6 +55505,7 @@ columns:
 亏待	kbdh	100
 看不懂	kbdi	100
 抗病毒	kbdio	100
+溃堤	kbdk	100
 揆度	kbdl	100
 馈电	kbdm	100
 空白点	kbdo	100
@@ -57886,6 +57897,7 @@ columns:
 看着办	kqb	100
 口诛笔伐	kqbf	100
 跨步	kqbj	100
+垮坝	kqbs	100
 狂犬病	kqbu	100
 挎包	kqbz	100
 扩展槽	kqc	100
@@ -61657,6 +61669,7 @@ columns:
 离天	lktm	100
 礼堂	lktp	100
 李唐	lktpv	100
+理塘	lktpvv	100
 理他	lkts	100
 利他	lktsu	100
 离团	lktt	100
@@ -64828,6 +64841,7 @@ columns:
 龙王	lywp	100
 龙娃	lyws	100
 陇川	lywt	100
+零一万物	lyww	100
 龙床	lywx	100
 另一些	lyx	100
 龙芯	lyxb	100
@@ -65294,6 +65308,7 @@ columns:
 绵薄之力	mbfl	100
 民愤	mbfn	100
 摸不着头脑	mbfni	100
+面壁智能	mbfnv	100
 明摆着	mbfo	100
 民房	mbfp	100
 民风	mbfr	100
@@ -69561,6 +69576,7 @@ columns:
 没有关系	mygx	100
 每一个字	mygz	100
 没有工作	mygza	100
+麦芽糊精	myhj	100
 没意见	myj	100
 马英九	myja	100
 眉宇间	myjao	100
@@ -69573,6 +69589,7 @@ columns:
 没有机会	myjh	100
 每一句话	myjhu	100
 民营经济	myjj	100
+美宜佳	myjo	100
 满园春色	myjs	100
 没有尽头	myjt	100
 每一件	myju	100
@@ -73129,6 +73146,7 @@ columns:
 恼火	nzhl	100
 闹荒	nzhm	100
 恼恨	nzhn	100
+脑花	nzhq	100
 闹荒	nzhx	100
 闹哄	nzhy	100
 你自己	nzj	100
@@ -74088,6 +74106,7 @@ columns:
 瓶子	pgzk	100
 平作	pgzl	100
 萍踪	pgzy	100
+萍藻	pgzz	100
 排行榜	phb	100
 排摈	phbb	100
 派别	phbd	100
@@ -88297,6 +88316,7 @@ columns:
 缩略	sllh	100
 所录	sllj	100
 所里	sllk	100
+蓑笠	sllki	100
 所立	sllku	100
 斯里兰卡	sllkv	100
 所虑	slll	100
@@ -91676,6 +91696,7 @@ columns:
 太用	thyy	100
 太要	thyz	100
 偷汉子	thz	100
+抬走	thzd	100
 太宰	thzh	100
 太祖	thzj	100
 太子	thzk	100
@@ -97274,6 +97295,8 @@ columns:
 池水	wkeba	100
 赤水	wkebv	100
 赤手	wked	100
+持守	wkedi	100
+吃手	wkedo	100
 吃蛇	wkee	100
 齿数	wkej	100
 吃书	wkejo	100
@@ -105933,6 +105956,7 @@ columns:
 西天	xktm	100
 喜糖	xktp	100
 心宽体胖	xktpo	100
+西塘	xktpv	100
 西塔	xkts	100
 系统	xkty	100
 西绦	xktz	100
@@ -109436,6 +109460,7 @@ columns:
 胸痹	xybk	100
 形影不离	xybl	100
 雄辩	xybm	100
+熊本	xybn	100
 雄霸	xybs	100
 血液病	xybu	100
 胸背	xybw	100
@@ -111344,9 +111369,9 @@ columns:
 忧郁	ydylo	100
 犹豫	ydylu	100
 鱿鱼	ydyluu	100
-有余	ydylv	100
+有雨	ydylv	100
+有余	ydylvi	100
 一带一路	ydylvv	100
-有雨	ydylvv	101
 悠扬	ydyp	100
 移动硬盘	ydypu	100
 有氧	ydypv	100
@@ -112470,6 +112495,7 @@ columns:
 也发现了	yfxla	100
 沿线	yfxm	100
 眼线	yfxmi	100
+月之暗面	yfxmu	100
 艳羡	yfxmv	100
 研修	yfxq	100
 依法行政	yfxqi	100
