@@ -2,7 +2,7 @@
 # encoding: utf-8
 ---
 name: keytao.phrase
-version: "2026.09.09"
+version: "2026.09.16"
 sort: by_weight
 columns:
   - text
@@ -6737,6 +6737,7 @@ columns:
 八字没一撇	bzmp	100
 保盟	bzmr	100
 宝马	bzms	100
+宝妈	bzmso	100
 胞妹	bzmw	100
 不怎么样	bzmy	100
 豹猫	bzmz	100
@@ -8171,6 +8172,7 @@ columns:
 词霸	ckbs	100
 糍粑	ckbso	100
 慈悲	ckbw	100
+瓷杯	ckbwo	100
 磁暴	ckbz	100
 刺参	ckcf	100
 此次	ckck	100
@@ -10106,7 +10108,8 @@ columns:
 调改	dcgh	100
 吊古	dcgj	100
 掉光	dcgm	100
-掉岗	dcgp	100
+吊杠	dcgp	100
+掉岗	dcgpi	100
 吊挂	dcgq	100
 调关	dcgt	100
 调给	dcgw	100
@@ -18559,6 +18562,7 @@ columns:
 是福是祸	efeh	100
 实质伤害	efeho	100
 山楂树	efei	100
+师范生	efeii	100
 杉树	efej	100
 闪失	efek	100
 山石	efeki	100
@@ -19280,7 +19284,8 @@ columns:
 数表	ejbco	100
 竖版	ejbf	100
 数百	ejbh	100
-蛇精病	ejbi	100
+手抄报	ejbi	100
+蛇精病	ejbio	100
 恕不	ejbj	100
 殊不	ejbjv	100
 数笔	ejbk	100
@@ -32744,6 +32749,7 @@ columns:
 广播操	gbco	100
 嘎巴菜	gbcoa	100
 归藏	gbcp	100
+庋藏	gbcpo	100
 干坝村	gbcv	100
 归槽	gbcz	100
 怪不得	gbd	100
@@ -37047,6 +37053,7 @@ columns:
 官渡	gtdj	100
 官邸	gtdk	100
 观点	gtdm	100
+关店	gtdmo	100
 关灯	gtdr	100
 管段	gtdt	100
 官墩	gtdw	100
@@ -41288,6 +41295,7 @@ columns:
 胡撞	hjfm	100
 互粉	hjfn	100
 花甲之年	hjfni	100
+户晨风	hjfo	100
 互访	hjfp	100
 胡抓	hjfq	100
 护封	hjfr	100
@@ -44908,6 +44916,7 @@ columns:
 还以为	hyw	100
 活阎王	hywa	100
 红绸	hywd	100
+荒淫无度	hywdi	100
 红丸	hywf	100
 红外	hywh	100
 洪武	hywj	100
@@ -45467,6 +45476,7 @@ columns:
 仅对	jbdb	100
 金雕	jbdc	100
 筋斗	jbdd	100
+金豆	jbddi	100
 仅得	jbde	100
 金的	jbdei	100
 紧的	jbdeiu	100
@@ -48842,6 +48852,7 @@ columns:
 拆庙	jhmci	100
 绝灭	jhmd	100
 绝命	jhmg	100
+决明	jhmgo	100
 拆卖	jhmh	100
 掘墓	jhmj	100
 柴木	jhmji	100
@@ -59745,6 +59756,7 @@ columns:
 漏灰	ldhb	100
 列侯	ldhd	100
 漏壶	ldhj	100
+劣弧	ldhji	100
 猎户	ldhju	100
 烈火	ldhl	100
 劣货	ldhli	100
@@ -83085,6 +83097,7 @@ columns:
 准的	qwdko	100
 准点	qwdm	100
 奇耻大辱	qwdr	100
+朝闻道	qwdu	100
 朝闻道，夕死可矣	qwdy	100
 群岛	qwdz	100
 千瓦时	qwe	100
@@ -87949,6 +87962,7 @@ columns:
 私事	skeku	100
 死尸	skekv	100
 死侍	skekvi	100
+死士	skekvv	100
 斯说	skel	100
 四双	skem	100
 死神	sken	100
@@ -93702,7 +93716,8 @@ columns:
 沓至	tsfk	100
 塌方	tsfp	100
 他方	tsfpi	100
-塔防	tsfpv	100
+塌房	tsfpv	100
+塔防	tsfpva	100
 塔丰	tsfr	100
 挞伐	tsfs	100
 替死鬼	tsg	100
@@ -97320,6 +97335,7 @@ columns:
 无重	wjwy	100
 无冲	wjwyv	100
 五角星	wjx	100
+沃集鲜	wjxa	100
 无心	wjxb	100
 无效	wjxc	100
 无邪	wjxd	100
@@ -108082,6 +108098,7 @@ columns:
 下卡	xsks	100
 下款	xskt	100
 下框	xskx	100
+夕死可矣	xsky	100
 下三滥	xsl	100
 下临	xslb	100
 瞎聊	xslc	100
@@ -111120,6 +111137,7 @@ columns:
 呦呵	ydheo	100
 有害	ydhh	100
 游湖	ydhj	100
+优弧	ydhji	100
 诱惑	ydhl	100
 有货	ydhlv	100
 又黄	ydhm	100
@@ -111985,6 +112003,7 @@ columns:
 有谁能	yen	100
 野鸟	yenc	100
 也难	yenf	100
+易守难攻	yeng	100
 夜奶	yenh	100
 椰奶	yenhv	100
 饮食男女	yenn	100
@@ -121758,7 +121777,8 @@ columns:
 砸钱	zsqm	100
 咋整	zsqr	100
 杂糅	zsrd	100
-杂然	zsrf	100
+扎染	zsrf	100
+杂然	zsrfu	100
 砸人	zsrn	100
 在搜索	zss	100
 砸碎	zssb	100
