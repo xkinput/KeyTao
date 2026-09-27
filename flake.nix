@@ -112,7 +112,7 @@
 
             rimeDataDir = mkOption {
               type = types.str;
-              default = if pkgs.stdenv.isDarwin then "Library/Rime" else ".local/share/fcitx5/rime";
+              default = if pkgs.stdenv.hostPlatform.isDarwin then "Library/Rime" else ".local/share/fcitx5/rime";
               description = ''
                 Rime user data directory relative to home.
                 Default values:
