@@ -2,7 +2,7 @@
 # encoding: utf-8
 ---
 name: keytao.phrase
-version: "2026.09.27"
+version: "2026.09.30"
 sort: by_weight
 columns:
   - text
@@ -2314,6 +2314,7 @@ columns:
 不欢而散	bhxsv	100
 败选	bhxt	100
 百项	bhxx	100
+白象	bhxxu	100
 白熊	bhxy	100
 不会有	bhy	100
 编后语	bhya	100
@@ -11676,7 +11677,8 @@ columns:
 定值	dgfko	100
 订制	dgfkou	100
 顶撞	dgfm	100
-定桩	dgfmo	100
+定妆	dgfmo	100
+定桩	dgfmov	100
 订份	dgfn	100
 订房	dgfp	100
 顶峰	dgfr	100
@@ -11684,7 +11686,8 @@ columns:
 顶阀	dgfs	100
 鼎沸	dgfw	100
 顶撞	dgfx	100
-定桩	dgfxo	100
+定妆	dgfxo	100
+定桩	dgfxov	100
 顶踵	dgfy	100
 丁种	dgfyv	100
 顶呱呱	dgg	100
@@ -19295,6 +19298,7 @@ columns:
 鼠标	ejbc	100
 数表	ejbco	100
 竖版	ejbf	100
+薯饼	ejbg	100
 数百	ejbh	100
 手抄报	ejbi	100
 蛇精病	ejbio	100
@@ -29850,6 +29854,7 @@ columns:
 冯某	frmd	100
 丰满	frmf	100
 奉命	frmg	100
+蜂鸣	frmgi	100
 枫木	frmj	100
 蜂蜜	frmk	100
 风靡	frmku	100
@@ -30387,6 +30392,7 @@ columns:
 发证	fsqr	100
 发卡	fsqs	100
 法权	fsqt	100
+发圈	fsqta	100
 追随者	fsqu	100
 副所长	fsqv	100
 发强	fsqx	100
@@ -31623,6 +31629,7 @@ columns:
 抚心自问	fxzw	100
 庄宗	fxzy	100
 装造	fxzz	100
+妆造	fxzzo	100
 专业版	fyb	100
 钟表	fybc	100
 中标	fybci	100
@@ -37228,7 +37235,8 @@ columns:
 惯了	gtleo	100
 灌篮	gtlf	100
 掼篮	gtlfi	100
-关岭	gtlg	100
+关陵	gtlg	100
+关岭	gtlgo	100
 官禄	gtlj	100
 管路	gtlju	100
 管理	gtlk	100
@@ -38920,6 +38928,7 @@ columns:
 荟萃	hbcb	100
 很不错的	hbcd	100
 绘测	hbce	100
+灰测	hbcev	100
 会餐	hbcf	100
 烩菜	hbch	100
 会此	hbck	100
@@ -45900,6 +45909,7 @@ columns:
 紧迫	jbpl	100
 禁片	jbpm	100
 近旁	jbpp	100
+长坂坡	jbpu	100
 金佩	jbpw	100
 捷报频传	jbpwi	100
 浸泡	jbpz	100
@@ -46663,6 +46673,7 @@ columns:
 交租	jczj	100
 饺子	jczk	100
 交子	jczko	100
+嚼子	jczkoa	100
 教资	jczku	100
 轿子	jczkv	100
 叫做	jczl	100
@@ -54554,6 +54565,7 @@ columns:
 唇印	jwybv	100
 春游	jwyd	100
 均由	jwydv	100
+唇釉	jwydvu	100
 均有	jwydvv	100
 春夜	jwye	100
 骏业	jwyea	100
@@ -58511,6 +58523,7 @@ columns:
 开胃酒	kwjv	100
 困窘	kwjy	100
 开窗口	kwk	100
+快问快答	kwkd	100
 看网课	kwki	100
 困苦	kwkj	100
 困困	kwkw	100
@@ -59034,6 +59047,7 @@ columns:
 空听	kytg	100
 孔图	kytj	100
 空踢	kytk	100
+控糖	kytp	100
 空桶	kyty	100
 崆峒	kytyi	100
 恐同	kytyv	100
@@ -65388,6 +65402,7 @@ columns:
 老铁	lztd	100
 烙铁	lztdo	100
 老头	lztdu	100
+老坛	lztf	100
 老听	lztg	100
 乐亭	lztgu	100
 老太	lzth	100
@@ -65699,6 +65714,7 @@ columns:
 谋财害命	mchm	100
 描画	mchq	100
 描红	mchy	100
+妙脆角	mcj	100
 描金	mcjb	100
 秒进	mcjbu	100
 庙街	mcjd	100
@@ -65914,6 +65930,7 @@ columns:
 某庭	mdtg	100
 某天	mdtm	100
 灭天	mdtmv	100
+马黛茶	mdwa	100
 某物	mdwj	100
 蔑污	mdwji	100
 灭蚊	mdwn	100
@@ -67203,6 +67220,7 @@ columns:
 木俑	mjyy	100
 马基雅维利主义	mjyya	100
 摩羯座	mjz	100
+马嚼子	mjza	100
 沐足	mjzj	100
 母子	mjzk	100
 募资	mjzki	100
@@ -69177,6 +69195,7 @@ columns:
 每部	mwbj	100
 漫无边际	mwbja	100
 每笔	mwbk	100
+眉笔	mwbka	100
 冥顽不灵	mwbl	100
 没变	mwbm	100
 霉变	mwbmv	100
@@ -75587,6 +75606,7 @@ columns:
 胖人	pprnu	100
 飘飘洒洒	ppss	100
 泡泡堂	ppt	100
+泡泡糖	ppta	100
 旁听	pptg	100
 滂沱	pptl	100
 普普通通	pptt	100
@@ -92970,6 +92990,7 @@ columns:
 田村	tmcw	100
 他们的	tmd	100
 她们的	tmda	100
+田调	tmdc	100
 天碟	tmdd	100
 天的	tmde	100
 恬淡	tmdf	100
@@ -101288,6 +101309,7 @@ columns:
 重送	wysy	100
 五月天	wyt	100
 冲退	wytb	100
+冲调	wytc	100
 重贴	wytd	100
 冲头	wytdo	100
 重弹	wytf	100
@@ -101974,6 +101996,7 @@ columns:
 心魂	xbhwov	100
 心慌	xbhx	100
 信号	xbhz	100
+新号	xbhzo	100
 矮半截	xbj	100
 新晋	xbjb	100
 薪金	xbjbi	100
@@ -103293,6 +103316,7 @@ columns:
 藕片	xdpmi	100
 斜碰	xdpr	100
 携带者	xdq	100
+欧芹	xdqb	100
 斜桥	xdqc	100
 斜切	xdqd	100
 写着	xdqe	100
@@ -109237,6 +109261,7 @@ columns:
 熬心费力	xxflvo	100
 相撞	xxfm	100
 香粉	xxfn	100
+香氛	xxfnu	100
 学习者	xxfo	100
 相仿	xxfp	100
 按需分配	xxfpi	100
@@ -109820,6 +109845,7 @@ columns:
 胸背	xybw	100
 想也不想	xybx	100
 凶暴	xybz	100
+胸包	xybzu	100
 下一次	xyc	100
 凶残	xycf	100
 雄才	xych	100
@@ -115865,6 +115891,7 @@ columns:
 雅鲁藏布江	ylzjv	100
 余字	ylzk	100
 鱼子	ylzku	100
+鱼籽	ylzkuo	100
 余座	ylzl	100
 一路走来	ylzlv	100
 预增	ylzr	100
