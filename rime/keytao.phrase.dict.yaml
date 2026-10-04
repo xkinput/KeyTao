@@ -2,7 +2,7 @@
 # encoding: utf-8
 ---
 name: keytao.phrase
-version: "2026.09.30"
+version: "2026.10.04"
 sort: by_weight
 columns:
   - text
@@ -8304,6 +8304,7 @@ columns:
 词块	ckkg	100
 词库	ckkj	100
 磁卡	ckks	100
+次卡	ckkso	100
 此款	ckkt	100
 此空	ckky	100
 词库里	ckl	100
@@ -16595,6 +16596,7 @@ columns:
 道标	dzbco	100
 道别	dzbd	100
 盗版	dzbf	100
+倒班	dzbfi	100
 刀柄	dzbg	100
 电子表格	dzbgi	100
 道白	dzbh	100
@@ -16636,6 +16638,7 @@ columns:
 倒地	dzdki	100
 到点	dzdm	100
 导电	dzdma	100
+到店	dzdmv	100
 多灾多难	dzdn	100
 倒挡	dzdp	100
 叨登	dzdr	100
@@ -24283,6 +24286,7 @@ columns:
 少超	ezwz	100
 上自习	ezx	100
 捎信	ezxb	100
+烧心	ezxbo	100
 少校	ezxc	100
 少些	ezxd	100
 烧鹅	ezxe	100
@@ -31636,6 +31640,7 @@ columns:
 种别	fybd	100
 这也不是	fybe	100
 中办	fybf	100
+中班	fybfi	100
 这一部分	fybfo	100
 重要标志	fybfu	100
 重病	fybg	100
@@ -33267,6 +33272,7 @@ columns:
 勾挂	gdgq	100
 高度关注	gdgqo	100
 狗官	gdgt	100
+公对公	gdgu	100
 够高	gdgz	100
 该多好	gdh	100
 勾绘	gdhb	100
@@ -35362,6 +35368,7 @@ columns:
 公开化	gkh	100
 高科技	gkj	100
 公开场合	gkjh	100
+光刻机	gkji	100
 光可鉴人	gkjr	100
 古柯碱	gkju	100
 公开课	gkk	100
@@ -46549,6 +46556,7 @@ columns:
 教唆	jcsl	100
 浇洒	jcss	100
 较松	jcsy	100
+九层塔	jct	100
 叫退	jctb	100
 教条	jctc	100
 教头	jctd	100
@@ -52449,6 +52457,7 @@ columns:
 常走	jpzd	100
 常在	jpzh	100
 长足	jpzj	100
+长租	jpzju	100
 肠子	jpzk	100
 场子	jpzkv	100
 厂子	jpzkva	100
@@ -59742,6 +59751,7 @@ columns:
 领导地位	lddwi	100
 垄断地位	lddwv	100
 漏洞	lddy	100
+楼栋	lddyv	100
 楼道	lddz	100
 列岛	lddzv	100
 两点水	lde	100
@@ -65377,6 +65387,7 @@ columns:
 捞取	lzqli	100
 老去	lzqlu	100
 捞钱	lzqm	100
+老钱	lzqmu	100
 落枕	lzqn	100
 老张	lzqp	100
 老仇	lzqq	100
@@ -68971,6 +68982,7 @@ columns:
 马琳	mslb	100
 马料	mslc	100
 马列	msld	100
+吗喽	msldo	100
 骂了	msle	100
 马勒	mslea	100
 麻了	msleo	100
@@ -70580,6 +70592,7 @@ columns:
 你知道吗	nfdmi	100
 难当	nfdp	100
 难打	nfds	100
+男大	nfdsi	100
 南大	nfdsu	100
 南端	nfdt	100
 南方的	nfdu	100
@@ -71597,6 +71610,7 @@ columns:
 女单	nldf	100
 女弟	nldk	100
 女店	nldm	100
+女大	nlds	100
 年龄段	nldu	100
 诺顿	nldw	100
 挪动	nldy	100
@@ -71907,6 +71921,7 @@ columns:
 农民家庭	nmjt	100
 年均	nmjw	100
 年春	nmjwu	100
+黏菌	nmjwui	100
 年刊	nmkf	100
 年卡	nmks	100
 你们俩	nml	100
@@ -74429,6 +74444,7 @@ columns:
 排患	phht	100
 排洪	phhy	100
 牌号	phhz	100
+排号	phhzi	100
 平滑肌	phj	100
 排解	phjd	100
 派车	phje	100
@@ -90380,6 +90396,7 @@ columns:
 贴上	tdepa	100
 头刷	tdeq	100
 偷生	tder	100
+头绳	tdero	100
 头纱	tdes	100
 铁砂	tdesi	100
 铁栓	tdet	100
@@ -119379,6 +119396,7 @@ columns:
 最大值	zdf	100
 走着	zdfe	100
 奏折	zdfev	100
+走之	zdfk	100
 走访	zdfp	100
 诹访	zdfpo	100
 走风	zdfr	100
@@ -119766,6 +119784,7 @@ columns:
 组织能力	zfnla	100
 再分配	zfp	100
 造反派	zfpu	100
+走之旁	zfpv	100
 赞佩	zfpw	100
 总方针	zfq	100
 组织者	zfqa	100
@@ -122593,6 +122612,7 @@ columns:
 早熟	zzej	100
 枣树	zzejv	100
 早市	zzek	100
+藻饰	zzeki	100
 早逝	zzeko	100
 造势	zzeku	100
 早说	zzel	100
