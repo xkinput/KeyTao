@@ -2,7 +2,7 @@
 # encoding: utf-8
 ---
 name: keytao.phrase
-version: "2026.11.04"
+version: "2026.11.08"
 sort: by_weight
 columns:
   - text
@@ -680,6 +680,7 @@ columns:
 北斗星	bdx	100
 别信	bdxb	100
 别笑	bdxc	100
+憋笑	bdxco	100
 别写	bdxd	100
 百度学术	bdxe	100
 别按	bdxf	100
@@ -817,6 +818,7 @@ columns:
 保时捷	beji	100
 本世纪初	bejj	100
 本世纪末	bejm	100
+闭式解	bejo	100
 不睡觉	bejv	100
 本世纪	bejvv	100
 备受煎熬	bejx	100
@@ -1204,6 +1206,7 @@ columns:
 班门	bfmn	100
 斑马	bfms	100
 半马	bfmso	100
+半麻	bfmsoo	100
 白富美	bfmu	100
 搬煤	bfmw	100
 半毛	bfmz	100
@@ -2730,6 +2733,7 @@ columns:
 不成	bjjr	100
 不加	bjjs	100
 补加	bjjso	100
+补假	bjjsoi	100
 不佳	bjjsv	100
 不假	bjjsvi	100
 不倦	bjjt	100
@@ -2763,6 +2767,7 @@ columns:
 补卡	bjkso	100
 不宽	bjkt	100
 补款	bjkto	100
+不困	bjkw	100
 不狂	bjkx	100
 北京科技大学	bjkxi	100
 不仅可以	bjky	100
@@ -3289,6 +3294,7 @@ columns:
 必读	bkdj	100
 毙敌	bkdk	100
 笔电	bkdm	100
+必点	bkdmo	100
 必当	bkdp	100
 壁灯	bkdr	100
 比大	bkds	100
@@ -3315,7 +3321,8 @@ columns:
 笔数	bkejuo	100
 逼数	bkejv	100
 鄙视	bkek	100
-必是	bkeko	100
+闭式	bkeko	100
+必是	bkekoo	100
 笔试	bkeku	100
 鼻屎	bkekua	100
 彼时	bkekuo	100
@@ -4799,6 +4806,7 @@ columns:
 本系	bnxkv	100
 本溪	bnxkva	100
 本县	bnxm	100
+奔现	bnxmv	100
 本想	bnxx	100
 奔向	bnxxv	100
 本乡	bnxxva	100
@@ -6114,6 +6122,7 @@ columns:
 补充液	bwy	100
 背阴	bwyb	100
 备有	bwyd	100
+北邮	bwydi	100
 北野	bwye	100
 百无一是	bwyev	100
 不吃羊肉空惹一身膻	bwyevo	100
@@ -6614,6 +6623,7 @@ columns:
 报纸	bzfk	100
 保值	bzfki	100
 保质	bzfkiu	100
+爆汁	bzfko	100
 包纸	bzfku	100
 薄酌	bzfl	100
 包装	bzfm	100
@@ -6731,6 +6741,7 @@ columns:
 爆扣	bzkd	100
 薄壳	bzke	100
 剥壳	bzkea	100
+报课	bzkei	100
 报刊	bzkf	100
 包块	bzkg	100
 宝库	bzkj	100
@@ -7044,6 +7055,7 @@ columns:
 催税	cbeb	100
 催收	cbed	100
 催熟	cbej	100
+脆柿	cbek	100
 脆爽	cbem	100
 催生	cber	100
 脆爽	cbex	100
@@ -8967,6 +8979,7 @@ columns:
 层报	crbz	100
 层次	crck	100
 层层	crcr	100
+蹭蹭	crcro	100
 曾从	crcy	100
 蹭热度	crd	100
 曾对	crdb	100
@@ -9194,6 +9207,7 @@ columns:
 蹭吃蹭喝	cwcho	100
 存词	cwck	100
 村村	cwcw	100
+蹲蹲	cwcwo	100
 寸寸	cwcwv	100
 村从	cwcy	100
 寸草	cwcz	100
@@ -9353,12 +9367,14 @@ columns:
 次新股	cxg	100
 残奥会	cxh	100
 从小就	cxj	100
+雌二醇	cxji	100
 促膝长谈	cxjt	100
 菜虚鲲	cxk	100
 蔡徐坤	cxki	100
 从心里	cxl	100
 此项目	cxm	100
 次显码表	cxmb	100
+脆香米	cxmu	100
 藏形匿影	cxny	100
 促销品	cxp	100
 曹雪芹	cxq	100
@@ -9948,6 +9964,8 @@ columns:
 对立	dblk	100
 队里	dblka	100
 对联	dblm	100
+怼脸	dblma	100
+对练	dblmaa	100
 对流	dblq	100
 对啦	dbls	100
 等比例	dblu	100
@@ -10007,6 +10025,7 @@ columns:
 东半球	dbqvo	100
 对准	dbqw	100
 对群	dbqwa	100
+对枪	dbqx	100
 对照	dbqz	100
 倒不如	dbr	100
 倒不如说	dbre	100
@@ -11558,6 +11577,7 @@ columns:
 德智体	dft	100
 屌炸天	dfta	100
 单腿	dftb	100
+单推	dftbo	100
 单挑	dftc	100
 单条	dftco	100
 弹头	dftd	100
@@ -11567,6 +11587,7 @@ columns:
 单图	dftj	100
 单体	dftk	100
 丹田	dftm	100
+德智体群美	dftmu	100
 吊炸天	dfto	100
 单糖	dftp	100
 蛋疼	dftr	100
@@ -12784,8 +12805,10 @@ columns:
 笃哇	djwsu	100
 渡船	djwt	100
 读为	djww	100
-都尉	djwwu	100
+独卫	djwwu	100
+都尉	djwwua	100
 杜威	djwwv	100
+毒唯	djwwvo	100
 独创	djwx	100
 毒虫	djwy	100
 蠹虫	djwyv	100
@@ -12798,6 +12821,7 @@ columns:
 毒枭	djxc	100
 读写	djxd	100
 毒蛾	djxe	100
+渡厄	djxea	100
 毒性	djxg	100
 独行	djxgu	100
 待价而沽	djxgui	100
@@ -13088,8 +13112,9 @@ columns:
 抵抗	dkkp	100
 地跨	dkkq	100
 地坑	dkkr	100
-迪卡	dkks	100
+低卡	dkks	100
 涤卡	dkksa	100
+迪卡	dkksi	100
 底卡	dkkso	100
 底宽	dkkt	100
 地矿	dkkx	100
@@ -13388,7 +13413,8 @@ columns:
 多端	dldtu	100
 顿了顿	dldv	100
 独来独往	dldw	100
-多栋	dldy	100
+多动	dldy	100
+多栋	dldyu	100
 多到	dldz	100
 躲到	dldzu	100
 大理石	dle	100
@@ -13803,6 +13829,7 @@ columns:
 垫底	dmdki	100
 点多	dmdl	100
 点点	dmdm	100
+垫垫	dmdmi	100
 典当	dmdp	100
 电灯	dmdr	100
 点灯	dmdri	100
@@ -14101,8 +14128,9 @@ columns:
 殿下	dmxs	100
 点啊	dmxsi	100
 点选	dmxt	100
-动脉血	dmxv	100
+大模型	dmxv	100
 大冒险	dmxvi	100
+动脉血	dmxvu	100
 电讯	dmxw	100
 都没有	dmy	100
 电音	dmyb	100
@@ -15970,6 +15998,7 @@ columns:
 第五个	dwg	100
 盾构	dwgd	100
 顿感	dwgf	100
+钝感	dwgfi	100
 墩高	dwgz	100
 党委会	dwh	100
 敦厚	dwhd	100
@@ -16595,6 +16624,7 @@ columns:
 钓鱼台	dyti	100
 动图	dytj	100
 冻土	dytjo	100
+第一桶金	dytju	100
 胴体	dytk	100
 冬天	dytm	100
 洞天	dytma	100
@@ -17714,7 +17744,7 @@ columns:
 授时	edekio	100
 手饰	edekiu	100
 首饰	edeko	100
-首诗	edekoo	100
+守时	edekoo	100
 瘦身	eden	100
 受审	edenu	100
 说的是	edeo	100
@@ -20430,6 +20460,7 @@ columns:
 石斛	ekhjv	100
 识货	ekhl	100
 失火	ekhlu	100
+失活	ekhlua	100
 拾荒	ekhm	100
 是很	ekhn	100
 世行	ekhp	100
@@ -20726,8 +20757,9 @@ columns:
 石器	ekqkvo	100
 失去	ekql	100
 驶去	ekqla	100
-拭去	ekqli	100
+拾取	ekqli	100
 逝去	ekqliv	100
+拭去	ekqliv	101
 市区	ekqlo	100
 识曲	ekqloi	100
 识趣	ekqlov	100
@@ -20740,6 +20772,7 @@ columns:
 失真	ekqnu	100
 市长	ekqp	100
 师长	ekqpi	100
+什长	ekqpiu	100
 视障	ekqpo	100
 十丈	ekqpu	100
 是求	ekqq	100
@@ -21404,6 +21437,7 @@ columns:
 双击	emjk	100
 手忙脚乱	emjl	100
 孀居	emjla	100
+爽剧	emjlv	100
 双肩	emjm	100
 双键	emjma	100
 霜晨	emjn	100
@@ -21412,6 +21446,7 @@ columns:
 双颊	emjs	100
 双唇	emjw	100
 双桨	emjx	100
+霜降	emjxv	100
 爽口	emkd	100
 爽快	emkg	100
 双开	emkh	100
@@ -22639,6 +22674,7 @@ columns:
 世青赛	eqsv	100
 市政厅	eqt	100
 刷帖	eqtd	100
+刷头	eqtda	100
 身强体壮	eqtf	100
 刷图	eqtj	100
 刷题	eqtk	100
@@ -22899,6 +22935,7 @@ columns:
 深入落实	erlea	100
 省了	erlei	100
 生灵	erlg	100
+圣灵	erlga	100
 省略	erlh	100
 生来	erlhu	100
 生路	erlj	100
@@ -22912,6 +22949,7 @@ columns:
 胜率	erll	100
 盛殓	erlm	100
 声浪	erlp	100
+省流	erlq	100
 生冷	erlr	100
 声泪	erlw	100
 生日礼物	erlwu	100
@@ -22956,6 +22994,7 @@ columns:
 升平	erpgu	100
 圣普	erpj	100
 生僻	erpk	100
+生啤	erpku	100
 声旁	erpp	100
 势如破竹	erpq	100
 生怕	erps	100
@@ -24131,6 +24170,7 @@ columns:
 收益率	eylao	100
 剩余劳动	eyld	100
 使用率	eyli	100
+上一轮	eyliv	100
 市盈率	eylo	100
 石芽岭	eylv	100
 声韵母	eym	100
@@ -24143,6 +24183,7 @@ columns:
 双音频	eypa	100
 上眼皮	eypi	100
 摄影棚	eypio	100
+上一排	eypiv	100
 使用频率	eypl	100
 实验品	eypo	100
 试验品	eypoa	100
@@ -24211,6 +24252,7 @@ columns:
 神一样的	eyydo	100
 术业有专攻	eyyg	100
 商业银行	eyyh	100
+食用油	eyyi	100
 事业有成	eyyj	100
 山雨欲来	eyyl	100
 山雨欲来风满楼	eyyli	100
@@ -24581,6 +24623,7 @@ columns:
 追过	fbgl	100
 追光	fbgm	100
 追根	fbgn	100
+追更	fbgr	100
 转不过弯	fbgw	100
 追光	fbgx	100
 追高	fbgz	100
@@ -24960,6 +25003,7 @@ columns:
 周年	fdnm	100
 周纳	fdns	100
 周内	fdnsu	100
+周内	fdnw	100
 反动派	fdp	100
 皱皮	fdpk	100
 风度翩翩	fdpp	100
@@ -26552,6 +26596,7 @@ columns:
 摘译	fhyk	100
 防患于未然	fhyr	100
 宅院	fhyt	100
+周黑鸭	fhyu	100
 摘要	fhyz	100
 这孩子	fhz	100
 摘走	fhzd	100
@@ -27876,6 +27921,7 @@ columns:
 侄女	fknl	100
 织女	fknla	100
 之女	fknlo	100
+直女	fknlu	100
 之年	fknm	100
 执念	fknmi	100
 之念	fknmo	100
@@ -29202,6 +29248,7 @@ columns:
 纷腾	fntr	100
 纷沓	fnts	100
 分团	fntt	100
+智能体	fntu	100
 粉臀	fntw	100
 粪桶	fnty	100
 分桃	fntz	100
@@ -30246,6 +30293,7 @@ columns:
 封嘴	frzb	100
 封在	frzh	100
 丰足	frzj	100
+风阻	frzju	100
 疯子	frzk	100
 风姿	frzku	100
 凤姿	frzkuo	100
@@ -30302,6 +30350,7 @@ columns:
 炸弹	fsdf	100
 发单	fsdfa	100
 罚单	fsdfi	100
+炸蛋	fsdfo	100
 法定	fsdg	100
 发呆	fsdh	100
 发带	fsdha	100
@@ -30625,6 +30674,7 @@ columns:
 发圈	fsqta	100
 追随者	fsqu	100
 副所长	fsqv	100
+炸群	fsqw	100
 发强	fsqx	100
 法强	fsqxa	100
 重色轻友	fsqy	100
@@ -32336,6 +32386,7 @@ columns:
 中铺	fypj	100
 种皮	fypk	100
 中篇	fypm	100
+这一排	fypo	100
 负一屏	fypu	100
 中配	fypw	100
 只言片语	fypy	100
@@ -32425,6 +32476,7 @@ columns:
 中坛	fytf	100
 风雨同舟	fytfu	100
 中听	fytg	100
+中庭	fytgi	100
 中台	fyth	100
 中央台	fyti	100
 菲亚特	fytiv	100
@@ -32938,6 +32990,7 @@ columns:
 复杂性	fzx	100
 招新	fzxb	100
 肇衅	fzxbo	100
+招笑	fzxc	100
 找些	fzxd	100
 兆欧	fzxdu	100
 放在心上	fzxe	100
@@ -33847,6 +33900,7 @@ columns:
 工时费	gef	100
 各州	gefd	100
 隔着	gefe	100
+搁这	gefei	100
 歌者	gefev	100
 搁置	gefk	100
 咯吱	gefko	100
@@ -34009,6 +34063,7 @@ columns:
 搞事情	geq	100
 割切	geqd	100
 隔着	geqe	100
+搁这	geqei	100
 歌者	geqev	100
 各占	geqf	100
 个展	geqfi	100
@@ -35585,6 +35640,7 @@ columns:
 故意	gjyk	100
 古一	gjyku	100
 古语	gjyl	100
+谷雨	gjylu	100
 宫颈炎	gjyo	100
 固阳	gjyp	100
 古雅	gjys	100
@@ -35987,6 +36043,7 @@ columns:
 粿条	gltco	100
 过头	gltd	100
 锅贴	gltdi	100
+国铁	gltdii	100
 管理体制	gltf	100
 过厅	gltg	100
 国泰	glth	100
@@ -36064,6 +36121,7 @@ columns:
 过意	glykv	100
 过于	glyl	100
 国语	glyli	100
+过誉	glylv	100
 过氧	glyp	100
 果园	glyt	100
 橄榄油	glyv	100
@@ -36951,6 +37009,7 @@ columns:
 狗仗人势	gqre	100
 挂入	gqrj	100
 寡人	gqrn	100
+挂人	gqrni	100
 瓜瓤	gqrp	100
 更轻松	gqs	100
 感情色彩	gqsc	100
@@ -37340,6 +37399,7 @@ columns:
 贯标	gtbc	100
 官办	gtbf	100
 官兵	gtbg	100
+灌饼	gtbga	100
 官拜	gtbh	100
 关闭	gtbk	100
 官博	gtbl	100
@@ -38551,6 +38611,7 @@ columns:
 工票	gypc	100
 公判	gypf	100
 公平	gypg	100
+公屏	gypgu	100
 工牌	gyph	100
 公仆	gypj	100
 攻破	gypl	100
@@ -38715,6 +38776,7 @@ columns:
 归因于	gyyii	100
 工艺	gyyk	100
 公益	gyyku	100
+公义	gyykuo	100
 公寓	gyyl	100
 公域	gyylu	100
 供养	gyyp	100
@@ -38963,6 +39025,7 @@ columns:
 高亢	gzkp	100
 搞垮	gzkq	100
 高坑	gzkr	100
+高卡	gzks	100
 高宽	gzkt	100
 高旷	gzkx	100
 高空	gzky	100
@@ -39553,6 +39616,7 @@ columns:
 汇票	hbpc	100
 会平	hbpg	100
 会派	hbph	100
+挥拍	hbphi	100
 惠普	hbpj	100
 会胖	hbpp	100
 灰棚	hbpr	100
@@ -40046,6 +40110,7 @@ columns:
 后让	hdrp	100
 后伞	hdsf	100
 后嗣	hdsk	100
+后缩	hdsl	100
 猴狲	hdsw	100
 后送	hdsy	100
 好多天	hdt	100
@@ -40642,6 +40707,7 @@ columns:
 韩版	hfbf	100
 寒冰	hfbg	100
 旱冰	hfbgo	100
+华夫饼	hfbi	100
 豪放不羁	hfbj	100
 悔之不及	hfbjo	100
 寒痹	hfbk	100
@@ -41468,6 +41534,7 @@ columns:
 嗨淘	hhtzo	100
 化合物	hhw	100
 混合物	hhwa	100
+何患无辞	hhwc	100
 挥霍无度	hhwd	100
 海湾	hhwf	100
 海外	hhwh	100
@@ -41877,6 +41944,7 @@ columns:
 湖色	hjse	100
 互诉	hjsj	100
 护私	hjsk	100
+互撕	hjskv	100
 互锁	hjsl	100
 护丧	hjsp	100
 胡蒜	hjst	100
@@ -43312,6 +43380,7 @@ columns:
 划痕	hqhn	100
 华航	hqhp	100
 画画	hqhq	100
+花花	hqhqi	100
 哗哗	hqhqo	100
 划划	hqhqv	100
 花环	hqht	100
@@ -43820,6 +43889,7 @@ columns:
 横遭	hrzz	100
 贺岁版	hsb	100
 哈白	hsbh	100
+好死不如赖活	hsbha	100
 荤素不忌	hsbj	100
 哈勃	hsbl	100
 哈巴	hsbs	100
@@ -44140,6 +44210,7 @@ columns:
 还她	httsva	100
 环塔	httsvv	100
 环通	htty	100
+幻痛	httya	100
 糊涂虫	htw	100
 换车	htwe	100
 还车	htwev	100
@@ -44599,6 +44670,7 @@ columns:
 混养	hwyp	100
 浑圆	hwyt	100
 混为一谈	hwyta	100
+混元	hwytav	100
 画外音	hwyv	100
 毫无疑问	hwyw	100
 混匀	hwywa	100
@@ -45533,7 +45605,8 @@ columns:
 好狠	hzhn	100
 豪华	hzhq	100
 好话	hzhqa	100
-毫亨	hzhr	100
+豪横	hzhr	100
+毫亨	hzhro	100
 好换	hzht	100
 好黑	hzhw	100
 好黄	hzhx	100
@@ -46732,6 +46805,7 @@ columns:
 交际	jcjko	100
 交集	jcjkoi	100
 焦距	jcjl	100
+搅局	jcjli	100
 精彩绝伦	jcjlo	100
 教具	jcjlu	100
 矫健	jcjm	100
@@ -49400,6 +49474,7 @@ columns:
 厥阴	jhyb	100
 柴油	jhyd	100
 劫后余生	jhye	100
+蕨叶	jhyei	100
 拆阅	jhyh	100
 惊骇欲绝	jhyj	100
 决议	jhyk	100
@@ -49499,6 +49574,7 @@ columns:
 集成电路	jjdli	100
 触电	jjdm	100
 触点	jjdmu	100
+厨电	jjdmv	100
 炒鸡蛋	jjdo	100
 阶级斗争	jjdq	100
 长江大桥	jjdqu	100
@@ -51720,6 +51796,7 @@ columns:
 见过	jmgl	100
 建国	jmgla	100
 坚果	jmgli	100
+煎锅	jmglo	100
 见光	jmgm	100
 建光	jmgma	100
 剑光	jmgmi	100
@@ -51744,6 +51821,7 @@ columns:
 监护	jmhj	100
 间或	jmhl	100
 贱货	jmhla	100
+拣货	jmhli	100
 建行	jmhp	100
 简化	jmhq	100
 建华	jmhqa	100
@@ -52484,6 +52562,7 @@ columns:
 长达	jpds	100
 畅打	jpdsi	100
 长短	jpdt	100
+解剖刀	jpdu	100
 超频到	jpdv	100
 长东	jpdy	100
 尝到	jpdz	100
@@ -53210,6 +53289,7 @@ columns:
 承前启后	jqqha	100
 就缺	jqqho	100
 记者招待会	jqqhou	100
+见真章	jqqi	100
 救助	jqqj	100
 揪住	jqqji	100
 旧主	jqqjio	100
@@ -53317,6 +53397,7 @@ columns:
 长期性	jqx	100
 建筑学	jqxa	100
 揪心	jqxb	100
+酒心	jqxba	100
 九霄	jqxc	100
 绛珠仙草	jqxca	100
 旧鞋	jqxd	100
@@ -55773,6 +55854,7 @@ columns:
 超多	jzdl	100
 车载斗量	jzdlv	100
 超点	jzdm	100
+潮店	jzdma	100
 炒店	jzdmo	100
 超等	jzdr	100
 超大	jzds	100
@@ -55957,6 +56039,7 @@ columns:
 超盘	jzpf	100
 剑走偏锋	jzpfi	100
 超平	jzpg	100
+潮牌	jzph	100
 抄谱	jzpj	100
 超跑	jzpz	100
 夹杂着	jzq	100
@@ -56034,6 +56117,7 @@ columns:
 潮吹	jzwb	100
 超车	jzwe	100
 超玩	jzwf	100
+潮玩	jzwfa	100
 朝外	jzwh	100
 超误	jzwj	100
 朝我	jzwl	100
@@ -56657,6 +56741,7 @@ columns:
 科教	kejc	100
 可接	kejd	100
 可解	kejdv	100
+柯洁	kejdva	100
 客车	keje	100
 可产	kejf	100
 可敬	kejg	100
@@ -58635,6 +58720,7 @@ columns:
 垮塌	kqts	100
 扩展坞	kqw	100
 侉车	kqwe	100
+夸我	kqwl	100
 空气污染	kqwr	100
 夸许	kqxl	100
 跨县	kqxm	100
@@ -58786,6 +58872,7 @@ columns:
 卡贴	kstd	100
 快速通道	kstdo	100
 卡特	kste	100
+卡台	ksth	100
 卡托	kstl	100
 卡斯特罗	kstli	100
 客死他乡	kstx	100
@@ -59699,6 +59786,7 @@ columns:
 靠着	kzqe	100
 靠住	kzqj	100
 考期	kzqk	100
+烤漆	kzqko	100
 考取	kzql	100
 靠前	kzqm	100
 考前	kzqmu	100
@@ -60873,6 +60961,7 @@ columns:
 蓝鲸	lfjg	100
 立法机关	lfjgo	100
 拦击	lfjk	100
+烂剧	lfjl	100
 揽件	lfjm	100
 阑槛	lfjmo	100
 揽承	lfjr	100
@@ -61831,6 +61920,7 @@ columns:
 了解了	ljl	100
 绿林	ljlb	100
 炉料	ljlc	100
+胪列	ljld	100
 录了	ljle	100
 露了	ljlev	100
 庐陵	ljlg	100
@@ -63831,6 +63921,7 @@ columns:
 来去无踪	lqwzv	100
 李肇星	lqx	100
 留心	lqxb	100
+流心	lqxba	100
 留校	lqxc	100
 流泻	lqxd	100
 留俄	lqxe	100
@@ -63991,6 +64082,7 @@ columns:
 令人难以置信	lrnx	100
 冷盘	lrpf	100
 冷僻	lrpk	100
+冷泡	lrpz	100
 楞伽	lrqd	100
 愣着	lrqe	100
 冷战	lrqf	100
@@ -64591,6 +64683,7 @@ columns:
 论辩	lwbm	100
 泪奔	lwbn	100
 里外不是人	lwbr	100
+泪崩	lwbra	100
 累吧	lwbs	100
 羸惫	lwbw	100
 离愁别绪	lwbx	100
@@ -64694,6 +64787,7 @@ columns:
 轮滑	lwhqv	100
 论衡	lwhr	100
 轮换	lwht	100
+类魂	lwhw	100
 雷轰	lwhy	100
 另外还有	lwhyo	100
 论文集	lwj	100
@@ -65469,6 +65563,7 @@ columns:
 笼火	lyhl	100
 龙华	lyhq	100
 联谊会	lyhv	100
+李彦宏	lyhvo	100
 龙吟虎啸	lyhx	100
 辣眼睛	lyj	100
 录音机	lyja	100
@@ -65508,6 +65603,7 @@ columns:
 利益链	lylu	100
 聊一聊	lylv	100
 伶牙俐齿	lylw	100
+礼义廉耻	lylwo	100
 隆隆	lyly	100
 冷言冷语	lylyo	100
 另一面	lym	100
@@ -67137,6 +67233,7 @@ columns:
 明晚	mgwf	100
 名物	mgwj	100
 明吃	mgwk	100
+名创	mgwm	100
 明文	mgwn	100
 铭文	mgwni	100
 铭感五内	mgwniv	100
@@ -67147,6 +67244,7 @@ columns:
 明察	mgwso	100
 名茶	mgwsu	100
 名为	mgww	100
+名创	mgwx	100
 螟虫	mgwy	100
 明朝	mgwz	100
 没关系	mgx	100
@@ -67790,6 +67888,7 @@ columns:
 弥补	mkbj	100
 密布	mkbjo	100
 密闭	mkbk	100
+玛卡巴卡	mkbkv	100
 米博	mkbl	100
 马可波罗	mkbla	100
 米波	mkblo	100
@@ -68160,6 +68259,7 @@ columns:
 魔方	mlfpo	100
 磨坊	mlfpov	100
 魔法	mlfs	100
+末法	mlfsv	100
 梅兰芳	mlfv	100
 麦粒肿	mlfvo	100
 莫非	mlfw	100
@@ -68301,6 +68401,7 @@ columns:
 卖粮难	mln	100
 磨难	mlnf	100
 莫宁	mlng	100
+莫奈	mlnh	100
 模拟	mlnk	100
 魔女	mlnl	100
 末年	mlnm	100
@@ -68799,6 +68900,7 @@ columns:
 面源	mmytv	100
 面貌一新	mmyx	100
 免要	mmyz	100
+没面子	mmz	100
 免罪	mmzb	100
 面奏	mmzd	100
 免责	mmze	100
@@ -69479,6 +69581,7 @@ columns:
 马勺	msez	100
 民诉法	msf	100
 骂着	msfe	100
+马哲	msfea	100
 麻烦	msff	100
 马寨	msfh	100
 马夫	msfj	100
@@ -69612,6 +69715,7 @@ columns:
 玛沁	msqb	100
 马桥	msqc	100
 骂着	msqe	100
+马哲	msqea	100
 骂战	msqf	100
 孖展	msqfa	100
 麻雀	msqh	100
@@ -71152,6 +71256,7 @@ columns:
 南侧	nfce	100
 难测	nfcea	100
 男厕	nfcei	100
+南财	nfch	100
 难词	nfck	100
 南仓	nfcp	100
 南村	nfcw	100
@@ -71162,6 +71267,7 @@ columns:
 男的	nfdei	100
 男单	nfdf	100
 男丁	nfdg	100
+难顶	nfdga	100
 难度	nfdj	100
 男滴	nfdk	100
 难敌	nfdka	100
@@ -72384,11 +72490,12 @@ columns:
 年辈	nmbw	100
 纳米比亚	nmby	100
 年报	nmbz	100
-糯米糍	nmc	100
+你没错	nmc	100
 年菜	nmch	100
 年次	nmck	100
 念错	nmcl	100
 纳米材料	nmcla	100
+糯米糍	nmco	100
 那么多	nmd	100
 那么短	nmda	100
 那么地	nmdau	100
@@ -73326,6 +73433,7 @@ columns:
 暖壶	nthj	100
 暖和	nthl	100
 那条街	ntj	100
+暖场	ntjp	100
 暖酒	ntjq	100
 暖巢	ntjz	100
 娜塔莉	ntl	100
@@ -73602,6 +73710,7 @@ columns:
 哪月	nwyh	100
 内衣	nwyk	100
 内移	nwyki	100
+内娱	nwyl	100
 那样	nwyp	100
 宁为玉碎，不为瓦全	nwyq	100
 内压	nwys	100
@@ -73820,6 +73929,7 @@ columns:
 农垦	nykn	100
 农卡	nyks	100
 浓了	nyl	100
+那一轮	nyla	100
 农林	nylb	100
 浓烈	nyld	100
 弄了	nyle	100
@@ -73849,6 +73959,7 @@ columns:
 弄弄	nyny	100
 浓浓	nynya	100
 耐用品	nyp	100
+那一排	nypa	100
 农圃	nypj	100
 弄破	nypl	100
 脓疱	nypz	100
@@ -74144,6 +74255,7 @@ columns:
 贫富	pbfj	100
 平板支撑	pbfjv	100
 品质	pbfk	100
+拼桌	pbfl	100
 拼装	pbfm	100
 蓬勃发展	pbfq	100
 频发	pbfs	100
@@ -74903,6 +75015,7 @@ columns:
 凭证	pgqr	100
 平整	pgqrv	100
 凭券	pgqt	100
+平权	pgqtv	100
 爬过去	pgqu	100
 平准	pgqw	100
 平沼	pgqz	100
@@ -75797,6 +75910,7 @@ columns:
 破竹	plqj	100
 破弃	plqk	100
 破去	plql	100
+破千	plqm	100
 破阵	plqn	100
 迫真	plqnu	100
 破拳	plqt	100
@@ -75823,6 +75937,7 @@ columns:
 爬楼梯	pltu	100
 霹雳舞	plw	100
 破车	plwe	100
+破万	plwf	100
 泼污	plwj	100
 破五	plwjv	100
 破窗	plwm	100
@@ -79034,6 +79149,7 @@ columns:
 情急	qgjko	100
 全国纪录	qgjl	100
 清规戒律	qgjla	100
+青桔	qgjlv	100
 请柬	qgjm	100
 请见	qgjmo	100
 晴间	qgjmoo	100
@@ -79119,7 +79235,8 @@ columns:
 情满	qgmf	100
 秋高马肥	qgmfu	100
 清明	qgmg	100
-请卖	qgmh	100
+清迈	qgmh	100
+请卖	qgmho	100
 青木	qgmj	100
 倾慕	qgmji	100
 情迷	qgmk	100
@@ -80369,6 +80486,7 @@ columns:
 七寸	qkcw	100
 骑从	qkcy	100
 起草	qkcz	100
+蛴螬	qkczi	100
 折扣店	qkd	100
 起的	qkde	100
 旗开得胜	qkdeo	100
@@ -81052,6 +81170,7 @@ columns:
 躯干	qlgfu	100
 去改	qlgh	100
 曲骨	qlgj	100
+去骨	qlgjv	100
 去过	qlgl	100
 娶过	qlglv	100
 屈光	qlgm	100
@@ -83678,6 +83797,7 @@ columns:
 全盟	qtmr	100
 全码	qtms	100
 全马	qtmsi	100
+全麻	qtmsio	100
 去他妈	qtmv	100
 全美	qtmw	100
 前途命运	qtmy	100
@@ -84061,6 +84181,7 @@ columns:
 锲而不舍	qxbe	100
 枪版	qxbf	100
 强兵	qxbg	100
+枪兵	qxbgv	100
 抢白	qxbh	100
 全新办	qxbi	100
 墙布	qxbj	100
@@ -84286,6 +84407,7 @@ columns:
 前些年	qxn	100
 招贤纳士	qxne	100
 这些年来	qxnl	100
+切尔诺贝利	qxnlv	100
 这些年	qxno	100
 招降纳叛	qxnp	100
 强扭	qxnq	100
@@ -84628,6 +84750,7 @@ columns:
 这样那样	qyny	100
 强硬派	qyp	100
 穷破	qypl	100
+这一排	qypo	100
 这一切	qyq	100
 穷亲	qyqb	100
 确有其事	qyqe	100
@@ -85015,6 +85138,7 @@ columns:
 折子戏	qzx	100
 招新	qzxb	100
 肇衅	qzxbo	100
+招笑	qzxc	100
 找些	qzxd	100
 兆欧	qzxdu	100
 招安	qzxf	100
@@ -85387,6 +85511,7 @@ columns:
 人身攻击	regj	100
 热锅	regl	100
 热更	regr	100
+热梗	regri	100
 热管	regt	100
 入睡后	reh	100
 热河	rehe	100
@@ -85795,6 +85920,7 @@ columns:
 入仕	rjekui	100
 入世	rjekuv	100
 如霜	rjem	100
+乳霜	rjemu	100
 如神	rjen	100
 入神	rjenu	100
 如上	rjep	100
@@ -87027,6 +87153,7 @@ columns:
 热腾腾	rtt	100
 软投	rttd	100
 软瘫	rttf	100
+软弹	rttfv	100
 任天堂	rtti	100
 软体	rttk	100
 软糖	rttp	100
@@ -87769,6 +87896,7 @@ columns:
 所说的话	sedhu	100
 色度	sedj	100
 丧失殆尽	sedju	100
+随时待命	sedm	100
 色当	sedp	100
 色灯	sedr	100
 色达	seds	100
@@ -89685,6 +89813,7 @@ columns:
 损人不利己	srbj	100
 虽然不能	srbn	100
 虽如此	src	100
+私人定制	srdf	100
 僧道	srdz	100
 虽然是	sre	100
 僧房	srfp	100
@@ -89966,6 +90095,7 @@ columns:
 算学	stxh	100
 四条线	stxi	100
 酸洗	stxk	100
+蒜香	stxx	100
 酸液	stye	100
 酸雨	styl	100
 宋体字	stz	100
@@ -90789,6 +90919,7 @@ columns:
 特别要	tby	100
 退隐	tbyb	100
 退游	tbyd	100
+推友	tbydi	100
 痛不欲生	tbye	100
 推演	tbyf	100
 推移	tbyk	100
@@ -91496,6 +91627,7 @@ columns:
 头绪	tdxl	100
 头衔	tdxm	100
 贴现	tdxma	100
+头显	tdxmo	100
 铁锈	tdxq	100
 投下	tdxs	100
 铁匣	tdxsi	100
@@ -91556,6 +91688,7 @@ columns:
 特笨	tebn	100
 特棒	tebp	100
 特把	tebs	100
+听声辨位	tebw	100
 特报	tebz	100
 徒手操	tec	100
 同室操戈	tecg	100
@@ -91816,6 +91949,7 @@ columns:
 滩地	tfdka	100
 痰多	tfdl	100
 摊点	tfdm	100
+探店	tfdmi	100
 坦荡	tfdp	100
 天知道	tfdv	100
 统治地位	tfdw	100
@@ -92137,6 +92271,7 @@ columns:
 停水	tgeb	100
 听谁	tgebo	100
 停手	tged	100
+停售	tgedi	100
 挺帅	tgeg	100
 听书	tgej	100
 停驶	tgek	100
@@ -93525,6 +93660,7 @@ columns:
 脱轨	tlgb	100
 脱钩	tlgd	100
 托孤	tlgj	100
+脱骨	tlgju	100
 脱光	tlgm	100
 脱肛	tlgp	100
 脱岗	tlgpu	100
@@ -93770,6 +93906,7 @@ columns:
 田调	tmdc	100
 天碟	tmdd	100
 天的	tmde	100
+甜的	tmdeu	100
 恬淡	tmdf	100
 天定	tmdg	100
 天顶	tmdgv	100
@@ -93900,6 +94037,7 @@ columns:
 填出	tmjj	100
 天际	tmjk	100
 田鸡	tmjki	100
+田忌	tmjkia	100
 天机	tmjkv	100
 填具	tmjl	100
 田间	tmjm	100
@@ -95489,6 +95627,7 @@ columns:
 桶内	tynw	100
 拖油瓶	typ	100
 通拼	typb	100
+同频	typbi	100
 通票	typc	100
 糖衣炮弹	typd	100
 通盘	typf	100
@@ -96480,6 +96619,7 @@ columns:
 扯断	wedt	100
 我说的	wedu	100
 万事达	wedv	100
+武士刀	wedvv	100
 扯动	wedy	100
 无伤大雅	wedyv	100
 车道	wedz	100
@@ -97001,6 +97141,7 @@ columns:
 玩呢	wfne	100
 万难	wfnf	100
 皖南	wfnfu	100
+完虐	wfnh	100
 玩腻	wfnk	100
 万年	wfnm	100
 晚年	wfnmo	100
@@ -98098,6 +98239,7 @@ columns:
 无票	wjpc	100
 误判	wjpf	100
 无牌	wjph	100
+五排	wjphv	100
 无匹	wjpk	100
 巫婆	wjpl	100
 无偏	wjpm	100
@@ -100797,6 +100939,7 @@ columns:
 五体投地	wttdv	100
 船艇	wttg	100
 船台	wtth	100
+串台	wtthi	100
 船体	wttk	100
 穿堂	wttp	100
 传他	wtts	100
@@ -101102,6 +101245,7 @@ columns:
 维护	wwhj	100
 围护	wwhji	100
 为祸	wwhl	100
+尾货	wwhla	100
 未获	wwhlv	100
 未晃	wwhm	100
 萎黄	wwhmi	100
@@ -101428,7 +101572,8 @@ columns:
 为它	wwtsoo	100
 胃痛	wwty	100
 微淘	wwtz	100
-汪汪汪	www	100
+呜呜呜	www	100
+汪汪汪	wwwa	100
 微臭	wwwd	100
 尾车	wwwe	100
 委婉	wwwf	100
@@ -102553,6 +102698,7 @@ columns:
 潮吹	wzwb	100
 超车	wzwe	100
 超玩	wzwf	100
+潮玩	wzwfa	100
 朝外	wzwh	100
 超误	wzwj	100
 朝我	wzwl	100
@@ -103288,6 +103434,7 @@ columns:
 校舍	xcee	100
 小山	xcef	100
 萧山	xcefi	100
+小帅	xceg	100
 小数	xcej	100
 消暑	xceja	100
 小树	xceji	100
@@ -103440,6 +103587,7 @@ columns:
 小城	xcjr	100
 小成	xcjri	100
 小家	xcjs	100
+销假	xcjsi	100
 效价	xcjso	100
 小春	xcjw	100
 骁骏	xcjwa	100
@@ -103536,6 +103684,7 @@ columns:
 笑骂	xcms	100
 小马	xcmsi	100
 小妹	xcmw	100
+小美	xcmwi	100
 小猫	xcmz	100
 小帽	xcmzi	100
 下次你	xcn	100
@@ -107841,6 +107990,7 @@ columns:
 先着	xmfzu	100
 小蘑菇	xmg	100
 显贵	xmgb	100
+嫌贵	xmgba	100
 限购	xmgd	100
 献歌	xmge	100
 先改	xmgh	100
@@ -108166,6 +108316,7 @@ columns:
 险恶	xmxe	100
 限额	xmxea	100
 先按	xmxf	100
+酰胺	xmxfv	100
 线性	xmxg	100
 限行	xmxga	100
 阿猫阿狗	xmxgau	100
@@ -108251,6 +108402,7 @@ columns:
 姓名字号	xmzhau	100
 先祖	xmzj	100
 险阻	xmzja	100
+线阻	xmzjaa	100
 仙子	xmzk	100
 闲坐	xmzl	100
 先做	xmzlu	100
@@ -110865,6 +111017,7 @@ columns:
 新一轮	xylov	100
 心有灵犀一点通	xylt	100
 匈牙利	xylu	100
+下一轮	xylv	100
 心有灵犀	xylx	100
 形音码	xym	100
 胸膜	xyml	100
@@ -110891,6 +111044,7 @@ columns:
 胸脯	xypj	100
 胸片	xypm	100
 汹涌澎湃	xypp	100
+下一排	xypv	100
 胸佩	xypw	100
 新要求	xyq	100
 悬崖峭壁	xyqb	100
@@ -111318,6 +111472,7 @@ columns:
 因数	ybeji	100
 饮食	ybek	100
 隐式	ybeka	100
+阴湿	ybekaa	100
 隐士	ybekav	100
 因事	ybeki	100
 吟诗	ybeko	100
@@ -111331,6 +111486,7 @@ columns:
 因伤	ybep	100
 印上	ybepu	100
 印刷	ybeq	100
+音声	yber	100
 荫沙	ybes	100
 用不上	ybeu	100
 要不是	ybev	100
@@ -112716,6 +112872,7 @@ columns:
 耶博	yebl	100
 页边	yebm	100
 夜奔	yebn	100
+野榜	yebp	100
 掩饰不住	yebq	100
 也罢	yebs	100
 也把	yebsa	100
@@ -114329,6 +114486,7 @@ columns:
 英雄	ygxy	100
 一个月	ygy	100
 影音	ygyb	100
+英音	ygybi	100
 影印	ygybo	100
 应有	ygyd	100
 婴幼	ygyda	100
@@ -114523,6 +114681,7 @@ columns:
 越坏	yhhg	100
 粤海	yhhh	100
 越货	yhhl	100
+月活	yhhlu	100
 晕乎乎	yhho	100
 月华	yhhq	100
 月环	yhht	100
@@ -114851,6 +115010,7 @@ columns:
 研究方向	yjfxv	100
 一家之言	yjfy	100
 原教旨主义	yjfyv	100
+欲加之罪	yjfz	100
 有几个	yjg	100
 夜静更深	yjge	100
 一将功成万骨枯	yjgk	100
@@ -115467,7 +115627,8 @@ columns:
 一季	ykjkvu	100
 一击	ykjkvv	100
 依据	ykjl	100
-义举	ykjlo	100
+宜居	ykjlo	100
+义举	ykjloo	100
 移居	ykjlu	100
 一句	ykjlv	100
 一局	ykjlva	100
@@ -117096,6 +117257,7 @@ columns:
 洋红	yphy	100
 一派胡言	yphyv	100
 养好	yphz	100
+养号	yphzo	100
 硬盘机	ypj	100
 央金	ypjb	100
 仰角	ypjc	100
@@ -119063,6 +119225,7 @@ columns:
 优越感	yygi	100
 伊予柑	yygia	100
 用过	yygl	100
+羽衣甘蓝	yygla	100
 用光	yygm	100
 嘤嘤怪	yygo	100
 用钢	yygp	100
@@ -119788,6 +119951,7 @@ columns:
 要入	yzrj	100
 曜日	yzrk	100
 要人	yzrn	100
+摇人	yzrni	100
 咬人	yzrno	100
 要让	yzrp	100
 要软	yzrt	100
@@ -119867,6 +120031,7 @@ columns:
 要细	yzxk	100
 要虚	yzxl	100
 要先	yzxm	100
+腰线	yzxmu	100
 要修	yzxq	100
 要下	yzxs	100
 咬下	yzxso	100
@@ -120835,6 +121000,7 @@ columns:
 最高人民检察院	zgryo	100
 总公司	zgs	100
 子公司	zgsa	100
+足光散	zgso	100
 栽跟头	zgt	100
 祖国统一	zgty	100
 最高潮	zgw	100
