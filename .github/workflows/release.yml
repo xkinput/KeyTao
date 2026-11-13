@@ -55,7 +55,7 @@ jobs:
           echo "msg=${MSG}" >> $GITHUB_OUTPUT
       
       - name: Create Release
-        uses: softprops/action-gh-release@v1
+        uses: softprops/action-gh-release@3bb12739c298aeb8a4eeaf626c5b8d85266b0e65 # v2
         with:
           tag_name: ${{ steps.version.outputs.VERSION }}
           name: KeyTao ${{ steps.version.outputs.VERSION }}
@@ -120,8 +120,12 @@ jobs:
           
           for file in release/keytao-*.zip release/checksums.txt; do
             echo "Uploading $file ..."
-            UPLOAD_RESP=$(curl -s -X POST \
+            UPLOAD_RESP=$(curl -sS -X POST \
               "https://gitee.com/api/v5/repos/xkinput/KeyTao/releases/${RELEASE_ID}/attach_files?access_token=${GITEE_TOKEN}" \
               -F "file=@${file}")
+            if ! echo "$UPLOAD_RESP" | jq -e '.browser_download_url or .name' > /dev/null; then
+              echo "Failed to upload $file: $UPLOAD_RESP"
+              exit 1
+            fi
             echo "$UPLOAD_RESP"
           done
