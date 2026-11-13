@@ -73,9 +73,9 @@ local function read_version_text()
   return version
 end
 
-local function translator(input, seg)
-  local version = read_version_text()
+local version = read_version_text()
 
+local function translator(input, seg)
   if input == "o" then
     yield(Candidate("oboot", seg.start, seg._end, os.date("%H:%M:%S"), "(时间 ~ej)"))
     yield(Candidate("oboot", seg.start, seg._end, os.date("%Y年%m月%d日"), "(日期 ~rq)"))
