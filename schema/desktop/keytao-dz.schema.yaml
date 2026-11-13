@@ -5,8 +5,6 @@ schema:
   schema_id: keytao-dz
   name: 键道6单字
   version: "2.2"
-  dependencies:
-    - keytao-cx
 
 
 # Layout config

@@ -7,8 +7,6 @@ schema:
   version: "1"
   author:
     - 发明人 大牛
-  dependencies:
-    - keytao-cx
 
 
 # Layout config

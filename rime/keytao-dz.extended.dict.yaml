@@ -6,7 +6,7 @@
 name: keytao-dz.extended
 version: "Q1"
 sort: original
-use_preset_vocabulary: true
+use_preset_vocabulary: false
 import_tables:
 # ---------------------------------------
 # 下列为扩展 可选码表内容：
