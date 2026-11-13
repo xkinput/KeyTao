@@ -26,9 +26,6 @@ switches:
   - name: sbb_disable_full
     reset: 0
     states: [ "开₆₃₀全码", "关₆₃₀全码" ]
-  - name: topup_hint  # lua: keytao_filter.lua
-    reset: 0
-    states: [ "关顶功提示", "开顶功提示" ]
 
 engine:
   processors:
