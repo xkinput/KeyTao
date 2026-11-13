@@ -111,7 +111,7 @@ fi
 
 isHaveUserDict "键道6" keytao.user.dict.yaml
 isHaveUserDict "键道6" keytao.extended.dict.yaml
-isHaveUserDict "键道6" keytao_dz.extended.dict.yaml
+isHaveUserDict "键道6" keytao-dz.extended.dict.yaml
 isHaveUserDict "一笔" xkyb.user.dict.yaml
 isHaveUserDict "两笔" xklb.user.dict.yaml
 
