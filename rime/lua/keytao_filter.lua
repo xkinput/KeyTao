@@ -11,7 +11,7 @@ end
 
 local function ensure_reverse(env)
     if not env.reverse then
-        env.reverse = ReverseDb("build/keytao.extended.reverse.bin")
+        env.reverse = ReverseDb(env.reverse_path)
     end
     return env.reverse
 end
@@ -97,7 +97,13 @@ local function filter(input, env)
 end
 
 local function init(env)
+    local dict = env.engine.schema.config:get_string("translator/dictionary")
+    if not dict or dict == "" then
+        dict = "keytao.extended"
+    end
+
     env.reverse         = nil
+    env.reverse_path    = "build/" .. dict .. ".reverse.bin"
     env.hint_text       = env.engine.schema.config:get_string('hint_text') or '🚫'
     env.pat_short_vowel = "([bcdefghjklmnpqrstwxyz][auiov]+)"
     env.pat_short_cons  = "([bcdefghjklmnpqrstwxyz][bcdefghjklmnpqrstwxyz])"
