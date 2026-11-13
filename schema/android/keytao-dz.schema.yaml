@@ -39,8 +39,6 @@ layout:
 
 
 switches:
-  - options: [ _keyboard_functions, _keyboard_qwerty ]
-    states: [ "ㄓ", "ㄓ"]
   - name: ascii_mode
     reset: 0
     states: [ 中, 英 ]
