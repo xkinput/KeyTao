@@ -3,7 +3,7 @@ xnumber.lua: realize a yong-style number typing experience in RIME
 usage:
 0. this script is intended for keytao but also work for other schemas (may need some custimizations)
 1. place this script in `rime\lua`
-2. modify `rime\rime.lua` by adding a line like `number_translator = require("numberx")`
+2. modify `rime\rime.lua` by adding a line like `number_translator = require("xnumber")`
 3. modify your schema (like `keytao.schema.yaml`) by adding an item like `- lua_translator@number_translator` under the `engine/translators` section
 4. re-deploy RIME and enjoy (the default trigger key is `=`)
 change log:

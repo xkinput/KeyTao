@@ -36,7 +36,7 @@ oboot_translator = require("oboot")
 
 -- keytao_filter: 单字模式 & 630 即 ss 词组提示
 --- 修改自 @懒散 TsFreddie https://github.com/TsFreddie/jdc_lambda/blob/master/rime/lua/xkjdc_sbb_hint.lua
--- 可由 schema 的 danzi_mode 与 wxw_hint 开关控制
+-- 可由 schema 的 danzi_mode 与 sbb_hint 开关控制
 -- 详见 `lua/keytao_filter.lua`
 keytao_filter = require("keytao_filter")
 
@@ -44,7 +44,7 @@ keytao_filter = require("keytao_filter")
 topup_processor = require("for_topup")
 
 -- number_translator: 将 `=` + 阿拉伯数字 翻译为大小写汉字
--- 详见 `lua/number.lua`
+-- 详见 `lua/xnumber.lua`
 number_translator = require("xnumber")
 
 -- 用 ' 作为次选键
