@@ -51,6 +51,8 @@ testHasSchema(){
 	echo "复制Rime用户配置文件...................完成"
     fi
     echo -e "---------------------\n"
+    # Dicts removed upstream; rsync (no --delete) would otherwise leave them behind
+    rm -f "$rime/keytao.dict.yaml" "$rime/keytao-dz.dict.yaml"
     rsync -avhI --progress \
       $xk_path/ \
       --include="*.dict.yaml" \
