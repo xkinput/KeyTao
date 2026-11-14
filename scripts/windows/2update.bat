@@ -1,7 +1,7 @@
 @echo off
 CLS
 mode con cols=80 lines=20
-title Ð¡ï¿½Çºï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Æ¹ï¿½ï¿½ï¿½
+title Ð¡ÀÇºÁÂë±í¸´ÖÆ¹¤¾ß
 :init
 setlocal DisableDelayedExpansion
 set "batchPath=%~0"
@@ -15,7 +15,7 @@ if '%errorlevel%' == '0' ( goto gotPrivileges ) else ( goto getPrivileges )
 if '%1'=='ELEV' (echo ELEV & shift /1 & goto gotPrivileges)
 ECHO.
 ECHO ********************************
-ECHO ï¿½ï¿½ï¿½ï¿½ UAC È¨ï¿½ï¿½ï¿½ï¿½×¼ï¿½ï¿½ï¿½ï¿½
+ECHO ÇëÇó UAC È¨ÏÞÅú×¼¡­¡­
 ECHO ********************************
 ECHO Set UAC = CreateObject^("Shell.Application"^) > "%vbsGetPrivileges%"
 ECHO args = "ELEV " >> "%vbsGetPrivileges%"
@@ -32,26 +32,26 @@ if '%1'=='ELEV' (del "%vbsGetPrivileges%" 1>nul 2>nul  &  shift /1)
 
 set gitBash=git
 
-echo ï¿½ï¿½ï¿½ï¿½gitï¿½æ±¾Îªï¿½ï¿½
+echo ±¾»úgit°æ±¾Îª£º
 %gitBash% --version
 echo.
 
 if %ERRORLEVEL% EQU 0 (
-  echo ï¿½ï¿½È¡ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
+  echo »ñÈ¡×îÐÂÂë±í£º
   %gitBash% pull origin master
-  echo ï¿½ï¿½È¡ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
+  echo »ñÈ¡×îÐÂÂë±íÍê³É
 ) else (
   cls
   echo.
-  echo Î´ï¿½ï¿½×°gitï¿½ï¿½ï¿½ï¿½ï¿½ë°²×°gitï¿½ï¿½ï¿½ï¿½https://git-scm.com/install/windows
+  echo Î´°²×°git³ÌÐò£¬Çë°²×°git³ÌÐò£¡https://git-scm.com/install/windows
   ping -n 3 127.1 >nul
   echo.
-  echo Ê®ï¿½ï¿½ï¿½ï¿½Ô¶ï¿½ï¿½Ë³ï¿½...
+  echo Ê®Ãëºó×Ô¶¯ÍË³ö...
   ping -n 10 127.1 >nul
   exit
 )
 echo.
-echo 3ï¿½ï¿½ï¿½Ê¼ï¿½ï¿½ï¿½Â£ï¿½Ctrl + CÍ£Ö¹ï¿½ï¿½ï¿½ï¿½
+echo 3Ãëºó¿ªÊ¼¸üÐÂ£¬Ctrl + CÍ£Ö¹¡­¡­
 ping -n 3 127.1 >nul
 
 Setlocal enabledelayedexpansion
@@ -63,40 +63,40 @@ for /f "skip=2 delims=: tokens=1,*" %%i in ('reg query "HKEY_CURRENT_USER\SOFTWA
    if not "!var:~-1!"=="=" set rimeUserDir=!str:~-1!:!var!
 )
 
-if exist "%CD%\ï¿½ï¿½ï¿½ï¿½\" (
-  del "%CD%\ï¿½ï¿½ï¿½ï¿½\" /S /Q
+if exist "%CD%\±¸·Ý\" (
+  del "%CD%\±¸·Ý\" /S /Q
 ) else (
-  mkdir "%CD%\ï¿½ï¿½ï¿½ï¿½\"
+  mkdir "%CD%\±¸·Ý\"
 )
-xcopy "%rimeUserDir%" "%CD%\ï¿½ï¿½ï¿½ï¿½\" /Y /E
+xcopy "%rimeUserDir%" "%CD%\±¸·Ý\" /Y /E
 cls
-echo ï¿½ï¿½ï¿½ï¿½Ô­ï¿½Ð´Ê¿ï¿½		ï¿½ï¿½ï¿½
+echo ±¸·ÝÔ­ÓÐ´Ê¿â		Íê³É
 
 taskkill /f /im WeaselServer.exe
 del "%rimeUserDir%\" /S /Q
 xcopy "..\..\rime" "%rimeUserDir%\" /Y /E
-echo ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ä¼ï¿½		ï¿½ï¿½ï¿½
+echo ¸´ÖÆÂë±íÎÄ¼þ		Íê³É
 
 xcopy "..\..\schema\desktop\*" "%rimeUserDir%\" /Y /E
-echo ï¿½ï¿½ï¿½Æ¶ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½		ï¿½ï¿½ï¿½
+echo ¸´ÖÆ¶ÀÓÐÅäÖÃ		Íê³É
 
 xcopy "..\..\schema\windows\*" "%rimeUserDir%\" /Y /E
-echo ï¿½ï¿½ï¿½Æ¶ï¿½ï¿½ï¿½Ä²ï¿½Æ½Ì¨ï¿½ï¿½ï¿½ï¿½		ï¿½ï¿½ï¿½
+echo ¸´ÖÆ¶ÀÓÐµÄÆ½Ì¨ÅäÖÃ		Íê³É
 
 cls
 
-if exist "%CD%\ï¿½Ã»ï¿½ï¿½ï¿½ï¿½ï¿½\" (
-  xcopy ".\ï¿½Ã»ï¿½ï¿½ï¿½ï¿½ï¿½\*" "%rimeUserDir%\" /Y /E
-  echo ï¿½ï¿½Ô­ï¿½Ã»ï¿½ï¿½ï¿½ï¿½ï¿½		ï¿½ï¿½ï¿½
+if exist "%CD%\ÓÃ»§Êý¾Ý\" (
+  xcopy ".\ÓÃ»§Êý¾Ý\*" "%rimeUserDir%\" /Y /E
+  echo »¹Ô­ÓÃ»§Êý¾Ý		Íê³É
 ) else (
-  mkdir "%CD%\ï¿½Ã»ï¿½ï¿½ï¿½ï¿½ï¿½\"
+  mkdir "%CD%\ÓÃ»§Êý¾Ý\"
 )
 
 echo.
 echo.
 
-echo ï¿½Ñ°ï¿½×°ï¿½ï¿½É£ï¿½
+echo ÒÑ°²×°Íê³É£¡
 echo.
-echo ï¿½ï¿½ï¿½Â²ï¿½ï¿½ï¿½
+echo ÖØÐÂ²¿Êð
 "%CD%\4deploy.bat"
 exit

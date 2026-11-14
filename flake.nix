@@ -136,8 +136,18 @@
                 --exclude='user.yaml' \
                 --exclude='installation.yaml' \
                 --exclude='sync/' \
+                --exclude='build/' \
+                --exclude='default.custom.yaml' \
                 "${cfg.package}/share/rime-data/" \
                 "${config.home.homeDirectory}/${cfg.rimeDataDir}/"
+
+              if [ ! -e "${config.home.homeDirectory}/${cfg.rimeDataDir}/default.custom.yaml" ]; then
+                $DRY_RUN_CMD install -m644 "${cfg.package}/share/rime-data/default.custom.yaml" \
+                  "${config.home.homeDirectory}/${cfg.rimeDataDir}/default.custom.yaml"
+              fi
+
+              $DRY_RUN_CMD rm -f "${config.home.homeDirectory}/${cfg.rimeDataDir}/keytao.dict.yaml" \
+                "${config.home.homeDirectory}/${cfg.rimeDataDir}/keytao-dz.dict.yaml"
 
               $VERBOSE_ECHO "KeyTao Rime schema files installed to ${cfg.rimeDataDir}"
             '';

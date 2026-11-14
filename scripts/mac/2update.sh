@@ -1,13 +1,18 @@
 #!/bin/bash
 
-rootDir=`dirname $0`
-cd $rootDir
-xkjd="../../../KeyTao/"
-xklb="../../../rime_xklb"
-xkyb="../../../rime_xkyb"
+rootDir=$(cd "$(dirname "$0")" && pwd) || exit 1
+repoRoot=$(cd "$(dirname "$0")/../.." && pwd) || exit 1
+if [ ! -f "$repoRoot/rime/keytao.phrase.dict.yaml" ]; then
+	echo "Error: missing $repoRoot/rime/keytao.phrase.dict.yaml" >&2
+	exit 1
+fi
+cd "$rootDir" || exit 1
+xkjd="$repoRoot"
+xklb="$repoRoot/../rime_xklb"
+xkyb="$repoRoot/../rime_xkyb"
 rime="$HOME/Library/Rime"
-schema="../../schema/desktop"
-extend_dicts="../../extend-dicts"
+schema="$repoRoot/schema/desktop"
+extend_dicts="$repoRoot/extend-dicts"
 bak="./备份"
 userDict="./用户数据"
 
@@ -21,13 +26,13 @@ isHaveDict (){
 # $1: schema name
 # $2: filepath
 # $3: rime_xk..
-    if [ ! -e $2 ]; then
+    if [ ! -e "$2" ]; then
     	echo "没有$1词库，跳过。"
     else
     	echo "检测到$1词库，是否同时安装？ y/n"
     	read isInstall
     	if [[ "$isInstall" == [yY] ]]; then
-    		cp -rf $2/rime/* $rime
+		cp -rf "$2"/rime/* "$rime"
     		echo "复制码表完成					完成"
     		echo "复制所有文件					完成"
 		count=$(expr $count + 1)
@@ -42,10 +47,10 @@ isHaveDict (){
 isHaveUserDict() {
 # $1: 键道6 / 两笔 / 一笔
 # $2: keytao / xkyb / xklb
-    if [ ! -f $bak/$2 ]; then
+    if [ ! -f "$bak/$2" ]; then
 	echo "· 没有备份$1用户词库跳过。"
     else
-	cp -rf $bak/$2 "$rime"
+	cp -rf "$bak/$2" "$rime"
 	echo "· 还原$1用户词库					完成"
     fi
 }
@@ -54,45 +59,45 @@ isHaveUserDict() {
 clear
 
 # 检测备份目录
-if [ ! -d $bak ]; then
+if [ ! -d "$bak" ]; then
 	clear
-	mkdir 备份
+	mkdir "$bak"
 else
-	rm -rf 备份/*
+	rm -rf "${bak:?}"/*
 fi
 
 if [ ! -f "$rime/installation.yaml" ]; then
 	echo "· 未发现 $rime 无需备份"
 else
-	cp -rf $rime/* ./备份/
+	cp -rf "$rime"/* "$bak/"
 	echo "· 备份“ $rime ”到“ $bak ”文件夹	完成"
 fi
 sleep 1
 
 #清空Rime目录
-if [ ! -d $rime ]; then
-	mkdir $rime
+if [ ! -d "$rime" ]; then
+	mkdir "$rime"
 else
-	rm -rf $rime
-	mkdir $rime
+	rm -rf "$rime"
+	mkdir "$rime"
 fi
 clear
 
-isHaveDict "键道6" $xkjd
+isHaveDict "键道6" "$xkjd"
 if [ $? == 1 ]; then
-    cp -f "$schema"/*.yaml $rime/
-    cp -f ../../schema/mac/*.yaml "$rime/"
-    cp -f "$extend_dicts/keytao.iboot.dict.yaml" $rime/
+    cp -f "$schema"/*.yaml "$rime/"
+    cp -f "$repoRoot"/schema/mac/*.yaml "$rime/"
+    cp -f "$extend_dicts/keytao.iboot.dict.yaml" "$rime/"
 
     JD="键道6"
 fi
 
-isHaveDict "一笔" $xkyb
+isHaveDict "一笔" "$xkyb"
 if [ $? == 1 ]; then
     YB="一笔"
 fi
 
-isHaveDict "两笔" $xklb
+isHaveDict "两笔" "$xklb"
 if [ $? == 1 ]; then
 	LB="两笔"
 fi
@@ -116,10 +121,10 @@ isHaveUserDict "两笔" "xklb.user.dict.yaml"
 
 
 # 检测当前目录用户词库
-if [ ! -d $userDict ]; then
+if [ ! -d "$userDict" ]; then
         echo "未发现$userDict"
 else
-        cp -rf $userDict/* $rime/
+        cp -rf "$userDict"/* "$rime/"
         echo "· 当前目录用户词库					完成"
 fi
 sleep 2
@@ -127,7 +132,7 @@ sleep 2
 clear
 echo "预览 $rime/"
 echo "==========================================="
-if [ ! -d $rime ]; then
+if [ ! -d "$rime" ]; then
 	echo "未发现$rime"
 else
 	ls "$rime"
