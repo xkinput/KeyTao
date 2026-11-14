@@ -119,6 +119,10 @@ local function speakIntOfficially(str, posMap, valMap)
 	for k = 1, #tbBar do
 		local speakBar = tbSpeakBar[k]
 		if speakBar ~= valMap[0] then
+			if out ~= "" and tbSpeakBar[k - 1] == valMap[0]
+					and string.sub(speakBar, 1, #valMap[0]) ~= valMap[0] then
+				out = out .. valMap[0]
+			end
 			out = out .. speakBar .. tbSpeakBarSuffix[k]
 		end
 	end
@@ -174,8 +178,8 @@ local function baseConverse(str, from, to)
 	end
 	local strout = str10
 	if to == 16 then
-		local num = tonumber(str10)
-		if not num then return str end
+		local num = math.tointeger(tonumber(str10))
+		if not num then return nil end
 		strout = string.format("%#x", num)
 	end
 	return strout
@@ -206,10 +210,48 @@ local function should_eval_expression(expr)
 	return depth == 0
 end
 
+local function eval_expression(expression)
+	local arithmetic = {
+		__add = function(a, b) return a + b end,
+		__sub = function(a, b) return a - b end,
+		__mul = function(a, b) return a * b end,
+		__div = function(a, b) return a / b end,
+		__idiv = function(a, b) return a // b end,
+		__mod = function(a, b) return a % b end,
+		__pow = function(a, b) return a ^ b end,
+		__unm = function(a) return -a end,
+	}
+	local function number(value)
+		return setmetatable({ value }, arithmetic)
+	end
+	for name, operation in pairs(arithmetic) do
+		arithmetic[name] = function(lhs, rhs)
+			local a, b = lhs[1], (rhs or lhs)[1]
+			local result = operation(a, b)
+			if math.type(a) == "integer" and math.type(b) == "integer" then
+				local overflow = (name == "__add" and ((b > 0 and result < a) or (b < 0 and result > a)))
+					or (name == "__sub" and ((b > 0 and result > a) or (b < 0 and result < a)))
+					or (name == "__mul" and a ~= 0 and ((a == -1 and b == math.mininteger) or result // a ~= b))
+					or (name == "__unm" and a == math.mininteger)
+					or (name == "__idiv" and a == math.mininteger and b == -1)
+				if overflow then result = operation(a + 0.0, b + 0.0) end
+			end
+			return number(result)
+		end
+	end
+	-- Preserve integer precision until an operation overflows.
+	expression = string.gsub(expression, "%d*%.?%d+%.?", function(literal)
+		return "number(" .. literal .. ")"
+	end)
+	local chunk = load("return " .. expression, nil, "t", { number = number })
+	if chunk then return chunk()[1] end
+end
+
 local function translator(input, seg, env)
 	-- env can be used for getting the state of a switch, e.g., `env.engine.context:get_option("s2t")` returns true/false (or nil if the switch does not exist)
 	if string.sub(input, 1, 1) == "=" then
 		local input2 = string.sub(input, 2)
+		if not string.match(input2, "%d") then return end
 		if string.match(input2, "^[%+%-]?%d*%.?%d*$") then -- sadly, lua does not support regex like {0,4}
 			-- comment or reorder following lines to adjust the effects
 			yield(Candidate("number", seg.start, seg._end, speakMoney(input2), " 金额"))
@@ -217,14 +259,19 @@ local function translator(input, seg, env)
 			yield(Candidate("number", seg.start, seg._end, speakLiterally(input2), " 冷读"))
 			yield(Candidate("number", seg.start, seg._end, speakMillitary(input2), " 军语"))
 		elseif should_eval_expression(input2) then
-			local chunk = load("return " .. input2)
-			if chunk then
-				local ok2, result = pcall(chunk)
-				if ok2 then yield(Candidate("number", seg.start, seg._end, tostring(result), " 计算")) end
+			local ok2, result = pcall(eval_expression, input2)
+			if ok2 and type(result) == "number" then
+				local text = tostring(result)
+				if math.type(result) == "float" then
+					text = string.format("%.15g", result)
+					if math.abs(result) < 2 ^ 53 and result % 1 == 0 then text = string.format("%.0f", result) end
+				end
+				yield(Candidate("number", seg.start, seg._end, text, " 计算"))
 			end
 		end
 		if string.match(input2, "^[%+%-]?%d*$") then -- plz, i dont want to deal with base conversion with decimals
-			yield(Candidate("number", seg.start, seg._end, baseConverse(input2, 10, 16), " 进制"))
+			local base = baseConverse(input2, 10, 16)
+			if base then yield(Candidate("number", seg.start, seg._end, base, " 进制")) end
 		end
 	end
 end
