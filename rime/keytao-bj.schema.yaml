@@ -20,12 +20,16 @@ switches:
   - name: emoji_cn
     reset: 0
     states: [ "关表情", "开表情" ]
+  - name: danzi_mode
+    reset: 0
   - name: sbb_hint
     reset: 1
     states: [ "关₆₃₀", "开₆₃₀" ]
   - name: sbb_disable_full
     reset: 0
     states: [ "开₆₃₀全码", "关₆₃₀全码" ]
+  - name: topup_hint
+    reset: 0
 
 engine:
   processors:
@@ -51,9 +55,9 @@ engine:
     - table_translator@custom_phrase
     - history_translator@repeat_history    
   filters:
-    - uniquifier
     - simplifier@emoji_cn
     - simplifier@simplification
+    - uniquifier
     - lua_filter@keytao_filter
  #拼写运算规则
 speller:

@@ -10,7 +10,6 @@ schema:
 # Layout config
 layout:
   topup:
-    topup_this: "bcdefghjklmnpqrstwxyz"
     topup_with: "avuio;"
 
   algebra:
@@ -28,11 +27,6 @@ layout:
   #   date: orq
   #   time: ouj
   #   week: oxq
-
-  patterns:
-    special: "^(?:;?[avuio])[a-z]{0,}"
-    # input_code: "^(?:orq?|ouj?|oxq?)"
-
 
 switches:
   - name: ascii_mode
@@ -237,7 +231,6 @@ key_binder:
 
 recognizer:
   patterns:
-    # __include: "layout/patterns"
     punct: "^/([0-9]0?|[a-z]+)$"
     danzi_lookup: "[a-z`]*`+[a-z`]*"
     email: "^[a-z][-_.0-9a-z]*@.*$"

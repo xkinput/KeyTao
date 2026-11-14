@@ -12,7 +12,6 @@ schema:
 # Layout config
 layout:
   topup:
-    topup_this: "bcdefghjklmnpqrstwxyz"
     topup_with: "avuio;"
 
   algebra:
@@ -30,11 +29,6 @@ layout:
   #   date: orq
   #   time: ouj
   #   week: oxq
-
-  patterns:
-    special: "^(?:;?[avuio])[a-z]{0,}"
-    # input_code: "^(?:orq?|ouj?|oxq?)"
-
 
 switches:
   - name: ascii_mode
@@ -155,14 +149,13 @@ engine:
     - punct_translator
     - table_translator
     - table_translator@custom_phrase
-    - table_translator@danzi_lookup
     - history_translator@repeat_history
     - lua_translator@oboot_translator
     - lua_translator@number_translator
   filters:
-    - uniquifier
     - simplifier@emoji_cn
     - simplifier@simplification
+    - uniquifier
     - lua_filter@keytao_filter
     - reverse_lookup_filter@danzi_lookup
 
@@ -237,7 +230,6 @@ key_binder:
 
 recognizer:
   patterns:
-    # __include: "layout/patterns"
     punct: "^/([0-9]0?|[a-z]+)$"
     danzi_lookup: "[a-z`]*`+[a-z`]*"
     email: "^[a-z][-_.0-9a-z]*@.*$"
