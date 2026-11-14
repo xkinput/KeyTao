@@ -254,7 +254,7 @@ home-manager switch --flake .#your-username
         menu:
           page_size: 9
     '';
-    force = true;  # 覆盖链接的文件
+    force = true;  # 覆盖复制的文件
   };
 }
 ```
@@ -271,7 +271,13 @@ home-manager switch --flake .#your-username
 
   # 手动安装脚本
   home.activation.installRimeXKJD = lib.hm.dag.entryAfter ["writeBoundary"] ''
-    ${pkgs.rsync}/bin/rsync -av --delete \
+    ${pkgs.rsync}/bin/rsync -av \
+      --chmod=D0755,F0644 \
+      --exclude='*.userdb/' \
+      --exclude='user.yaml' \
+      --exclude='installation.yaml' \
+      --exclude='sync/' \
+      --exclude='build/' \
       ${inputs.rime-keytao.packages.${pkgs.system}.default}/share/rime-data/ \
       $HOME/.local/share/fcitx5/rime/
   '';

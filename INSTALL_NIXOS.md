@@ -254,7 +254,7 @@ fcitx5-remote -r
 
 ## 配置自定义
 
-所有 Rime 配置文件会被链接到你的 Rime 数据目录。你可以创建 `.custom.yaml` 文件来覆盖默认配置，例如：
+所有 Rime 配置文件会被复制到你的 Rime 数据目录。Home Manager 模块会保留已有的 `default.custom.yaml`，仅在缺失时复制默认文件。你可以编辑该文件来自定义配置，例如：
 
 ```bash
 # 编辑自定义配置
@@ -295,7 +295,7 @@ ps aux | grep Squirrel
 
 ### Linux - 重新部署 Rime 后仍看不到键道方案
 
-1. 检查文件是否正确链接：
+1. 检查文件是否正确复制：
 
 ```bash
 ls -la ~/.local/share/fcitx5/rime/*.schema.yaml
