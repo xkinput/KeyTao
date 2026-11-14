@@ -63,6 +63,17 @@ compile "windows" "$RIME" "$DESKTOP" "$REPO/schema/windows"
 compile "android" "$RIME" "$REPO/schema/android"
 compile "ios"     "$RIME" "$DESKTOP" "$REPO/schema/ios"
 
+# ── 3. xnumber self-check ────────────────────────────────────────────────────
+echo ""
+echo "=== 3. xnumber self-check ==="
+if (cd "$REPO" && "${LUAC%/*}/lua" scripts/test_xnumber.lua); then
+    echo "  OK   xnumber"
+    PASS=$((PASS + 1))
+else
+    echo "  FAIL xnumber"
+    FAIL_COUNT=$((FAIL_COUNT + 1))
+fi
+
 echo ""
 echo "Results: $PASS passed, $FAIL_COUNT failed"
 [ $FAIL_COUNT -eq 0 ] || exit 1
