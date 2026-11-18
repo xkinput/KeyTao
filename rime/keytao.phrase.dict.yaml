@@ -2,7 +2,7 @@
 # encoding: utf-8
 ---
 name: keytao.phrase
-version: "2026.11.15"
+version: "2026.11.18"
 sort: by_weight
 columns:
   - text
@@ -135,6 +135,7 @@ columns:
 宾朋	bbpr	100
 百白破	bbpv	100
 保不齐	bbq	100
+绷不住	bbqa	100
 彪炳千古	bbqg	100
 北半球	bbqi	100
 把不准	bbqiv	100
@@ -5683,6 +5684,7 @@ columns:
 百闻不如一见	bwbjvo	100
 卑鄙	bwbk	100
 被逼	bwbko	100
+杯壁	bwbkv	100
 被剥	bwbl	100
 北边	bwbm	100
 奔驰宝马	bwbmv	100
@@ -5902,7 +5904,8 @@ columns:
 被炒	bwjz	100
 北朝	bwjzi	100
 保卫科	bwk	100
-被扣	bwkd	100
+杯口	bwkd	100
+被扣	bwkdo	100
 贝壳	bwke	100
 备课	bwkeu	100
 被砍	bwkf	100
@@ -6109,6 +6112,7 @@ columns:
 北岸	bwxfi	100
 别无二致	bwxfo	100
 北行	bwxg	100
+杯型	bwxgv	100
 悲哀	bwxh	100
 报仇雪恨	bwxhi	100
 报仇血恨	bwxhii	100
@@ -7986,7 +7990,8 @@ columns:
 彩头	chtdu	100
 菜摊	chtf	100
 才听	chtg	100
-裁汰	chth	100
+菜苔	chth	100
+裁汰	chthu	100
 彩图	chtj	100
 才提	chtk	100
 菜田	chtm	100
@@ -11320,6 +11325,7 @@ columns:
 单手	dfed	100
 单设	dfee	100
 单摄	dfeeo	100
+单射	dfeeou	100
 大幅上升	dfeev	100
 单删	dfef	100
 单数	dfej	100
@@ -12407,6 +12413,7 @@ columns:
 代为	dhww	100
 戴维	dhwwu	100
 待冲	dhwy	100
+代充	dhwyi	100
 待超	dhwz	100
 等会儿	dhx	100
 带薪	dhxb	100
@@ -13889,6 +13896,7 @@ columns:
 垫付	dmfji	100
 碘伏	dmfjv	100
 垫支	dmfk	100
+点痣	dmfki	100
 电灼	dmfl	100
 点状	dmfm	100
 淀粉	dmfn	100
@@ -16089,6 +16097,7 @@ columns:
 洞察秋毫	dwqh	100
 炖煮	dwqj	100
 洞察其奸	dwqja	100
+蹲起	dwqk	100
 得去	dwql	100
 调查取证	dwqq	100
 第五章	dwqu	100
@@ -18345,6 +18354,7 @@ columns:
 设点	eedm	100
 射电	eedmu	100
 射灯	eedr	100
+社达	eeds	100
 舌端	eedt	100
 收拾东西	eedx	100
 摄动	eedy	100
@@ -21391,6 +21401,7 @@ columns:
 双手	emed	100
 双摄	emee	100
 双蛇	emeea	100
+双射	emeeau	100
 双闪	emef	100
 什么时候	emeh	100
 神马时候	emeho	100
@@ -23862,6 +23873,7 @@ columns:
 双手	exed	100
 双摄	exee	100
 双蛇	exeea	100
+双射	exeeau	100
 双闪	exef	100
 山西省	exei	100
 双数	exej	100
@@ -25576,6 +25588,7 @@ columns:
 这儿	fexj	100
 浙二	fexja	100
 折耳	fexji	100
+肥瘦相间	fexju	100
 负手而立	fexl	100
 折现	fexm	100
 折线	fexmi	100
@@ -29546,6 +29559,7 @@ columns:
 放开	fpkh	100
 方框	fpkm	100
 富婆快乐球	fpkq	100
+房卡	fpks	100
 放宽	fpkt	100
 房款	fpkto	100
 放款	fpktov	100
@@ -43935,6 +43949,7 @@ columns:
 横行	hrxgv	100
 横线	hrxm	100
 横痃	hrxt	100
+黄仁勋	hrxv	100
 横向	hrxx	100
 恒雄	hrxy	100
 很容易	hry	100
@@ -44518,6 +44533,7 @@ columns:
 黑椒	hwjci	100
 魂轿	hwjcv	100
 婚介	hwjd	100
+婚戒	hwjda	100
 黑车	hwje	100
 婚车	hwjea	100
 魂车	hwjev	100
@@ -55935,6 +55951,7 @@ columns:
 就在此刻	jzck	100
 超次	jzckv	100
 晁错	jzcl	100
+抄错	jzcl	101
 称赞道	jzd	100
 炒掉	jzdc	100
 超跌	jzdd	100
@@ -64417,6 +64434,7 @@ columns:
 拉起	lsqk	100
 拉取	lsql	100
 拉镇	lsqn	100
+拉群	lsqw	100
 腊肉	lsrd	100
 老僧入定	lsrdu	100
 蜡染	lsrf	100
@@ -66837,6 +66855,7 @@ columns:
 慢手	mfed	100
 满手	mfeda	100
 漫射	mfee	100
+满射	mfeea	100
 满山	mfef	100
 漫山	mfefa	100
 蛮帅	mfeg	100
@@ -78094,6 +78113,7 @@ columns:
 切肉	qdrd	100
 切入	qdrj	100
 怯弱	qdrl	100
+切人	qdrn	100
 煮豆燃萁	qdrq	100
 这段日子	qdrz	100
 招待所	qds	100
@@ -87284,6 +87304,7 @@ columns:
 软毛	rtmz	100
 软泥	rtnk	100
 软糯	rtnl	100
+软嫩	rtnn	100
 软盘	rtpf	100
 软屏	rtpg	100
 软皮	rtpk	100
@@ -87754,6 +87775,7 @@ columns:
 绥芬	sbfn	100
 随访	sbfp	100
 随风	sbfr	100
+碎发	sbfs	100
 碎砖	sbft	100
 三板斧	sbfv	100
 遂废	sbfw	100
@@ -98693,6 +98715,7 @@ columns:
 唯恐不及	wkbjo	100
 赤壁	wkbk	100
 赤膊	wkbl	100
+吃播	wkblo	100
 吃遍	wkbm	100
 池边	wkbma	100
 无可避免	wkbmv	100
@@ -102606,6 +102629,7 @@ columns:
 炒菜	wzch	100
 超次	wzck	100
 晁错	wzcl	100
+抄错	wzcl	101
 外在的	wzd	100
 炒掉	wzdc	100
 超跌	wzdd	100
@@ -106655,6 +106679,7 @@ columns:
 而动	xjdy	100
 耳洞	xjdyv	100
 而到	xjdz	100
+耳道	xjdzv	100
 新技术	xje	100
 二水	xjeb	100
 二手	xjed	100
@@ -108614,6 +108639,7 @@ columns:
 小女生	xne	100
 恩赦	xnee	100
 恩师	xnek	100
+恩施	xneki	100
 小牛双拼	xnep	100
 西南风	xnf	100
 小牛辅码	xnfm	100
@@ -117618,6 +117644,7 @@ columns:
 阳台	ypth	100
 养胎	yptho	100
 养兔	yptj	100
+样图	yptjv	100
 羊驼	yptl	100
 央托	yptli	100
 仰天	yptm	100
@@ -120012,6 +120039,7 @@ columns:
 药剂	yzjk	100
 妖姬	yzjka	100
 窑鸡	yzjko	100
+咬肌	yzjkou	100
 腰际	yzjku	100
 药具	yzjl	100
 腰间	yzjm	100

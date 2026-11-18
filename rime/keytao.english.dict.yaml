@@ -2,7 +2,7 @@
 # encoding: utf-8
 ---
 name: keytao.english
-version: "2026.05.09"
+version: "2026.11.18"
 sort: by_weight
 columns:
   - text
@@ -44,7 +44,7 @@ Git	gkt	100
 GitHub	gktb	100
 Gitee	gkte	100
 Good	glld	100
-Google	gllgle	100
+Google	glle	100
 U盾	jdw	100
 U盘	jpfu	100
 USB	jsb	100
