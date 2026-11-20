@@ -14,4 +14,5 @@ patch:
   ascii_composer/good_old_caps_lock: true
   ascii_composer/switch_key:
     Caps_Lock: commit_text
-    Shift_L: commit_text
+    Shift_L: clear
+    Shift_R: clear
