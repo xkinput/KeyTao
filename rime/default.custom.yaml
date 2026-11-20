@@ -13,6 +13,6 @@ patch:
     page_size: 6
   ascii_composer/good_old_caps_lock: true
   ascii_composer/switch_key:
-    Caps_Lock: commit_text
+    Caps_Lock: clear
     Shift_L: clear
     Shift_R: clear
