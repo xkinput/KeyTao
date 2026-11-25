@@ -80,9 +80,6 @@ echo 复制码表文件		完成
 xcopy "..\..\schema\desktop\*" "%rimeUserDir%\" /Y /E
 echo 复制独有配置		完成
 
-xcopy "..\..\schema\windows\*" "%rimeUserDir%\" /Y /E
-echo 复制独有的平台配置		完成
-
 cls
 
 if exist "%CD%\用户数据\" (

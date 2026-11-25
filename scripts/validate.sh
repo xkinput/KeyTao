@@ -57,11 +57,8 @@ compile() {
 RIME="$REPO/rime"
 DESKTOP="$REPO/schema/desktop"
 
-compile "linux"   "$RIME" "$DESKTOP"
-compile "mac"     "$RIME" "$DESKTOP" "$REPO/schema/mac"
-compile "windows" "$RIME" "$DESKTOP" "$REPO/schema/windows"
+compile "desktop" "$RIME" "$DESKTOP"
 compile "android" "$RIME" "$REPO/schema/android"
-compile "ios"     "$RIME" "$DESKTOP" "$REPO/schema/ios"
 
 # ── 3. xnumber self-check ────────────────────────────────────────────────────
 echo ""

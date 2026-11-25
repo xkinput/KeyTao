@@ -44,7 +44,7 @@ testHasSchema(){
       --include=/lua \
       --exclude='/*' \
       "$rime/"
-    rsync -avhI --progress "$repoRoot/schema/desktop/" "$repoRoot/schema/mac/" "$rime/"
+    rsync -avhI --progress "$repoRoot/schema/desktop/" "$rime/"
 
 }
 

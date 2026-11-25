@@ -86,7 +86,6 @@ clear
 isHaveDict "键道6" "$xkjd"
 if [ $? == 1 ]; then
     cp -f "$schema"/*.yaml "$rime/"
-    cp -f "$repoRoot"/schema/mac/*.yaml "$rime/"
     cp -f "$extend_dicts/keytao.iboot.dict.yaml" "$rime/"
 
     JD="键道6"

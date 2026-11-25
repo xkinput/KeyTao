@@ -1,8 +1,0 @@
-customization:
-  distribution_code_name: Weasel
-  distribution_version: 0.17.4
-  generator: "Weasel::UIStyleSettings"
-  modified_time: "Sun Apr 26 11:22:34 2026"
-  rime_version: 1.13.1
-patch:
-  "style/color_scheme": win11_light

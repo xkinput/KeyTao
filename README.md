@@ -26,7 +26,7 @@
 
 #### 安装教程：
 
-* 前往下载 **[KeyTao 键道 App](https://github.com/xkinput/keytao-app/releases)**，可自动完成键道方案的安装与更新，支持 Windows / macOS / Linux / Android。
+* 前往下载 **[KeyTao 键道 App](https://github.com/xkinput/keytao-app/releases)**，可自动完成键道方案的安装与更新，支持 Windows / macOS / Linux / Android / iOS。
 * Linux 如果遇到fcitx/ibus问题可查看[安装 fcitx/rime 教程][linux安装键道6]
 * **Nix/NixOS 安装方式 🆕：**
   详见：**[Nix 安装指南](./INSTALL_NIXOS.md)** | [配置示例](./docs/nixos-config-example.md)
@@ -51,6 +51,12 @@
 
     下载后切换目录到键道即可自动部署
 
+#### 输入法主题：
+
+各系统发行包不再携带主题包，如需下载各系统输入法主题，请前往 [theme Release](https://github.com/xkinput/KeyTao/releases/tag/theme)：
+
+* [weasel（小狼毫）](https://github.com/xkinput/KeyTao/releases/download/theme/weasel.zip) / [squirrel（鼠须管）](https://github.com/xkinput/KeyTao/releases/download/theme/squirrel.zip) / [元书（iOS）](https://github.com/xkinput/KeyTao/releases/download/theme/yuanshu.zip) / [trime（同文）](https://github.com/xkinput/KeyTao/releases/download/theme/trime.zip)
+
 #### 并击功能：
 
 > 并击功能说明：在并击模式下，可实现字词100%左右互击，也能更方便的处理某些别手键位。目前并击功能已集成于本项目的Windows键道6之内，其他平台的用户请自行提取配置文件。如您在使用过程中有任何疑问，可在本项目留言咨询，或加入官方群讨论。
@@ -68,7 +74,7 @@
 
 ##### 验证 Schema 配置
 
-运行以下脚本可在本地对所有平台的方案做完整验证（Lua 语法 + 五平台 Rime 编译）：
+运行以下脚本可在本地对所有平台的方案做完整验证（Lua 语法 + Rime 编译）：
 
 ```bash
 bash scripts/validate.sh
@@ -77,7 +83,7 @@ bash scripts/validate.sh
 验证内容：
 
 1. **Lua 语法检查** — 用 `luac -p` 检查 `rime/lua/*.lua` 所有文件
-2. **五平台编译** — 用 `rime_deployer --build` 分别编译 linux / mac / windows / android / ios 各平台的 schema 组合，任何 schema 错误都会报出
+2. **多平台编译** — 用 `rime_deployer --build` 分别编译 desktop（linux / mac / windows / ios）与 android 平台的 schema 组合，任何 schema 错误都会报出
 
 CI 会在每次 Release 发布前自动运行此脚本，编译失败则阻止发布。
 
@@ -128,11 +134,12 @@ sudo apt install librime-bin librime-data lua5.4
 
 ### 键道可以运行在以下平台中：
 
-| Windows                |          Linux          |              Apple 装置              |        Android        |
-| ---------------------- | :----------------------: | :----------------------------------: | :-------------------: |
-| [Windows(weasel)][101] | [Linux(ibus-rime)][104] |         [Mac(squirrel)][102]         | [Android(trime)][105] |
-| [Windows(小小)][203]   | [Linux(fcitx-rime)][103] |           [iOS(元书)][106]           | [Android(小小)][203] |
-| [Windows(多多)][108]   |    [Linux(小小)][203]    | [iOS(iRime)][920] / [iOS(落格)][107] |                      |
+| Windows                |          Linux           |                Apple 装置                |        Android         |
+| ---------------------- | :----------------------: | :--------------------------------------: | :--------------------: |
+| [Windows(KeyTao)][109] |   [Linux(KeyTao)][109]   | [Mac(KeyTao)][109] / [iOS(KeyTao)][109]  | [Android(KeyTao)][109] |
+| [Windows(weasel)][101] | [Linux(ibus-rime)][104]  |           [Mac(squirrel)][102]           | [Android(trime)][105]  |
+| [Windows(小小)][203]   | [Linux(fcitx-rime)][103] |             [iOS(元书)][106]             |  [Android(小小)][203]  |
+| [Windows(多多)][108]   |    [Linux(小小)][203]    |   [iOS(iRime)][920] / [iOS(落格)][107]   |                        |
 
 > 键道的跨平台使用离不开以上优秀的输入平台
 
@@ -146,6 +153,7 @@ sudo apt install librime-bin librime-data lua5.4
 [107]: https://im.logcg.com/
 [920]: https://github.com/jimmy54/iRime
 [108]: https://chinput.com/portal.php
+[109]: https://github.com/xkinput/keytao-app
 [203]: https://github.com/dgod/yong
 [204]: https://github.com/xkinput/KeyTao
 [205]: https://xkinput.github.io/xxxk-help
