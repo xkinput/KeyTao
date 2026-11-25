@@ -17,7 +17,7 @@
 | [/docs](./docs)                         |       文档目录       |
 | [/extend-dicts](./extend-dicts)         |       扩展词典       |
 | [/rime](./rime)                         | 主码表文件夹[主码表] |
-| [/schema](./schema)                     |  各系统方案配置文件  |
+| [/schema](./schema)                     |      方案配置文件    |
 | [/scripts](./scripts)                   |    各系统脚本工具    |
 | [/INSTALL_NIXOS.md](./INSTALL_NIXOS.md) |    NixOS 安装指南    |
 | [/README.md](./README.md)               |     项目说明文件     |
@@ -53,7 +53,7 @@
 
 #### 输入法主题：
 
-各系统发行包不再携带主题包，如需下载各系统输入法主题，请前往 [theme Release](https://github.com/xkinput/KeyTao/releases/tag/theme)：
+方案发行包（`keytao-v*.zip`）全平台通用且不再携带主题包，如需下载各系统输入法主题，请前往 [theme Release](https://github.com/xkinput/KeyTao/releases/tag/theme)：
 
 * [weasel（小狼毫）](https://github.com/xkinput/KeyTao/releases/download/theme/weasel.zip) / [squirrel（鼠须管）](https://github.com/xkinput/KeyTao/releases/download/theme/squirrel.zip) / [元书（iOS）](https://github.com/xkinput/KeyTao/releases/download/theme/yuanshu.zip) / [trime（同文）](https://github.com/xkinput/KeyTao/releases/download/theme/trime.zip)
 
@@ -83,7 +83,7 @@ bash scripts/validate.sh
 验证内容：
 
 1. **Lua 语法检查** — 用 `luac -p` 检查 `rime/lua/*.lua` 所有文件
-2. **多平台编译** — 用 `rime_deployer --build` 分别编译 desktop（linux / mac / windows / ios）与 android 平台的 schema 组合，任何 schema 错误都会报出
+2. **方案编译** — 用 `rime_deployer --build` 编译 `rime/` 与 `schema/` 组合，任何 schema 错误都会报出
 
 CI 会在每次 Release 发布前自动运行此脚本，编译失败则阻止发布。
 

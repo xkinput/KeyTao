@@ -9,45 +9,13 @@ case "$RAW_VERSION" in
 	*) VERSION="v$RAW_VERSION" ;;
 esac
 
-echo "Building KeyTao packages, version: $VERSION"
+echo "Building KeyTao package, version: $VERSION"
 
 rm -rf release/
-mkdir -p release/keytao-linux release/keytao-mac release/keytao-windows release/keytao-android release/keytao-ios
+mkdir -p release/keytao
 
-write_version_file() {
-	printf '%s\n' "$VERSION" > "$1/version.txt"
-}
-
-cp -r rime/* release/keytao-linux/
-cp -r schema/desktop/* release/keytao-linux/
-write_version_file release/keytao-linux
-(cd release/keytao-linux && zip -qr ../keytao-linux-${VERSION}.zip .)
-echo "✓ linux"
-
-cp -r rime/* release/keytao-mac/
-cp -r schema/desktop/* release/keytao-mac/
-write_version_file release/keytao-mac
-(cd release/keytao-mac && zip -qr ../keytao-mac-${VERSION}.zip .)
-echo "✓ mac"
-
-cp -r rime/* release/keytao-windows/
-cp -r schema/desktop/* release/keytao-windows/
-write_version_file release/keytao-windows
-(cd release/keytao-windows && zip -qr ../keytao-windows-${VERSION}.zip .)
-echo "✓ windows"
-
-cp -r rime/* release/keytao-android/
-cp -r schema/android/* release/keytao-android/
-write_version_file release/keytao-android
-(cd release/keytao-android && zip -qr ../keytao-android-${VERSION}.zip .)
-echo "✓ android"
-
-# iOS (Hamster) uses desktop schema
-cp -r rime/* release/keytao-ios/
-cp -r schema/desktop/* release/keytao-ios/
-write_version_file release/keytao-ios
-(cd release/keytao-ios && zip -qr ../keytao-ios-${VERSION}.zip .)
-echo "✓ ios"
-
-echo ""
-cd release && sha256sum keytao-*.zip | tee checksums.txt
+printf '%s\n' "$VERSION" > release/keytao/version.txt
+cp -r rime/* release/keytao/
+cp -r schema/*.yaml release/keytao/
+(cd release/keytao && zip -qr "../keytao-${VERSION}.zip" .)
+echo "✓ keytao-${VERSION}.zip"

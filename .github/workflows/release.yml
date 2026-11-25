@@ -11,6 +11,9 @@ on:
         required: true
         default: 'v1.0.0'
 
+permissions:
+  contents: write
+
 jobs:
   validate:
     runs-on: ubuntu-latest
@@ -35,74 +38,74 @@ jobs:
         uses: actions/checkout@v4
         with:
           fetch-depth: 0
-      
+
       - name: Get version
         id: version
         run: |
           if [ "${{ github.event_name }}" == "workflow_dispatch" ]; then
-            echo "VERSION=${{ github.event.inputs.version }}" >> $GITHUB_OUTPUT
+            echo "VERSION=${{ github.event.inputs.version }}" >> "$GITHUB_OUTPUT"
           else
-            echo "VERSION=${GITHUB_REF#refs/tags/}" >> $GITHUB_OUTPUT
+            echo "VERSION=${GITHUB_REF#refs/tags/}" >> "$GITHUB_OUTPUT"
           fi
-      
-      - name: Build packages
-        run: bash scripts/release.sh ${{ steps.version.outputs.VERSION }}
-      
-      - name: Get latest commit message
-        id: commit_msg
-        run: |
-          MSG=$(git log -1 --pretty=format:"%s")
-          echo "msg=${MSG}" >> $GITHUB_OUTPUT
-      
-      - name: Create Release
-        uses: softprops/action-gh-release@3bb12739c298aeb8a4eeaf626c5b8d85266b0e65 # v2
-        with:
-          tag_name: ${{ steps.version.outputs.VERSION }}
-          name: KeyTao ${{ steps.version.outputs.VERSION }}
-          body: |
-            > ${{ steps.commit_msg.outputs.msg }}
-            
-            ## KeyTao 输入法方案 ${{ steps.version.outputs.VERSION }}
-            
-            ### 安装说明
-            
-            下载对应平台的压缩包，解压后将所有文件复制到您的 Rime 用户目录，然后重新部署即可使用。
-            
-            #### 各平台 Rime 用户目录位置：
-            
-            - **Linux (Fcitx5-rime)**: `~/.local/share/fcitx5/rime/`
-            - **Linux (iBus-rime)**: `~/.config/ibus/rime/`
-            - **macOS (鼠须管)**: `~/Library/Rime/`
-            - **Windows (小狼毫)**: `%APPDATA%\Rime\`
-            - **Android (同文)**: `/storage/emulated/0/rime/`
-            
-            ### 文件说明
-            
-            - `keytao-linux-*.zip` - Linux 平台专用版本
-            - `keytao-mac-*.zip` - macOS 平台专用版本
-            - `keytao-windows-*.zip` - Windows 平台专用版本
-            - `keytao-android-*.zip` - Android 平台专用版本
-            - `keytao-ios-*.zip` - iOS / iPad 平台专用版本（元书输入法）
-            - `checksums.txt` - SHA256 校验
-            
-            ### 更新内容
-            
-            请查看 [提交历史](https://github.com/${{ github.repository }}/commits/${{ steps.version.outputs.VERSION }}) 了解详细更新。
-          files: |
-            release/keytao-*.zip
-            release/checksums.txt
-          draft: false
-          prerelease: false
+
+      - name: Build package
+        run: bash scripts/release.sh "${{ steps.version.outputs.VERSION }}"
+
+      - name: Publish GitHub Release
         env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-      
-      - name: Create Gitee Release and upload assets
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          VERSION: ${{ steps.version.outputs.VERSION }}
+        run: |
+          ASSET="release/keytao-${VERSION}.zip"
+
+          # Find an existing release (including drafts pre-created by keytao-next auto-sync)
+          EXISTING_JSON=$(gh api "repos/${GITHUB_REPOSITORY}/releases?per_page=30" \
+            --jq "[.[] | select(.tag_name == \"${VERSION}\")] | .[0] // empty")
+
+          if [ -n "$EXISTING_JSON" ]; then
+            RELEASE_ID=$(printf '%s' "$EXISTING_JSON" | jq -r '.id')
+            IS_DRAFT=$(printf '%s' "$EXISTING_JSON" | jq -r '.draft')
+            EXISTING_BODY=$(printf '%s' "$EXISTING_JSON" | jq -r '.body // ""')
+            UPLOAD_URL=$(printf '%s' "$EXISTING_JSON" | jq -r '.upload_url' | sed 's/{?name,label}//')
+
+            if [ -n "$(printf '%s' "$EXISTING_BODY" | tr -d '[:space:]')" ]; then
+              printf '%s\n' "$EXISTING_BODY" > release/notes.md
+            else
+              python3 scripts/generate_release_notes.py "$VERSION" > release/notes.md
+            fi
+
+            # Replace asset with the same name if re-running workflow
+            OLD_ASSET_ID=$(printf '%s' "$EXISTING_JSON" | jq -r ".assets[] | select(.name == \"keytao-${VERSION}.zip\") | .id" | head -n 1)
+            if [ -n "$OLD_ASSET_ID" ]; then
+              gh api -X DELETE "repos/${GITHUB_REPOSITORY}/releases/assets/${OLD_ASSET_ID}"
+            fi
+
+            curl -fsSL -X POST \
+              -H "Authorization: Bearer ${GH_TOKEN}" \
+              -H "Content-Type: application/zip" \
+              --data-binary "@${ASSET}" \
+              "${UPLOAD_URL}?name=keytao-${VERSION}.zip" > /dev/null
+
+            if [ "$IS_DRAFT" = "true" ] || [ -z "$(printf '%s' "$EXISTING_BODY" | tr -d '[:space:]')" ]; then
+              gh api -X PATCH "repos/${GITHUB_REPOSITORY}/releases/${RELEASE_ID}" \
+                -f name="KeyTao ${VERSION}" \
+                -F draft=false \
+                -F body=@release/notes.md > /dev/null
+            fi
+          else
+            python3 scripts/generate_release_notes.py "$VERSION" > release/notes.md
+            gh release create "$VERSION" "$ASSET" \
+              --title "KeyTao ${VERSION}" \
+              --notes-file release/notes.md
+          fi
+
+      - name: Create Gitee Release and upload asset
         env:
           GITEE_TOKEN: ${{ secrets.GITEE_TOKEN }}
           VERSION: ${{ steps.version.outputs.VERSION }}
         run: |
-          RELEASE_BODY="KeyTao 输入法方案 ${VERSION}，下载对应平台压缩包解压后复制到 Rime 用户目录重新部署即可。"
-          
+          RELEASE_BODY=$(cat release/notes.md)
+
           RESPONSE=$(curl -s -X POST \
             "https://gitee.com/api/v5/repos/xkinput/KeyTao/releases" \
             -F "access_token=${GITEE_TOKEN}" \
@@ -110,22 +113,21 @@ jobs:
             -F "name=KeyTao ${VERSION}" \
             -F "body=${RELEASE_BODY}" \
             -F "target_commitish=master")
-          
+
           RELEASE_ID=$(echo "$RESPONSE" | jq -r '.id')
           if [ -z "$RELEASE_ID" ] || [ "$RELEASE_ID" = "null" ]; then
             echo "Failed to create Gitee release: $RESPONSE"
             exit 1
           fi
           echo "Gitee release created, id=$RELEASE_ID"
-          
-          for file in release/keytao-*.zip release/checksums.txt; do
-            echo "Uploading $file ..."
-            UPLOAD_RESP=$(curl -sS -X POST \
-              "https://gitee.com/api/v5/repos/xkinput/KeyTao/releases/${RELEASE_ID}/attach_files?access_token=${GITEE_TOKEN}" \
-              -F "file=@${file}")
-            if ! echo "$UPLOAD_RESP" | jq -e '.browser_download_url or .name' > /dev/null; then
-              echo "Failed to upload $file: $UPLOAD_RESP"
-              exit 1
-            fi
-            echo "$UPLOAD_RESP"
-          done
+
+          ASSET="release/keytao-${VERSION}.zip"
+          echo "Uploading $ASSET ..."
+          UPLOAD_RESP=$(curl -sS -X POST \
+            "https://gitee.com/api/v5/repos/xkinput/KeyTao/releases/${RELEASE_ID}/attach_files?access_token=${GITEE_TOKEN}" \
+            -F "file=@${ASSET}")
+          if ! echo "$UPLOAD_RESP" | jq -e '.browser_download_url or .name' > /dev/null; then
+            echo "Failed to upload $ASSET: $UPLOAD_RESP"
+            exit 1
+          fi
+          echo "$UPLOAD_RESP"

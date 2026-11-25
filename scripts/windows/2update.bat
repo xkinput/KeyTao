@@ -77,7 +77,7 @@ del "%rimeUserDir%\" /S /Q
 xcopy "..\..\rime" "%rimeUserDir%\" /Y /E
 echo 复制码表文件		完成
 
-xcopy "..\..\schema\desktop\*" "%rimeUserDir%\" /Y /E
+xcopy "..\..\schema\*" "%rimeUserDir%\" /Y /E
 echo 复制独有配置		完成
 
 cls
