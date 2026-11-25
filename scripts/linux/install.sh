@@ -18,7 +18,7 @@ jd=$(pwd)
 xkjd="$repoRoot"
 xklb="$repoRoot/../rime_xklb"
 xkyb="$repoRoot/../rime_xkybd"
-schema="$repoRoot/schema/desktop"
+schema="$repoRoot/schema"
 extend_dicts="$repoRoot/extend-dicts"
 userDict="./用户数据"
 

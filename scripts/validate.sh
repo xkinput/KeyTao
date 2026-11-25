@@ -55,10 +55,9 @@ compile() {
 }
 
 RIME="$REPO/rime"
-DESKTOP="$REPO/schema/desktop"
+SCHEMA="$REPO/schema"
 
-compile "desktop" "$RIME" "$DESKTOP"
-compile "android" "$RIME" "$REPO/schema/android"
+compile "keytao" "$RIME" "$SCHEMA"
 
 # ── 3. xnumber self-check ────────────────────────────────────────────────────
 echo ""

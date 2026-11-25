@@ -18,8 +18,8 @@ stdenvNoCC.mkDerivation rec {
     # Install main rime config files
     cp -r rime/* $out/share/rime-data/
 
-    # Install desktop schema files
-    cp schema/desktop/*.yaml $out/share/rime-data/
+    # Install schema files
+    cp schema/*.yaml $out/share/rime-data/
 
     runHook postInstall
   '';
