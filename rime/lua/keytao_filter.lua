@@ -1,12 +1,10 @@
-local function startswith(str, start)
-    return string.sub(str, 1, string.len(start)) == start
-end
+local consonant = "[bcdefghjklmnpqrstwxyz]"
+local short_vowel = "%s(" .. consonant .. "[auiov]+)%s"
+local short_cons = "%s(" .. consonant .. consonant .. ")%s"
 
-local function find_short(lookup, pattern)
-    return string.match(lookup, "^" .. pattern .. "%s") or
-        string.match(lookup, "%s" .. pattern .. "%s") or
-        string.match(lookup, "%s" .. pattern .. "$") or
-        string.match(lookup, "^" .. pattern .. "$")
+local function find_short(lookup)
+    local padded = " " .. lookup .. " "
+    return padded:match(short_vowel) or padded:match(short_cons)
 end
 
 local function ensure_reverse(env)
@@ -25,36 +23,18 @@ local function close_reverse(env)
     env.reverse = nil
 end
 
-local function hint(cand, input_text, input_len, env)
-    if utf8.len(cand.text) < 2 then
-        return false
+local function short_code(text, env)
+    local cache = env.short_codes
+    local short = cache[text]
+    if short == nil then
+        local reverse = ensure_reverse(env)
+        if not reverse then
+            return false
+        end
+        short = find_short(reverse:lookup(text)) or false
+        cache[text] = short
     end
-
-    local reverse = ensure_reverse(env)
-    if not reverse then
-        return false
-    end
-
-    local lookup = reverse:lookup(cand.text)
-    local short = find_short(lookup, env.pat_short_vowel) or
-        find_short(lookup, env.pat_short_cons)
-    if short and input_len > utf8.len(short) and not startswith(short, input_text) then
-        cand:get_genuine().comment = cand.comment .. "〔" .. short .. "〕"
-        return true
-    end
-
-    return false
-end
-
-local function danzi(cand)
-    if utf8.len(cand.text) < 2 then
-        return true
-    end
-    return false
-end
-
-local function commit_hint(cand, hint_text)
-    cand:get_genuine().comment = hint_text .. cand.comment
+    return short
 end
 
 local function filter(input, env)
@@ -63,36 +43,41 @@ local function filter(input, env)
     local is_on = context:get_option('sbb_hint')
     local disable_full = context:get_option('sbb_disable_full')
     local topup_hint_on = context:get_option('topup_hint')
-    local first = true
     local input_text = context.input
-    local input_len = utf8.len(input_text)
-    local reverse_used = false
+    local input_len = is_on and not is_danzi and utf8.len(input_text) or 0
+    -- A 630 code is at least two ASCII characters and must be shorter than the input.
+    local show_630 = input_len > 2
 
-    if not is_on or input_len == 0 then
+    if show_630 then
+        env.short_codes = env.short_codes or {}
+    elseif not is_on or input_text == "" then
         close_reverse(env)
     end
 
     local no_commit = topup_hint_on and input_text:len() < 4 and input_text:match(env.pat_no_commit)
     for cand in input:iter() do
-        if not is_danzi or danzi(cand) then
+        local text = (is_danzi or show_630) and cand.text
+        local text_len = text and utf8.len(text)
+        if not is_danzi or text_len < 2 then
             local has_630 = false
-            if is_on then
-                has_630 = hint(cand, input_text, input_len, env)
-                reverse_used = reverse_used or env.reverse ~= nil
+            if show_630 and text_len >= 2 then
+                local short = short_code(text, env)
+                if short and input_len > #short then
+                    cand:get_genuine().comment = cand.comment .. "〔" .. short .. "〕"
+                    has_630 = true
+                end
             end
             if not has_630 or not disable_full then
-                if first and cand.type ~= 'completion' then
-                    if no_commit then
-                        commit_hint(cand, env.hint_text)
-                    end
-                    first = false
+                if no_commit and cand.type ~= 'completion' then
+                    cand:get_genuine().comment = env.hint_text .. cand.comment
+                    no_commit = false
                 end
                 yield(cand)
             end
         end
     end
 
-    if reverse_used then
+    if env.reverse then
         close_reverse(env)
         collectgarbage("step", 64)
     end
@@ -107,9 +92,7 @@ local function init(env)
     env.reverse         = nil
     env.reverse_path    = "build/" .. dict .. ".reverse.bin"
     env.hint_text       = env.engine.schema.config:get_string('hint_text') or '🚫'
-    env.pat_short_vowel = "([bcdefghjklmnpqrstwxyz][auiov]+)"
-    env.pat_short_cons  = "([bcdefghjklmnpqrstwxyz][bcdefghjklmnpqrstwxyz])"
-    env.pat_no_commit   = "^[bcdefghjklmnpqrstwxyz]+$"
+    env.pat_no_commit   = "^" .. consonant .. "+$"
 
     -- Force full GC after each commit and when idle: Lua cannot see C++ object
     -- sizes (ReverseDb), so without explicit GC the runtime underestimates
@@ -117,11 +100,13 @@ local function init(env)
     local ctx           = env.engine.context
     env._commit_conn    = ctx.commit_notifier:connect(function()
         close_reverse(env)
+        env.short_codes = nil
         collectgarbage()
     end)
     env._update_conn    = ctx.update_notifier:connect(function(context)
         if not context:is_composing() then
             close_reverse(env)
+            env.short_codes = nil
             collectgarbage()
         end
     end)
@@ -129,6 +114,7 @@ end
 
 local function fini(env)
     close_reverse(env)
+    env.short_codes = nil
     if env._commit_conn then
         env._commit_conn:disconnect()
         env._commit_conn = nil
