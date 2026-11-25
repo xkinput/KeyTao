@@ -18,20 +18,8 @@ stdenvNoCC.mkDerivation rec {
     # Install main rime config files
     cp -r rime/* $out/share/rime-data/
 
-    # Install platform-specific schema files
-    ${
-      if stdenvNoCC.hostPlatform.isDarwin then
-        ''
-          # macOS: Install desktop schema, then overlay Mac-specific configs
-          cp schema/desktop/*.yaml $out/share/rime-data/
-          cp schema/mac/*.yaml $out/share/rime-data/
-        ''
-      else
-        ''
-          # Linux: Install desktop schema
-          cp schema/desktop/*.yaml $out/share/rime-data/
-        ''
-    }
+    # Install desktop schema files
+    cp schema/desktop/*.yaml $out/share/rime-data/
 
     runHook postInstall
   '';
