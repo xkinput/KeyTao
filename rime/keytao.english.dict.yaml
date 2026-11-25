@@ -2,7 +2,7 @@
 # encoding: utf-8
 ---
 name: keytao.english
-version: "2026.11.18"
+version: "2026.11.25"
 sort: by_weight
 columns:
   - text
@@ -119,7 +119,6 @@ APK	spk	100
 App	spp	100
 A站	sqf	100
 AA制	ssf	100
-AA制	ssfk	100
 ATM	stm	100
 THX	thx	100
 TIM	tkm	100
