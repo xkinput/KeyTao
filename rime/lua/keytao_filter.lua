@@ -91,7 +91,7 @@ local function init(env)
 
     env.reverse         = nil
     env.reverse_path    = "build/" .. dict .. ".reverse.bin"
-    env.hint_text       = env.engine.schema.config:get_string('hint_text') or '🚫'
+    env.hint_text       = env.engine.schema.config:get_string('hint_text') or '⎵'
     env.pat_no_commit   = "^" .. consonant .. "+$"
 
     -- Force full GC after each commit and when idle: Lua cannot see C++ object
