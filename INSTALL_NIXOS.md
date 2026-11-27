@@ -8,12 +8,10 @@ Nix 包会自动根据系统平台安装以下文件到 Rime 数据目录：
 
 - **主码表文件**：`rime/` 目录下的所有词库和配置
 - **通用方案**：
-  - `schema/keytao.schema.yaml` - 键道6方案
-  - `schema/keytao-dz.schema.yaml` - 键道6单字方案
+  - `rime/keytao.schema.yaml` - 键道6方案
+  - `rime/keytao-dz.schema.yaml` - 键道6单字方案
 - **macOS 自动目录**：
   - 自动部署到 `~/Library/Rime` 目录（鼠须管默认目录）
-
-与手动安装脚本（`scripts/linux/1install.sh` 或 `scripts/mac/2update.sh`）效果完全一致。
 
 ## 前提条件
 
@@ -145,25 +143,6 @@ cp -r result/share/rime-data/* ~/.local/share/fcitx5/rime/
 
 # 或复制到 ibus-rime 配置目录
 # cp -r result/share/rime-data/* ~/.config/ibus/rime/
-```
-
-### 方式三：直接使用（无需 flake）
-
-对于不使用 flakes 的系统：
-
-```bash
-# 克隆仓库
-git clone https://github.com/xkinput/KeyTao.git
-cd KeyTao
-
-# 构建
-nix-build
-
-# 复制到 Rime 配置目录
-cp -r result/share/rime-data/* ~/.local/share/fcitx5/rime/
-
-# 重新部署
-fcitx5-remote -r
 ```
 
 ## 使用不同的 Rime 前端

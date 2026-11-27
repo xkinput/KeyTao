@@ -16,6 +16,5 @@ mkdir -p release/keytao
 
 printf '%s\n' "$VERSION" > release/keytao/version.txt
 cp -r rime/* release/keytao/
-cp -r schema/*.yaml release/keytao/
 (cd release/keytao && zip -qr "../keytao-${VERSION}.zip" .)
 echo "✓ keytao-${VERSION}.zip"
