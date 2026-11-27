@@ -17,7 +17,6 @@
 | [/docs](./docs)                         |       文档目录       |
 | [/extend-dicts](./extend-dicts)         |       扩展词典       |
 | [/rime](./rime)                         | 主码表文件夹[主码表] |
-| [/schema](./schema)                     |      方案配置文件    |
 | [/scripts](./scripts)                   |    各系统脚本工具    |
 | [/INSTALL_NIXOS.md](./INSTALL_NIXOS.md) |    NixOS 安装指南    |
 | [/README.md](./README.md)               |     项目说明文件     |
@@ -27,6 +26,7 @@
 #### 安装教程：
 
 * 前往下载 **[KeyTao 键道 App](https://github.com/xkinput/keytao-app/releases)**，可自动完成键道方案的安装与更新，支持 Windows / macOS / Linux / Android / iOS。
+* 手动安装：克隆本仓库后，macOS / Linux 运行 `bash scripts/install.sh`，Windows 右键 `scripts/install.ps1` →「使用 PowerShell 运行」
 * Linux 如果遇到fcitx/ibus问题可查看[安装 fcitx/rime 教程][linux安装键道6]
 * **Nix/NixOS 安装方式 🆕：**
   详见：**[Nix 安装指南](./INSTALL_NIXOS.md)** | [配置示例](./docs/nixos-config-example.md)
@@ -74,7 +74,7 @@
 
 ##### 验证 Schema 配置
 
-运行以下脚本可在本地对所有平台的方案做完整验证（Lua 语法 + Rime 编译）：
+运行以下脚本可在本地对方案做完整验证（Lua 语法 + Rime 编译）：
 
 ```bash
 bash scripts/validate.sh
@@ -83,7 +83,7 @@ bash scripts/validate.sh
 验证内容：
 
 1. **Lua 语法检查** — 用 `luac -p` 检查 `rime/lua/*.lua` 所有文件
-2. **方案编译** — 用 `rime_deployer --build` 编译 `rime/` 与 `schema/` 组合，任何 schema 错误都会报出
+2. **方案编译** — 用 `rime_deployer --build` 编译 `rime/` 目录，任何 schema 错误都会报出
 
 CI 会在每次 Release 发布前自动运行此脚本，编译失败则阻止发布。
 

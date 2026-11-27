@@ -57,28 +57,21 @@ def parse_dict_stats(rev_range: str) -> tuple[int, list[tuple[str, int, int, int
             continue
         if current_file not in DICT_LABELS:
             continue
-        if line.startswith("+"):
-            body = line[1:]
-            if "\t" not in body or body.lstrip().startswith("#"):
-                continue
-            word = body.split("\t", 1)[0].strip()
-            if word:
-                added_by_file.setdefault(current_file, Counter())[word] += 1
-        elif line.startswith("-"):
-            body = line[1:]
-            if "\t" not in body or body.lstrip().startswith("#"):
-                continue
-            word = body.split("\t", 1)[0].strip()
-            if word:
-                removed_by_file.setdefault(current_file, Counter())[word] += 1
+        if not line.startswith(("+", "-")):
+            continue
+        body = line[1:]
+        if "\t" not in body or body.lstrip().startswith("#"):
+            continue
+        word = body.split("\t", 1)[0].strip()
+        if word:
+            target = added_by_file if line[0] == "+" else removed_by_file
+            target.setdefault(current_file, Counter())[word] += 1
 
     total_entries = 0
     stats: list[tuple[str, int, int, int]] = []
     for path, label in DICT_LABELS.items():
         added = added_by_file.get(path, Counter())
         removed = removed_by_file.get(path, Counter())
-        if not added and not removed:
-            continue
         changed = sum((added & removed).values())
         created = sum((added - removed).values())
         deleted = sum((removed - added).values())

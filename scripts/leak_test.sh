@@ -3,10 +3,9 @@
 # Shows live progress table and trend analysis.
 #
 # Usage:
-#   bash scripts/leak_test.sh <rounds>                         # just rounds, use defaults for rest
-#   bash scripts/leak_test.sh [platform] [schema] [rounds] [per-round] [rest-sec]
+#   bash scripts/leak_test.sh [rounds] [schema] [per-round] [rest-sec]
 #
-# Defaults: mac  keytao-dz  10  1000  20
+# Defaults: 10  keytao-dz  1000  20
 set -uo pipefail
 
 if [ -z "${IN_NIX_SHELL:-}" ]; then
@@ -14,47 +13,25 @@ if [ -z "${IN_NIX_SHELL:-}" ]; then
     exec nix develop "$REPO" --command bash "$0" "$@"
 fi
 
-# If the first argument is a plain integer, treat it as rounds (shorthand mode).
-if [[ "${1:-}" =~ ^[0-9]+$ ]]; then
-    ROUNDS="$1"
-    PLATFORM="${2:-mac}"
-    SCHEMA="${3:-keytao-dz}"
-    PER_ROUND="${4:-1000}"
-    REST_SEC="${5:-20}"
-else
-    PLATFORM="${1:-mac}"
-    SCHEMA="${2:-keytao-dz}"
-    ROUNDS="${3:-10}"
-    PER_ROUND="${4:-1000}"
-    REST_SEC="${5:-20}"
-fi
+ROUNDS="${1:-10}"
+SCHEMA="${2:-keytao-dz}"
+PER_ROUND="${3:-1000}"
+REST_SEC="${4:-20}"
 
 REPO=$(cd "$(dirname "$0")/.." && pwd)
 BENCH="$REPO/scripts/mem_bench"
-DEPLOYER=$(command -v rime_deployer 2>/dev/null \
-    || ls /nix/store/*/bin/rime_deployer 2>/dev/null | sort -V | tail -1 || true)
+DEPLOYER=$(command -v rime_deployer || true)
 
-[ -x "$BENCH" ]    || { echo "ERROR: scripts/mem_bench not compiled. Run: bash scripts/build_mem_bench.sh"; exit 1; }
+[ -x "$BENCH" ]    || { echo "ERROR: scripts/mem_bench not compiled. Re-enter nix develop"; exit 1; }
 [ -n "$DEPLOYER" ] || { echo "ERROR: rime_deployer not found"; exit 1; }
+: "${RIME_SHARED:?ERROR: RIME_SHARED not set — run inside nix develop}"
 
-if [ -z "${RIME_SHARED:-}" ]; then
-    RIME_SHARED=$(ls -d /nix/store/*/share/rime-data 2>/dev/null \
-        | grep -v keytao | sort -V | tail -1 || true)
-    [ -z "$RIME_SHARED" ] && RIME_SHARED=/usr/share/rime-data
-fi
-
-# ── Build release & deploy ────────────────────────────────────────────────────
-printf "Building release... "
-bash "$REPO/scripts/release.sh" v0.0.0-memtest >/dev/null 2>&1 && echo "done" || { echo "FAIL"; exit 1; }
-
-SRC="$REPO/release/keytao-$PLATFORM"
-[ -d "$SRC" ] || { echo "ERROR: $SRC not found"; exit 1; }
-
+# ── Deploy from rime/ ─────────────────────────────────────────────────────────
 WORK=$(mktemp -d)
 trap 'rm -rf "$WORK"' EXIT
-cp -r "$SRC"/. "$WORK/"
+cp -r "$REPO/rime"/. "$WORK/"
 
-printf "Deploying %s... " "$PLATFORM"
+printf "Deploying rime/... "
 "$DEPLOYER" --build "$WORK" "$RIME_SHARED" "$WORK/build" >/dev/null 2>&1
 [ -f "$WORK/build/${SCHEMA}.prism.bin" ] || \
 [ -f "$WORK/build/${SCHEMA}.extended.prism.bin" ] || \
@@ -69,8 +46,8 @@ _X=$'\033[0m'
 kb_to_mb() { awk "BEGIN{printf \"%.2f\", $1/1024}"; }
 
 echo ""
-printf "Leak test: %s / %s  —  %d rounds × %d strokes + %ds rest\n" \
-    "$PLATFORM" "$SCHEMA" "$ROUNDS" "$PER_ROUND" "$REST_SEC"
+printf "Leak test: %s  —  %d rounds × %d strokes + %ds rest\n" \
+    "$SCHEMA" "$ROUNDS" "$PER_ROUND" "$REST_SEC"
 total_time=$(( ROUNDS * (REST_SEC + (PER_ROUND / 50)) ))  # rough estimate
 printf "Estimated time: ~%dm%ds\n" $((total_time/60)) $((total_time%60))
 echo ""

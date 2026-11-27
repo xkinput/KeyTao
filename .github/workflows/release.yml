@@ -16,18 +16,7 @@ permissions:
 
 jobs:
   validate:
-    runs-on: ubuntu-latest
-    steps:
-      - name: Checkout code
-        uses: actions/checkout@v4
-
-      - name: Install rime_deployer and lua
-        run: |
-          sudo apt-get update -qq
-          sudo apt-get install -y librime-bin librime-data lua5.4
-
-      - name: Validate schemas and Lua
-        run: bash scripts/validate.sh
+    uses: ./.github/workflows/validate.yml
 
   build-and-release:
     runs-on: ubuntu-latest

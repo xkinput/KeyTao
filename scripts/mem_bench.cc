@@ -42,7 +42,64 @@ static long rss_kb()
 }
 
 // ── helpers ──────────────────────────────────────────────────────────────────
-static RimeSessionId g_session = 0;
+// KeyTao uses consonant+vowel combos. Drive typical 2-4 key sequences.
+static const char *const kInputs[] = {
+    "vf",
+    "va",
+    "vb",
+    "vc",
+    "vd",
+    "ve",
+    "vg",
+    "vh",
+    "vi",
+    "vj",
+    "vk",
+    "vl",
+    "vm",
+    "vn",
+    "vo",
+    "vp",
+    "vq",
+    "vr",
+    "vs",
+    "vt",
+    "vu",
+    "vw",
+    "vx",
+    "vy",
+    "aa",
+    "ab",
+    "ac",
+    "ad",
+    "ae",
+    "af",
+    "ba",
+    "bb",
+    "bc",
+    "bd",
+    "be",
+    "bf",
+    "ca",
+    "cb",
+    "cc",
+    "cd",
+    "ce",
+    "cf",
+    "da",
+    "db",
+    "dc",
+    "ea",
+    "eb",
+    "ec",
+    "fa",
+    "fb",
+    "fc",
+    "ga",
+    "gb",
+    "ha",
+};
+static const int kNumInputs = sizeof(kInputs) / sizeof(kInputs[0]);
 
 static void on_message(void *, RimeSessionId, const char *type, const char *val)
 {
@@ -177,64 +234,6 @@ int main(int argc, char *argv[])
   // ── leak-test mode: N rounds of M strokes, sleep between each ────────────
   if (rounds > 0)
   {
-    static const char *const inputs[] = {
-        "vf",
-        "va",
-        "vb",
-        "vc",
-        "vd",
-        "ve",
-        "vg",
-        "vh",
-        "vi",
-        "vj",
-        "vk",
-        "vl",
-        "vm",
-        "vn",
-        "vo",
-        "vp",
-        "vq",
-        "vr",
-        "vs",
-        "vt",
-        "vu",
-        "vw",
-        "vx",
-        "vy",
-        "aa",
-        "ab",
-        "ac",
-        "ad",
-        "ae",
-        "af",
-        "ba",
-        "bb",
-        "bc",
-        "bd",
-        "be",
-        "bf",
-        "ca",
-        "cb",
-        "cc",
-        "cd",
-        "ce",
-        "cf",
-        "da",
-        "db",
-        "dc",
-        "ea",
-        "eb",
-        "ec",
-        "fa",
-        "fb",
-        "fc",
-        "ga",
-        "gb",
-        "ha",
-    };
-    static const int n_inputs = sizeof(inputs) / sizeof(inputs[0]);
-
     printf("schema=%s\n", schema_id);
     printf("rss_after_schema=%ld\n", rss_after_schema);
     fflush(stdout);
@@ -245,7 +244,7 @@ int main(int argc, char *argv[])
       long round_peak = rss_kb();
       for (int i = 0; i < per_round; ++i)
       {
-        simulate(sid, inputs[total % n_inputs]);
+        simulate(sid, kInputs[total % kNumInputs]);
         long rss = rss_kb();
         if (rss > round_peak)
           round_peak = rss;
@@ -269,65 +268,6 @@ int main(int argc, char *argv[])
   }
 
   // ── simulate keystrokes ──────────────────────────────────────────────────
-  // KeyTao uses consonant+vowel combos. Drive typical 2-4 key sequences.
-  static const char *const inputs[] = {
-      "vf",
-      "va",
-      "vb",
-      "vc",
-      "vd",
-      "ve",
-      "vg",
-      "vh",
-      "vi",
-      "vj",
-      "vk",
-      "vl",
-      "vm",
-      "vn",
-      "vo",
-      "vp",
-      "vq",
-      "vr",
-      "vs",
-      "vt",
-      "vu",
-      "vw",
-      "vx",
-      "vy",
-      "aa",
-      "ab",
-      "ac",
-      "ad",
-      "ae",
-      "af",
-      "ba",
-      "bb",
-      "bc",
-      "bd",
-      "be",
-      "bf",
-      "ca",
-      "cb",
-      "cc",
-      "cd",
-      "ce",
-      "cf",
-      "da",
-      "db",
-      "dc",
-      "ea",
-      "eb",
-      "ec",
-      "fa",
-      "fb",
-      "fc",
-      "ga",
-      "gb",
-      "ha",
-  };
-  static const int n_inputs = sizeof(inputs) / sizeof(inputs[0]);
-
   // checkpoint index pointer
   int cp_idx = 0;
   int n_cp = (int)checkpoints.size();
@@ -336,7 +276,7 @@ int main(int argc, char *argv[])
   long rss_peak = rss_after_schema;
   for (int i = 0; i < strokes; ++i)
   {
-    simulate(sid, inputs[i % n_inputs]);
+    simulate(sid, kInputs[i % kNumInputs]);
     long r = rss_kb();
     if (r > rss_peak)
       rss_peak = r;

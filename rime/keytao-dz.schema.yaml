@@ -2,8 +2,8 @@
 # encoding: utf-8
 
 schema:
-  schema_id: keytao
-  name: 键道6
+  schema_id: keytao-dz
+  name: 键道6单字
   version: "2.2"
 
 
@@ -23,11 +23,6 @@ layout:
     - derive/^([bcdefghjklmnpqrstwxyz;`]{2}[avuio`]{5}).$/$1`/
     - derive/^[bcdefghjklmnpqrstwxyz;]{2}([avuio`]*)$/``$1/
 
-  # input_code:
-  #   date: orq
-  #   time: ouj
-  #   week: oxq
-
 switches:
   - name: ascii_mode
     reset: 0
@@ -42,7 +37,6 @@ switches:
     states: [ "关表情", "开表情" ]
   - name: danzi_mode
     reset: 0
-    states: [ "词组", "单字" ]
   - name: sbb_hint
     reset: 1
     states: [ "关₆₃₀", "开₆₃₀" ]
@@ -118,7 +112,7 @@ punctuator:
     '-' : '-'
     '_' : ——
     '+' : '+'
-    '=' : [ '=' ]
+    '=' : '='
     '[' : [ 「, 【, 〔, ［ ]
     ']' : [ 」, 】, 〕,  ］ ]
     '{' : [ 『, 〖, ｛ ]
@@ -154,8 +148,8 @@ engine:
     - simplifier@emoji_cn
     - simplifier@simplification
     - uniquifier
-    - reverse_lookup_filter@danzi_lookup
     - lua_filter@keytao_filter
+    - reverse_lookup_filter@danzi_lookup
 
 
 speller:
@@ -168,7 +162,7 @@ speller:
 
 
 translator:
-  dictionary: keytao.extended
+  dictionary: keytao-dz.extended
   enable_charset_filter: false
   enable_completion: true
   enable_encoder: true
@@ -196,15 +190,9 @@ simplification:
 
 
 danzi_lookup:
-  dictionary: keytao.extended
+  dictionary: keytao-dz.extended
   tags: [ danzi_lookup ]
   overwrite_comment: true
-  enable_charset_filter: false
-  enable_completion: true
-  enable_encoder: false
-  enable_sentence: false
-  enable_user_dict: false
-  encode_commit_history: false
   comment_format:
     - xform/^/〔/
     - xform/$/〕/

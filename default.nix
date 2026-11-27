@@ -1,10 +1,9 @@
 {
   lib,
   stdenvNoCC,
-  fetchFromGitHub,
 }:
 
-stdenvNoCC.mkDerivation rec {
+stdenvNoCC.mkDerivation {
   pname = "rime-keytao";
   version = "6.0";
 
@@ -17,9 +16,6 @@ stdenvNoCC.mkDerivation rec {
 
     # Install main rime config files
     cp -r rime/* $out/share/rime-data/
-
-    # Install schema files
-    cp schema/*.yaml $out/share/rime-data/
 
     runHook postInstall
   '';

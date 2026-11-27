@@ -47,7 +47,6 @@ end
 
 local function processor(key_event, env)
     local engine = env.engine
-    local schema = engine.schema
     local context = engine.context
 
     local input = context.input 
@@ -110,7 +109,6 @@ local function init(env)
     env.topup_max = config:get_int("topup/max_length")
     env.auto_clear = config:get_bool("topup/auto_clear") or false
     env.topup_command = config:get_bool("topup/topup_command") or false
-    env.enabled = true
 end
 
 return { init = init, func = processor }

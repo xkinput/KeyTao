@@ -14,15 +14,6 @@ local function ensure_reverse(env)
     return env.reverse
 end
 
-local function close_reverse(env)
-    if env.reverse and env.reverse.close then
-        pcall(function()
-            env.reverse:close()
-        end)
-    end
-    env.reverse = nil
-end
-
 local function short_code(text, env)
     local cache = env.short_codes
     local short = cache[text]
@@ -51,7 +42,7 @@ local function filter(input, env)
     if show_630 then
         env.short_codes = env.short_codes or {}
     elseif not is_on or input_text == "" then
-        close_reverse(env)
+        env.reverse = nil
     end
 
     local no_commit = topup_hint_on and input_text:len() < 4 and input_text:match(env.pat_no_commit)
@@ -78,7 +69,7 @@ local function filter(input, env)
     end
 
     if env.reverse then
-        close_reverse(env)
+        env.reverse = nil
         collectgarbage("step", 64)
     end
 end
@@ -91,21 +82,17 @@ local function init(env)
 
     env.reverse         = nil
     env.reverse_path    = "build/" .. dict .. ".reverse.bin"
-    env.hint_text       = env.engine.schema.config:get_string('hint_text') or '🚫'
+    env.hint_text       = env.engine.schema.config:get_string('hint_text') or '⎵'
     env.pat_no_commit   = "^" .. consonant .. "+$"
 
-    -- Force full GC after each commit and when idle: Lua cannot see C++ object
-    -- sizes (ReverseDb), so without explicit GC the runtime underestimates
-    -- live memory and collects too infrequently. See librime-lua issue #206/#307.
+    -- Force full GC when idle (also fires after every commit via Context::Clear):
+    -- Lua cannot see C++ object sizes (ReverseDb), so without explicit GC the
+    -- runtime underestimates live memory and collects too infrequently.
+    -- See librime-lua issue #206/#307.
     local ctx           = env.engine.context
-    env._commit_conn    = ctx.commit_notifier:connect(function()
-        close_reverse(env)
-        env.short_codes = nil
-        collectgarbage()
-    end)
     env._update_conn    = ctx.update_notifier:connect(function(context)
         if not context:is_composing() then
-            close_reverse(env)
+            env.reverse = nil
             env.short_codes = nil
             collectgarbage()
         end
@@ -113,12 +100,8 @@ local function init(env)
 end
 
 local function fini(env)
-    close_reverse(env)
+    env.reverse = nil
     env.short_codes = nil
-    if env._commit_conn then
-        env._commit_conn:disconnect()
-        env._commit_conn = nil
-    end
     if env._update_conn then
         env._update_conn:disconnect()
         env._update_conn = nil
