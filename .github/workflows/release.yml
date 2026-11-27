@@ -46,46 +46,39 @@ jobs:
           VERSION: ${{ steps.version.outputs.VERSION }}
         run: |
           ASSET="release/keytao-${VERSION}.zip"
+          VIEW_ERR=$(mktemp)
+          trap 'rm -f "$VIEW_ERR"' EXIT
 
           # Find an existing release (including drafts pre-created by keytao-next auto-sync)
-          EXISTING_JSON=$(gh api "repos/${GITHUB_REPOSITORY}/releases?per_page=30" \
-            --jq "[.[] | select(.tag_name == \"${VERSION}\")] | .[0] // empty")
+          if EXISTING=$(gh release view "$VERSION" --json isDraft,body 2>"$VIEW_ERR"); then
+            IS_DRAFT=$(jq -r '.isDraft' <<<"$EXISTING")
+            EXISTING_BODY=$(jq -r '.body // ""' <<<"$EXISTING")
+            HAS_BODY=$(printf '%s' "$EXISTING_BODY" | tr -d '[:space:]')
 
-          if [ -n "$EXISTING_JSON" ]; then
-            RELEASE_ID=$(printf '%s' "$EXISTING_JSON" | jq -r '.id')
-            IS_DRAFT=$(printf '%s' "$EXISTING_JSON" | jq -r '.draft')
-            EXISTING_BODY=$(printf '%s' "$EXISTING_JSON" | jq -r '.body // ""')
-            UPLOAD_URL=$(printf '%s' "$EXISTING_JSON" | jq -r '.upload_url' | sed 's/{?name,label}//')
-
-            if [ -n "$(printf '%s' "$EXISTING_BODY" | tr -d '[:space:]')" ]; then
+            if [ -n "$HAS_BODY" ]; then
               printf '%s\n' "$EXISTING_BODY" > release/notes.md
             else
               python3 scripts/generate_release_notes.py "$VERSION" > release/notes.md
             fi
 
-            # Replace asset with the same name if re-running workflow
-            OLD_ASSET_ID=$(printf '%s' "$EXISTING_JSON" | jq -r ".assets[] | select(.name == \"keytao-${VERSION}.zip\") | .id" | head -n 1)
-            if [ -n "$OLD_ASSET_ID" ]; then
-              gh api -X DELETE "repos/${GITHUB_REPOSITORY}/releases/assets/${OLD_ASSET_ID}"
-            fi
+            gh release upload "$VERSION" "$ASSET" --clobber
 
-            curl -fsSL -X POST \
-              -H "Authorization: Bearer ${GH_TOKEN}" \
-              -H "Content-Type: application/zip" \
-              --data-binary "@${ASSET}" \
-              "${UPLOAD_URL}?name=keytao-${VERSION}.zip" > /dev/null
-
-            if [ "$IS_DRAFT" = "true" ] || [ -z "$(printf '%s' "$EXISTING_BODY" | tr -d '[:space:]')" ]; then
-              gh api -X PATCH "repos/${GITHUB_REPOSITORY}/releases/${RELEASE_ID}" \
-                -f name="KeyTao ${VERSION}" \
-                -F draft=false \
-                -F body=@release/notes.md > /dev/null
+            if [ -z "$HAS_BODY" ]; then
+              gh release edit "$VERSION" \
+                --title "KeyTao ${VERSION}" \
+                --draft=false \
+                --notes-file release/notes.md
+            elif [ "$IS_DRAFT" = "true" ]; then
+              gh release edit "$VERSION" --draft=false
             fi
-          else
+          elif grep -qi "release not found" "$VIEW_ERR"; then
             python3 scripts/generate_release_notes.py "$VERSION" > release/notes.md
             gh release create "$VERSION" "$ASSET" \
               --title "KeyTao ${VERSION}" \
               --notes-file release/notes.md
+          else
+            cat "$VIEW_ERR" >&2
+            exit 1
           fi
 
       - name: Create Gitee Release and upload asset
