@@ -57,10 +57,6 @@ local function splitNumStr(str)
 end
 
 local function speakBar(str, posMap, valMap)
-	posMap = posMap or { [1] = "仟", [2] = "佰", [3] = "拾", [4] = "" }
-	valMap = valMap or
-			{ [0] = "零", "一", "二", "三", "四", "五", "六", "七", "八", "九" } -- the length of valMap[0] should not excess 1
-
 	local out = ""
 	local bar = string.sub("****" .. str, -4, -1) -- the integer part of a number string can be divided into bars; each bar has 4 bits
 	for pos = 1, 4 do
@@ -95,7 +91,6 @@ local function speakIntOfficially(str, posMap, valMap)
 
 	-- split the number string into bars, for example, in:str=123456789 → out:tbBar={1|2345|6789}
 	local int = string.match(str, "^0*(%d+)$") or "0"
-	if int == "" then int = "0" end
 	local remain = #int % 4
 	if remain == 0 then remain = 4 end
 	local tbBar = { [1] = string.sub(int, 1, remain) }
@@ -167,22 +162,6 @@ local function speakMoney(str)
 	local speakDec = speakDecMoney(part.dec)
 	local out = speakSym .. speakInt .. speakDec
 	return out
-end
-
-local function baseConverse(str, from, to)
-	local str10 = str
-	if from == 16 then
-		local num = tonumber(str, 16)
-		if not num then return str end
-		str10 = num
-	end
-	local strout = str10
-	if to == 16 then
-		local num = math.tointeger(tonumber(str10))
-		if not num then return nil end
-		strout = string.format("%#x", num)
-	end
-	return strout
 end
 
 local function should_eval_expression(expr)
@@ -270,8 +249,8 @@ local function translator(input, seg, env)
 			end
 		end
 		if string.match(input2, "^[%+%-]?%d*$") then -- plz, i dont want to deal with base conversion with decimals
-			local base = baseConverse(input2, 10, 16)
-			if base then yield(Candidate("number", seg.start, seg._end, base, " 进制")) end
+			local num = math.tointeger(tonumber(input2))
+			if num then yield(Candidate("number", seg.start, seg._end, string.format("%#x", num), " 进制")) end
 		end
 	end
 end

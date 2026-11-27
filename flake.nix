@@ -16,21 +16,6 @@
       system:
       let
         pkgs = nixpkgs.legacyPackages.${system};
-        librime-with-tools = pkgs.librime.overrideAttrs (old: {
-          cmakeFlags = (old.cmakeFlags or [ ]) ++ [ "-DBUILD_TOOLS=ON" ];
-          postInstall = (old.postInstall or "") + ''
-            for bin in rime_console rime_api_console; do
-              src=$(find "$NIX_BUILD_TOP" -maxdepth 5 -name "$bin" -not -name "*.cc" -type f 2>/dev/null | head -1)
-              [ -n "$src" ] || continue
-              install -m755 "$src" "$out/bin/$bin"
-              # fix rpath: remove sandbox build paths, add real $out/lib
-              while IFS= read -r rp; do
-                install_name_tool -delete_rpath "$rp" "$out/bin/$bin" 2>/dev/null || true
-              done < <(otool -l "$out/bin/$bin" | awk '/LC_RPATH/{f=1} f && /^ *path /{print $2; f=0}')
-              install_name_tool -add_rpath "$out/lib" "$out/bin/$bin"
-            done
-          '';
-        });
       in
       {
         packages.default = pkgs.callPackage ./default.nix { };
@@ -39,17 +24,19 @@
 
         devShells.default = pkgs.mkShell {
           packages = with pkgs; [
-            librime-with-tools # provides rime_deployer, rime_console, rime_api_console, etc.
+            librime # provides rime_deployer
             lua5_4 # provides luac
             ncurses # required by rime_tui
           ];
           shellHook = ''
             export RIME_SHARED="${pkgs.rime-data}/share/rime-data"
 
+            REPO_ROOT="$(git rev-parse --show-toplevel 2>/dev/null || echo "$PWD")"
+            LIBRIME_STORE="${pkgs.librime}"
+
             # compile mem_bench on first entry (or when source changes)
-            BENCH_SRC="$(git rev-parse --show-toplevel 2>/dev/null || echo "$PWD")/scripts/mem_bench.cc"
-            BENCH_BIN="$(git rev-parse --show-toplevel 2>/dev/null || echo "$PWD")/scripts/mem_bench"
-            LIBRIME_STORE="${librime-with-tools}"
+            BENCH_SRC="$REPO_ROOT/scripts/mem_bench.cc"
+            BENCH_BIN="$REPO_ROOT/scripts/mem_bench"
             if [ "$BENCH_SRC" -nt "$BENCH_BIN" ] 2>/dev/null || [ ! -x "$BENCH_BIN" ]; then
               echo "[mem_bench] compiling..."
               c++ -std=c++17 -O2 \
@@ -63,8 +50,8 @@
             fi
 
             # compile rime_tui on first entry (or when source changes)
-            TUI_SRC="$(git rev-parse --show-toplevel 2>/dev/null || echo "$PWD")/scripts/rime_tui.cc"
-            TUI_BIN="$(git rev-parse --show-toplevel 2>/dev/null || echo "$PWD")/scripts/rime_tui"
+            TUI_SRC="$REPO_ROOT/scripts/rime_tui.cc"
+            TUI_BIN="$REPO_ROOT/scripts/rime_tui"
             if [ "$TUI_SRC" -nt "$TUI_BIN" ] 2>/dev/null || [ ! -x "$TUI_BIN" ]; then
               echo "[rime_tui] compiling..."
               c++ -std=c++17 -O2 \

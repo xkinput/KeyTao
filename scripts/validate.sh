@@ -24,52 +24,20 @@ for f in "$REPO/rime/lua/"*.lua; do
 done
 [ $LUA_FAIL -eq 0 ] && echo "All Lua files OK" || { echo "Lua syntax errors found"; exit 1; }
 
-# ── 2. Platform schema compile ───────────────────────────────────────────────
+# ── 2. Schema compile ────────────────────────────────────────────────────────
 echo ""
-echo "=== 2. Schema compile per platform (rime_deployer --build) ==="
-
-PASS=0
-FAIL_COUNT=0
-
-compile() {
-    local name=$1; shift
-    local work="$TMPROOT/$name"
-    mkdir -p "$work"
-    for src in "$@"; do
-        cp -r "$src"/. "$work/"
-    done
-
-    local output
-    output=$("$DEPLOYER" --build "$work" "$SHARED" "$work/build" 2>&1)
-
-    if echo "$output" | grep -qE "^E[0-9]"; then
-        echo "  FAIL $name"
-        echo "$output" | grep "^E" | sed 's/^/       /'
-        FAIL_COUNT=$((FAIL_COUNT + 1))
-    else
-        local bins
-        bins=$(ls "$work/build/"*.bin 2>/dev/null | wc -l)
-        echo "  OK   $name — $bins .bin files"
-        PASS=$((PASS + 1))
-    fi
-}
-
-RIME="$REPO/rime"
-SCHEMA="$REPO/schema"
-
-compile "keytao" "$RIME" "$SCHEMA"
+echo "=== 2. Schema compile (rime_deployer --build) ==="
+WORK="$TMPROOT/keytao"
+cp -r "$REPO/rime" "$WORK"
+if ! output=$("$DEPLOYER" --build "$WORK" "$SHARED" "$WORK/build" 2>&1) || grep -qE "^E[0-9]" <<<"$output"; then
+    echo "  FAIL keytao"
+    sed 's/^/       /' <<<"$output"
+    exit 1
+fi
+bins=$(find "$WORK/build" -maxdepth 1 -name '*.bin' | wc -l | tr -d ' ')
+echo "  OK   keytao — $bins .bin files"
 
 # ── 3. xnumber self-check ────────────────────────────────────────────────────
 echo ""
 echo "=== 3. xnumber self-check ==="
-if (cd "$REPO" && "${LUAC%/*}/lua" scripts/test_xnumber.lua); then
-    echo "  OK   xnumber"
-    PASS=$((PASS + 1))
-else
-    echo "  FAIL xnumber"
-    FAIL_COUNT=$((FAIL_COUNT + 1))
-fi
-
-echo ""
-echo "Results: $PASS passed, $FAIL_COUNT failed"
-[ $FAIL_COUNT -eq 0 ] || exit 1
+(cd "$REPO" && "${LUAC%/*}/lua" scripts/test_xnumber.lua)

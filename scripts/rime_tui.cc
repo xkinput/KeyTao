@@ -1,5 +1,5 @@
 // rime_tui.cc — Interactive Rime schema TUI with live memory monitoring
-// Build:  see scripts/build_rime_tui.sh  (or auto-built by nix develop shellHook)
+// Build:  auto-built by nix develop shellHook
 // Usage:  rime_tui --user-data-dir DIR [--shared-data-dir DIR] [--schema SCHEMA_ID]
 //
 // Keys:

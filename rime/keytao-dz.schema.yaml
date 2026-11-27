@@ -193,12 +193,6 @@ danzi_lookup:
   dictionary: keytao-dz.extended
   tags: [ danzi_lookup ]
   overwrite_comment: true
-  enable_charset_filter: false
-  enable_completion: true
-  enable_encoder: false
-  enable_sentence: false
-  enable_user_dict: false
-  encode_commit_history: false
   comment_format:
     - xform/^/〔/
     - xform/$/〕/
